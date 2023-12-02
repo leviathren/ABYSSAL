@@ -1,0 +1,102 @@
+:root {
+    --greenlink: #0CB58A;
+    --greenlinkhov: #54D8A4;
+    --red: #460000;
+    --redlink: #C70000;
+    --redlinkhov: #F81111;
+    --purple: #6F48FF;
+    --spaceblue: #106686;
+    --blue: #4CC2CC;
+    --midblue: #00a6d2;
+    --white: #ffffff;
+    --hover: #54D8A4;
+    --grey: #787878;
+}
+
+@font-face {
+        font-family: angel;
+        src: url("fonts/Angel wish.ttf");
+    }
+
+@font-face {
+        font-family: badcoma;
+        src: url("/fonts/badcoma.ttf");
+    }
+
+@import url('https://cdn.jsdelivr.net/npm/galmuri/dist/galmuri.css');
+
+/* to use above, link this in the html file: <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galmuri/dist/galmuri.css"> */
+    
+@font-face {
+        font-family: glitch;
+        src: url("fonts/Doctor Glitch.otf");
+}
+
+@font-face {
+        font-family: vhs;
+        src: url("/fonts/easvhs.ttf");
+    }
+
+@font-face {
+        font-family: haunting;
+        src: url("fonts/Haunting Attraction.ttf");
+    }
+
+@font-face {
+        font-family: type;
+        src: url("/fonts/JMH Typewriter.ttf");
+}
+
+@font-face {
+        font-family: typeb;
+        src: url("/fonts/JMH Typewriter-Bold.ttf");
+}
+
+@font-face {
+        font-family: typeblk;
+        src: url("fonts/JMH Typewriter-Black.ttf");
+}
+
+@font-face {
+        font-family: typethin;
+        src: url("fonts/JMH Typewriter-Thin.ttf");
+}
+
+@font-face {
+    font-family: midnight;
+    src: url("fonts/MidnightMinutes_DEMO.otf");
+}
+
+@font-face {
+    font-family: october;
+    src: url("fonts/October Crow.ttf");
+}
+
+@font-face {
+        font-family: rock;
+        src: url("fonts/Rock of Times.otf");
+}
+
+@font-face {
+        font-family: whiteonblack;
+        src: url("/fonts/whiteonblack.ttf");
+    }
+
+@font-face {
+        font-family: whoaskssatan;
+        src: url("/fonts/who asks satan.ttf");
+}
+
+.hov {
+    -webkit-transition: .1s ease-in-out;
+	transition: .1s ease-in-out;
+}
+
+.hov:hover {
+    -webkit-transform: scale(1.04);
+	transform: scale(1.04);
+}
+
+.hover:hover {
+    transition: ease color 0.5s;
+}

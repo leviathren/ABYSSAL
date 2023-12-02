@@ -1,0 +1,158 @@
+<html>
+<style>
+    
+::-webkit-scrollbar {
+    background-color: black;
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--purple);
+}
+        
+    body {
+        font-family: vhs;
+        font-size: 1em;
+        letter-spacing: 2;
+        color: white;
+        margin: 0;
+        background-image: url(/bg/twinklingstarsbg.gif);
+    }
+    
+    main {
+        display: block;
+        background: black;
+        height: 80%;
+        width: 60%;
+        max-width: 700px;
+        padding: 30px;
+        margin: 10 auto;
+        overflow-y: auto;
+    }
+    
+    nav {
+        text-align: center;
+        margin: 10px 0;
+    }
+    
+    nav a {
+        text-transform: uppercase;
+        text-decoration: none;
+        margin: 0 20px;
+    }
+    
+    #statuscafe {
+        padding: 15px;
+        margin: 30 40;
+        border: 1px solid var(--purple);
+    }
+    #statuscafe-username {
+        margin-bottom: 15px;
+    }
+    #statuscafe-content {
+        margin: 0 1em .5em 1em;
+    }
+    
+    h1 {
+        text-transform: uppercase;
+        letter-spacing: 4;
+        margin: 20px;
+    }
+    
+    ul {
+        line-height: 1.5;
+    }
+    
+    ul span {
+        color: var(--purple);
+    }
+    
+    li {
+        list-style-type: none;
+        margin-bottom: 20px;
+    }
+    
+    a {
+        color: var(--purple);
+    }
+    
+    .removed {
+        color: var(--grey);
+    }
+    
+    .removed::after {
+        content: ' - now removed';
+        color: var(--red);
+    }
+    
+    @media only screen and (max-width: 750px) {
+        
+        main {
+            width: auto;
+            margin: auto;
+        }
+    }
+
+</style>
+
+
+<head>
+    
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href='fonts.css'>
+<title>ship's log</title>
+</head>
+
+<body>
+    
+    <main>
+        
+        <nav>
+            <a href="home.html">home</a>
+            <a href="https://status.cafe/users/leviathren" target="_blank">status.cafe</a>
+            
+        </nav>
+        
+        <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=leviathren" defer></script>
+
+
+    <article>
+        <h1>lately</h1>
+            <ul>
+                <li><span>nov 9, 2023 -</span> new site layout!</li>
+                <li><span>nov 1, 2023 -</span> streamlined some css and changed theme-changing buttons and js</li>
+                
+                <li><span>oct 24, 2023 -</span> updated guestbook/comment pages to ayano's <a href="https://virtualobserver.moe/ayano/comment-widget" target="_blank">comment widget</a></li>
+                
+                <li><span>oct 23, 2023 -</span> <a href="haunt.html">haunted</a> page mostly polished up, site updates moved to blog page and removed notebook page since i don't write much long form content</li>
+                
+                    <li class="removed"><span>oct 11, 2023 -</span> moved the greenhouse content to <a href="notebook.html">notebook</a></li>
+        
+                    <li class="removed"><span>sept 27, 2023 -</span> opened the <a href="">greenhouse</a></li>
+        
+                    <li><span>sept 21, 2023 -</span> fixed music player on home page</li>
+        
+                    <li><span>sept 19, 2023 -</span> major update to site appearance and file organization, and started working on notebook page</li>
+        
+                    <li><span>sept 16, 2023 -</span> published the <a href="art.html">art gallery</a></li>
+        
+                    <li class="removed"><span>sept 9, 2023 -</span>
+                        blog post: the hummingbirds are fighting in the yard
+                    </li>
+        
+                    <li><span>sept 8, 2023 -</span>
+                    uploaded the blog page
+                    </li>
+            </ul>
+        
+    </article>
+
+        
+    </main>
+
+</body>
+
+</html>

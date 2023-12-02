@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    
+        <title>ABYSSAL</title>
+        
+        <!----- metadata ----->
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="home.css">
+        <link rel="stylesheet" href="fonts.css">
+        <link rel="icon" type="image/png" href="decor/eyedark.png">
+        
+        <!------ TOOLTIPS DO NOT TOUCH PLEASE GOD ------->
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script src="https://static.tumblr.com/lspzyz3/xloqk6cgp/jquery.style-my-tooltips.js"></script>
+<script>
+							(function($){
+							$(document).ready(function(){
+							$("[title]").style_my_tooltips({
+							tip_follows_cursor: true,
+							tip_delay_time:100,
+							tip_fade_speed:300,
+							attribute:"title"
+							});
+							});
+							})(jQuery);
+</script>
+        <!------- end tooltips :) -------->
+        
+    </head>
+
+    
+    <body>
+        
+        <nav>
+            
+            <button class="shortcut" onclick="showDiv(2)">
+            <img class="shortcut-icon" src="decor/computer.gif"><br>site
+            </button>
+            
+            <button class="shortcut" onclick="showDiv(3)">
+            <img class="shortcut-icon" src="decor/ghostrah.webp"><br>me
+            </button>
+            
+            <button class="shortcut" onclick="showDiv(4)">
+            <img class="shortcut-icon" src="decor/tilldeath.gif"><br>you
+            </button>
+            
+            <button class="shortcut" onclick="showDiv(6)"><img class="shortcut-icon" src="decor/catjam.webp"><br>music box</button>
+            
+            <button class="shortcut" onclick="showDiv(12)"><img class="shortcut-icon" src="decor/whitearrow.gif"><br>chatbox</button>
+            
+            <a class="shortcut" href="sitemap.html"><img class="shortcut-icon" src="decor/an-book.gif"><br>sitemap</a>
+            
+        </nav>
+        
+        <main>
+        
+            <div id="div1" class="window">
+                <div id="header1" class="windowheader"><img class="windowicon" src="decor/computer.gif">welcome<button id="windowclose" onclick="closeDiv(1)"></button></div>
+                <div class="toolbar">
+                    <span class="tools">file</span>
+                    <span class="tools">edit</span>
+                    <span class="tools smt-current-element" title="these are just cosmetic">view</span>
+                </div>
+                <div class="content">
+                    <article>
+                    <h1>welcome, wanderer</h1>
+                    
+                    <p>hello weary traveler. this internet outpost is a passion project and collection of all things that interest me.</p><p>the making of this site itself is the main project, but you will also find some art i make <a href="art.html">here</a>.</p>
+                    <p>stay as long as you like.</p>
+                                       
+                </article>
+                
+                <section>
+                <button class="collapsible"><h1>what is this?<img src="decor/whitearrow.gif" width="20px"></h1></button>
+                    <div class="collapsed">
+                <p>the web revival movement is about reclaiming the personal internet and making spaces that welcome creativity and are free from big corporations and capitalist-driven content. one way to participate is by creating a personal site. personal sites give people the opportunity to decorate however they want and share whatever they want!</p>
+                
+                <p>for a deeper understanding, these are great places to start:<br>
+                <a href="https://yesterweb.org/#the-mass-movement" target="_blank">the mass movement</a> by yesterweb.org<br>
+                    <a href="https://thoughts.melonking.net/guides/introduction-to-the-web-revival-1-what-is-the-web-revival" target="_blank">intro to the web revival</a> by melon king</p></div>
+                </section>
+                    
+                    <section>
+                    <a class="center hover" href="hallofrock.html"><h1>ENTER THE<br><text style="font-family: whiteonblack; font-size: 2em;">HALL OF ROCK</text></h1></a>
+                    </section>
+                    <br>
+                    
+                    <br>
+                    <img class="center" src="decor/nobosses.jpg">
+                    <br>
+                
+                <section class="center">
+                    <h2 class="center">happy resident of:</h2>
+                    
+                    <p>32-bit cafe</p><a href="https://32bit.cafe/" target="_blank"><img class="hov" src="btns/32b.png"></a><br>
+                    <p>void.shrooms webring</p><a href="https://void.shroom.ink/" target="_blank"><img class="hov" src="btns/void.shrooms.jpg"></a><br>
+                    <p><a href="https://hotlinewebring.club/">hotline webring</a></p>
+                </section>
+                </div>
+            </div>
+            
+            <div id="div2" class="window" style="display: none;">
+            <div id="header2" class="windowheader">
+                <img class="windowicon" src="decor/tinycomputer.png">site links<button id="windowclose" onclick="closeDiv(2)"></button>
+                </div>
+                <div class="toolbar">
+                    <span class="tools">file</span>
+                    <span class="tools">edit</span>
+                    <span class="tools">view</span>
+                </div>
+                <div class="content">
+                    <ul>
+                    <li><img class="bullet" src="decor/note.png"><a title="site updates" href="blog.html" class="smt-current-element">ship's log</a></li>
+                        <li><img class="bullet" src="decor/catcomputer.gif"><a class="smt-current-element" title="all my old themes and stuff" href="layouts.html">layout archive</a></li>
+                        <li><img class="bullet" src="decor/strawberrysite.gif"><a href="sitemap.html">sitemap</a></li>
+                    </ul>
+                    <iframe class="center" src="https://shroom.ink/guard.html/?site=ABYSSAL&shroom=4" height="250px" width="200px" scrolling="no" frameborder="0"></iframe>
+                </div>
+            </div>
+            
+            <div id="div3" class="window" style="display: none;">
+            <div id="header3" class="windowheader"><img class="windowicon" src="decor/batflap.gif">stuff from me<button id="windowclose" onclick="closeDiv(3)"></button></div>
+                <div class="toolbar"><span class="tools">file</span>
+                    <span class="tools">edit</span>
+                    <span class="tools">view</span></div>
+                <div class="content">
+                    <ul>
+                        <li><img class="bullet" src="decor/ghostrah.webp"><a title="curious about me?" href="about.html" class="smt-current-element">about</a></li>
+                        <li><img class="bullet" src="decor/palette.gif"><a title="things i've made - image-heavy - CAUTION: you may come across nudity and blood" href="art.html" class="smt-current-element">art gallery</a></li>
+                        <li><img class="bullet" src="decor/ufo.gif"><a title="stamps, buttons, and blinkies i like" href="collections.html" class="smt-current-element">collections</a></li>
+                        <li><img class="bullet" src="decor/roundcat.gif"><a title="pixel clubs I'm in :3 planning on joining more" href="pixels.html" class="smt-current-element">pixel clubs</a></li>
+                        <li><img class="bullet" src="decor/tinycomputer.png"><a title="my neocities profile" href="https://neocities.org/site/leviathren" target="_blank" class="smt-current-element">neocities</a></li>
+                    </ul>
+                    
+                </div>
+            </div>
+            
+            <div id="div4" class="window" style="display: none;">
+            <div id="header4" class="windowheader"><img class="windowicon" src="decor/eatme.webp">stuff for you<button id="windowclose" onclick="closeDiv(4)"></button></div>
+                <div class="toolbar"><span class="tools">file</span>
+                    <span class="tools">edit</span>
+                    <span class="tools">view</span></div>
+                <div class="content">
+                    <ul>
+                    <li><img class="bullet" src="decor/spiral.webp"><a title="check out these cool sites!" href="buttons.html" class="smt-current-element">neighbors</a></li>
+                        <li><img class="bullet" src="decor/sparkles.gif"><a href="hallofrock.html">HALL OF ROCK pixel club</a></li>
+                        <li><img class="bullet" src="decor/computer.gif"><a title="my page of linky links" href="links.html" class="smt-current-element">surf the web</a></li>
+                        <li><img class="bullet" src="decor/crosscoffin.webp"><a title="care for a scare?" href="haunt.html" class="smt-current-element">sleepy hollow</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            
+            <div id="div5" class="window" style="display: none;">
+            <div id="header5" class="windowheader"><img class="windowicon" src="decor/an-book.gif">visitors<button id="windowclose" onclick="closeDiv(5)"></button></div>
+                <div class="toolbar"><span class="tools">file</span>
+                    <span class="tools">edit</span>
+                    <span class="tools">view</span></div>
+                <div class="content">
+                     <div id="c_widget"></div></div>
+        <script src="comment-widget.js"></script>
+            </div>
+            
+            <div id="div6" class="window" style="display: none;">
+            <div id="header6" class="windowheader"><img class="windowicon" src="decor/catjam.webp">walkman<button id="windowclose" onclick="closeDiv(6)"></button></div>
+                <div class="toolbar">
+                    <span class="tools">file</span>
+                    <span class="tools">edit</span>
+                    <span class="tools">view</span>
+                </div>
+                <div class="content">
+                <!----- music player ----->
+                
+                <div id="musicplayer" class="center">
+        <div>
+            <marquee scrollamount="8" class="songtitle"></marquee>
+        </div>
+
+        <table class="controls">
+            <tr>
+                <td>
+                    <div class="prev-track" onclick="prevTrack()"><i class="fas fa-backward"></i></div>
+                </td>
+                <td>
+                    <div class="playpause-track" onclick="playpauseTrack()" ><i class="fas fa-play"></i></div>
+                </td>
+                <td>
+                    <div class="next-track" onclick="nextTrack()"><i class="fas fa-forward"></i></div>
+                </td>
+            </tr>
+        </table>
+ 
+        <div class="seeking">
+            <div class="current-time">00:00</div>
+ 
+            <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+ 
+            <div class="total-duration">0:00</div>
+        </div>
+ 
+        <audio id="music" src=""></audio> 
+    </div>
+    
+                <!----- end music player box ----->
+
+                </div>
+            </div>
+            
+            <div id="div7" class="window">
+            <div id="header7" class="windowheader"><img class="windowicon" src="decor/moonstars.gif">select a theme<button id="windowclose" onclick="closeDiv(7)"></button></div>
+                <div class="toolbar">
+                    <span class="tools">file</span>
+                    <span class="tools">edit</span>
+                    <span class="tools">view</span>
+                </div>
+                <div class="content theme-switcher">
+                        
+                    <button data-theme="noir" aria-pressed="true" class="smt-current-element" title="noir" style="background-image:url('decor/darkpagedoll.gif')"></button>
+                        
+                    <button data-theme="forest" aria-pressed="false" class="smt-current-element" title="forest" style="background-image:url('animals/fairy.png')"></button>
+                    
+                    <button data-theme="golden" aria-pressed="false" class="smt-current-element" title="golden" style="background-image:url('decor/sunpagedoll.gif')"></button>
+                    
+                    <button data-theme="cyberpink" aria-pressed="false" class="smt-current-element" title="cyber grape" style="background-image:url('decor/mysticalcrystal.gif')"></button>
+                    
+                    <button data-theme="skyblue" aria-pressed="false" class="smt-current-element" title="sky blue" style="background-image:url('decor/blue clouds.gif')"></button>
+                </div>
+            </div>
+            
+            <div id="div8" class="window">
+            <div id="header8" class="windowheader">
+                <img class="windowicon" src="decor/heart.png">status<button id="windowclose" onclick="closeDiv(8)"></button>
+                </div>
+                <div class="toolbar">
+                    <span class="tools">file</span>
+                    <span class="tools">edit</span>
+                    <span class="tools">view</span>
+                </div>
+                <div class="content">
+                    <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div><a href="https://status.cafe/users/leviathren"><img id="statusbtn" class="hov" src="https://status.cafe/users/leviathren/badge.png" alt="Status Cafe Profile"/></a></div><script src="https://status.cafe/current-status.js?name=leviathren" defer></script>
+                </div>
+            </div>
+            
+            <div id="div9" class="window">
+            <div id="header9" class="windowheader">
+                <img class="windowicon" src="decor/deadlynightshade.png">www.web<button id="windowclose" onclick="closeDiv(9)"></button>
+                </div>
+                <div class="toolbar">
+                    <span class="tools">file</span>
+                    <span class="tools">edit</span>
+                    <span class="tools">view</span>
+                </div>
+                <div class="content">
+                    <marquee onmouseover="this.stop();" onmouseout="this.start();">
+            <img class="hov" src="btns/neocitiespink.gif">
+                <a href="https://status.cafe"><img class="hov" src="https://status.cafe/assets/button.png" alt="Status Cafe"/></a>
+            <img class="hov" src="btns/makeawebsitebtn.jpg">
+            <img class="hov" src="btns/queerbtn.png">
+            <img class="hov" src="btns/arizonagreentea.gif">
+            <img class="hov" src="btns/containsjavascript.png">
+            <img class="hov" src="btns/bestviewedmonitor.gif">
+            <img class="hov" src="btns/responsivewebsite.png">
+            <img class="hov" src="btns/learnhtml.gif">
+            <img class="hov" src="btns/changegender.gif">
+            <img class="hov" src="btns/bookmarkthispage.gif">
+            <img class="hov" src="btns/webshare.gif">
+            <img class="hov" src="btns/brackets.gif">
+            <img class="hov" src="btns/handcodebtn.gif">
+            <img class="hov" src="btns/palestine.gif">
+            <img src="decor/crawler.gif">
+            </marquee>
+                </div>
+            </div>
+            
+            <div id="div10" class="window">
+            <div id="header10" class="windowheader">
+                <img class="windowicon" src="decor/batwing.png">featured page<button id="windowclose" onclick="closeDiv(10)"></button></div>
+                <div class="toolbar">
+                    <span class="tools">file</span>
+                    <span class="tools">edit</span>
+                    <span class="tools">view</span>
+                </div>
+                <div class="content">
+                <a class="smt-current-element" title="blast to the past" href="/layouts.html"><img class="center hov" src="decor/featured.png"></a>
+                </div>
+            </div>
+            
+            <div id="div11" class="window">
+            <div id="header11" class="windowheader">
+                <img class="windowicon" src="animals/battiny.gif">trading post<button id="windowclose" onclick="closeDiv(11)"></button>
+                </div>
+                <div class="toolbar">
+                    <span class="tools">file</span>
+                    <span class="tools">edit</span>
+                    <span class="tools">view</span>
+                </div>
+                <div class="content">
+                <img class="center hov" src="/btns/leviathrenbutton.gif">
+                <p class="center">my button! :3<br>please no hotlink <span id="smt-current"><a href="https://blog.hubspot.com/website/hotlinking" target="_blank" class="smt-current-element" title="what is hotlinking?">[?]</a></span></p>
+                <textarea><a href="https://leviathren.neocities.org/" target="_blank"><img src="**file name here**"></a></textarea>
+                </div>
+            </div>
+            
+            <div id="div12" class="window" style="display: none">
+            <div id="header12" class="windowheader">
+                <img class="windowicon" src="decor/sparkles.gif">chatbox<button id="windowclose" onclick="closeDiv(12)"></button>
+                </div>
+                <div class="toolbar">
+                    <span class="tools">file</span>
+                    <span class="tools">edit</span>
+                    <span class="tools">view</span>
+                </div>
+                <div class="content">
+                <iframe src="https://www3.cbox.ws/box/?boxid=3531613&boxtag=B2PQvw" width="100%" height="250" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
+                </div>
+            </div>
+            
+            <div id="div13" class="window" style="display: none">
+            <div id="header13" class="windowheader">
+                <img class="windowicon" src="decor/notepad.gif">notepad<button id="windowclose" onclick="closeDiv(13)"></button>
+                </div>
+                <div class="toolbar">
+                    <span class="tools">file</span>
+                    <span class="tools">edit</span>
+                    <span class="tools">view</span>
+                </div>
+                <div class="content">
+                to-do:
+                    <ul>
+                        <li>- updated blog page</li>
+                        <li>- pride room</li>
+                        <li>- pause/play gifs</li>
+                        <li>- font switcher</li>
+                    </ul>
+                note:<br>credits are listed under my <a href="links.html">links page</a><br>
+                    <br>let me know if something looks broken!
+                </div>
+            </div>
+            
+        </main>
+        
+        <div id="pagedoll"></div>
+        
+        <div id="start">
+            <img class="starteye">
+            <script>$(".starteye").click(function () {
+    $(this).toggleClass("starteyeclose");
+                });</script>
+            
+            <button class="startbtn" onclick="showDiv(1)">welcome</button>
+            <button class="startbtn" onclick="showDiv(7)">themes</button>
+            <button class="startbtn" onclick="showDiv(13)">notepad</button>
+            <button class="startbtn" onclick="showDiv(8)">status</button>
+            <button class="startbtn" onclick="showDiv(5)">guests</button>
+            
+            <p class="copyright">abyssal * coded by leviathren * hosted on neocities (c) 2023</p>
+        </div>
+        
+    
+        <!----- scripts ----->
+        
+        <!----- open and close windows ----->
+        <script>
+            function showDiv(divNumber) {
+        document.getElementById("div" + divNumber).style.display="block";}
+        </script>
+        <script>
+            function closeDiv(divNumber) {
+        document.getElementById("div" + divNumber).style.display="none";}
+        </script>
+        
+        <!----- drag windows ----->
+        <script>function makeDragable(dragHandle, dragTarget) {
+  // used to prevent dragged object jumping to mouse location
+  let xOffset = 0;
+  let yOffset = 0;
+
+  let handle = document.querySelector(dragHandle);
+  handle.addEventListener("mousedown", startDrag, true);
+  handle.addEventListener("touchstart", startDrag, true);
+
+  /*sets offset parameters and starts listening for mouse-move*/
+  function startDrag(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    let dragObj = document.querySelector(dragTarget);
+    
+    // shadow element would take the original place of the dragged element, this is to make sure that every sibling will not reflow in the document
+    let shadow = dragObj.cloneNode();
+    shadow.id = ""
+    // You can change the style of the shadow here
+    shadow.style.opacity = 0.5
+    dragObj.parentNode.insertBefore(shadow, dragObj.nextSibling);
+
+    let rect = dragObj.getBoundingClientRect();
+    dragObj.style.left = rect.left;
+    dragObj.style.top = rect.top;
+    dragObj.style.position = "absolute";
+    dragObj.style.zIndex = 999999;
+
+    /*Drag object*/
+    function dragObject(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      if(e.type=="mousemove") {
+        dragObj.style.left = e.clientX-xOffset + "px"; // adjust location of dragged object so doesn't jump to mouse position
+        dragObj.style.top = e.clientY-yOffset + "px";
+      } else if(e.type=="touchmove") {
+        dragObj.style.left = e.targetTouches[0].clientX-xOffset +"px"; // adjust location of dragged object so doesn't jump to mouse position
+        dragObj.style.top = e.targetTouches[0].clientY-yOffset +"px";
+      }
+    }
+    /*End dragging*/
+    document.addEventListener("mouseup", function() {
+      // hide the shadow element, but still let it keep the room, you can delete the shadow element to let the siblings reflow if that is what you want
+      shadow.style.opacity = 0
+      shadow.style.zIndex = -999999
+      window.removeEventListener('mousemove', dragObject, true);
+      window.removeEventListener('touchmove', dragObject, true);
+    }, true)
+
+    if (e.type=="mousedown") {
+      xOffset = e.clientX - rect.left; //clientX and getBoundingClientRect() both use viewable area adjusted when scrolling aka 'viewport'
+      yOffset = e.clientY - rect.top;
+      window.addEventListener('mousemove', dragObject, true);
+    } else if(e.type=="touchstart") {
+      xOffset = e.targetTouches[0].clientX - rect.left;
+      yOffset = e.targetTouches[0].clientY - rect.top;
+      window.addEventListener('touchmove', dragObject, true);
+    }
+  }
+}
+
+makeDragable('#header1', '#div1')
+makeDragable('#header2', '#div2')
+makeDragable('#header3', '#div3')
+makeDragable('#header4', '#div4')
+makeDragable('#header5', '#div5')
+makeDragable('#header6', '#div6')
+makeDragable('#header7', '#div7')
+makeDragable('#header8', '#div8')
+makeDragable('#header9', '#div9')
+makeDragable('#header10', '#div10')
+makeDragable('#header11', '#div11')
+makeDragable('#header12', '#div12')
+makeDragable('#header13', '#div13')
+makeDragable('#header14', '#div14')
+        </script>
+        
+        <!-----  collapse content ----->
+        <script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+        
+        <!----- music player ----->
+        <script>
+        // initiate variables
+        let track_name = document.querySelector(".songtitle");
+ 
+        let playpause_btn = document.querySelector(".playpause-track");
+        let next_btn = document.querySelector(".next-track");
+        let prev_btn = document.querySelector(".prev-track");
+ 
+        let seek_slider = document.querySelector(".seek_slider");
+        let curr_time = document.querySelector(".current-time");
+        let total_duration = document.querySelector(".total-duration");
+ 
+        let track_index = 0;
+        let isPlaying = false;
+        let updateTimer;
+        
+        // create new audio element
+        let curr_track = document.getElementById("music");
+        
+        //
+        // DEFINE YOUR SONGS HERE!!!!!
+        // MORE THAN FOUR SONGS CAN BE ADDED!!
+        // JUST ADD ANOTHER BRACKET WITH NAME AND PATH
+        // CATBOX.MOE IS RECOMMENDED FOR UPLOADING MP3 FILES
+        let track_list = [
+            {
+                name:"snake dance - the march violets",
+                path:"https://files.catbox.moe/3n6cvj.mp3"
+            },
+            {
+                name:"nowhere to run - stegosaurus rex",
+                path:"https://files.catbox.moe/x3gczq.mp3"
+            },
+            {
+                name:"enjoy the silence - depeche mode",
+                path:"https://files.catbox.moe/avynpm.mp3"
+            },
+            {
+                name:"sad bodies - shad shadows",
+                path:"https://files.catbox.moe/7zazkp.mp3"
+            },
+            {
+                name:"matando suenos - euroshima",
+                path:"https://files.catbox.moe/8qbs80.mp3"
+            },
+            {
+               name:"major tom (coming home) - peter schilling",
+                path:"https://files.catbox.moe/lch7yk.mp3"
+            },
+            {
+               name:"into the void - buzz kill" ,
+                path:"https://files.catbox.moe/6eafgw.mp3"
+            },
+            {
+                name:"1 2 i love you - the march violets",
+                path:"https://files.catbox.moe/u38qei.mp3"
+            },
+            {
+                name:"the storm - hante.",
+                path:"https://files.catbox.moe/8kqyhr.mp3"
+            },
+        ];
+        //
+        //
+        //
+        //
+        //
+ 
+        function loadTrack(track_index) {
+            clearInterval(updateTimer);
+            resetValues();
+ 
+            // load a new track
+            curr_track.src = track_list[track_index].path;
+            curr_track.load();
+            
+            // update details of the track
+            track_name.textContent = "playing " + (track_index + 1) + " of " + track_list.length + ": " + track_list[track_index].name;
+ 
+            // set an interval of 1000 milliseconds for updating the seek slider
+            updateTimer = setInterval(seekUpdate, 1000);
+            
+            // move to the next track if the current one finishes playing 
+            curr_track.addEventListener("ended", nextTrack);
+        }
+ 
+        // reset values
+        function resetValues() {
+            curr_time.textContent = "0:00";
+            total_duration.textContent = "0:00";
+            seek_slider.value = 0;
+        }
+ 
+        // checks if song is playing
+        function playpauseTrack() {
+            if (!isPlaying) playTrack();
+            else pauseTrack();
+        }
+ 
+        // plays track when play button is pressed
+        function playTrack() {
+            curr_track.play();
+            isPlaying = true;
+            
+            // replace icon with the pause icon
+            playpause_btn.innerHTML = '<i class="fas fa-pause"></i>';
+        }
+ 
+        // pauses track when pause button is pressed
+        function pauseTrack() {
+            curr_track.pause();
+            isPlaying = false;
+            
+            // replace icon with the play icon
+            playpause_btn.innerHTML = '<i class="fas fa-play"></i>';
+        }
+ 
+        // moves to the next track
+        function nextTrack() {
+            if (track_index < track_list.length - 1)
+                track_index += 1;
+            else track_index = 0;
+            loadTrack(track_index);
+            playTrack();
+        }
+ 
+        // moves to the previous track
+        function prevTrack() {
+            if (track_index > 0)
+                track_index -= 1;
+            else track_index = track_list.length;
+            loadTrack(track_index);
+            playTrack();
+        }
+ 
+        // seeker slider
+        function seekTo() {
+            seekto = curr_track.duration * (seek_slider.value / 100);
+            curr_track.currentTime = seekto;
+        }
+ 
+        function seekUpdate() {
+            let seekPosition = 0;
+            
+            // check if the current track duration is a legible number
+            if (!isNaN(curr_track.duration)) {
+                seekPosition = curr_track.currentTime * (100 / curr_track.duration);
+                seek_slider.value = seekPosition;
+                
+            // calculate the time left and the total duration
+            let currentMinutes = Math.floor(curr_track.currentTime / 60);
+            let currentSeconds = Math.floor(curr_track.currentTime - currentMinutes * 60);
+            let durationMinutes = Math.floor(curr_track.duration / 60);
+            let durationSeconds = Math.floor(curr_track.duration - durationMinutes * 60);
+                
+            // adding a zero to the single digit time values
+            if (currentSeconds < 10) { currentSeconds = "0" + currentSeconds; }
+            if (durationSeconds < 10) { durationSeconds = "0" + durationSeconds; }
+            if (currentMinutes < 10) { currentMinutes = currentMinutes; }
+            if (durationMinutes < 10) { durationMinutes = durationMinutes; }
+ 
+            curr_time.textContent = currentMinutes + ":" + currentSeconds;
+            total_duration.textContent = durationMinutes + ":" + durationSeconds;
+          }
+        }
+        
+        // load the first track in the tracklist
+        loadTrack(track_index);
+    </script>
+        
+        <!----- music player icons ----->
+        <script src="https://kit.fontawesome.com/f936906ae0.js" crossorigin="anonymous"></script>
+        
+        <!----- theme switcher ----->
+        <script>
+                    const pressedButtonSelector = '[data-theme][aria-pressed="true"]';
+const defaultTheme = 'noir';
+
+const applyTheme = (theme) => {
+  const target = document.querySelector(`[data-theme="${theme}"]`);
+  document.documentElement.setAttribute("data-selected-theme", theme);
+  document.querySelector(pressedButtonSelector).setAttribute('aria-pressed', 'false');
+  target.setAttribute('aria-pressed', 'true');
+};
+
+const handleThemeSelection = (event) => {
+  const target = event.target;
+  const isPressed = target.getAttribute('aria-pressed');
+  const theme = target.getAttribute('data-theme');        
+  
+  if(isPressed !== "true") {
+    applyTheme(theme);
+    localStorage.setItem('selected-theme', theme);
+  }
+}
+
+const setInitialTheme = () => {
+  const savedTheme = localStorage.getItem('selected-theme');
+  if(savedTheme && savedTheme !== defaultTheme) {
+    applyTheme(savedTheme);
+  }
+};
+
+setInitialTheme();
+
+const themeSwitcher = document.querySelector('.theme-switcher');
+const buttons = themeSwitcher.querySelectorAll('button');
+
+buttons.forEach((button) => {
+   button.addEventListener('click', handleThemeSelection);
+});
+
+                    </script>
+        
+    </body>
+
+</html>

@@ -1,0 +1,479 @@
+<html data-theme="default">
+
+<style> 
+    
+:root,[data-theme="default"] {
+    --bg: black;
+    --text: white;
+    --font: lucida console;
+    --fontsize: 1em;
+    --label: white;
+    --animation: none;
+}
+    
+    [data-theme="gothic"] {
+    --bg: url(bg/binary.gif);
+    --text: white;
+    --font: angel;
+    --fontsize: 1.2em;
+    --label: white;
+    --animation: shake;
+}
+    
+::-webkit-scrollbar {
+    background-color: black;
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--red);
+}
+    
+    body {
+        width: 100%;
+        display: flex;
+        background: var(--bg);
+        color: white;
+        font-family: var(--font);
+        font-size: var(--fontsize);
+        overflow-x: hidden;
+        scrollbar-color: var(--red) black;
+        scrollbar-width: thin;
+    }
+    
+    .container {
+        text-align: center;
+        margin-left: 20px;
+        max-width: 900px;
+    }
+    
+    .sidebar {
+        position: fixed;
+        left: 960px;
+        top: 8%;
+        width: 250px;
+        font-size: var(--fontsize);
+        background: black;
+        padding: 20px 10px;
+        border: 2px solid var(--red);
+        border-radius: 5px;
+    }
+    
+    a {
+        color: var(--redlink);
+        transition: 0.3s ease;
+    }
+    
+    a:hover {
+        color: var(--redlinkhov);
+        transition: 0.4s ease;
+    }
+    
+    .nav {
+        margin: 12px;
+    }
+    
+    section {
+        border-top: 2px solid var(--red);
+        padding: 10px;
+    }
+    
+    /* main content */
+    
+    .header {
+        margin-top: 30px;
+    }
+    
+    .header img { 
+animation: var(--animation) 0.5s; 
+animation-iteration-count: infinite; 
+-webkit-filter:blur(1px); 
+-webkit-transition: .5s ease-in; 
+} 
+    
+@keyframes shake {
+0% { transform: translate(1px, 1px) rotate(0deg); }
+10% { transform: translate(-1px, -2px) rotate(-1deg); }
+20% { transform: translate(-3px, 0px) rotate(1deg); }
+30% { transform: translate(3px, 2px) rotate(0deg); }
+40% { transform: translate(1px, -1px) rotate(1deg); }
+50% { transform: translate(-1px, 2px) rotate(-1deg); }
+60% { transform: translate(-3px, 1px) rotate(0deg); }
+70% { transform: translate(3px, 1px) rotate(-1deg); }
+80% { transform: translate(-1px, -1px) rotate(1deg); }
+90% { transform: translate(1px, 2px) rotate(0deg); }
+100% { transform: translate(1px, -2px) rotate(-1deg); }
+} 
+    
+    .gallery {
+        margin-top: 20px;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .col {
+        width: 220px;
+    }
+    
+    .column {
+        display: none;
+    }
+    
+    .gallery img {
+        width: 200px;
+        border: 1px solid white;
+        margin: 20px;
+    }
+    
+    p {
+        margin: 10px;
+    }
+    
+    .center {
+        display: block;
+        text-align: center;
+    }
+    
+    .footer {
+        text-align: center;
+        font-size: 14px;
+    }
+    
+    .btn {
+        border: 2px outset #505050;
+        padding: 5px 10px;
+        margin: 5px;
+        background: transparent;
+        color: white;
+        font-family: var(--font);
+        font-size: 18;
+        transition: 0.3s ease;
+}
+    
+    #access {
+        font-family: helvetica;
+        text-transform: uppercase;
+        font-size: 16px;
+}
+
+    .btn:hover {
+        background-color: var(--red);
+        transition: 0.4s ease;
+        border: 2px outset var(--red);
+    }
+    
+    .btn.active {
+        background-color: var(--red);
+        border: 2px outset var(--red);
+        color: white;
+    }
+
+    .show {
+        display: block;
+    }
+    
+@media only screen and (max-width: 1200px) {
+
+    body {
+        display: block;
+    }
+    
+    .container {
+        margin: auto;
+    }
+        
+    .sidebar {
+        position: relative;
+        top: 0;
+        left: 0;
+        display: flex;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+    }
+    
+    .sidebar section {
+        border: none;
+        margin: 0;
+    }
+    
+    .links {
+        display: none;
+    }
+    
+    .footer {
+        display: none;
+    }
+    
+    .top {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        margin: 0;
+        background: black;
+        z-index: 9;
+    }
+    
+}
+    
+    </style>
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="fonts.css">
+        <title>art gallery</title>
+        
+        <!------ TOOLTIPS DO NOT TOUCH PLEASE GOD ------->
+        <style>
+#s-m-t-tooltip{
+	/* basic */
+	max-width: 300px;
+	z-index: 10;
+	margin: 24px 14px 7px 12px;
+	/* style and design */
+    font-family: ms gothic;
+    font-size: 14px;
+	padding:8px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+    border: 1px dashed white;
+	border-radius: 5px;
+    background: black;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script src="https://static.tumblr.com/lspzyz3/xloqk6cgp/jquery.style-my-tooltips.js"></script>
+<script>
+							(function($){
+							$(document).ready(function(){
+							$("[title]").style_my_tooltips({
+							tip_follows_cursor: true,
+							tip_delay_time:100,
+							tip_fade_speed:300,
+							attribute:"title"
+							});
+							});
+							})(jQuery);
+</script>
+        <!------- end tooltips :) -------->
+    </head>
+    
+    <body>
+            
+            <div class="sidebar">
+            
+                <a class="nav" href="home.html">home&#10531;</a>
+            
+                <section>
+            <div id="smt-current" class="smt-current-element" title="switch fonts and pause/play title shake">
+                 <button id="access" class="btn btn-link btn-sm ml-2 small">allow animations and decorative font</button></div>
+            <script>
+                var toggle = document.getElementById("access");
+
+
+toggle.onclick = function() {
+    var currentTheme = document.documentElement.getAttribute("data-theme");
+    var targetTheme = "gothic";
+
+    if (currentTheme === "gothic") {
+        targetTheme = "default";
+    }
+    
+    document.documentElement.setAttribute('data-theme', targetTheme)
+    localStorage.setItem('theme', targetTheme);
+};
+            </script>
+            </section>
+            
+            <section>
+            
+            <div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> everything</button>
+  <button class="btn" onclick="filterSelection('trad')"> traditional</button>
+  <button class="btn" onclick="filterSelection('dig')"> digital</button>
+</div>
+            </section>
+
+            
+            <section class="links">
+            
+            <p>other places you can find my art = <a href="https://www.instagram.com/leviathren/" target="_blank">instagram</a>
+                </p>
+            
+            </section>
+            
+            <section class="top">
+                
+                <a class="center" href="#top">back to top</a>
+            
+            </section>
+        
+        <section class="footer">
+                
+            <p>all art by leviathren. hosted on neocities (c) 2023</p>
+            
+            </section>
+            
+        </div>
+        
+        <div class="container">
+            
+            <div class="header">
+            <img id="top" src="/decor/artgal.png">
+            </div>
+            
+            <p>all images are mine. please do not use without crediting - a link back would be nice!</p>
+        
+        <div class="gallery">
+            
+            <!----- COLUMN 1 ----->
+            
+            <div class="col">
+                
+                <img class="column trad hov smt-current-element" title="The Jaws of Life" src="art/jawsoflife.jpg">
+                
+                
+                    <img class="column dig hov smt-current-element" title="Kier" src="art/kier2.png" >
+            
+                
+                     <img class="column trad hov smt-current-element" title="Eyes" src="/art/eyes.jpg" >
+                
+
+                    <img class="column dig hov smt-current-element" title="Final Responder" src="art/Final_Responder_DTIYS.png" >
+                
+                
+                    <img class="column dig hov smt-current-element" title="In the Garden" src="art/in_the_garden.png" >
+            
+            </div>
+            
+            <!----- COLUMN 2 ----->
+            
+            <div class="col">
+                
+                <img class="column dig hov smt-current-element" title="Come and See" src="art/comeandsee.png">
+            
+                
+                    <img class="column dig hov smt-current-element" title="Blue Line" src="art/Blue_Line.png" >
+                
+                
+                    <img class="column trad hov smt-current-element" title="Self Portrait" src="/art/selfportrait.jpg" >
+                
+                
+                    <img class="column dig hov smt-current-element" title="Greenpath" src="art/Greenpath.png" >
+                
+                
+                    <img class="column dig hov smt-current-element" title="Kier the Blood Fairy" src="art/Kier.png" >
+                
+                
+                    <img class="column dig hov smt-current-element" title="Sykkuno and Corpse" src="art/Sykkuno_And_Corpse.png" >
+            
+            </div>
+            
+            <!----- COLUMN 3 ----->
+            
+            <div class="col">
+                
+                <img class="column trad hov smt-current-element" title="Devils" src="art/devil.jpg">
+            
+                
+                    <img class="column trad hov smt-current-element" title="I Become What I Might Be" src="/art/ibecomewhatiam.jpg" >
+                
+                
+                    <img class="column dig hov smt-current-element" title="Fairy Season" src="art/water.png" >
+                
+                
+                    <img class="column dig hov smt-current-element" title="Don't Dream It" src="art/dontdream.png" >
+                
+                
+                    <img class="column dig hov smt-current-element" title="Hollow Knight" src="art/Hollow_Knight.png" >
+            
+            </div>
+            
+            <!----- COLUMN 4 ----->
+            
+            <div class="col">
+                
+                <img class="column trad hov smt-current-element" title="Eyess" src="art/eyess.jpg">
+            
+                
+                     <img class="column trad hov smt-current-element" title="Space City" src="/art/spacecity.PNG" >
+                
+                
+                    <img class="column dig hov smt-current-element" title="Blue" src="art/Blue.png" >
+                
+                
+                    <img class="column dig hov smt-current-element" title="Jodi" src="art/Jodi.png" >
+                
+                
+                    <img class="column dig hov smt-current-element" title="Mother Miranda" src="art/Mother_Miranda.png" >
+                
+                
+                    <img class="column dig hov smt-current-element" title="Dingy Bathroom" src="art/Dingy.png" >
+            
+            </div>
+            
+
+            </div>
+
+        
+        </div>
+        
+            
+        
+        <script>filterSelection("all") // Execute the function and show all columns
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}</script>
+        
+    </body>
+
+</html>

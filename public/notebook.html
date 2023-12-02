@@ -1,0 +1,622 @@
+<!DOCTYPE HTML>
+<html>
+<!-- 
+html and css resources: https://www.w3schools.com/
+---
+i have my own resource page with a ton of links so feel free to check that out if you're looking for more codes / graphics to decorate your page with / etc: https://doqmeat.neocities.org/other 
+---
+feel free to contact me for any questions! -->
+<head>
+    <link rel="stylesheet" href="fonts.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>notebook</title>
+<link rel="icon" type="image/x-icon" href="IMG-URL-FOR-FAVICON">
+<style>
+	html{ /* feel free to delete this if you just want the normal cursor! */
+cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat947.ani), url(https://cur.cursors-4u.net/nature/nat-10/nat947.png), auto !important;
+    margin-top: 40px;
+    } 
+    
+body{
+background-image: url(/bg/bluestarsbg.gif);
+margin:0px;
+word-wrap:break-word;
+font-size:14px;
+letter-spacing: 2px;
+line-height:1.5;
+word-spacing:2px;
+font-family: vhs; /* ms pgothic is not compatible with safari */
+color:white;
+    }
+    
+    body a {
+        color: #187D5A;
+        cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat948.ani), url(https://cur.cursors-4u.net/nature/nat-10/nat948.png), auto !important;
+        text-decoration: none;
+    }
+    
+    a:hover {
+        color: #45B888;
+        text-decoration: line-through;
+    }
+
+mark{background:lightgoldenrodyellow;}
+
+#wrapper-index{ /* the notebook's cover */
+background: ; 
+background-image: url(/bg/black_paper.webp);
+position:relative;
+margin:auto;
+margin-top:30px;
+margin-bottom:35px;
+width:1108px;
+padding:20px 10px 15px 10px;
+border-radius:20px;
+border:1px ridge #a8a8a8;
+}
+
+/*this is my ugly binder spiral! feel free to remove itor change it. it wont mess the rest of the code! */
+#tab1-wrapper:after, #tab2-wrapper:after, #tab3-wrapper:after, #tab4-wrapper:after, #tab5-wrapper:after, #tab6-wrapper:after, #tab7-wrapper:after, #tab8-wrapper:after{
+content:url(https://doqmeat.neocities.org/!g/web/materials/spiral-test4.png);
+position:absolute;
+z-index:10;
+	 transform: translate(-50%, -50%);
+ -ms-transform: translate(-50%, -50%);
+top:50%;
+left:50%;
+pointer-events:none;
+}
+
+/* PAGES CSS */
+
+.paper{ /*the CSS of both "pages" boxes. you can choose the look of ALL pages here */
+background:url(/bg/blacktiles.jpg);
+background-size: 150px;
+background-repeat: repeat;
+z-index:5;
+position:relative;
+display:inline-block;
+box-sizing:border-box;
+border:1px solid lightblue;
+height:600px;
+}
+
+.left{
+width:490px;
+margin-left:50px;
+margin-right:10px;
+border-radius:10px 0px 0px 10px;
+overflow:hidden;
+}
+.left-in{
+padding:15px 10px 15px 25px;
+height:100%;
+margin-right:15px;
+overflow:auto;
+}
+
+.right{
+padding:15px 45px;
+width:490px;
+margin-left:10px;
+border-radius:0px 10px 10px 0px;
+overflow:auto;
+}
+
+/* you can also customize the look of SPECIFIC TAB pages. take TAB 2 for example: */
+
+#tab2-p{
+font-family:vhs;
+font-size:;
+background:url(/bg/grid-grey.png);
+border-color:;
+}
+
+/* tab buttons CSS stuff */
+
+.tab { /* for the ones on the right */
+	 width:590px;
+	 height:50px;
+	 position:absolute;
+	 transform: translate(-50%, -50%);
+ -ms-transform: translate(-50%, -50%);
+	 rotate:-90deg;
+  top:-10px;
+	 left:-232px;
+    display: none;
+}
+
+.tab2 { /* for the ones on the left */
+	 width:590px;
+	 height:50px;
+	 position:absolute;
+	 transform: translate(-50%, -50%);
+ -ms-transform: translate(-50%, -50%);
+	 rotate:90deg;
+  top:590px;
+	 right:-232px;
+}
+
+.tab button, .tab2 button{ /*this is the look of the TABS! */
+	z-index:1;
+	position:relative;
+	vertical-align:top;
+	width:120px;
+	margin:0px 8px;
+ padding: 10px 0px 30px 0px;
+	font-family: vhs;
+	border:none;
+ cursor: cell;
+	font-size: 18px;
+	transition-duration:0.5s;
+	top:10px;
+	border-radius:10px 10px 0 0;
+	border:1px solid grey;
+}
+
+/* here you can change the color of each individual TAB button*/
+.tab1-b{
+background:#4BB4A6;
+}
+.tab2-b{
+background:#37998B;
+}
+.tab3-b{
+background:#208275;
+}
+.tab4-b{
+background:#14675C;
+}
+.tab5-b{
+background:#4BB4A6;
+}
+.tab6-b{
+background:#37998B;
+}
+.tab7-b{
+background:#208275;
+}
+.tab8-b{
+background:#14675C;
+}
+
+/* hover effect of TAB*/
+.tab button:hover, .tab2 button:hover{
+top:0px;
+cursor: cell;
+}
+
+/* selected TAB effect */
+.tab button.active, .tab2 button.active{
+top:0px;
+cursor: cell;
+box-shadow: 1px 1px 20px 1px grey;}
+
+/* so pages stay hidden */
+.tabcontent {
+  display: none;
+}
+    
+    /* decor pics */
+    
+    img#feesh {
+        position: absolute;
+        right: 10px;
+        top: 4px;
+    }
+    
+    img#jelly {
+        position: absolute;
+        top: 500px;
+    }
+    
+    img#angel {
+        position: absolute;
+        bottom: 20px;
+        left: 30px;
+    }
+    
+    img#circle {
+        position: absolute;
+        right: 20px;
+        z-index: -1;
+    }
+    
+    img#green {
+        display: block;
+        width: 100%;
+    }
+    
+    /* end decor pics */
+    
+    #tab8-p img {
+        float: left;
+        margin-right: 20px;
+    }
+    
+    .btn {
+        margin: 4px;
+        background: transparent;
+        border: none;
+        color: white;
+        font-family: vhs;
+        font-size: 14px;
+        letter-spacing: 2px;
+        transition-duration: 0.3s;
+        letter-spacing: 2px;
+        cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat948.ani), url(https://cur.cursors-4u.net/nature/nat-10/nat948.png), auto !important;
+    }
+
+    /* Add a grey background color on mouse-over */
+    .btn:hover {
+        background-color: #0E6D60;
+        transition-duration: 0.3s;
+        letter-spacing: 3.5px;
+    }
+    
+    /* Add a dark background color to the active button */
+    .btn.active {
+        background-color: #0E6D60;
+        color: white;
+    }
+    
+        .column {
+        display: none;
+    }
+    
+        /* The "show" class is added to the filtered elements */
+    .show {
+        display: block;
+    }
+
+/* custom scrollbar for chrome users, firefox users cant see this */
+  ::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+	background:white;
+	border: 1px solid black;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+	background:white;
+	border: 1px solid black;
+}
+
+::-webkit-scrollbar-track {
+	border-radius: 10px;
+	background: #095D51;
+}
+    
+    #return {
+        display: block;
+        margin: auto;
+        background: transparent;
+        border: none;
+    }
+    
+    button {
+        cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat948.ani), url(https://cur.cursors-4u.net/nature/nat-10/nat948.png), auto !important;
+    }
+    
+</style>
+    
+    <!------ TOOLTIPS DO NOT TOUCH PLEASE GOD ------->
+        <style>
+#s-m-t-tooltip{
+	/* basic */
+	max-width: 300px;
+	z-index: 10;
+	margin: 24px 14px 7px 12px;
+	/* style and design */
+    font-size: 14px;
+	padding:8px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+    border: 1px dashed white;
+	border-radius: 5px;
+    background: black;
+}
+</style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script src="https://static.tumblr.com/lspzyz3/xloqk6cgp/jquery.style-my-tooltips.js"></script>
+<script>
+							(function($){
+							$(document).ready(function(){
+							$("[title]").style_my_tooltips({
+							tip_follows_cursor: true,
+							tip_delay_time:100,
+							tip_fade_speed:300,
+							attribute:"title"
+							});
+							});
+							})(jQuery);
+</script>
+    
+</head>
+<body>
+
+<!-- 	NOTEBOOK wrapper -->
+    
+<div id="wrapper-index">
+	
+	<div class="tab">
+		<button class="tablinks tab4-b" onclick="openTab(event, 'tab4-wrapper')"></button>
+				<button class="tablinks tab3-b" onclick="openTab(event, 'tab3-wrapper')"></button>
+				<button class="tablinks tab2-b" onclick="openTab(event, 'tab2-wrapper')"></button>
+			<button class="tablinks tab1-b" onclick="openTab(event, 'tab1-wrapper')"></button> <!-- 	id="defaultOpen" chooses which tab the notebook will have open when reloaded -->
+	</div>
+	
+	<div class="tab2">
+		<button class="tablinks tab5-b" id="defaultOpen" onclick="openTab(event, 'tab5-wrapper')">welcome</button>
+		<button class="tablinks tab6-b" onclick="openTab(event, 'tab6-wrapper')">mind palace</button>
+		<button class="tablinks tab7-b" onclick="openTab(event, 'tab7-wrapper')">music log</button>
+		<button class="tablinks tab8-b" onclick="openTab(event, 'tab8-wrapper')">plant log</button>
+	</div>
+	
+<!-- 	TAB 1 wrapper -->
+	<div id="tab1-wrapper" class="tabcontent">
+	<div id="tab1-p" class="paper left">
+	<div class="left-in">
+		
+<!-- TAB 1 left paper end divs -->
+		</div></div>
+		<div id="tab1-p" class="paper right">
+            
+	<!-- TAB 1 right paper end divs -->
+	</div> 
+<!-- 	TAB 1 wrapper end div -->
+	</div>
+	
+	<!-- TAB 2 wrapper -->
+	<div id="tab2-wrapper" class="tabcontent">
+	<div id="tab2-p" class="paper left">
+	<div class="left-in">
+        
+			  
+<!-- TAB 2 left paper end divs -->
+		</div>
+<div id="tab2-p" class="paper right">
+    
+        </div>
+	
+<!-- TAB 2 right paper end div -->
+		</div> 
+<!-- TAB 2 wrapper end div -->
+	 </div>
+
+	<div id="tab3-wrapper" class="tabcontent">
+	<div id="tab3-p" class="paper left">
+	<div class="left-in">
+		
+		</div></div>
+	<div id="tab3-p" class="paper right">
+		
+	</div></div>
+
+	<div id="tab4-wrapper" class="tabcontent">
+	<div id="tab4-p" class="paper left">
+	<div class="left-in">
+	
+		
+		</div></div>
+	<div id="tab4-p" class="paper right">
+		
+		
+
+	</div></div>
+	
+
+	<div id="tab5-wrapper" class="tabcontent">
+	<div id="tab5-p" class="paper left">
+ <div class="left-in">
+	<h1>zzzzzzzzzzzzzz</h1>
+     <img id="feesh" src="animals/fishswim.webp" width="200px">
+     <img id="jelly" src="animals/angyjelly.gif" width="50px">
+
+		</div></div>
+	<div id="tab5-p" class="paper right">
+        <img id="angel" src="decor/angelglobe10.gif">
+        <img id="circle" src='decor/circleblack.gif' width="180px"><br>
+        <h1>you've wandered into a journal. read? >>></h1>
+
+	</div></div>
+	
+	<div id="tab6-wrapper" class="tabcontent">
+	<div id="tab6-p" class="paper left">
+	<div class="left-in">
+        <div id="myBtnContainer">
+            <li><button class="btn active" onclick="filterSelection('home')">front page</button></li>
+            <li><button class="btn" onclick="filterSelection('1')">october 2023</button></li>
+
+            </div>
+        
+		</div></div>
+	<div id="tab6-p" class="paper right">
+        <div class="column home">
+            <article>
+            <h2>hello</h2>
+                <p>here are my thoughts. don't mind them too much, they come and go faster than i can write and this is where i try to make them coherent for my future self to read.</p>
+            
+            </article>
+        </div>
+        
+        <div class="column 1">
+            <article>
+                <section>
+                <h2>oct 10, 2023</h2>
+                    <p>revamped the notebook page into a diary and log hub. thinking of how i wanted to set this up took a lot of time because i kept getting distracted watching the youtube videos and movies playing in the rooms i was coding in.</p>
+                </section>
+            </article>
+        </div>
+        
+	</div></div>
+	
+		<div id="tab7-wrapper" class="tabcontent">
+	<div id="tab7-p" class="paper left">
+	<div class="left-in">
+
+		</div></div>
+	<div id="tab7-p" class="paper right">
+        
+
+	</div></div>
+	
+		<div id="tab8-wrapper" class="tabcontent">
+	<div id="tab8-p" class="paper left">
+	<div class="left-in">
+        <h1>this is my greenhouse</h1>
+        <div id="myBtnContainer">
+            <li><button class="btn active" onclick="filterSelection('garden')">entrance</button></li>
+            <li><button class="btn" onclick="filterSelection('g1')">pothos</button></li>
+            <li><button class="btn" onclick="filterSelection('g2')">fern</button></li>
+
+            </div>
+
+		</div></div>
+	<div id="tab8-p" class="paper right">
+        <div class="column garden">
+            <article>
+            <img id="green" src="decor/plantanimated.gif">
+            </article>
+        </div>
+        
+        <div class="column g1">
+            <article>
+            <h2>pothos</h2>
+    
+    <p>
+    Pothos are my longest standing successes when it comes to houseplant keeping.<br><br>
+        <img src="decor/pothosplants.jpg" width="250px">These pothos all came from a single stem of pothos that had about like, 5 leaves max that I got at a plant sale at my college in my freshman year.<br><br>This was actually taken a few years ago now, so there were even more propagations by the time I moved away and left them behind (accidentally).<br><br>I usually just put the cuttings in a jar of water and set it in front of a window or somewhere where it would get decent light and that's it. They thrive like that. This time I've got pothos in soil, which I haven't done before so hopefully I don't manage to over-water them or under-sun them.
+    </p>
+            
+            </article>
+        </div>
+        
+        <div class="column g2">
+            <article>
+            <h1>fern</h1>
+    <p>Ferns are my worst track record when it comes to dying plants. I'm not kidding, every single fern I've had, which is like, 3, has died. I thought I was a pretty decent plant keeper until I started trying to raise ferns.<br><br>I've got mine right next to my humidifier and I think it's getting enough sun; it isn't right by a window that gets a ton of sun but I make sure it's not in too dark of a corner. It already has a bunch of leaves that are darker green in color and they feel a little dry, but not quite crispy.</p>
+            
+            </article>
+        </div>
+        
+
+	</div></div>
+	
+	
+<!-- TEMPLATE for new set of TAB pages
+
+	<div id="tab[num]-wrapper" class="tabcontent">
+	<div id="tab[num]-p" class="paper left">
+ <div class="left-in">
+		text goes here
+
+		</div></div>
+	<div id="tab[num]-p" class="paper right">
+		text goes here
+
+	</div></div>
+
+-->
+
+	
+	
+	
+<!-- NOTEBOOK wrapper end div -->
+	</div>
+    <div id="smt-current">
+         <button id="return" class="smt-current-element" title="go home" onclick="window.location.href='home.html';"><img src="decor/creepyhouse.gif"></button></div>
+    
+    <script>
+                filterSelection("home") 
+                // Execute the function and show all columns
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}</script>
+
+	
+<script>
+function download(){
+    var text = document.getElementById("my-textarea").value;
+    text = text.replace(/\n/g, "\r\n"); // To retain the Line breaks.
+    var blob = new Blob([text], { type: "text/plain"});
+    var anchor = document.createElement("a");
+    anchor.download = "notebook-page.txt";
+    anchor.href = window.URL.createObjectURL(blob);
+    anchor.target ="_blank";
+    anchor.style.display = "none"; // just to be safe!
+    document.body.appendChild(anchor);
+    anchor.click();
+    document.body.removeChild(anchor);
+ }
+	
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+    
+    
+
+    
+</body>
+</html>

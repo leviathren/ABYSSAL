@@ -1,0 +1,313 @@
+<html>
+
+<style>
+    
+    html {
+        background-image: url(bg/gatebg.png);
+        background-size: 150px;
+        cursor: url(animals/battiny.gif), default;
+    }
+    
+    html a {
+        cursor: url(animals/flappybat.gif), default;
+    }
+    
+    main {
+        width: 600px;
+        min-height: 400px;
+        margin: auto;
+        background: black;
+        position: relative;
+        border: 8px double var(--grey);
+        border-radius: 20px;
+    }
+    
+    nav {
+        font-family: glitch;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1em;
+        margin: 20px;
+        border: 20px solid;
+        border-image: url(decor/skullchain.webp) 30;
+    }
+    
+    nav a {
+        color: white;
+        text-decoration: none;
+        transition-duration: 0.3s;
+        letter-spacing: 2;
+    }
+    
+    nav a:hover {
+        transition-duration: 0.3s;
+        transform: scale(1.1);
+    }
+    
+    nav img {
+        vertical-align: middle;
+    }
+    
+    button {
+        font-family: glitch;
+        background: transparent;
+        border: none;
+        color: white;
+        font-size: 1em;
+        letter-spacing: 2px;
+        text-align: center;
+        text-transform: uppercase;
+        transition-duration: 0.3s;
+    }
+    
+    button:hover {
+        cursor: url(animals/flappybat.gif), default;
+        transition-duration: 0.3s;
+        transform: scale(1.1);
+    }
+    
+    .board {
+        min-height: 150px;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .column {
+        display: none;
+    }
+
+    .show {
+        display: block;
+    }
+    
+    .stamp {
+        -webkit-transition: .1s ease-in-out;
+	   transition: .1s ease-in-out;
+    }
+    
+    .stamp:hover {
+        -webkit-transform: scale(1.05);
+	   transform: scale(1.05);
+    }
+    
+    .stamp2 {
+        max-height: 56px;
+        -webkit-transition: .1s ease-in-out;
+	   transition: .1s ease-in-out;
+    }
+    
+    .stamp2:hover {
+        -webkit-transform: scale(1.05);
+	   transform: scale(1.05);
+    }
+    
+    .btn {
+        max-width: 88px;
+        -webkit-transition: .1s ease-in-out;
+	   transition: .1s ease-in-out;
+    }
+
+    .btn:hover {
+        -webkit-transform: scale(1.05);
+	   transform: scale(1.05);
+    }
+    
+    .blink {
+        max-width: 150px;
+        -webkit-transition: .1s ease-in-out;
+	   transition: .1s ease-in-out;
+    }
+    
+    .blink:hover {
+        -webkit-transform: scale(1.05);
+	   transform: scale(1.05);
+    }
+    
+    @media only screen and (max-width: 750px) {
+        
+        nav a, button {
+            display: block;
+            margin: auto;
+        }
+        
+        nav img {
+            display: none;
+        }
+
+        main {
+            width: auto;
+        }
+    }
+
+    </style>
+
+<head>
+    
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="fonts.css">
+    
+    <title>collections</title></head>
+
+<body>
+    
+    <main>
+        
+        <nav>
+            <div id="myBtnContainer">
+                <a href="home.html">home</a>
+                <img src="decor/batwingcandle.webp">
+                <button class="button active" onclick="filterSelection('stamps')">stamps</button>
+                <img src="decor/batwingcandle.webp">
+                <button class="button" onclick="filterSelection('buttons')">buttons</button>
+                <img src="decor/batwingcandle.webp">
+                <button class="button" onclick="filterSelection('blinkies')">blinkies</button>
+            </div>
+        
+        </nav>
+        
+        <div class="board">
+
+            <div class="column stamps">
+                
+                <img class="stamp" src="stamps/babymetal.png">
+                <img class="stamp" src="stamps/blackcats.gif">
+                <img class="stamp" src="stamps/BLM.png">
+                <img class="stamp" src="stamps/bodyhorror.png">
+                <img class="stamp" src="stamps/ceilingcat.gif">
+                <img class="stamp" src="stamps/cranberries.gif">
+                <img class="stamp" src="stamps/darkness.jpg">
+                <img class="stamp" src="stamps/error.gif">
+                <img class="stamp" src="stamps/error2.gif">
+                <img class="stamp" src="stamps/eyes.gif">
+                <img class="stamp" src="stamps/givemehorror.png">
+                <img class="stamp" src="stamps/graveyard.png">
+                <img class="stamp" src="stamps/greentea.gif">
+                <img class="stamp" src="stamps/hillhouse.png">
+                <img class="stamp" src="stamps/horrortime.png">
+                <img class="stamp" src="stamps/ilovebats.gif">
+                <img class="stamp" src="stamps/katebush.jpg">
+                <img class="stamp" src="stamps/knife.png">
+                <img class="stamp" src="stamps/mcr.png">
+                <img class="stamp" src="stamps/panslabyrinth.jpg">
+                <img class="stamp2" src="stamps/screen.gif">
+                <img class="stamp" src="stamps/sweenytodd.png">
+                <img class="stamp" src="stamps/tobyfox.gif">
+                <img class="stamp" src="stamps/whatdoyoufeel.gif">
+                
+            
+            </div>
+            <div class="column buttons">
+                
+                <img class="btn" src="btns/akira.png">
+                <img class="btn" src="btns/anarchynow.gif">
+                <img class="btn" src="btns/anticodeandrun.gif">
+                <img class="btn" src="btns/antinftbtn.webp">
+                <img class="btn" src="btns/arizonagreentea.gif">
+                <img class="btn" src="btns/axolotl.gif">
+                <img class="btn" src="btns/beecage.gif">
+                <img class="btn" src="btns/best_free.gif">
+                <img class="btn" src="btns/bestdesktop.gif">
+                <img class="btn" src="btns/bestviewed1920.jpg">
+                <img class="btn" src="btns/bestviewedbtn.gif">
+                <img class="btn" src="btns/bestvieweddesktop.gif">
+                <img class="btn" src="btns/bestviewedmonitor.gif">
+                <img class="btn" src="btns/bookmarkthispage.gif">
+                <img class="btn" src="btns/brackets.gif">
+                <img class="btn" src="btns/budgie.gif">
+                <img class="btn" src="btns/bunbrowser.gif">
+                <img class="btn" src="btns/clubpenguinbtn.gif">
+                <img class="btn" src="btns/cssawesome.png">
+                <img class="btn" src="btns/darkrabbithole.jpg">
+                <img class="btn" src="btns/death.gif">
+                <img class="btn" src="btns/delete-twitterbtn.gif">
+                <img class="btn" src="btns/discord.gif">
+                <img class="btn" src="btns/dontfeedai.gif">
+                <img class="btn" src="btns/email.gif">
+                <img class="btn" src="btns/espeon.gif">
+                <img class="btn" src="btns/eyesbtn.gif">
+                <img class="btn" src="btns/freestuffcentral.gif">
+                <img class="btn" src="btns/gaypride.gif">
+                <img class="btn" src="btns/gaywomenbtn.gif">
+                <img class="btn" src="btns/go2hell.gif">
+                <img class="btn" src="btns/handcodebtn.gif">
+                <img class="btn" src="btns/horrorsearch.gif">
+                <img class="btn" src="btns/hostedonneocities.gif">
+                <img class="btn" src="btns/ilikecomputer.png">
+                <img class="btn" src="btns/ilovehorror.gif">
+                <img class="btn" src="btns/internetarch.jpg">
+                <img class="btn" src="btns/learnhtml.gif">
+                <img class="btn" src="btns/lesbianbtn.png">
+            
+            </div>
+            
+            <div class="column blinkies">
+                
+                <img class="blink" src="blinkies/fuckterfs.gif">
+                <img class="blink" src="blinkies/lesbianvisibility.gif">
+                <img class="blink" src="blinkies/monstersofthedeep.gif">
+                <img class="blink" src="blinkies/restricted.gif">
+                <img class="blink" src="blinkies/runbyales.gif">
+                <img class="blink" src="blinkies/scarymovies.gif">
+                <img class="blink" src="blinkies/takethedive.gif">
+                
+            </div>
+            
+        </div>
+        
+    </main>
+    
+    <!------ scripts ----->
+    <script>filterSelection("stamps") 
+            // Execute the function and show all columns
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("button");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}</script>
+    
+    </body>
+
+</html>

@@ -1,0 +1,384 @@
+:root,[data-theme="default"] {
+    --heading: october;
+    --font: midnight;
+}
+
+[data-theme="1"] {
+    --heading: haunting;
+    --font: angel;
+}
+
+[data-theme="2"] {
+    --heading: ms gothic;
+    --font: ms gothic;
+}
+
+::-webkit-scrollbar {
+    background-color: black;
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--red);
+}
+
+html {
+    background: black;
+    background-image: url(bg/bloodsplatter.gif);
+    height: 100vh;
+    cursor: url(https://cur.cursors-4u.net/holidays/hol-1/hol35.cur), auto !important;
+}
+
+body {
+    color: white;
+    font-family: var(--font);
+    font-size: 1em;
+    letter-spacing: 2;
+}
+
+img#bat {
+    position: absolute;
+    right: 0;
+    z-index: 2;
+}
+
+img#butterfly {
+    position: absolute;
+    height: 200px;
+}
+
+img#blood {
+    position: absolute;
+    height: 300px;
+    bottom: 30px;
+    left: 12%;
+    z-index: -1;
+}
+
+img#moon {
+    position: absolute;
+    height: 250px;
+    right: 40px;
+    top: 40px;
+}
+
+img#candleabra {
+    display: block;
+    margin: auto;
+}
+
+img#gothgirl {
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+}
+
+img#house {
+    width: 100%;
+    max-width: 200px;
+    margin: 20px 0;
+}
+
+img#kiss {
+    display: block;
+    margin: auto;
+    max-width: 200px;
+}
+
+img#creepyhouse {
+    position: absolute;
+    width: 160px;
+    left: 9%;
+    top: 19%;
+    filter: brightness(50%) hue-rotate(200deg) contrast(140%) saturate(50%);
+}
+
+img#batwleft {
+    width: 25px;
+}
+
+img#batwright {
+    width: 25px;
+    transform: scaleX(-1);
+}
+
+img#pumpkin {
+    position: absolute;
+    left: 80px;
+    bottom: 150px;
+    width: 120px;
+    transform: rotate(-20deg);
+}
+
+/* main */
+
+main {
+    background: black;
+    padding: 30px;
+    height: auto;
+    width: 50%;
+    margin: auto;
+    position: relative;
+    display: flex;
+}
+
+.col1 {
+    display: block;
+    width: 30%;
+    min-width: 210px;
+    text-align: center;
+}
+
+nav {
+    display: block;
+    border: 3px double var(--red);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+button#font {
+    display: block;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    border: 3px double var(--red);
+    border-radius: 5px;
+}
+
+li {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+}
+
+.bullet {
+    width: 20px;
+    height: 20px;
+    margin-right: 2px;
+}
+
+.btn {
+    background: transparent;
+    border: none;
+    font-family: var(--heading);
+    font-size: 1.1em;
+    letter-spacing: 1.5;
+    text-decoration: none;
+    text-align: left;
+    padding-left: 4px;
+    color: var(--redlink);
+    cursor: url(https://cur.cursors-4u.net/holidays/hol-1/hol64.ani), url(https://cur.cursors-4u.net/holidays/hol-1/hol64.png), auto !important;
+}
+
+/* Add a grey background color on mouse-over */
+.btn:hover {
+    font-style: italic;
+    color: var(--redlinkhov);
+}
+
+/* Add a dark background color to the active button */
+.btn.active {
+    background-color: var(--red);
+    color: white;
+}
+
+.column {
+    display: none;
+}
+
+    /* The "show" class is added to the filtered elements */
+.show {
+    display: block;
+}
+
+.stamps img {
+    max-width: 102px;
+}
+
+.col2 {
+    display: block;
+    margin-left: 20px;
+    width: 100%;
+}
+
+.btnbox {
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9) ), url(btns/eyebtnold2.gif);
+    height: 31px;
+    overflow: hidden;
+}
+
+.btnbox img {
+    height: 31px;
+}
+
+.contents {
+    position: fixed;
+    display: block;
+    left: 78%;
+    max-width: 200px;
+    padding: 10px;
+    background: black;
+    border: 3px double var(--red);
+    font-family: var(--heading);
+    font-size: 1.1em;
+}
+
+a.top {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px;
+    width: 60%;
+    background: var(--red);
+    color: white;
+    text-decoration: none;
+    border: 4px double black;
+}
+
+a.top:hover {
+    background: black;
+    color: var(--redlinkhov);
+    border: 4px double var(--red); 
+    transition: ease background 0.5s;
+}
+
+article {
+    display: block;
+    margin: 20px;
+}
+
+section {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+section.left img {
+    float: left;
+    margin: 20px;
+}
+
+section.right img {
+    float: right;
+    margin: 20px;
+}
+
+blockquote {
+    background-image: url(bg/ghost.png);
+    background-size: 100px;
+    padding: 10px;
+    border: 3px double var(--grey);
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flex img {
+    max-width: 150px;
+    margin: 10px;
+    -webkit-transition: .1s ease-in-out;
+	transition: .1s ease-in-out;
+}
+
+.flex img:hover {
+    -webkit-transform: scale(1.08);
+	transform: scale(1.08);
+}
+
+.button {
+    max-height: 31px;
+}
+
+.divider {
+    margin: 50px 0;
+}
+
+.center {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul.tiny {
+    font-size: 12px;
+    color: var(--text);
+    margin-left: -20px;
+}
+
+h1 {
+    font-family: var(--heading);
+    font-size: 1.6em;
+    letter-spacing: 4px;
+    margin: 20px 0px;
+}
+
+h2 {
+    font-family: var(--heading);
+    font-size: 1.2em;
+    letter-spacing: 4px;
+}
+
+h3 {
+    font-family: var(--heading);
+    font-size: 1em;
+    letter-spacing: 4px;
+}
+
+p {
+    margin: 20px 0px;
+    letter-spacing: 1.5;
+    line-height: 1.5;
+}
+
+a {
+    color: var(--redlink);
+    cursor: url(https://cur.cursors-4u.net/holidays/hol-1/hol35.cur), auto !important;
+}
+
+a:hover {
+    color: var(--redlinkhov);
+    cursor: url(https://cur.cursors-4u.net/holidays/hol-1/hol64.ani), url(https://cur.cursors-4u.net/holidays/hol-1/hol64.png), auto !important;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 750px) {
+    
+    main {
+        width: auto;
+        display: block;
+    }
+    
+    .col1 {
+        width: auto;
+        margin: auto;
+    }
+    
+    #house {
+        display: none;
+    }
+    
+    .stamps {
+        display: none;
+    }
+    
+    img#kiss {
+        display: none;
+    }
+    
+    .col2 {
+        width: auto;
+        margin: auto;
+    }
+}

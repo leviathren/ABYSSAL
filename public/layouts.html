@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <style>
+        
+::-webkit-scrollbar {
+    background-color: black;
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #1a536f;
+}
+
+::selection {
+    background: #1a536f;
+    color: black;
+}
+        
+        body {
+            background: url(bg/twinklingstarsbg.gif);
+            margin: 0;
+            color: white;
+            font-family: Galmuri14, sans-serif;
+            scrollbar-color: #1a536f black;
+            scrollbar-width: thin;
+        }
+        
+        main {
+            background: url(bg/bluestarsbg.gif);
+            padding-bottom: 40px;
+        }
+        
+        /* parallax stuff */
+        
+        .parallax {
+            height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+            perspective: 1px;
+        }
+
+        .parallax-layer {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        .layer1 {
+            background: url(bg/twinklingstarsbg.gif);
+            transform: translateZ(-6px) scale(7);
+            height: 210vh;
+        }
+
+        .layer2 {
+            transform: translateZ(0);
+            width: 900px;
+            height: auto;
+            margin: auto;
+            box-shadow: 0 0 80px 30px black;
+            position: relative;
+        }
+        
+        /* end parallax stuff */
+        
+        nav {
+            text-align: center;
+            padding: 40px 20px 0;
+        }
+        
+        a {
+            color: white;
+            transition: 0.5s;
+        }
+        
+        a:hover {
+            color: #4aabdb;
+            letter-spacing: 2;
+        }
+        
+        img {
+            box-shadow: 0 0 20px #1a536f;
+        }
+        
+       .main {
+            display: block;
+            margin: auto;
+            width: 800px;
+        }
+        
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .thumb {
+            width: 380px;
+            margin: 20px;
+        }
+        
+        .hover {
+            transition: 0.5s ease;
+        }
+        
+        .hover:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 25px #306f8e;
+        }
+        
+        .center {
+            display: block;
+            margin: auto;
+            text-align: center;
+        }
+        
+        .div {
+            box-shadow: none;
+            margin: 40px auto;
+        }
+        
+        .oldbtn img {
+            display: block;
+            margin: 30px auto 10px;
+        }
+        
+        figcaption {
+            font-size: 12px;
+            width: 400px;
+            margin: auto;
+            text-align: center;
+        }
+        
+        h2 {
+            margin: 40px;
+            font-size: 1.4em;
+            text-transform: uppercase;
+        }
+        
+        h3 {
+            margin: 40px 40px 0;
+            font-size: 1.1em;
+            text-transform: uppercase;
+        }
+        
+        h3::before {
+            content: '- ';
+        }
+        
+        h3::after {
+            content: ' -';
+        }
+        
+        p {
+            margin: 40px 60px 0;
+            font-size: 1em;
+        }
+        
+        @media only screen and (max-width: 750px) {
+            
+            .layer2 {
+                width: auto;
+            }
+            
+            .main {
+                width: 80%;
+            }
+            
+            .thumb {
+                width: 80%;
+            }
+            
+            figcaption {
+                width: 80%;
+            }
+    }
+    
+    </style>
+
+    <head>
+    
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galmuri/dist/galmuri.css">
+        
+        <title>site evolutions</title>
+        
+    </head>
+
+    <body>
+        <div class="parallax">
+        
+        <div class="parallax-layer layer1"></div>
+    
+        <div class="parallax-layer layer2">
+        <main>
+            
+            <nav id="top">
+            
+            <a href="home.html">home</a>
+        
+            </nav>
+            
+            <p>I like changing my layouts frequently and evolving my site to follow where I am in my webweaving journey, but I don't want to lose what it used to look like, so, layout archive!</p>
+            
+            <section>
+                <h2>nov 9, 2023 to present</h2>
+                <img class="main hover" src="decor/noir.png">
+                
+                <h3>various themes</h3>
+                <div class="flex">
+                <img class="thumb hover" src="decor/forest.png">
+                <img class="thumb hover" src="decor/golden.png">
+                <img class="thumb hover" src="decor/pink.png">
+                <img class="thumb hover" src="decor/skyblue.png">
+                </div>
+        
+                <p>Current theme! I felt bored with my last layout and wanted to do something that felt more interactive and reminiscent of "old web", so I made the old boxes of content into draggable 'windows' that you could open and close and the overall layout is supposed to mimic a desktop. I stuck with the old window styles with the outset borders and everything, but went with more modern color schemes and fun themes rather than the traditional windows grey and blue. (If you have a favorite theme, lmk bc I love to know those things >:) ).</p>
+                <p>In much contrast to my last layout, I wanted this one to feel more exploratative, where you only get the important stuff, or the basics, at face value and you have to go searching if you wanted to find other fun stuff. Scavenger hunt. I like that there's less stuff on the page, and things feel more confined against the mostly empty background, so it feels more expanse-y and void. But, you could quickly clutter the screen with the navigation 'windows' if you wanted to. Plus, since you can drag and open/close every 'window', you can really customize how <i>you</i> want my home page to look: super busy and cluttered? minimal? busy but organized in neat columns? Sometimes I just sit around and drag the 'windows' around mindlessly for fun. Also, with the super simple theme-switching script I'm using, it's stupid easy to make new themes so I think I might get a little silly and go nuts with how many different themes I make from now on. Expect more, as of Nov 11, 2023.</p>
+            </section>
+            
+            <img class="center div" src="decor/moonstars.gif">
+            
+            <section>
+                <h2>october 2023 to nov 9, 2023</h2>
+                <img class="main hover" src="decor/plain.png">
+                
+                <h3>various themes</h3>
+                <div class="flex">
+                <img class="thumb hover" src="decor/gothic.png">
+                <img class="thumb hover" src="decor/rock.png">
+                <img class="thumb hover" src="decor/cyber.png">
+                </div>
+                
+                <p>With this layout I tried making things as intuitive and easy-to-find as possible. I liked having a main box with a sort of intro in it, and then a directory to the left and miscellaneous fun things on the right. Everything on the home page was visible and you didn't need to do any scrolling, and I liked that it felt like it was all laid out on a table or something where you didn't need to go looking for stuff. Little work to navigate the site. The most clicking and scrolling around you had to do was just clicking the links in the directory/navigation section.I wanted it to look kind of like newspapers with the main bulk of the page in the center with the little-er things off to the side.</p>
+            </section>
+            
+            <img class="center div" src="decor/moonstars.gif">
+            
+            <section>
+                
+                <h2>Sept to nov 29, 2023</h2>
+                <img class="main hover" src="decor/indexss.png">
+                
+                <p>This is how my index/landing page has looked basically since the beginning whenever I first made a splash page.</p>
+            
+            </section>
+            
+            <img class="center div" src="decor/moonstars.gif">
+            
+            <section>
+                <h2>Sept to oct(?) 2023</h2>
+                <img class="main hover" src="decor/pierlight.png">
+                
+                <p>I don't have a screenshot of my site at the time, but this was my very first background. I drew it myself! The layout was fairly similar to the next one (see above) where there was a larger middle column and two side columns. I think I started out with just one big column and then a narrower side column on the right, but I ended up wanting people to have to scroll less to see all the stuff at the bottom of the single side column.</p>
+                <p>Lore drop! Did you know, ABYSSAL used to be called Levi's Seaside Inn? I wanted to make an internet 'outpost' where 'travellers', that would be you, could make a stop at my page like you would at a cafe, bar, or inn. I felt like there were already plenty of internet cafe's that were incredibly well done, and I have an interest in the sea and seafaring, so a seaport sort of page was perfect. I still kept the sea motif, hence ABYSSAL (the abyssal plains, the abyssal zone, etc. in the oceans), but the inn part is a little lacking as of Nov 11, 2023, and I would like to re-incorporate it sometime.</p>
+                <figure class="oldbtn"><img class="hover" src="btns/seasideinnbtn.png"><figcaption>Wow! You found my old site button! As you can see, I very much enjoyed the black and teal blue color palette. The button was supposed to look like those signs that hang above taverns and inns and such. Please do not use this to link back to here though, it no longer is an accurate representation of what this site is!</figcaption></figure>
+                <p>Fun fact, there was a little switch I drew on the page, and when clicked, it would swap the background for one that looked exactly like this one but the light post would be turned off. (Actually, I think off was default and therefore it would switch on, but it was a toggle so you could flip the switch as much as you'd like) I can't find the 'off' version of the image for some reason, but trust. I was estatic when I finally got it working, because at the time my knowledge of html/css/java was very basic and I only had experience messing with tumblr themes.</p>
+            </section>
+    
+            <p><a href="#top">BACK TO TOP</a></p>
+            
+        </main>
+        </div>
+        </div>
+    </body>
+
+</html>

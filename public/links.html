@@ -1,0 +1,402 @@
+<html>
+
+<style>
+    
+::-webkit-scrollbar {
+    background-color: black;
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--spaceblue);
+}
+    
+::-moz-scrollbar {
+    background-color: black;
+    width: 5px;
+    height: 5px;
+}
+
+::-moz-scrollbar-thumb {
+    background-color: var(--spaceblue);
+}
+    
+    @import url('https://cdn.jsdelivr.net/npm/galmuri/dist/galmuri.css');
+    
+    html {
+        background-image: url(bg/bluestarsbg.gif);
+        background-attachment: fixed;
+        cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat947.ani), url(https://cur.cursors-4u.net/nature/nat-10/nat947.png), auto !important;
+    }
+    
+    html a {
+        cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat949.ani), url(https://cur.cursors-4u.net/nature/nat-10/nat949.png), auto !important;
+    }
+    
+    .container {
+        display: flex;
+        width: 800px;
+        height: 100vh;
+        margin: auto;
+    }
+    
+    nav {
+        display: block;
+        width: 200px;
+        min-height: 400px;
+        background: black;
+        margin: auto;
+        border: 4px double var(--grey);
+    }
+    
+    #myBtnContainer {
+        margin: 10px 0;
+    }
+    
+    .btn {
+        margin: 4px;
+        background: transparent;
+        border: none;
+        color: white;
+        font-family: vhs;
+        font-size: 12px;
+        letter-spacing: 2;
+        cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat949.ani), url(https://cur.cursors-4u.net/nature/nat-10/nat949.png), auto !important;
+    }
+
+    .btn:hover {
+        background-color: #106686;
+    }
+    
+    .btn.active {
+        background-color: #106686;
+        color: white;
+    }
+    
+    main {
+        font-family: Galmuri14, sans-serif;
+        display: block;
+        width: 600px;
+        min-height: 400px;
+        background: black;
+        margin: auto;
+        border: 4px double var(--grey);
+        color: white;
+    }
+    
+    .column {
+        display: none;
+    }
+    
+    .show {
+        display: block;
+    }
+    
+    h1 {
+        font-size: 1.5em;
+        letter-spacing: 2;
+        margin: 30px;
+    }
+    
+    h2 {
+        font-size: 1.1em;
+        letter-spacing: 2;
+        margin: 20px 0 0 30px;
+    }
+    
+    h3 {
+        font-size: 0.8em;
+        letter-spacing: 2;
+        margin: 20px 0 0 30px;
+    }
+    
+    h3::before {
+        content: '\2937  ';
+    }
+    
+    p {
+        font-family: vhs;
+        font-size: 1em;
+        letter-spacing: 2;
+        margin: 30px;
+        line-height: 2;
+    }
+    
+    span {
+        color: var(--grey);
+        font-size: 14px;
+        font-style: italic;
+    }
+    
+    ul {
+        font-family: vhs;
+        letter-spacing: 2;
+        line-height: 2;
+    }
+    
+    main ul {
+        margin-left: 10px;
+    }
+    
+    a {
+        color: var(--blue);
+    }
+    
+    a:hover {
+        font-style: italic;
+    }
+    
+    @media only screen and (max-width: 750px) {
+        
+        .container {
+            display: block;
+            width: auto;
+        }
+        
+        nav {
+            min-height: auto;
+            width: auto;
+        }
+        
+        #myBtnContainer {
+            display: block;
+            justify-content: center;
+        }
+
+        main {
+            width: auto;
+        }
+    }
+    
+    </style>
+
+<head>
+    
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galmuri/dist/galmuri.css">
+    
+    <title>links out</title></head>
+
+<body>
+    
+    <div class="container">
+        
+        <nav>
+            
+        <div id="myBtnContainer">
+            <li><a href="home.html"><button class="btn">home</button></a></li>
+            <li><button class="btn active" onclick="filterSelection('home')">landing</button></li>
+            <li><button class="btn" onclick="filterSelection('freq')">sites i frequent</button></li>
+            <li><button class="btn" onclick="filterSelection('read')">web culture</button></li>
+            <li><button class="btn" onclick="filterSelection('access')">accessability</button></li>
+                <li><button class="btn" onclick="filterSelection('code')">resources</button></li>
+                <li><button class="btn" onclick="filterSelection('credits')"> credits</button></li>
+
+            </div>
+        
+        </nav>
+        
+        <main>
+            
+            <div class="column home">
+                <h1>Links to other pages across the web!</h1>
+                <p>not complete yet - be sure to come back again later!<br>this is a collection of links i want to save.</p>
+            </div>
+            
+            <div class="column freq">
+                <h1>Sites that I keep going back to because they're so cool/fun/useful/pretty</h1>
+                <ul>
+                    <li><a href="https://32bit.cafe/" target="_blank">32-bit.cafe</a><span> "a community [...] helping to make the personal web fruitful and bountiful again, full of self-expression and removing the capitalistic drive out of it"</span></li>
+                    <li><a href="https://sleepy-sage.neocities.org/movies" target="_blank">horror corner</a> by sleepy sage<span> all things horror</span></li>
+                    <li><a href="https://hillhouse.neocities.org/shrines/halloween/horror" target="_blank">get horrified!</a> by hill house<span> lots of horror media</span></li>
+                    <li><a href="https://artwork.neocities.org/halloween" target="_blank">A R T W O R K</a> by artwork<span> lots of halloween graphics</span></li>
+                </ul>
+            </div>
+            
+            <div class="column read">
+                <h1>Articles, blog posts, etc. about web history and culture that I enjoyed reading</h1>
+                <ul>
+                    <li><a href="https://yesterweb.org/" target="_blank">the yesterweb manifesto</a><span> what the web revival was about and yesterweb's goals, organization, and community</span></li>
+                    <li><a href="https://www.computerhistory.org/timeline/computers/" target="_blank">history of computers|timeline</a></li>
+                    <li><a href="https://neonaut.neocities.org/cyber/crypt/" target="_blank">cyber mauseoleums</a> by neonaut<span> the preservation of cyber ghosts and the argument against deletion</span></li>
+                </ul>
+            </div>
+            
+            <div class="column access">
+                <h1>Reading material and resources on digital accessability</h1>
+                <p>i do not have physical disabilities myself so i cannot provide first-hand insights to accessability, but i will compile what i find on the internet that i find helpful here.</p>
+                <ul>
+                    <li><a href="https://brucelawson.co.uk/2018/the-practical-value-of-semantic-html/" target="_blank">the practical value of semantic html</a> by bruce lawson</li>
+                    <li><a href="https://tink.uk/understanding-semantics/" target="_blank">understanding semantics</a> by leonie watson</li>
+                    <li><a href="https://www.smashingmagazine.com/2018/12/voiceover-screen-reader-web-apps/" target="_blank">i used the web for a day using a screen reader</a> by chris ashton</li>
+                <li><a href="https://solaria.neocities.org/accessibility#sem" target="_blank">web accessability</a> by solaria</li>
+                
+                </ul>
+            </div>
+            
+            <div class="column code">
+                <h1>Stuff for your sites</h1>
+                <h2>general coding help and tutorials</h2>
+                <ul>
+                    <li><a href="https://www.w3schools.com/html/html_intro.asp" target="_blank">introduction to HTML</a></li>
+                    <li><a href="https://www.w3schools.com/" target="_blank">w3schools</a></li>
+                    <li><a href="https://32bit.cafe/" target="_blank">32-bit.cafe</a><span> small web community with lots of resources</span></li>
+                    <li><a href="https://solaria.neocities.org/gallerytut" target="_blank">simple gallery</a> guide by solaria</li>
+                <li><a href="https://www.w3schools.com/howto/howto_js_portfolio_filter.asp" target="_blank">gallery with filtering</a> by w3schools</li>
+                    <li><a href="https://keithclark.co.uk/articles/pure-css-parallax-websites/" target="_blank">parallax effect</a> by keith clark<span> make different elements scroll at different speeds</span></li>
+                    <li><a href="https://youtu.be/7JAmKyIzUmI?si=sZml6L0cdOock0k0" target="_blank">how to upload to neocities video</a></li>
+                </ul>
+                <h2>helpful tools</h2>
+                <ul>
+                    <li><a href="https://www.htmlsymbols.xyz/" target="_blank">html symbol codes</a></li>
+                    <li><a href="https://webaim.org/resources/contrastchecker/" target="_blank">webAIM: contrast checker</a></li>
+                    <li><a href="https://sadgrl.online/projects/layout-builder/" target="_blank">layout builder</a> by sadness</li>
+                    <li><a href="https://neonaut.neocities.org/brain/image-compression" target="_blank">become a compression sorcerer</a> by neonaut<span> all about image compression, with links to tools</span></li>
+                    <li><a href="https://tinypng.com/" target="_blank">tinypng</a><span> free image compression service</span></li>
+                    <li><a href="https://www.iloveimg.com/" target="_blank">iloveimg</a><span> free bulk editor, has a great image compression tool</span></li>
+                </ul>
+                <h2>graphics</h2>
+                <ul>
+                    <li><a href="https://favicons.neocities.org/" target="_blank">pixel heaven</a></li>
+                    <li><a href="https://pixelsafari.neocities.org/" target="_blank">coco's pixel safari</a></li>
+                    <li><a href="https://pixels.crd.co/#pixels" target="_blank">pixels.crd.co</a><span> favicons organized by color</span></li>
+                    <li><a href="http://www.acasystems.com/en/button-maker/" target="_blank">ACA 80x15 button maker</a></li>
+                    <li><a href="https://www.cursors-4u.com/" target="_blank">cursors-4u</a><span> big bank of unique and custom cursors</span></li>
+                    <li><a href="https://gifcities.org/" target="_blank">gifcities</a><span> library of gifs</span></li>
+                    <li><a href="https://horrorgifs.neocities.org/" target="_blank">horrorgifsneocities</a><span> collection of horror gifs and images</span></li>
+                    <li><a href="https://sushi-pixels.neocities.org/" target="_blank">sushi pixels neocities</a><span> sushi's collection of pixels</span></li>
+                </ul>
+                <h2>fun code and scripts</h2>
+                <ul>
+                    <li><a href="https://webneko.net/" target="_blank">webneko</a><span> a little cat that chases your cursor around</span></li>
+                    <li><a href="http://www.mf2fm.com/rv/dhtmlblockrain.php">block rain</a> by rv</li>
+                    <li><a href="https://pastebin.com/PiDgrv3J">music player</a> by adilene (<a href="https://github.com/sayantanm19/js-music-player/blob/master/index.html">source code</a> by sayantanm19)</li>
+                    <li><a href="https://dimden.dev/moonwidget/" target="_blank">moon widget</a> by dimden</li>
+                    <li><a href="https://www.cutercounter.com">free hit counter</a> by cutercounter</li>
+                </ul>
+            
+            </div>
+            
+            <div class="column credits">
+                <h1>Code, templates, and graphics I've used on my site!</h1>
+                
+                <h2>fonts</h2>
+                
+                <h3>pixel/cyber</h3>
+                <ul>
+                <li><a href="https://github.com/Quiple/Galmuri" target="_blank">galmuri</a> by quiple<span> nintendo DS-inspired font</span></li>
+                    <li><a href="https://www.dafont.com/easvhs.font" target="_blank">easvhs</a> by rurr</li>
+                    <li>lucida console</li>
+                <li><a href="https://www.dafont.com/doctor-glitch.font" target="_blank">doctor glitch</a> by woodcutter</li>
+                </ul>
+                <h3>horror</h3>
+                <ul>
+                <li><a href="https://www.dafont.com/haunting-attraction.font" target="_blank">haunting attraction</a> by sinister fonts</li>
+                    <li><a href="https://www.dafont.com/midnight-minutes.font" target="_blank">midnight minutes</a> by rvst</li>
+                    <li><a href="https://www.dafont.com/october-crow.font" target="_blank">october crow</a> by sinister fonts</li>
+                    <li><a href="https://www.dafont.com/who-asks-satan.font" target="_blank">who asks satan</a> by font monger</li>
+                    <li><a href="https://www.dafont.com/bad-coma.font" target="_blank">bad coma</a> by imagex</li>
+                </ul>
+                
+                <h3>type/other</h3>
+            <ul>
+                <li><a href="https://www.dafont.com/angel-wish.font" target="_blank">angel wish</a> by stringlabs</li>
+                <li><a href="https://www.dafont.com/jmh-typewriter.font" target="_blank">jmh typewriter</a> by jorge moron</li>
+                <li><a href="https://www.dafont.com/rock-of-times.font" target="_blank">rock of times</a> by woodcutter</li>
+                <li><a href="https://www.dafont.com/white-on-black.font" target="_blank">white on black</a> by imagex</li>
+                
+                </ul>
+                
+                <h2>code</h2>
+            <ul>
+                <li><a href="https://stackoverflow.com/questions/9334084/moveable-draggable-div" target="_blank">draggable div</a> by ospider on stackoverflow<span> used: home page</span></li>
+                <li><a href="https://www.w3schools.com/howto/howto_js_draggable.asp" target="_blank">draggable html content</a> tutorial on w3schools<span> used: home page</span></li>
+                <li><a href="https://pastebin.com/PiDgrv3J">music player</a> by adilene (<a href="https://github.com/sayantanm19/js-music-player/blob/master/index.html">source code</a> by sayantanm19)<span> used: home page</span></li>
+                <li><a href="https://www.cbox.ws/">chat box</a> by cbox<span> used: home page</span></li>
+                <li><a href="https://fossheim.io/writing/posts/accessible-theme-picker-html-css-js/">theme switcher</a> by sarah l fossheim<span> used: home page, sleepy hollow page</span></li>
+                
+                <li><a href="https://solaria.neocities.org/gallerytut" target="_blank">simple gallery</a> guide by solaria<span> used: art gallery</span></li>
+                <li><a href="https://www.w3schools.com/howto/howto_js_portfolio_filter.asp" target="_blank">gallery with filtering</a> by w3schools<span> used: like, every page with multiple 'sub-pages', such as this one</span></li>
+            </ul>
+                <h2>graphics</h2>
+            <ul>
+                <li><a href="https://gifcities.org/" target="_blank">gifcities</a> for a lot of my page decor/icons</li>
+                <li><a href="https://sadgrl.online/webmastery/downloads/tiledbgs">tiled backgrounds</a> by sadness</li>
+                <li><a href="https://www.deviantart.com/profiledecor/art/F2U-Bat-Flying-725897535">bat cursor</a> by profiledecor</li>
+                <li><a href="https://www.deviantart.com/profiledecor/art/F2U-Sketchbook-And-Copics-720364674">notebook pixels</a> by profiledecor</li>
+                <li><a href="https://www.deviantart.com/dynavera/art/FTU-Plant-Pixel-727400254">potted plant pixel</a> by dynavera</li>
+                <li><a href="https://www.deviantart.com/fabulousgod/art/little-plant-pixel-542867471">potted plant pixel</a> by fabulousgod</li>
+                <li><a href="https://www.deviantart.com/triangularpixels/art/Green-Leaf-Resource-Divider-Free-Use-489635734">plant cursor</a> by triangularpixels</li>
+                <li><a href="https://unsplash.com/photos/0Nos8QpdQOI?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink">greenhouse background</a> by krisjanis mezulis</li>
+                <li><a href="https://www.deviantart.com/king-lulu-deer/art/Urban-Garden-764863377">urban garden</a> by king-lulu-deer</li>
+                <li><a href="https://www.deviantart.com/rilvin/art/f2u-risen-757246049">crow</a> by rilvin</li>
+                <li><a href="https://www.deviantart.com/peachkonpeito/art/F2U-opalescent-spiderweb-768322387">spiderweb</a> by peachkonpeito</li>
+                <li><a href="https://www.cursors-4u.com/" target="_blank">cursors</a> from cursors-4u</li>
+                <li><a href="https://snailspng.tumblr.com/" target="_blank">pngs</a> by snail</li>
+            </ul>
+            
+
+            </div>
+        
+        </main>
+        
+        
+    </div>
+    
+            <script>
+                filterSelection("home") 
+                // Execute the function and show all columns
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}</script>
+
+    </body>
+
+</html>

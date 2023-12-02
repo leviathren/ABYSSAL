@@ -1,0 +1,503 @@
+<html data-theme="default">
+
+<head>
+    
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="hauntstyle.css">
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="icon" href="decor/redcandle.webp">
+    
+    <!------ TOOLTIPS DO NOT TOUCH PLEASE GOD ------->
+        <style>
+#s-m-t-tooltip{
+	/* basic */
+	max-width: 200px;
+	z-index: 10;
+	margin: 24px 14px 7px 12px;
+	/* style and design */
+    font-size: 14px;
+    color: white;
+	padding:8px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+    border: 1px dashed white;
+	border-radius: 5px;
+    background: linear-gradient(
+		150deg,
+        #000000,
+        var(--red)
+	);
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script src="https://static.tumblr.com/lspzyz3/xloqk6cgp/jquery.style-my-tooltips.js"></script>
+<script>
+							(function($){
+							$(document).ready(function(){
+							$("[title]").style_my_tooltips({
+							tip_follows_cursor: true,
+							tip_delay_time:100,
+							tip_fade_speed:300,
+							attribute:"title"
+							});
+							});
+							})(jQuery);
+</script>
+        <!------- end tooltips :) -------->
+    
+    <title>sleepy hallow</title>
+    </head>
+    
+    <body>
+    
+    <img id="bat" class="smt-current-element" title="*click click click*" src="decor/batflap.gif">
+        <img id="butterfly" src="decor/blackbutterfly.png">
+        <img id="blood" src="decor/blood.png">
+        <img id="moon" src="decor/bloodmoon.png">
+        <img id="gothgirl" class="smt-current-element" title="jealous? you don't even exist to me." src="decor/gothgirl.gif">
+        <div id="smt-current">
+                     <img id="creepyhouse" class="smt-current-element" title="we have 999 happy haunts here, but there's room for a thousand. any volunteers?" src="decor/creepyhouse.gif"></div>
+    
+        <main>
+            
+            <div class="col1">
+        
+            <nav>
+                
+                <div id="myBtnContainer">
+                    <li><img class="bullet" src="decor/candlebra.webp"><button class="btn hover active" onclick="filterSelection('front')">front gate</button></li>
+                    
+                    <li><img class="bullet" src="decor/spider.gif"><div id="smt-current"><a class="btn hover smt-current-element" title="back to the abyss" href="https://leviathren.neocities.org/home">the web weaver</a></div></li>
+                    
+                    <li><img class="bullet" src="decor/ghostrah.webp"><div id="smt-current"><button class="btn hover smt-current-element" title="i talk about horror movies i like" onclick="filterSelection('horrormov')">horror movies</button><img src="decor/wip.gif" width="40"></div></li>
+                    
+                    <li><img class="bullet" src="decor/skullflash.gif"><div id="smt-current"><button class="btn hover smt-current-element" title="my favorite horror, thriller, and eerie video games" onclick="filterSelection('game')">horror games</button><img src="decor/wip.gif" width="40"></div></li>
+                    
+                    <li><img class="bullet" src="decor/potionred.webp"><div id="smt-current"><button class="btn hover" title="collectibles and F2U graphics from me to you" onclick="filterSelection('treat')">trick or treat</button></div></li>
+                    <li><img class="bullet" src="decor/eatme.webp"><div id="smt-current"><button class="btn hover smt-current-element" title="horror stamps, blinkies, and buttons collection" onclick="filterSelection('candy')">candy basket</button></div></li>
+                    <li><img class="bullet" src="decor/glitchghosts.gif"><div id="smt-current"><button class="btn hover smt-current-element" title="sign your name in the book of the beast" onclick="filterSelection('gb')">souls collected</button></div></li>
+                </div>
+            
+            </nav>
+                
+                <div id="smt-current" class="smt-current-element" title="switch fonts">
+                 <button id="font" class="btn hover btn-link btn-sm ml-2 small" type="button"><img id="batwleft" src="decor/batwing.png">toggle font<img id="batwright" src="decor/batwing.png"></button></div>
+            <script>
+                var toggle = document.getElementById("font");
+
+
+toggle.onclick = function() {
+    var currentTheme = document.documentElement.getAttribute("data-theme");
+    var targetTheme = "1";
+
+    if (currentTheme === "1") {
+        targetTheme = "2";
+    }
+    
+    if (currentTheme === "2") {
+        targetTheme = "default";
+    }
+    
+    document.documentElement.setAttribute('data-theme', targetTheme)
+    localStorage.setItem('theme', targetTheme);
+};
+            </script>
+                
+                <img id="house" src="decor/HauntedHouse.gif">
+                
+                <div class="stamps">
+                    <img class="hov" src="stamps/hillhouse.png">
+                    <img class="hov" src="stamps/givemehorror.png">
+                    <img class="hov" src="stamps/eyes.gif">
+                    <img class="hov" src="stamps/knife.png">
+                    <img class="hov" src="stamps/darkness.jpg">
+                    <img class="hov" src="stamps/graveyard.png">
+                    <img class="hov" src="stamps/horrortime.png">
+                    <img class="hov" src="stamps/sweenytodd.png">
+                    <img class="hov" src="stamps/panslabyrinth.jpg">
+                    <img class="hov" src="stamps/ilovebats.gif">
+                    <img class="hov" src="stamps/bodyhorror.png">
+                    <img class="hov" src="stamps/screen.gif">
+                </div>
+                
+                <div class="btnbox">
+                <marquee onmouseover="this.stop();" onmouseout="this.start();">
+                <img class="hov" src="btns/horrorsearch.gif">
+                    <img class="hov" src="btns/eyesbtn.gif">
+                    <img class="hov" src="btns/ilovehorror.gif">
+                    <img class="hov" src="btns/go2hell.gif">
+                    <img class="hov" src="btns/hilloween.png">
+                    <img class="hov" src="btns/upallnight.gif">
+                    <img class="hov" src="btns/voidbtn.gif">
+                </marquee>
+                </div>
+                
+                <img id="kiss" class="smt-current-element" title="i found this on gifcities.org but i'm not sure who the original artist is :( might be wiqued kiss? that's who gifcities links it back to at least" src="decor/gothkiss.gif">
+                
+            </div>
+            
+            <div class="col2">
+                
+                <img id="candleabra" src="decor/candleabra.gif">
+            
+            <div class="column front">
+                
+                <article>
+                <h1 class="center">welcome, lost soul.</h1>
+                    
+                <p class="center"><img id="ghosty" src="decor/ghosty.gif" height="40px"> this site was made for the <a class="hover" href="https://tilde.32bit.cafe/~slug/events/halloween-2023/" target="_blank">32bit.cafe</a> halloween 2023 event. enjoy your stay.
+                </p>
+                    
+                    <blockquote class="free"><h1 class="center">halloween 2023</h1></blockquote>
+                
+                    <section>
+                <h2 class="center">treats i made</h2>
+                <h3 class="center">community pumpkin patch</h3>
+                <p class="center">
+                    <a id="smt-current" class="smt-current-event" title="template by lost letters" href="https://tilde.32bit.cafe/~slug/events/halloween-2023/" target="_blank"><img class="hov" src="decor/purpleflame.gif"></a>
+                    </p>
+                <h3 class="center">concoctions</h3>
+                <p class="center">
+                    <a id="smt-current" class="smt-current-event" title="template by lost letters, afternoon tea pixel club" href="https://tilde.32bit.cafe/~slug/events/halloween-2023/" target="_blank"><img class="hov" src="decor/witchesbrew.gif"></a>
+                    <a id="smt-current" class="smt-current-event" title="template by lost letters, afternoon tea pixel club" href="https://tilde.32bit.cafe/~slug/events/halloween-2023/" target="_blank"><img class="hov" src="decor/cupofstars.gif"></a>
+                </p>
+                        
+                        <button class="btn hover center" title="collectibles and F2U graphics from me to you" onclick="filterSelection('treat')">more...</button>
+                </section>
+
+                    <section>
+                <h2 class="center">treats i collected</h2>
+                <h3 class="center">ghoulish gourds</h3>
+                        <p class="center">
+                            
+                            <a id="smt-current" class="smt-current-event" title="made by sushi pixels" href="https://sushi-pixels.neocities.org/" target="_blank"><img class="hov" src="decor/sushi_sushi-pixels-neocities-org_cute-pumpkim.png"></a>
+                            
+                            <a id="smt-current" class="smt-current-event" title="made by linwood" href="https://linwood.neocities.org/" target="_blank"><img class="hov" src="decor/pumpkinlinwood.png"></a>
+                            
+                            <a id="smt-current" class="smt-current-event" title="made by A R T W O R K" href="https://artwork.neocities.org/halloween" target="_blank"><img class="hov" src="decor/artwork_artwork-neocities-org_cat-with-pumpkin.gif"></a>
+                            
+                            <a id="smt-current" class="smt-current-event" title="made by sanguineroyal" href="https://sanguineroyal.com/" target="_blank"><img class="hov" src="decor/krish-sanguine-royal_sanguineroyal-com_1.png"></a>
+                            
+                            <a id="smt-current" class="smt-current-event" title="made by lotus" href="https://lotus-cube.neocities.org/hw-treats" target="_blank"><img class="hov" src="decor/lotus_skeleton%20pumpkin_beetlejuice-pumpkin.png"></a>
+                            
+                            <a id="smt-current" class="smt-current-event" title="made by floral tears" href="https://floral-tears.neocities.org/" target="_blank"><img class="hov" src="decor/pumpkinfloraltears.png"></a>
+                            
+                            <a id="smt-current" class="smt-current-event" title="made by lost letters" href="https://lostletters.neocities.org/" target="_blank"><img class="hov" src="decor/pumpkinlostletters.png"></a>
+                            
+                            <a id="smt-current" class="smt-current-event" title="made by only wonder" href="https://onlywonder.net/" target="_blank"><img class="hov" src="decor/pumpkinonlywonder.gif"></a>
+                        </p>
+                <h3 class="center">concoctions</h3>
+                        <p class="center">
+                            
+                        <a id="smt-current" class="smt-current-event" title="made by lost letters" href="https://lostletters.neocities.org/" target="_blank"><img class="hov" src="decor/bottlelostletters.png"></a>
+                            
+                            <a id="smt-current" class="smt-current-event" title="made by dogfish99" href="https://dogfish99.neocities.org/" target="_blank"><img class="hov" src="decor/kira_dogfish99-neocities-org_castle-cup.png"></a>
+                            
+                            <a id="smt-current" class="smt-current-event" title="made by paintkiller" href="https://paintkiller.neocities.org/new/halloween2023/" target="_blank"><img class="hov" src="decor/martinipaintkiller.png"></a>
+                            
+                            <a id="smt-current" class="smt-current-event" title="made by paintkiller" href="https://paintkiller.neocities.org/new/halloween2023/" target="_blank"><img class="hov" src="decor/teapaintkiller.gif"></a>
+                            
+                            <a id="smt-current" class="smt-current-event" title="made by divergent rays" href="https://divergentrays.com/" target="_blank"><img class="hov" src="decor/martinidivergentrays.gif"></a>
+                            
+                            <a id="smt-current" class="smt-current-event" title="made by bliss net" href="https://blissnet.neocities.org/" target="_blank"><img class="hov" src="decor/bliss-net_blissnet-neocities-org_hocus-pocus.png"></a>
+                        </p>
+                        
+                        <h3 class="center">sweets</h3>
+                        <p class="center">
+                        <a id="smt-current" class="smt-current-event" title="made by only wonder" href="https://onlywonder.net/" target="_blank"><img class="hov" src="decor/candyonlywonder.png"></a>
+                            
+                            <a id="smt-current" class="smt-current-event" title="made by only wonder" href="https://onlywonder.net/" target="_blank"><img class="hov" src="decor/candy2onlywonder.png"></a>
+                            
+                            <a id="smt-current" class="smt-current-event" title="made by sushi pixels" href="https://sushi-pixels.neocities.org/" target="_blank"><img class="hov" src="decor/sushi_sushi-pixels-neocities-org_skull-candy-apple.png"></a>
+                            
+                        </p>
+                        
+                <h3 class="center">familiars</h3>
+                        <p class="center">
+                            
+                            <a id="smt-current" class="smt-current-event" title="made by A R T W O R K" href="https://artwork.neocities.org/" target="_blank"><img class="hov" src="decor/artwork_artwork-neocities-org_3.gif"></a>
+                            
+                            <a id="smt-current" class="smt-current-event" title="made by clover princess" href="https://sweetcharm.net/" target="_blank"><img class="hov" src="decor/eyebatbyclover.gif"></a>
+                            
+                            <a id="smt-current" class="smt-current-event" title="made by dogfish99" href="https://dogfish99.neocities.org/" target="_blank"><img class="hov" src="decor/kira_dogfish99-neocities-org_bongo-kitty.gif"></a>
+                            
+                            <a id="smt-current" class="smt-current-event" title="made by hillhouse" href="https://hillhouse.neocities.org/shrines/halloween/treats" target="_blank"><img class="hov" src="decor/rosemary_hillhouse-neocities-orgshrineshalloweentreats_ghost-cat-pink.gif"></a>
+                            
+                            <a id="smt-current" class="smt-current-event" title="made by clover princess" href="https://sweetcharm.net/" target="_blank"><img class="hov" src="decor/casettebeastclover.gif"></a>
+                            
+                            <a id="smt-current" class="smt-current-event" title="made by paintkiller" href="https://paintkiller.neocities.org/new/halloween2023/" target="_blank"><img class="hov" src="decor/ghostpaintkiller.gif"></a>
+                        </p>
+                        
+                        <h3 class="center">decor</h3>
+                        <p class="center">
+                            
+                            <a id="smt-current" class="smt-current-event" title="made by lotus" href="https://lotus-cube.neocities.org/hw-treats" target="_blank"><img class="hov" src="decor/lotus_lotus-cube-neocities-org_halloween-lamp.gif"></a>
+                            
+                            <a id="smt-current" class="smt-current-event" title="made by solaria" href="https://solaria.neocities.org/pixel/" target="_blank"><img class="hov" src="decor/solaria_solaria-neocities-orgpixel_1.png"></a>
+                            
+                            <a id="smt-current" class="smt-current-event" title="made by lotus" href="https://lotus-cube.neocities.org/hw-treats" target="_blank"><img class="hov" src="decor/lotus_lotus-cube-neocities-org_mentally-uneased.gif"></a>
+                            
+                        </p>
+                </section>
+                
+                </article>
+                
+                </div>
+                
+                <!------ horror movies ------->
+                
+                <div class="column horrormov">
+                    
+                    <div class="contents">
+                        <p>go to:</p>
+                        <li><a class="hover" href="#hill">the haunting of hill house</a></li>
+                        <li><a class="hover" href="#rocky">the rocky horror picture show</a></li>
+                        <li><a class="hover" href="#jen">jennifer's body</a></li>
+                        <li><a class="hover" href="#craft">the craft</a></li>
+                        
+                        <p>upcoming reviews:</p>
+                        <ul class="tiny">
+                        <li>last night in soho</li>
+                        <li>the neon demon</li>
+                        <li>raw</li>
+                        <li>the conjuring series (debating between an overview or doing each movie..)</li>
+                    <li>hereditary</li>
+                        </ul>
+                        
+                        <a class="top" href="#top">back to top</a>
+                    </div>
+                    
+                    <article>
+                        <h1 id="top" class="center">don't fret, there aren't any spoilers.. yet</h1>
+                        <img class="center" src="decor/wip.gif" width="">
+                        
+                        <section class="left" id="hill">
+                            <h2>the haunting of hill house</h2>
+                        <img src="decor/hillhouse.jpg" width="150">
+                            <p>This is probably my favorite horror show ever - as for now. I don't know if anything could top it though, really.</p>
+                            <p>I think the thing I loved the most about this show was the way they told the story. I prefer horror shows/movies with an invigorating, complex, and mysterious story, and this show definitely delivered on that end. What was most impressive though was how you see parts of the beginning and end of the story in the very first episode, but you see how things unfolded throughout the show by jumping back and forth between the past and present, and they only reveal how everything went down at the very end and everything falls into place so well.</p>
+                            <p>It kept me on the edge of my seat and one of the big reveals was actually such a surprising (but not in an out-of-left-field-and-it-didnt-make-any-sense way) twist.</p>
+                            <p>There's strong story-telling, the characters are all very interesting and have good arcs surrounding what they experienced in the past and how it's led them to where they are in the present. Overall, I loved it and can't recommend it enough.</p>
+                        
+                        </section>
+                        
+                        <section class="right" id="rocky">
+                            <h2>the rocky horror picture show</h2>
+                        
+                        <img src="decor/rocky.avif" width="150">
+                            <p>This isn't really horror in the modern sense of scary I think, but it's got horror in the name and to conservatives I'm sure it's plenty horrifying so I'll take this and any chance to talk about Rocky Horror because it's iconic.</p>
+                            <h3>history</h3>
+                            <p>There's so much history behind the making of rocky horror. It started as a stage show, written by Richard O'Brien; He wanted to pay homage to b-movies and sci-fi movies. Rocky Horror was one of the first musicals to feature sexually liberated and transgressive characters, and its raunchy, wild nature definitely made it stand out from anything around its time.</p>
+                            <p>Rocky was adapted for the silver screen and luckily was able to maintain a lot of its original feel and even some of the cast. It premiered in a few test-cities but was considered a flop pretty quickly, and was then pulled from theatres. By some grace of whoever, Tim Deegan, the vice president of advertising at the time, pushed for Rocky Horror to become the new midnight movie at the Waverly Theater in New York City.</p>
+                            <p>This proved to be super successful and over time, Rocky Horror developed a loyal niche of fans that would view it multiple, up to hundreds, of times. The movie attracted and resonated with many social outcasts, namely lgbtq+ individuals. People who didn't fit into the neat boxes that were socially acceptable found comfort and felt represented in the film. Over time, the audience, many of whom were repeat-viewers, developed traditions that included dressing up as the characters, lip-syncing the songs, acting out iconic scenes, yelling callbacks at certain moments throughout the movie, and more. Rocky Horror had become a cult classic. Different areas will likely have slightly different callbacks, but I found <a href="https://entinc.org/usrfiles/news/Rocky%20Horror%20Audience%20Partici.pdf" target="_blank">this list</a> of the more popular ones if you want to participate in callbacks!</p>
+                            <h3>what is it about, though</h3>
+                            <p>Rocky Horror follows an average couple who get wrapped up in a freaky environment, meeting new people who show them a whole other world and way they could live. I think that's about as much I could write without spoiling it, so go watch it for yourself if you haven't seen it yet >:). Content warning for nsfw though, maybe don't watch it with your grandmother. Or do.</p>
+                        
+                        </section>
+                        
+                        <section class="left" id="jen">
+                        <h2>jennifer's body</h2>
+                            
+                            <img src="decor/jennifersbody.jpg" width="150">
+                            <p>Jennifer's Body is another cult classic, especially among women, and especially especially among sapphics.</p>
+                            <p>This movie is kinda campy but it has deeper and darker themes that resonated with me more than I thought it would, because I went into watching this movie not knowing much, if anything, about it. The main characters, Anita (Needy) and Jennifer, are two best friends, and the story dives into their friendship dynamic and how they treat one another as a series of dark events unfold. The movie also depicts how women's bodies and sex are viewed, and eventually the reclaimation of one's body. <text style="color:var(--redlinkhov)">(Be advised, viewers who may be triggered by undertones of kidnapping and S/A should watch with discretion.)</text></p>
+                            <p>I have so much I could say about this movie that I don't know where to start, but I don't think I can go much more into detail without giving away the plot. Basically, Megan Fox (Jennifer) slays, Amanda Seyfried (Needy) slays, and it's a fun horror movie for the girlies.</p>
+                        </section>
+                        
+                        <section id="craft" class="right">
+                        <h2>the craft</h2>
+                        <img src="decor/thecraft.jpg" width="150">
+                            <p>The Craftttt, I just watched this one because I keep seeing it circulate and I finally got around to it. Sometimes there are movies that I keep meaning to watch but I want to set aside time where I can give it my full attention, but that means shelving it for longer than I'd like to.</p>
+                            <p>I really enjoyed the way witchcraft was depicted in this movie, like the emphasis on sisterhood, the bond of a coven, and the connection to nature being their source of magic. I also liked the way the movie shows how the use of magic for personal gain can go wrong, and the costs and consequences that come with it.</p>
+                        
+                        </section>
+                    
+                    
+                    </article>
+                
+                </div>
+                
+                <div class="column game">
+                <h1 class="center">spooky video games</h1>
+                    <img class="center" src="decor/wip.gif" width="">
+                    
+                    <div class="flex">
+                    <img width="" src="decor/nightmare1.jpg">
+                    
+                    <img width="" src="decor/nightmare2.webp">
+                    
+                    <img width="" src="decor/dbd.jpg">
+                        
+                    <img width="" src="decor/phasmo.jpg">
+                </div>
+                
+                </div>
+                
+                <div class="column treat">
+                
+                <h1 id="treat" class="center">trick or treat! grab what you like, i don't bite...</h1>
+                    
+                    <section class="center">
+                    <h2>collectibles</h2>
+                        <div class="flex">
+                            <img src="decor/redeyecandy.gif">
+                            <img src="decor/greeneyecandy.gif">
+                            <img src="decor/blueeyecandy.gif">
+                            <img src="decor/pinkeyecandy.gif">
+                            <img src="decor/yelloweyecandy.gif">
+                            <img src="decor/cyaneyecandy.gif">
+                            <img src="decor/purpleeyecandy.gif">
+                            <img src="decor/orangeeyecandy.gif">
+                        </div>
+                        <p>how to link back to me :)</p>
+                        <textarea><a href="https://leviathren.neocities.org/" target="_blank"><img src="**file name here**"></a></textarea>
+                        
+                    </section>
+                    
+                    <img class="center divider" src="decor/skulldivider.webp">
+                    
+                    <section class="center">
+                    <h2>my graphics that are free to use on your own sites!</h2>
+                    <p>credit is not necessary but much appreciated :) </p>
+                    <blockquote>you can also find these on my <a href="https://giphy.com/leviathren" target="_blank">giphy page</a>.</blockquote>
+                
+                    
+                    <h3 class="center">gifs</h3>
+                        <div class="flex">
+                        <img src="decor/fangs.gif">
+                            <img src="decor/tilldeath.gif">
+                            <img src="decor/teeths.gif">
+                            <img src="decor/circleblack.gif">
+                            <img src="decor/marooncircle.gif">
+                            <img src="decor/maroonwcircle.gif">
+                            <img src="decor/whitecircle.gif">
+                        </div>
+                    </section>
+                
+                </div>
+                
+                <div class="column candy">
+                
+                <h1 class="center">horror i've gathered from elsewhere on the web</h1>
+                    <p>i will try to link the original sources if i found them there</p>
+                    
+                    <h3 class="center">stamps</h3>
+                    <div class="flex">
+                        <img src="stamps/hillhouse.png">
+                    <img src="stamps/givemehorror.png">
+                    <img src="stamps/eyes.gif">
+                    <img src="stamps/knife.png">
+                    <img src="stamps/darkness.jpg">
+                    <img src="stamps/graveyard.png">
+                    <img src="stamps/horrortime.png">
+                    <img src="stamps/sweenytodd.png">
+                    <img src="stamps/panslabyrinth.jpg">
+                    <img src="stamps/ilovebats.gif">
+                    <img src="stamps/bodyhorror.png">
+                    <img src="stamps/screen.gif">
+                    </div>
+                    
+                    <img class="divider center" src="decor/skulldivider.webp">
+                    
+                    <h3 class="center">blinkies</h3>
+                    <div class="flex">
+                    <img src="blinkies/batfly.gif">
+                        <img src="blinkies/bats.gif">
+                        <img src="blinkies/blackcateyes.gif">
+                        <img src="blinkies/creature.webp">
+                        <img src="blinkies/crows.gif">
+                        <img src="blinkies/eyesmove.webp">
+                        <img src="blinkies/funghoul.gif">
+                        <img src="blinkies/ghostgay.gif">
+                        <img src="blinkies/haphalloween.gif">
+                        <img src="blinkies/happyhalloween.gif">
+                        <img src="blinkies/jackolanterns.webp">
+                        <img src="blinkies/justwantrevenge.gif">
+                        <img src="blinkies/monstersofthedeep.gif">
+                        <img src="blinkies/pumpkinking.gif">
+                        <img src="blinkies/scarymovies.gif">
+                        <img src="blinkies/spooky.webp">
+                        <img src="blinkies/trickortreat.gif">
+                        <img src="blinkies/vamp.gif">
+                    </div>
+                    
+                    <img class="divider center" src="decor/skulldivider.webp">
+                    
+                    <h3 class="center">buttons</h3>
+                    <div class="flex">
+                    <img class="button" src="btns/boo.gif">
+                        <img class="button" src="btns/death.gif">
+                        <img class="button" src="btns/eyesbtn.gif">
+                        <img class="button" src="btns/go2hell.gif">
+                        <img class="button" src="btns/halloweengreetings.gif">
+                        <a href="https://hillhouse.neocities.org/shrines/halloween/treats" target="_blank"><img class="button" src="btns/hilloween.png"></a>
+                        <img class="button" src="btns/horrorsearch.gif">
+                        <img class="button" src="btns/ilovehorror.gif">
+                    </div>
+                    
+                </div>
+                
+                <div class="column gb">
+                <div id="c_widget"></div>
+        <script src="hauntcomment-widget.js"></script>
+                </div>
+            
+            </div>
+        
+        
+        </main>
+        
+        <script>filterSelection("front") 
+            // Execute the function and show all columns
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}</script>
+        
+    </body>
+
+</html>

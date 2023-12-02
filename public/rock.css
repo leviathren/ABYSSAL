@@ -1,0 +1,196 @@
+:root,
+[data-selected-theme="dark"]{
+    --bgimg: url("bg/blacktiles.jpg");
+    --bg: #010101;
+    --color: white;
+    --altcolor: #b888ff;
+    --link: #88ffaa;
+    --linkhov: #cbffda;
+}
+
+[data-selected-theme="light"]{
+    --bgimg: url("bg/blacktiles.jpg");
+    --bg: #dddddd;
+    --color: black;
+    --altcolor: #8350cd;
+    --link: #20ad48;
+    --linkhov: #6fd58c;
+}
+
+::-webkit-scrollbar {
+    background-color: var(--bg);
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--altcolor);
+}
+
+::selection {
+    background: var(--altcolor);
+    color: var(--bg);
+}
+
+html {
+    scrollbar-color: var(--altcolor) var(--bg);
+    scrollbar-width: thin;
+}
+
+#s-m-t-tooltip{
+	/* basic */
+	max-width: 200px;
+	z-index: 999999 !important;
+	margin: 24px 14px 7px 12px;
+	/* style and design */
+    color: var(--bg);
+    font-size: 14px;
+	padding: 4px;
+    border: 1px dashed var(--bg);
+    background: var(--altcolor);
+}
+
+body {
+    background: var(--bgimg);
+    background-attachment: fixed;
+    background-size: 400px;
+    margin: 0;
+    height: auto;
+    width: 100%;
+    font-family: type;
+    color: var(--color);
+}
+
+nav {
+    text-align: center;
+}
+
+nav a {
+    margin: 10px;
+}
+
+main {
+    position: relative;
+    background: var(--bg);
+    min-height: 600px;
+    width: 800px;
+    margin: auto;
+    padding: 20px 40px;
+    z-index: 2;
+}
+
+.theme-switcher {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+}
+
+.theme-switcher button {
+    background: transparent;
+    color: var(--color);
+    border: 2px outset var(--color);
+    height: 30px;
+    width: 30px;
+    font-size: 18px;
+    margin: 2px;
+}
+
+.return {
+    position: absolute;
+    top: 15px;
+}
+
+.center {
+    text-align: center;
+}
+
+.hov1 {
+	transition: 0.5s ease;
+}
+
+.hov1:hover {
+	transform: scale(1.02);
+    transition: 0.1s ease;
+}
+
+section {
+    margin: 40px 20px;
+}
+
+.guitars {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 2px dashed var(--color);
+    padding: 40px;
+}
+
+.guitar {
+    margin: 10px;
+}
+
+h1 {
+    font-family: whiteonblack;
+    font-size: 4em;
+    margin: 40px 20px;
+}
+
+p.info {
+    margin: 30px 20px;
+}
+
+a {
+    color: var(--link);
+}
+
+a:hover {
+    color: var(--linkhov);
+}
+
+#joan {
+    position: fixed;
+    top: 150px;
+    right: 70px;
+    height: 350px;
+    transform: rotate(8deg);
+}
+
+#yvette {
+    position: fixed;
+    top: 100px;
+    left: 80px;
+    transform: rotate(-10deg);
+}
+
+#victoria {
+    position: fixed;
+    top: 505px;
+    right: 50px;
+    height: 260px;
+    transform: rotate(2deg);
+}
+
+@media only screen and (max-width: 750px) {
+    
+    body {
+        height: auto;
+    }
+    
+    main {
+        width: auto;
+        height: auto;
+    }
+    
+    .theme-switcher {
+        top: 10px;
+        right: 10px;
+    }
+    
+    #joan {
+        display: none;
+    }
+    
+    #yvette {
+        display: none;
+    }
+}

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <style>
+        
+        body {
+            background: repeating-linear-gradient(
+            to bottom,
+            #202020 0px,
+            black 1px,
+            black 2px,
+            black 3px);
+            font-family: lucida console;
+            font-size: 0.8em;
+            line-height: 2;
+            color: white;
+        }
+        
+        #s-m-t-tooltip{
+            /* basic */
+            max-width: 250px;
+            z-index: 999999 !important;
+            margin: 24px 14px 7px 12px;
+            /* style and design */
+            color: white;
+            font-size: 14px;
+            padding: 8px;
+            border: 2px inset black;
+            background: #080808;
+        }
+        
+        .window {
+            background: #101010;
+            border: 3px outset black;
+        }
+        
+        .windowheader {
+            margin: 3px;
+            padding: 4px;
+            background: #202020;
+            font-size: 1.2em;
+            letter-spacing: 2;
+        }
+        
+        .windowicon {
+            height: 15px;
+            width: 15px;
+            margin: 0 6px 0 2px;
+        }
+        
+        .toolbar {
+            margin: 3px;
+            padding: 4px;
+            font-size: 10px;
+            border: 1px outset #282828;
+        }
+        
+        .toolbar span {
+            padding: 4px 6px;
+        }
+
+        .toolbar span:hover {
+            background: rgb(48, 48, 48, 0.8);
+        }
+        
+        .content {
+            box-sizing: border-box;
+            margin: 4px;
+            padding: 15px;
+            background: #080808;
+            border: 2px inset #303030;
+            overflow: scroll;
+        }
+        
+        #sitemap {
+            width: 600px;
+            margin: auto;
+        }
+        
+        .info {
+            display: inline;
+            color: #a0a0a0;
+            font-family: lucida console;
+            font-size: 0.9em;
+            transition: ease 0.5s;
+        }
+
+        .info:hover {
+            color: #6F48FF;
+            cursor: pointer;
+        }
+        
+        #start {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background: #101010;
+            border: 1px solid #282828;
+        }
+        
+        a.startbtn {
+            display: block;
+            height: 100%;
+            width: 30px;
+            padding: 10px 20px;
+            background: #101010;
+            color: white;
+            border: none;
+        }
+
+        a.startbtn:hover {
+            background: rgb(48, 48, 48, 0.2);
+        }
+        
+        h3 {
+            font-size: 1.2em;
+        }
+        
+        h3::before {
+            content: '\2937  ';
+        }
+        
+        h4 {
+            font-size: 1em;
+            margin-left: 30px;
+        }
+        
+        h4::before {
+            content: '\2937  ';
+        }
+        
+        ul {
+            list-style-type: '- ';
+            margin-left: 35px;
+        }
+        
+        a {
+            font-family: lucida console;
+            color: white;
+        }
+        
+        a:hover {
+            color: #6F48FF;
+        }
+        
+        @media only screen and (max-width: 750px) {
+            
+        #sitemap {
+            width: auto;
+        }
+    }
+        
+    </style>
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>sitemap</title>
+        
+    </head>
+    
+    <body>
+        
+        <main>
+        
+            <div id="sitemap" class="window">
+            <div class="windowheader">
+                <img class="windowicon" src="decor/computer.gif">sitemap
+                </div>
+                
+                <div class="toolbar smt-current-element" title="this toolbar is just cosmetic">
+                    <span class="tools">file</span>
+                    <span class="tools">edit</span>
+                    <span class="tools">view</span>
+                </div>
+                
+                <div class="content">
+                
+                <h3><a href="home.html">home</a></h3>
+                    
+                <h4>site</h4>
+                    <ul>
+                        <li><a href="blog.html">ship's log</a> <div class="info smt-current-element" title="site updates">[?]</div>
+                        </li>
+                        
+                        <li><a href="layouts.html">layout archive</a></li>
+                    
+                    </ul>
+                    
+                    
+                <h4>me</h4>
+                    <ul>
+                        <li><a href="about.html">about me</a></li>
+                        
+                        <li><a href="art.html">art gallery</a></li>
+                        
+                        <li><a href="collections.html">collections</a> <div class="info smt-current-element" title="my collection of stamps, buttons, and blinkies">[?]</div></li>
+                        
+                        <li><a href="pixels.html">pixel clubs</a> <div class="info smt-current-element" title="pixel clubs I've joined">[?]</div></li>
+                        
+                        <li><a href="https://neocities.org/site/leviathren" target="_blank">neocities profile</a> <div class="info smt-current-element" title="external link">[?]</div></li>
+                    
+                    </ul>
+                    
+                    
+                <h4>you</h4>
+                    <ul>
+                        <li><a href="buttons.html">neighbors</a> <div class="info smt-current-element" title="button wall of my mutuals and cool sites">[?]</div></li>
+                        
+                        <li><a href="hallofrock.html">HALL OF ROCK Pixel Club</a> <div class="info smt-current-element" title="my guitar-themed pixel club :) ">[?]</div></li>
+                        
+                        <li><a href="links.html">surf the web</a> <div class="info smt-current-element" title="links to external sites, resources, credits">[?]</div></li>
+                        
+                        <li><a href="haunt.html">sleepy hollow</a> <div class="info smt-current-element" title="halloween/horror-inspired page">[?]</div></li>
+                        
+                        <li><a href="home.html#div5">guestbook</a></li>
+                    
+                    </ul>
+                </div>
+            </div>
+            
+            
+            <div id="start">
+            <a class="startbtn" href="home.html">home</a>
+            </div>
+        </main>
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script src="https://static.tumblr.com/lspzyz3/xloqk6cgp/jquery.style-my-tooltips.js"></script>
+<script>
+							(function($){
+							$(document).ready(function(){
+							$("[title]").style_my_tooltips({
+							tip_follows_cursor: true,
+							tip_delay_time:100,
+							tip_fade_speed:300,
+							attribute:"title"
+							});
+							});
+							})(jQuery);
+</script>
+        
+    </body>
+
+</html>
