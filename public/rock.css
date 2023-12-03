@@ -1,20 +1,22 @@
 :root,
 [data-selected-theme="dark"]{
     --bgimg: url("bg/blacktiles.jpg");
+    --bgsize: 400px;
     --bg: #010101;
-    --color: white;
+    --color: #f0f0f0;
     --altcolor: #b888ff;
     --link: #88ffaa;
     --linkhov: #cbffda;
 }
 
 [data-selected-theme="light"]{
-    --bgimg: url("bg/blacktiles.jpg");
-    --bg: #dddddd;
+    --bgimg: url("bg/dkgraytexture.gif");
+    --bgsize: auto;
+    --bg: #f2f2f2 ;
     --color: black;
-    --altcolor: #8350cd;
-    --link: #20ad48;
-    --linkhov: #6fd58c;
+    --altcolor: #a080ce;
+    --link: #598c68;
+    --linkhov: #7fd698;
 }
 
 ::-webkit-scrollbar {
