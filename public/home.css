@@ -142,7 +142,7 @@ body {
   );
     cursor: var(--cursor);
     color: var(--fontcolor);
-    font-family: lucida console;
+    font-family: Galmuri14, sans-serif;
     font-size: 0.8em;
 }
 
@@ -189,7 +189,7 @@ body a, button:hover {
 
 .startbtn {
     height: 100%;
-    font-family: lucida console;
+    font-family: Galmuri14, sans-serif;
 }
 
 button.startbtn {
@@ -216,7 +216,7 @@ nav {
     background: transparent;
     color: var(--fontcolor);
     text-decoration: none;
-    font-family: lucida console;
+    font-family: Galmuri14, sans-serif;
     border: none;
 }
 
@@ -344,7 +344,7 @@ button#windowclose:hover {
 .collapsible {
     background: transparent;
     color: var(--fontcolor);
-    font-family: lucida console;
+    font-family: Galmuri14, sans-serif;
     padding-left: 0;
     border: none;
     transition: ease background 0.5s;
@@ -507,7 +507,7 @@ button#windowclose:hover {
 #pagedoll {
     position: fixed;
     top: 20%;
-    left: 35%;
+    left: 25%;
     width: 300px;
     height: 400px;
     background: no-repeat var(--pagedoll);
