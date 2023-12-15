@@ -88,13 +88,13 @@
 }
 
 .hov {
-    -webkit-transition: .1s ease-in-out;
-	transition: .1s ease-in-out;
+    -webkit-transition: .2s ease-in-out;
+	transition: .2s ease-in-out;
 }
 
 .hov:hover {
-    -webkit-transform: scale(1.04);
-	transform: scale(1.04);
+    -webkit-transform: scale(1.03);
+	transform: scale(1.03);
 }
 
 .hover:hover {
