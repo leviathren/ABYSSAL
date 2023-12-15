@@ -331,7 +331,7 @@ button#windowclose:hover {
 
 /* main */
 #div1 {
-    top: 10%;
+    top: 15%;
     right: 25%;
     width: 450px;
     z-index: 999;
@@ -362,7 +362,7 @@ button#windowclose:hover {
 
 /* site links */
 #div2 {
-    top: 5%;
+    top: 12%;
     left: 10%;
     width: 230px;
 }
@@ -370,19 +370,19 @@ button#windowclose:hover {
 /* from me */
 #div3 {
     width: 200px;
-    top: 5%;
+    top: 15%;
 }
 
 /* for you */
 #div4 {
     width: 240px;
-    top: 10%;
+    top: 18%;
 }
 
 /* guestbook */
 #div5 {
     max-width: 600px;
-    top: 5%;
+    top: 18%;
     z-index: 9999;
 }
 
@@ -393,14 +393,14 @@ button#windowclose:hover {
 
 /* music player */
 #div6 {
-    top: 2%;
+    top: 8%;
     left: 22%;
 }
 
 /* themes */
 #div7 {
     width: 200px;
-    top: 5%;
+    top: 10%;
     right: 10%;
 }
 
@@ -425,8 +425,8 @@ button#windowclose:hover {
 /* status */
 #div8 {
     width: 250px;
-    top: 20%;
-    right: 4%;
+    top: 15%;
+    right: 12%;
 }
 
 #statuscafe {
@@ -460,8 +460,8 @@ button#windowclose:hover {
 /* featured page */
 #div10 {
     width: 245px;
-    right: 2%;
-    top: 40%;
+    right: 15%;
+    top: 30%;
 }
 
 #div10 .content img {
@@ -497,16 +497,9 @@ button#windowclose:hover {
     overflow-y: scroll;
 }
 
-/* pixel club */
-#div14 {
-    width: 180px;
-    top: 5%;
-    left: 15%;
-}
-
 #pagedoll {
     position: fixed;
-    top: 20%;
+    top: 30%;
     left: 25%;
     width: 300px;
     height: 400px;
