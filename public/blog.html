@@ -4,7 +4,7 @@
     
 :root,
     
-    [data-selected-theme="dark"]{
+    [data-selected-theme="default"]{
         --bgimg: url(bg/purplestars.gif);
         --bg: black;
         --color: white;
@@ -14,8 +14,8 @@
     
     [data-selected-theme="light"]{
         --bgimg: url(bg/lightblue.png);
-        --bg: white;
-        --color:black;
+        --bg: #eff2fa;
+        --color: #2b3860;
         --border: #787878;
         --link: #bacbff;
     }
@@ -45,6 +45,7 @@
     
     body {
         font-family: Galmuri14, sans-serif;
+        color: var(--color);
     }
     
     .container {
@@ -64,6 +65,37 @@
         border: 4px double var(--border);
     }
     
+    nav p {
+        margin-bottom: 0;
+        text-align: center;
+    }
+    
+    button {
+        cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat949.ani), url(https://cur.cursors-4u.net/nature/nat-10/nat949.png), auto !important;
+    }
+    
+    .theme-switcher {
+        text-align: center;
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--border);
+    }
+    
+    .theme-switcher button {
+        background: transparent;
+        color: var(--color);
+        border: 1px solid var(--link);
+        border-radius: 0;
+        font-size: 12px;
+        letter-spacing: 4;
+        width: 40%;
+        padding: 5px;
+        margin: 5px 2px;
+    }
+    
+    .theme-switcher button:hover {
+        background-color: var(--link);
+    }
+    
     #myBtnContainer {
         margin: 10px 0;
     }
@@ -75,7 +107,6 @@
         color: var(--color);
         font-size: 12px;
         letter-spacing: 2;
-        cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat949.ani), url(https://cur.cursors-4u.net/nature/nat-10/nat949.png), auto !important;
     }
 
     .btn:hover {
@@ -92,24 +123,10 @@
         width: 700px;
         min-height: 400px;
         background: var(--bg);
-        margin: auto;
+        margin: 0 auto auto;
         margin-left: 220px;
         border: 4px double var(--border);
         color: var(--color);
-    }
-    
-    .theme-switcher button {
-        background: transparent;
-        color: var(--color);
-        border: 1px solid var(--link);
-        border-radius: 0;
-        font-size: 12px;
-        padding: 5px;
-        margin: 5px 2px;
-    }
-    
-    .theme-switcher button:hover {
-        background-color: var(--link);
     }
     
     .column {
@@ -224,8 +241,18 @@
         
         <nav>
             
+            <div class="theme-switcher">
+                
+                <p>Choose a theme</p>
+            
+                <button data-theme="default" aria-pressed="true" class="smt-current-element hover">dark</button>
+                        
+                <button data-theme="light" aria-pressed="false" class="smt-current-element hover">light</button>
+            </div>
+            
         <div id="myBtnContainer">
-            <li><a href="home.html"><button class="btn hover">home</button></a></li>
+            
+            <li><a href="home.html"><button class="btn hover">home &#10531;</button></a></li>
             <li><button class="btn active hover" onclick="filterSelection('home')">landing</button></li>
             <li><button class="btn hover" onclick="filterSelection('1')">What's the Small Web?</button></li>
 
@@ -237,14 +264,11 @@
             
             <div class="column home">
                 
-                <h1>rahhhhhhhhh</h1>
+                <h1>Welcome, Reader</h1>
                 
-                <p class="theme-switcher">pick a theme:<br>
-                    
-                    <button data-theme="dark" aria-pressed="true" class="smt-current-element hover">dark</button>
-                        
-                    <button data-theme="light" aria-pressed="false" class="smt-current-element hover">light</button></p>
+                <p>Here, you will subject yourself to my ramblings.</p>
                 
+                <p>These are think-pieces and personal experiences, and shouldn't be taken as factual truths. I'm not an expert in anything.</p>
                 
             </div>
             
@@ -252,25 +276,23 @@
                 
                 <h1>What is the "Small Web"?</h1>
                 
-                <h3>Contents</h3>
-                <ul>
-                    <li><a class="hover" href="#intro">Intro</a></li>
+                <h2>Intro</h2>
                 
-                </ul>
+                <p>It's not a small spider's home. The "Small Web" is one of the many names that refers to the personal web, parts of the internet populated by people creating and sharing things for fun, rather than content made out of capitalist drive. The Small Web is part of a larger Web Revival Movement. You will probably hear these terms used interchangably, along with "Independent Web", "Old Web", and more, but what does it mean?</p>
                 
-                <h2 id="intro">Intro</h2>
+                <h2>What Makes Up the Small Web?</h2>
                 
-                <p>It's not a small spider's home. The "Small Web" refers to the personal web, parts of the internet populated by people creating and sharing things for fun, rather than content made out of capitalist drive. The Small Web is part of a larger Web Revival Movement. You will probably hear these terms used interchangably, along with "Independent Web", "Old Web", and more, but what does it mean?</p>
+                <p>The Small Web is slower-paced as opposed to fast-paced content such as short-form videos and limited character-count posts. Things you'll commonly come across on the small web are blog posts, forums, personal websites, webrings, and more. It exists on the outskirts of the internet, also known as the "Peripheral Web", where corporations aren't present because it's far less populated. Contrast this to the "Core Web", which is made up of major platforms such as Google, Instagram, Facebook, TikTok, Twitter, YouTube, you get the idea. This is where you would find the majority of people on the internet, and where things like algorithms find and push content to the user. This is the main feature of the Core Web: shorter content, delivered quickly.</p>
                 
-                <p>The Small Web is slower-paced as opposed to fast-paced content such as short-form videos and limited character-count posts. This may look like blog posts, forum discussions, personal websites, online diary logs, etc. It exists on the outskirts of the internet, also known as the "Peripheral Web", where major corporations don't bother pushing ads and promoted content because it's far less populated. Contrast this to the "Core Web", which is made up of major platforms such as Google, Instagram, Facebook, TikTok, Twitter, and YouTube. This is where you would find the majority of people on the internet, and where things like algorithms find and push content to the user, rather than the user having to seek out what they're interested in every time they want to view it. You just have to open the application, and content is already lined up for you, suggested based off of your previous searches. I intentionally used the word "application", because for many people now, mobile apps are the main way of accessing these platforms. This is mainly due to convenience, as it is easy to turn on your phone and open an app, which you can do anywhere you have service, while opening a browser requires you to be at a computer or to have a laptop open, which isn't always feasible. This is the core of the Core Web, shorter content delivered quickly. Back to the Peripheral Web, or Small Web, you often have to search for content yourself. Take this site for example, you most likely found neocities.org somewhere, and somehow, through a lot of clicking I imagine, you ended up here. It didn't pop up at the top of your feed somewhere, because there is no algorithm out here.</p>
+                <p>Back to the Peripheral Web, or Small Web, you often have to search for content yourself. Take this site for example, you most likely found neocities.org somewhere, and somehow, through a lot of clicking I imagine, you ended up here. It didn't pop up at the top of your feed somewhere, because there is no algorithm out here. What I'm trying to say in a long-winded way, is that it takes more time for things to happen in the Small Web. It is also called the Slow Web for this reason.</p>
                 
-                <p>What I'm trying to say in a long-winded way, is that it takes more time for things to happen in the Small Web. It is also called the Slow Web for this reason. For many who have migrated out here, this is a relieving break from an overwhelming digital culture that moves very quickly. Many people suffer from information overload nowadays, due to the constant bombardment (I know, that's a strong word) of news that pops up on people's feeds, often without their consent because again, that's how algorithms work. Consider how on many social media platforms, something may show on your feed that you may not be interested in, just because the algorithm thought you might be. Sometimes, you just want to see something specific you're feeling that day, so the Small, or Slow, Web, is what people go to for that. You may visit your favorite site you have bookmarked, or you may sift through posts on a forum dedicated to a certain topic you're interested in. Something similar to this that already exists on the Core Web I would say is Reddit, with the ability to join subreddits specific to your interests. That's a way to dip your toes into something a little more forum-like, if you're unfamiliar.</p>
+                <h2>Why the Small Web?</h2>
                 
-                <figure class="center"><img height="100px" src="decor/frogputer.gif"><figcaption>reading break!</figcaption></figure>
+                <p>For many who have migrated out here, this is a relieving break from an overwhelming digital culture that moves very quickly. Many people suffer from information overload due to the constant bombardment (I know, that's a strong word) of stuff that pops up on people's feeds. Consider how on many social media platforms, something may show on your feed that you may not be interested in, just because the algorithm thought you might be. Sometimes, you just want to see something specific you're feeling that day, so the Small - or Slow - Web, is what people go to for that. You may visit your favorite site you have bookmarked, or you may sift through posts on a forum dedicated to a certain topic you're interested in. </p>
                 
-                <figure class="center"><img height="200px" src="decor/charliejones.png"><figcaption>me at this point in writing</figcaption></figure>
+                <h2>Wrap it Up</h2>
                 
-                <p></p>
+                <p>What you need to know if you're venturing into the Small Web for the first time, is that it is a place with a focus on building community, creativity, privacy, and fun. Things like NFT's, AI, corporate greed, and bad-faith gotcha arguments are widely unwelcome. You may participate or hang out on the Small Web in a myriad of ways, the limit is your imagination!</p>
                 
                 
                 
@@ -283,45 +305,7 @@
     </div>
     
     <!----- theme switcher ----->
-        <script>
-                    const pressedButtonSelector = '[data-theme][aria-pressed="true"]';
-const defaultTheme = 'dark';
-
-const applyTheme = (theme) => {
-  const target = document.querySelector(`[data-theme="${theme}"]`);
-  document.documentElement.setAttribute("data-selected-theme", theme);
-  document.querySelector(pressedButtonSelector).setAttribute('aria-pressed', 'false');
-  target.setAttribute('aria-pressed', 'true');
-};
-
-const handleThemeSelection = (event) => {
-  const target = event.target;
-  const isPressed = target.getAttribute('aria-pressed');
-  const theme = target.getAttribute('data-theme');        
-  
-  if(isPressed !== "true") {
-    applyTheme(theme);
-    localStorage.setItem('selected-theme', theme);
-  }
-}
-
-const setInitialTheme = () => {
-  const savedTheme = localStorage.getItem('selected-theme');
-  if(savedTheme && savedTheme !== defaultTheme) {
-    applyTheme(savedTheme);
-  }
-};
-
-setInitialTheme();
-
-const themeSwitcher = document.querySelector('.theme-switcher');
-const buttons = themeSwitcher.querySelectorAll('button');
-
-buttons.forEach((button) => {
-   button.addEventListener('click', handleThemeSelection);
-});
-
-                    </script>
+        <script type="text/javascript" src="themeswitch.js"></script>
     
     
     <!----- pages ------>
