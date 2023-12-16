@@ -210,28 +210,20 @@ nav {
 
 .shortcut {
     display: block;
-    width: 80px;
-    padding: 15px;
+    width: 90px;
+    height: 100px;
     margin: auto;
     background: transparent;
     color: var(--fontcolor);
     text-decoration: none;
     font-family: lucida console;
     border: none;
-}
-
-a.shortcut {
-    padding: 15px 0;
-}
-
-a.shortcut:hover {
-    color: var(--fontcolor);
+    word-wrap: break-word;
 }
 
 .shortcut:hover{
     background: var(--shortcuthov);
 }
-
 .shortcut-icon {
     display: block;
     height: 25px;
