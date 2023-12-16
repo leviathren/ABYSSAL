@@ -4,7 +4,7 @@
     --fontcolor: white;
     --accent: #202020;
     --highlight: #ffffff;
-    --link: #d8d8d8;
+    --link: #ddd4fe;
     --linkhov: #6F48FF;
     --shortcuthov: rgb(48, 48, 48, 0.5);
     --toolbarhov: rgb(48, 48, 48, 0.8);
@@ -142,7 +142,7 @@ body {
   );
     cursor: var(--cursor);
     color: var(--fontcolor);
-    font-family: "lucida console", monospace, serif;
+    font-family: lucida console;
     font-size: 0.8em;
 }
 
@@ -189,7 +189,7 @@ body a, button:hover {
 
 .startbtn {
     height: 100%;
-    font-family: "lucida console", monospace, serif;
+    font-family: lucida console;
 }
 
 button.startbtn {
@@ -216,7 +216,7 @@ nav {
     background: transparent;
     color: var(--fontcolor);
     text-decoration: none;
-    font-family: "lucida console", monospace, serif;
+    font-family: lucida console;
     border: none;
 }
 
@@ -332,7 +332,7 @@ button#windowclose:hover {
 /* main */
 #div1 {
     top: 15%;
-    right: 25%;
+    right: 30%;
     width: 450px;
     z-index: 999;
 }
@@ -344,7 +344,7 @@ button#windowclose:hover {
 .collapsible {
     background: transparent;
     color: var(--fontcolor);
-    font-family: "lucida console", monospace, serif;
+    font-family: lucida console;
     padding-left: 0;
     border: none;
     transition: ease background 0.5s;
@@ -362,21 +362,9 @@ button#windowclose:hover {
 
 /* site links */
 #div2 {
-    top: 12%;
-    left: 10%;
-    width: 230px;
-}
-
-/* from me */
-#div3 {
+    top: 4%;
+    left: 8%;
     width: 200px;
-    top: 15%;
-}
-
-/* for you */
-#div4 {
-    width: 240px;
-    top: 18%;
 }
 
 /* guestbook */
@@ -401,7 +389,7 @@ button#windowclose:hover {
 #div7 {
     width: 200px;
     top: 10%;
-    right: 10%;
+    right: 5%;
 }
 
 .theme-switcher {
@@ -426,7 +414,7 @@ button#windowclose:hover {
 #div8 {
     width: 250px;
     top: 15%;
-    right: 12%;
+    right: 8%;
 }
 
 #statuscafe {
@@ -453,15 +441,15 @@ button#windowclose:hover {
 /* button marquee */
 #div9 {
     width: 300px;
-    top: 75%;
+    bottom: 8%;
     left: 2%;
 }
 
 /* featured page */
 #div10 {
     width: 245px;
-    right: 15%;
-    top: 30%;
+    right: 12%;
+    top: 20%;
 }
 
 #div10 .content img {
@@ -472,8 +460,8 @@ button#windowclose:hover {
 /* trading post */
 #div11 {
     width: 180px;
-    top: 55%;
-    right: 12%;
+    bottom: 10%;
+    right: 4%;
 }
 
 #div11 .content {
@@ -508,9 +496,18 @@ button#windowclose:hover {
     overflow: visible;
 }
 
+.window p {
+    margin-left: 4px;
+}
+
 .window ul {
     list-style-type: none;
-    margin-left: -40px;
+    margin: 0 0 20px 0;
+}
+
+.window li {
+    list-style: none;
+    margin-left: -30px;
 }
 
 marquee img {
@@ -530,10 +527,12 @@ h1 {
 
 a {
     color: var(--link);
+    transition: 0.2s ease;
 }
 
 a:hover {
     color: var(--linkhov);
+    transition: 0.2s ease;
 }
 
 p {
@@ -547,7 +546,7 @@ p.copyright {
 }
 
 li {
-    margin: 4px;
+    margin: 4px 0;
 }
 
 /* music player start */
@@ -658,36 +657,18 @@ li {
 
 @media only screen and (max-width: 750px) {
     
-    body {
+    main {
         width: 100%;
-        display: block;
     }
     
     nav {
-        background: var(--contentbg);
-        width: 100%;
-        padding: 10px 0;
-    }
-    
-    .shortcut {
-        margin: 0;
-        padding: 10px;
-        display: inline;
-        width: auto;
-    }
-    
-    .shortcut img {
         display: none;
-    }
-    
-    main {
-        width: 100%;
-        justify-content: center;
     }
     
     .window {
         position: static;
         border: none;
+        margin: ;
     }
     
     .windowheader {
@@ -702,64 +683,59 @@ li {
         display: none;
     }
     
-    #div1 {
-        width: 100%;
-        order: 4;
+    .content {
+        width: 95%;
+        justify-content: center;
+        margin: 4px auto;
     }
     
-    #div2 {
-        width: 100%;
+    #div1 {
+        width: auto;
         order: 1;
     }
     
-    #div3 {
-        width: 100%;
+    #div1 .content {
+        margin-top: 10px;
+    }
+    
+    #div2 {
+        width: auto;
         display: block;
         order: 2;
     }
     
-    #div4 {
-        width: 100%;
-        order: 3;
-        display: block;
-    }
     #div5 {
-        width: 100%;
-        order: 5;
+        display: none;
     }
     #div6 {
-        width: 100%;
-        order: 6;
         display: none;
     }
     #div7 {
-        width: 100%;
-        margin: auto;
-        order: 7;
+        width: auto;
+        order: 3;
     }
     #div8 {
-        width: 100%;
-        margin: auto;
-        order: 8;
+        width: auto;
+        order: 4;
     }
     #div9 {
-        width: 100%;
-        height: auto;
-        margin: auto;
-        order: 9;
+        width: auto;
+        order: 5;
     }
     #div10 {
         display: none;
     }
     #div11 {
-       width: 100%;
-        margin: auto;
-        order: 11;
+        width: auto;
+        order: 6;
+    }
+    #div11 .content {
+        margin-bottom: 10px;
     }
     #div12 {
-        width: 100%;
-        margin: auto;
-        order: 12;
+        display: block;
+        width: auto;
+        order: 7;
     }
     #div13 {
         display: none;
