@@ -11,8 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="home.css">
         <link rel="stylesheet" href="fonts.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galmuri/dist/galmuri.css">
-        <link rel="icon" type="image/png" href="decor/eye.gif">
+        <link rel="icon" type="image/png" href="decor/eyedark.png">
         
         <!------ TOOLTIPS DO NOT TOUCH PLEASE GOD ------->
     
@@ -40,22 +39,14 @@
         <nav>
             
             <button class="shortcut" onclick="showDiv(2)">
-            <img class="shortcut-icon" src="decor/computer.gif"><br>site
-            </button>
-            
-            <button class="shortcut" onclick="showDiv(3)">
-            <img class="shortcut-icon" src="decor/ghostrah.webp"><br>me
-            </button>
-            
-            <button class="shortcut" onclick="showDiv(4)">
-            <img class="shortcut-icon" src="decor/tilldeath.gif"><br>you
+            <img class="shortcut-icon" src="decor/computer.gif"><br>site directory
             </button>
             
             <button class="shortcut" onclick="showDiv(6)"><img class="shortcut-icon" src="decor/catjam.webp"><br>music box</button>
             
             <button class="shortcut" onclick="showDiv(12)"><img class="shortcut-icon" src="decor/whitearrow.gif"><br>chatbox</button>
             
-            <a class="shortcut" href="sitemap.html"><img class="shortcut-icon" src="decor/an-book.gif"><br>sitemap</a>
+            <a class="shortcut smt-current-element" title="click here to see all the pages on this site" href="sitemap.html"><img class="shortcut-icon" src="decor/an-book.gif"><br>sitemap</a>
             
         </nav>
         
@@ -74,7 +65,7 @@
                     
                     <p>hello weary traveler. this internet outpost is a passion project and collection of all things that interest me.</p><p>the making of this site itself is the main project, but you will also find some art i make <a href="art.html">here</a>.</p>
                     <p>stay as long as you like.</p>
-			    <br>
+                        <br>
                         
                         <p class="center">
                            <img src="decor/stockings.png"><img src="decor/stockings.png">
@@ -113,13 +104,16 @@
                     <p>32-bit cafe</p><a href="https://32bit.cafe/" target="_blank"><img class="hov" src="btns/32b.png"></a><br>
                     <p>void.shrooms webring</p><a href="https://void.shroom.ink/" target="_blank"><img class="hov" src="btns/void.shrooms.jpg"></a><br>
                     <p><a href="https://hotlinewebring.club/">hotline webring</a></p>
+                    
+                    <br>
+                    <iframe class="center" src="https://shroom.ink/guard.html/?site=ABYSSAL&shroom=4" height="250px" width="200px" scrolling="no" frameborder="0"></iframe>
                 </section>
                 </div>
             </div>
             
             <div id="div2" class="window" style="display: none;">
             <div id="header2" class="windowheader">
-                <img class="windowicon" src="decor/tinycomputer.png">site links<button id="windowclose" onclick="closeDiv(2)"></button>
+                <img class="windowicon" src="decor/tinycomputer.png">directory<button id="windowclose" onclick="closeDiv(2)"></button>
                 </div>
                 <div class="toolbar">
                     <span class="tools">file</span>
@@ -127,47 +121,32 @@
                     <span class="tools">view</span>
                 </div>
                 <div class="content">
+                    <p>sitely</p>
                     <ul>
-                    <li><img class="bullet" src="decor/note.png"><a title="site updates" href="updates.html" class="smt-current-element">ship's log</a></li>
+                    <li><img class="bullet" src="decor/note.png"><a title="site updates" href="blog.html" class="smt-current-element">ship's log</a></li>
                         <li><img class="bullet" src="decor/catcomputer.gif"><a class="smt-current-element" title="all my old themes and stuff" href="layouts.html">layout archive</a></li>
                         <li><img class="bullet" src="decor/strawberrysite.gif"><a href="sitemap.html">sitemap</a></li>
                     </ul>
-                    <iframe class="center" src="https://shroom.ink/guard.html/?site=ABYSSAL&shroom=4" height="250px" width="200px" scrolling="no" frameborder="0"></iframe>
-                </div>
-            </div>
-            
-            <div id="div3" class="window" style="display: none;">
-            <div id="header3" class="windowheader"><img class="windowicon" src="decor/batflap.gif">stuff from me<button id="windowclose" onclick="closeDiv(3)"></button></div>
-                <div class="toolbar"><span class="tools">file</span>
-                    <span class="tools">edit</span>
-                    <span class="tools">view</span></div>
-                <div class="content">
+                    <p>my stuff</p>
                     <ul>
-                        <li><img class="bullet" src="decor/ghostrah.webp"><a title="curious about me?" href="about.html" class="smt-current-element">about</a></li>
+                    <li><img class="bullet" src="decor/ghostrah.webp"><a title="curious about me?" href="about.html" class="smt-current-element">about</a></li>
                         <li><img class="bullet" src="decor/palette.gif"><a title="things i've made - image-heavy - CAUTION: you may come across nudity and blood" href="art.html" class="smt-current-element">art gallery</a></li>
                         <li><img class="bullet" src="decor/ufo.gif"><a title="stamps, buttons, and blinkies i like" href="collections.html" class="smt-current-element">collections</a></li>
                         <li><img class="bullet" src="decor/roundcat.gif"><a title="pixel clubs I'm in :3 planning on joining more" href="pixels.html" class="smt-current-element">pixel clubs</a></li>
                         <li><img class="bullet" src="decor/tinycomputer.png"><a title="my neocities profile" href="https://neocities.org/site/leviathren" target="_blank" class="smt-current-element">neocities</a></li>
                     </ul>
-                    
-                </div>
-            </div>
-            
-            <div id="div4" class="window" style="display: none;">
-            <div id="header4" class="windowheader"><img class="windowicon" src="decor/eatme.webp">stuff for you<button id="windowclose" onclick="closeDiv(4)"></button></div>
-                <div class="toolbar"><span class="tools">file</span>
-                    <span class="tools">edit</span>
-                    <span class="tools">view</span></div>
-                <div class="content">
+                    <p>for you</p>
                     <ul>
-                    <li><img class="bullet" src="decor/spiral.webp"><a title="check out these cool sites!" href="buttons.html" class="smt-current-element">neighbors</a></li>
-                        <li><img class="bullet" src="decor/sparkles.gif"><a href="hallofrock.html">HALL OF ROCK pixel club</a></li>
-                        <li><img class="bullet" src="decor/computer.gif"><a title="my page of linky links" href="links.html" class="smt-current-element">surf the web</a></li>
+                    <li><img class="bullet" src="decor/spiral.webp"><a title="check out these cool sites!" href="buttons.html" class="smt-current-element">seaport</a></li>
+                        <li><img class="bullet" src="decor/sparkles.gif"><a class="smt-current-element" title="my pixel club!" href="hallofrock.html">HALL OF ROCK</a></li>
+                        <li><img class="bullet" src="decor/computer.gif"><a title="my page of off-site linky links" href="links.html" class="smt-current-element">surf the web</a></li>
                         <li><img class="bullet" src="decor/crosscoffin.webp"><a title="care for a scare?" href="haunt.html" class="smt-current-element">sleepy hollow</a></li>
 
                     </ul>
+
                 </div>
             </div>
+            
             
             <div id="div5" class="window" style="display: none;">
             <div id="header5" class="windowheader"><img class="windowicon" src="decor/an-book.gif">visitors<button id="windowclose" onclick="closeDiv(5)"></button></div>
@@ -179,7 +158,7 @@
         <script src="comment-widget.js"></script>
             </div>
             
-            <div id="div6" class="window">
+            <div id="div6" class="window" style="display: none;">
             <div id="header6" class="windowheader"><img class="windowicon" src="decor/catjam.webp">walkman<button id="windowclose" onclick="closeDiv(6)"></button></div>
                 <div class="toolbar">
                     <span class="tools">file</span>
@@ -451,8 +430,6 @@
 
 makeDragable('#header1', '#div1')
 makeDragable('#header2', '#div2')
-makeDragable('#header3', '#div3')
-makeDragable('#header4', '#div4')
 makeDragable('#header5', '#div5')
 makeDragable('#header6', '#div6')
 makeDragable('#header7', '#div7')
