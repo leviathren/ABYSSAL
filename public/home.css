@@ -460,6 +460,10 @@ button#windowclose:hover {
     text-align: center;
 }
 
+#div11 img {
+    margin: 6px auto;
+}
+
 /* chatbox */
 #div12 {
     top: 40%;
