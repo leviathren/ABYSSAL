@@ -88,8 +88,8 @@
 }
 
 .hov {
-    -webkit-transition: .2s ease-in-out;
-	transition: .2s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
 }
 
 .hov:hover {
