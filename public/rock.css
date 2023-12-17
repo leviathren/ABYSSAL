@@ -1,22 +1,24 @@
 :root,
-[data-selected-theme="dark"]{
+[data-selected-theme="default"]{
     --bgimg: url("bg/blacktiles.jpg");
     --bgsize: 400px;
     --bg: #010101;
     --color: #f0f0f0;
-    --altcolor: #b888ff;
+    --altcolor: #8652ff;
     --link: #88ffaa;
     --linkhov: #cbffda;
+    --filter: none;
 }
 
 [data-selected-theme="light"]{
-    --bgimg: url("bg/dkgraytexture.gif");
-    --bgsize: auto;
-    --bg: #f2f2f2 ;
-    --color: black;
-    --altcolor: #a080ce;
-    --link: #598c68;
-    --linkhov: #7fd698;
+    --bgimg: url("bg/bluebrick.jpg");
+    --bgsize: 100px;
+    --bg: #dadbff ;
+    --color: #25007a;
+    --altcolor: #e800b0;
+    --link: #5d00ff;
+    --linkhov: #8b6bff;
+    --filter: sepia(100%) hue-rotate(200deg);
 }
 
 ::-webkit-scrollbar {
@@ -143,10 +145,12 @@ p.info {
 
 a {
     color: var(--link);
+    transition: 0.2s ease;
 }
 
 a:hover {
     color: var(--linkhov);
+    transition: 0.2s ease;
 }
 
 #joan {
