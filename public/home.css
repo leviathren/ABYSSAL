@@ -433,7 +433,7 @@ button#windowclose:hover {
 /* button marquee */
 #div9 {
     width: 300px;
-    bottom: 8%;
+    top: 75%;
     left: 2%;
 }
 
@@ -452,7 +452,7 @@ button#windowclose:hover {
 /* trading post */
 #div11 {
     width: 180px;
-    bottom: 10%;
+    top: 55%;
     right: 4%;
 }
 
@@ -460,7 +460,7 @@ button#windowclose:hover {
     text-align: center;
 }
 
-#div11 img {
+#div11 .content img {
     margin: 6px auto;
 }
 
