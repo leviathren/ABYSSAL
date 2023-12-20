@@ -354,9 +354,15 @@ button#windowclose:hover {
 
 /* site links */
 #div2 {
+    display: none;
     top: 4%;
     left: 8%;
     width: 200px;
+}
+
+/* mobile notif */
+#div3 {
+    display: none;
 }
 
 /* guestbook */
@@ -687,15 +693,21 @@ li {
     
     #div1 {
         width: auto;
-        order: 1;
+        order: 3;
     }
     
     #div1 .content {
-        margin-top: 10px;
+        max-height: none;
+        overflow: hidden;
     }
     
     #div2 {
         width: auto;
+        display: block;
+        order: 1;
+    }
+
+    #div3 {
         display: block;
         order: 2;
     }
@@ -708,22 +720,22 @@ li {
     }
     #div7 {
         width: auto;
-        order: 3;
+        order: 4;
     }
     #div8 {
         width: auto;
-        order: 4;
+        order: 5;
     }
     #div9 {
         width: auto;
-        order: 5;
+        order: 6;
     }
     #div10 {
         display: none;
     }
     #div11 {
         width: auto;
-        order: 6;
+        order: 7;
     }
     #div11 .content {
         margin-bottom: 10px;
@@ -731,7 +743,7 @@ li {
     #div12 {
         display: block;
         width: auto;
-        order: 7;
+        order: 8;
     }
     #div13 {
         display: none;
