@@ -147,7 +147,7 @@ body {
   );
     cursor: var(--cursor);
     color: var(--fontcolor);
-    font-family: lucida console;
+    font-family: "lucida console", monospace, serif;
     font-size: 0.8em;
 }
 
@@ -194,7 +194,6 @@ body a, button:hover {
 
 .startbtn {
     height: 100%;
-    font-family: lucida console;
 }
 
 button.startbtn {
@@ -221,7 +220,6 @@ nav {
     background: transparent;
     color: var(--fontcolor);
     text-decoration: none;
-    font-family: lucida console;
     border: none;
     word-wrap: break-word;
 }
@@ -342,7 +340,6 @@ button#windowclose:hover {
 .collapsible {
     background: transparent;
     color: var(--fontcolor);
-    font-family: lucida console;
     padding-left: 0;
     border: none;
     transition: ease background 0.5s;
@@ -567,6 +564,10 @@ marquee img {
 
 h1 {
     margin: 20px 10px;
+}
+
+button {
+    font-family: "lucida console", monospace, serif;
 }
 
 a {
