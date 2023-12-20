@@ -1,5 +1,5 @@
 :root,
-[data-selected-theme="noir"]{
+[data-selected-theme="default"]{
     --bg: black;
     --fontcolor: white;
     --accent: #202020;
@@ -17,6 +17,7 @@
     --pagedoll: url("decor/darkpagedoll.gif");
     --cursor: url(https://cur.cursors-4u.net/cursors/cur-9/cur817.cur), auto !important;
     --cursorhov: url(https://cur.cursors-4u.net/cursors/cur-9/cur819.cur), auto !important;
+    --filter: saturate(0%) contrast(130%);
 }
 
 [data-selected-theme="forest"]{
@@ -37,6 +38,7 @@
     --pagedoll: url("decor/fairy.png");
     --cursor: url(https://cur.cursors-4u.net/cursors/cur-9/cur829.cur), auto !important;
     --cursorhov: url(https://cur.cursors-4u.net/cursors/cur-9/cur817.cur), auto !important;
+    --filter: sepia(20%) saturate(20%) hue-rotate(50deg);
 }
 
 [data-selected-theme="golden"]{
@@ -57,6 +59,7 @@
     --pagedoll: url("decor/sunpagedoll.gif");
     --cursor: url(https://cur.cursors-4u.net/cursors/cur-9/cur836.cur), auto !important;
     --cursorhov: url(https://cur.cursors-4u.net/cursors/cur-9/cur817.cur), auto !important;
+    --filter: sepia(60%) saturate(80%) hue-rotate(5deg);
 }
 
 [data-selected-theme="cyberpink"]{
@@ -77,6 +80,7 @@
     --pagedoll: url("decor/mysticalcrystal.gif");
     --cursor: url(https://cur.cursors-4u.net/cursors/cur-9/cur838.cur), auto !important;
     --cursorhov: url(https://cur.cursors-4u.net/cursors/cur-9/cur817.cur), auto !important;
+    --filter: saturate(100%) hue-rotate(300deg);
 }
 
 [data-selected-theme="skyblue"]{
@@ -97,6 +101,7 @@
     --pagedoll: url("decor/blue clouds.gif");
     --cursor: url(https://cur.cursors-4u.net/cursors/cur-9/cur830.cur), auto !important;
     --cursorhov: url(https://cur.cursors-4u.net/cursors/cur-9/cur817.cur), auto !important;
+    --filter: saturate(40%) hue-rotate(190deg);
 }
 
 ::-webkit-scrollbar {
@@ -224,6 +229,7 @@ nav {
 .shortcut:hover{
     background: var(--shortcuthov);
 }
+
 .shortcut-icon {
     display: block;
     height: 25px;
@@ -391,6 +397,7 @@ button#windowclose:hover {
 
 /* music player */
 #div6 {
+    display: none;
     top: 8%;
     left: 22%;
 }
@@ -470,8 +477,9 @@ button#windowclose:hover {
 /* trading post */
 #div11 {
     width: 180px;
-    top: 55%;
-    right: 4%;
+    top: 40%;
+    right: 2%;
+    z-index: 99;
 }
 
 #div11 .content {
@@ -485,6 +493,7 @@ button#windowclose:hover {
 /* chatbox */
 #div12 {
     top: 40%;
+    display: none;
 }
 
 /* notepad */
@@ -704,6 +713,8 @@ img:hover {
     
     main {
         width: 100%;
+        display: flex;
+        flex-direction: column;
     }
     
     nav {
@@ -749,12 +760,12 @@ img:hover {
         display: block;
         order: 1;
     }
-
+    
     #div3 {
         display: block;
         order: 2;
     }
-
+    
     #div4 {
         display: block;
         width: auto;
@@ -798,7 +809,7 @@ img:hover {
     #div13 {
         display: none;
     }
-
+    
     #div14 {
         order: 10;
         margin-bottom: 20px;
