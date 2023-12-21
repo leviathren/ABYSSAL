@@ -485,6 +485,7 @@ button#windowclose:hover {
 
 #div11 .content img {
     margin: 6px auto;
+    filter: none;
 }
 
 /* chatbox */
