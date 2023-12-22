@@ -61,7 +61,7 @@ body {
     margin: 0;
     height: auto;
     width: 100%;
-    font-family: type;
+    font-family: "lucida console", monospace, serif;
     color: var(--color);
 }
 
