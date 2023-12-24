@@ -2,99 +2,152 @@
 
 <style>
     
-    @font-face {
-        font-family: glitch;
-        src: url(/fonts/Doctor Glitch.otf");
-    }
-    
-    @font-face {
-        font-family: vhs;
-        src: url("/fonts/easvhs.ttf");
-    }
+    /* #003024 #00aa88 #00eeaa */
     
     @import url('https://cdn.jsdelivr.net/npm/galmuri/dist/galmuri.css');
     
+    ::selection {
+        background: #00aa88;
+        color: black;
+    }
+    
     html {
-        background-image: url(bg/blkwarp.gif);
-        cursor: url(https://cur.cursors-4u.net/games/gam-2/gam189.cur), auto !important;
+        
     }
     
     body {
-        font-family: Galmuri14, sans-serif;   letter-spacing: 2;
-        line-height: 2;
-        overflow: hidden;
+        height: 100%;
+        margin: 0;
+        display: flex;
+        background: repeating-linear-gradient(
+        to bottom,
+        #202020 0px,
+        black 1px,
+        black 2px,
+        black 3px
+      );
+        font-family: "lucida console", monospace, serif;
+        font-size: 0.8em;
+        color: white;
     }
     
-    main {
-        position: relative;
-        z-index: 1;
-        background-color: black;
-        height: 85%;
-        width: 50%;
-        max-width: 700px;
-        margin: auto;
-        margin-top: 4%;
-        overflow-y: scroll;
-        overflow-x: hidden;
-        
-        &::-webkit-scrollbar {
-           width: 8px;
-        }
+    .window {
+        position: absolute;
+        height: auto;
+        z-index: 9;
+        background: #101010;
+        border: 3px outset black;
+        padding: 2px;
+    }
 
-        &::-webkit-scrollbar-thumb {
-           background-color: rgba(255,255,255,.1);
-        }
+    .windowheader {
+        cursor: move;
+        z-index: 10;
+        margin: 3px;
+        padding: 4px;
+        background: #202020;
+    }
+
+    .windowicon {
+        height: 15px;
+        width: 15px;
+        margin: 0 6px 0 2px;
+    }
+    
+    .toolbar {
+        margin: 3px;
+        padding: 4px;
+        font-size: 10px;
+        border: 1px outset #282828;
+    }
+
+    .toolbar span {
+        padding: 4px 6px;
+    }
+
+    .toolbar span:hover {
+        background: rgb(48, 48, 48, 0.8);
+    }
+
+    .content {
+        box-sizing: border-box;
+        margin: 4px;
+        padding: 10px 20px;
+        background: #080808;
+        border: 2px inset #303030;
+        overflow: scroll;
+    }
+    
+    #start {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background: #101010;
+        border: 1px solid #282828;
+        z-index: 99999999;
+    }
+    
+    #start button {
+        background: transparent;
+        height: 100%;
+        padding: 10px;
+        color: white;
+        font-family: Galmuri14, monospace, serif;
+        letter-spacing: 2;
+        border: none;
+    }
+    
+    #start button:hover {
+        background: rgb(48, 48, 48, 0.8);
+        color: #00eeaa;
     }
     
     article {
-        color: white;
         padding: 20px;
     }
     
+    li {
+        margin-left: -20px;
+    }
+    
+    /* BEGIN DIVS */
+    
+    #div1 {
+        top: 15%;
+        left: 40%;
+        width: 600px;
+        z-index: 99;
+    }
+    
     .icon {
-        width: 200px;
+        width: 100px;
         float: left;
-        margin-left: 40px;
-        margin-right: 40px;
-        margin-bottom: 30px;
+        margin: 0 20px 10px 0;
+        filter: hue-rotate(260deg) contrast(140%);
     }
     
-    h1 {
-        margin: 20px;
+    #div2 {
+        top: 10%;
+        left: 10%;
+        width: 250px;
     }
     
-    p {
-        margin: 20px;
+    #div3 {
+        top: 50%;
+        left: 15%;
+        width: 300px;
     }
     
-    .divider {
-        width: 200px;
-        display: block;
-        margin: auto;
-    }
-    
-    button {
-        background-color: black;
-        padding: 10px;
-        color: white;
-        font-family: Galmuri14, sans-serif;
-        letter-spacing: 2;
-        float: right;
-        cursor: url(https://cur.cursors-4u.net/games/gam-2/gam188.cur), auto !important;
-        border: none;
-        box-shadow: inset 2px 2px #535353, inset -2px -2px #1f1f1f;
-    }
-    
-    button:hover {
-        box-shadow: inset 2px 2px #1f1f1f, inset -2px -2px #535353;
+    #div4 {
+        top: 8%;
+        right: 5%;
+        width: 250px;
     }
     
     @media only screen and (max-width: 750px) {
         
-        main {
-            width: auto;
-            height: auto;
-        }
     }
     
     </style>
@@ -113,31 +166,158 @@
     
         <main>
             
-            <article>
-                
-                <button onclick="window.location.href='https://leviathren.neocities.org/home';">home <b>&#10531;</b></button>
-                
-                <h1>about leviathren</h1>
-                <img class="icon" src="decor/me.png">
-                <p>hi i'm <text style="color:#6F48FF">WREN</text>, i go by leviath<text style="color:#6F48FF">ren</text> online. you can also call me levi for short. i'm 22 years old and living in the Pacific Standard Time zone UTC-08:00.</p>
-                <img class="divider" src="decor/barbedwire.png">                <p>some keystones of what makes me who i am is my ethnicity and queerness.</p>
-                <p>i am a second generation chinese american. my first language was cantonese, though i am hardly fluent now, heartbreakingly. this, with the added layer of growing up in a small, 80&percnt;-white town, was the first core piece in shaping me.</p>
-                <p>realizing that i loved women and wanted to share my life with another feminine soul (feminine as in sapphics, not exclusively femmes) was so liberating for me. it felt like i was finally meeting myself for the first time, the real, whole me. every bit of my person and what i do is through my queer, chinese background.</p>
-                <p>oh there's also the whole thing with gender, i won't get into it here (i'll probably write about all of this in blog posts) but basically what i tell people is that i'm genderfluid, and what i tell other <i>queer</i> people is: my gender? lesbian. my sexuality? lesbian. iykyk.</p>
-                <img class="divider" src="decor/barbedwire.png">
-                <p>more about levi:</p>
-                <ul>
-                    <li>pronouns are he/she</li>
-                    <li>has a degree in biology</li>
-                    <li>is learning how to play bass</li>
-                </ul>
-                
-            </article>
+            <div id="div1" class="window">
+            <div id="header1" class="windowheader"><img class="windowicon" src="decor/an-book.gif">Introduction</div>
+                <div class="toolbar"><span class="tools">file</span>
+                    <span class="tools">edit</span>
+                    <span class="tools">view</span></div>
+                <div class="content">
+                    <h2>About the Webweaver</h2>
+                    <img class="icon" src="decor/me.png">
+                <p>I'm <text style="color:#00aa88">Leviathren</text>. You can shorten that however you like. </p>
+                    
+                    <h3>Where Do You Get Your Name?</h3>
+                    <p>It's a portmanteau of my favorite mythical sea creature (the Leviathan, specifically the one from Atlantis The Lost Empire) and my name.</p>
+                    
+                    <h3>How Long Have You Been Coding?</h3>
+                    <p>I learned a few coding basics when I was in middle school during a class project where we had to make a game using simple commands.</p>
+                    <p>I later learned more about html and css when I started college by messing with tumblr themes.</p>
+                    <p>Only after I graduated did I get into Neocities and the Web Revival, where my interest in coding grew exponentially and I started to get more serious about learning and pouring more time into creating static sites from scratch.</p>
+                    
+                </div>
+            </div>
             
+            <div id="div2" class="window">
+            <div id="header2" class="windowheader"><img class="windowicon" src="decor/an-book.gif">Quick Facts</div>
+                <div class="toolbar"><span class="tools">file</span>
+                    <span class="tools">edit</span>
+                    <span class="tools">view</span></div>
+                <div class="content">
+                    <h3>More About Me</h3>
+                    <ul>
+                        <li>He/She</li>
+                        <li>22 years old</li>
+                        <li>Chinese</li>
+                        <li>Queer</li>
+                        <li>Degree in Biology and minor in Digital Media</li>
+                </ul>
+                </div>
+            </div>
+            
+            <div id="div3" class="window">
+            <div id="header3" class="windowheader"><img class="windowicon" src="decor/an-book.gif">Currently</div>
+                <div class="toolbar"><span class="tools">file</span>
+                    <span class="tools">edit</span>
+                    <span class="tools">view</span></div>
+                <div class="content">
+                    <p>
+                        <b>Coding:</b> <text style="color:#00aa88">Music Page</text><br>
+                        <b>Reading:</b> <text style="color:#00aa88">Chain of Gold</text><br>
+                        <b>Listening:</b> <text style="color:#00aa88">Pierce the Veil</text><br>
+                        <b>Watching:</b> <text style="color:#00aa88">Percy Jackson and the Olympians</text>
+                    </p>
+                    <hr>
+                    <p>
+                        <b>Timezone:</b> <text style="color:#00aa88">GMT-8</text>
+                    </p>
+                </div>
+            </div>
+            
+            
+            <div id="div4" class="window">
+            <div id="header4" class="windowheader"><img class="windowicon" src="decor/an-book.gif">Hobbies</div>
+                <div class="toolbar"><span class="tools">file</span>
+                    <span class="tools">edit</span>
+                    <span class="tools">view</span></div>
+                <div class="content">
+                    <h3>What I Like To Do</h3>
+                    <ul>
+                        <li>Coding</li>
+                        <li>Playing bass guitar</li>
+                        <li>Being in nature</li>
+                        <li>Biking</li>
+                        <li>Skateboarding</li>
+                        <li>Rollerblading</li>
+                        <li>Gaming</li>
+                        <li>Art<text style="color:#686868;">(sketching and painting)</text></li>
+                        <li>Crafts<text style="color:#686868;">(clothing and accessory alterations, trinkets, sculptures, jewelry, pins, keychains, etc)</text></li>
+                </ul>
+                </div>
+            </div>
+            
+            <div id="start"><button onclick="window.location.href='https://leviathren.neocities.org/home';">home <b>&#10531;</b></button></div>
+
         
         </main>
         
     </body>
 
+    <!----- drag windows ----->
+        <script>function makeDragable(dragHandle, dragTarget) {
+  // used to prevent dragged object jumping to mouse location
+  let xOffset = 0;
+  let yOffset = 0;
+
+  let handle = document.querySelector(dragHandle);
+  handle.addEventListener("mousedown", startDrag, true);
+  handle.addEventListener("touchstart", startDrag, true);
+
+  /*sets offset parameters and starts listening for mouse-move*/
+  function startDrag(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    let dragObj = document.querySelector(dragTarget);
+    
+    // shadow element would take the original place of the dragged element, this is to make sure that every sibling will not reflow in the document
+    let shadow = dragObj.cloneNode();
+    shadow.id = ""
+    // You can change the style of the shadow here
+    shadow.style.opacity = 0.5
+    dragObj.parentNode.insertBefore(shadow, dragObj.nextSibling);
+
+    let rect = dragObj.getBoundingClientRect();
+    dragObj.style.left = rect.left;
+    dragObj.style.top = rect.top;
+    dragObj.style.position = "absolute";
+    dragObj.style.zIndex = 999999;
+
+    /*Drag object*/
+    function dragObject(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      if(e.type=="mousemove") {
+        dragObj.style.left = e.clientX-xOffset + "px"; // adjust location of dragged object so doesn't jump to mouse position
+        dragObj.style.top = e.clientY-yOffset + "px";
+      } else if(e.type=="touchmove") {
+        dragObj.style.left = e.targetTouches[0].clientX-xOffset +"px"; // adjust location of dragged object so doesn't jump to mouse position
+        dragObj.style.top = e.targetTouches[0].clientY-yOffset +"px";
+      }
+    }
+    /*End dragging*/
+    document.addEventListener("mouseup", function() {
+      // hide the shadow element, but still let it keep the room, you can delete the shadow element to let the siblings reflow if that is what you want
+      shadow.style.opacity = 0
+      shadow.style.zIndex = -999999
+      window.removeEventListener('mousemove', dragObject, true);
+      window.removeEventListener('touchmove', dragObject, true);
+    }, true)
+
+    if (e.type=="mousedown") {
+      xOffset = e.clientX - rect.left; //clientX and getBoundingClientRect() both use viewable area adjusted when scrolling aka 'viewport'
+      yOffset = e.clientY - rect.top;
+      window.addEventListener('mousemove', dragObject, true);
+    } else if(e.type=="touchstart") {
+      xOffset = e.targetTouches[0].clientX - rect.left;
+      yOffset = e.targetTouches[0].clientY - rect.top;
+      window.addEventListener('touchmove', dragObject, true);
+    }
+  }
+}
+
+makeDragable('#header1', '#div1')
+makeDragable('#header2', '#div2')
+makeDragable('#header3', '#div3')
+makeDragable('#header4', '#div4')
+        </script>
 
 </html>
