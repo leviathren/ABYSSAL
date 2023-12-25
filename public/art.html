@@ -46,7 +46,6 @@
         text-align: center;
         margin-left: 20px;
         max-width: 900px;
-        transition: 0.5s fade-in;
     }
     
     .sidebar {
@@ -70,10 +69,6 @@
     a:hover {
         color: var(--redlinkhov);
         transition: 0.4s ease;
-    }
-    
-    .nav {
-        margin: 12px;
     }
     
     section {
@@ -117,7 +112,7 @@ animation-iteration-count: infinite;
     
     .col {
         width: 220px;
-	height: 100%;
+        height: 100%;
         display: flex;
         flex-direction: column-reverse;
         align-content: flex-start;
@@ -130,8 +125,7 @@ animation-iteration-count: infinite;
     .gallery img {
         width: 200px;
         border: 1px solid white;
-        margin: 20px;
-        transition: 0.2s ease;
+        margin: 10px 20px;
     }
     
     p {
@@ -190,11 +184,6 @@ animation-iteration-count: infinite;
         line-height: 2;
         border: 1px solid white;
         cursor: pointer;
-        transition: 0.2s ease;
-    }
-    
-    .lightbox-toggle:hover {
-        background: black;
         transition: 0.2s ease;
     }
     
@@ -267,7 +256,7 @@ animation-iteration-count: infinite;
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <link rel="stylesheet" href="fonts.css">
-        <title>art gallery</title>
+        <title>Art Gallery</title>
         
         <!------ TOOLTIPS DO NOT TOUCH PLEASE GOD ------->
         <style>
@@ -308,7 +297,7 @@ animation-iteration-count: infinite;
             
             <div class="sidebar">
             
-                <a class="nav" href="home.html">home&#10531;</a>
+                <p><a class="nav" href="home.html">home&#10531;</a></p>
             
                 <section>
             <div id="smt-current" class="smt-current-element" title="switch fonts and pause/play title shake">
@@ -334,22 +323,22 @@ toggle.onclick = function() {
             <section>
             
             <div id="myBtnContainer">
-  <button class="btn active" onclick="filterSelection('all')"> everything</button>
-  <button class="btn" onclick="filterSelection('trad')"> traditional</button>
-  <button class="btn" onclick="filterSelection('dig')"> digital</button>
+  <button class="btn active" onclick="filterSelection('all')"> Everything</button>
+  <button class="btn" onclick="filterSelection('trad')"> Traditional</button>
+  <button class="btn" onclick="filterSelection('dig')"> Digital</button>
 </div>
             </section>
 
             
             <section class="top">
                 
-                <a class="center" href="#top">back to top</a>
+                <a class="center" href="#top">Back To Top</a>
             
             </section>
         
         <section class="footer">
                 
-            <p>all art by leviathren. hosted on neocities (c) 2023</p>
+            <p>All art by Leviathren. Hosted on neocities (c) 2023.</p>
             
             </section>
             
@@ -361,7 +350,7 @@ toggle.onclick = function() {
             <img id="top" src="/decor/artgal.png">
             </div>
             
-            <p>all images are mine. please do not use without crediting - a link back would be nice!</p>
+            <p>Art below is mine. Do not use for commercial purposes. Using as pfp/banner/background with linked credit is fine.</p>
         
         <div class="gallery">
             
@@ -369,19 +358,19 @@ toggle.onclick = function() {
             
             <div class="col">
                 
-                <img class="column trad hov smt-current-element" title="The Jaws of Life" src="art/jawsoflife.jpg">
+                <img class="column trad hov smt-current-element" title="The Jaws of Life" alt="Partial Jaws Of Life lyrics next to pen drawing of a jaws-of-life" src="art/jawsoflife.jpg">
                 
                 
-                    <img class="column dig hov smt-current-element" title="Kier" src="art/kier2.png" >
-            
-                
-                     <img class="column trad hov smt-current-element" title="Eyes" src="/art/eyes.jpg" >
-                
+                <img class="column dig hov smt-current-element" alt="Digital drawing of fairy with red hair and wings holding bloody wound from broken horn" title="Kier" src="art/kier2.png">
 
-                    <img class="column dig hov smt-current-element" title="Final Responder" src="art/Final_Responder_DTIYS.png" >
-                
-                
-                    <img class="column dig hov smt-current-element" title="In the Garden" src="art/in_the_garden.png" >
+
+                 <img class="column trad hov smt-current-element" alt="Acrylic painting of purple eyes in the dark" title="Eyes" src="/art/eyes.jpg" >
+
+
+                <img class="column dig hov smt-current-element" alt="Digital drawing of angel in bloody robes holding a large ball of wires" title="Final Responder" src="art/Final_Responder_DTIYS.png">
+
+
+                <img class="column dig hov smt-current-element" alt="Digital drawing of girl with short hair looking at a butterfly in a garden with mountains in the background" title="In the Garden" src="art/in_the_garden.png">
             
             </div>
             
@@ -389,22 +378,22 @@ toggle.onclick = function() {
             
             <div class="col">
                 
-                <img class="column dig hov smt-current-element" title="Come and See" src="art/comeandsee.png">
+                <img class="column dig hov smt-current-element" alt="Digital drawing of a nude woman spinning with a blue and red star with an eye in the background" title="Come and See" src="art/comeandsee.png">
             
                 
-                    <img class="column dig hov smt-current-element" title="Blue Line" src="art/Blue_Line.png" >
-                
-                
-                    <img class="column trad hov smt-current-element" title="Self Portrait" src="/art/selfportrait.jpg" >
-                
-                
-                    <img class="column dig hov smt-current-element" title="Greenpath" src="art/Greenpath.png" >
-                
-                
-                    <img class="column dig hov smt-current-element" title="Kier the Blood Fairy" src="art/Kier.png" >
-                
-                
-                    <img class="column dig hov smt-current-element" title="Sykkuno and Corpse" src="art/Sykkuno_And_Corpse.png" >
+                <img class="column dig hov smt-current-element" alt="Digital drawing of a person looking behind them at a girl in the subway" title="Blue Line" src="art/Blue_Line.png">
+
+
+                <img class="column trad hov smt-current-element" alt="Pen drawing of the artist wearing kitty headphones" title="Self Portrait" src="/art/selfportrait.jpg">
+
+
+                <img class="column dig hov smt-current-element" alt="Digital drawing of Ghost from Hollow Knight standing in Greenpath" title="Greenpath" src="art/Greenpath.png">
+
+
+                <img class="column dig hov smt-current-element" alt="Digital drawing of nude Kier, the red-haired and winged fairy" title="Kier the Blood Fairy" src="art/Kier.png">
+
+
+                <img class="column dig hov smt-current-element" alt="Sykkuno and Corpse as among us characters building snowmen" title="Sykkuno and Corpse" src="art/Sykkuno_And_Corpse.png">
             
             </div>
             
@@ -412,19 +401,19 @@ toggle.onclick = function() {
             
             <div class="col">
                 
-                <img class="column trad hov smt-current-element" title="Devils" src="art/devil.jpg">
+                <img class="column trad hov smt-current-element" alt="Pen and paint drawing of a red bat wing, upside-down crosses, and pentagrams" title="Devils" src="art/devil.jpg">
             
                 
-                    <img class="column trad hov smt-current-element" title="I Become What I Might Be" src="/art/ibecomewhatiam.jpg" >
-                
-                
-                    <img class="column dig hov smt-current-element" title="Fairy Season" src="art/water.png" >
-                
-                
-                    <img class="column dig hov smt-current-element" title="Don't Dream It" src="art/dontdream.png" >
-                
-                
-                    <img class="column dig hov smt-current-element" title="Hollow Knight" src="art/Hollow_Knight.png" >
+                <img class="column trad hov smt-current-element" alt="Pen drawing of a person with angel wings and a raven" title="I Become What I Might Be" src="/art/ibecomewhatiam.jpg">
+
+
+                <img class="column dig hov smt-current-element" alt="Digital drawing of a nude fairy with light blue wings kneeling and looking at the viewer" title="Fairy Season" src="art/water.png">
+
+
+                <img class="column dig hov smt-current-element" alt="Digital drawing of red eyes with the words 'don't dream'" title="Don't Dream It" src="art/dontdream.png">
+
+
+                <img class="column dig hov smt-current-element" alt="Digital drawing of Ghost from Hollow Knight looking at a pole in Hollownest" title="Hollow Knight" src="art/Hollow_Knight.png">
             
             </div>
             
@@ -432,22 +421,22 @@ toggle.onclick = function() {
             
             <div class="col">
                 
-                <img class="column trad hov smt-current-element" title="Eyess" src="art/eyess.jpg">
+                <img class="column trad hov smt-current-element" alt="Pen and paint drawing of black and white eyes with red lips and blood" title="Eyess" src="art/eyess.jpg">
             
                 
-                     <img class="column trad hov smt-current-element" title="Space City" src="/art/spacecity.PNG" >
-                
-                
-                    <img class="column dig hov smt-current-element" title="Blue" src="art/Blue.png" >
-                
-                
-                    <img class="column dig hov smt-current-element" title="Jodi" src="art/Jodi.png" >
-                
-                
-                    <img class="column dig hov smt-current-element" title="Mother Miranda" src="art/Mother_Miranda.png" >
-                
-                
-                    <img class="column dig hov smt-current-element" title="Dingy Bathroom" src="art/Dingy.png" >
+                <img class="column trad hov smt-current-element" alt="Watercolor paint of a city floating in space" title="Space City" src="/art/spacecity.PNG">
+
+
+                <img class="column dig hov smt-current-element" alt="Digital drawing of a monotone blue woman praying" title="Blue" src="art/Blue.png">
+
+
+                <img class="column dig hov smt-current-element" alt="Digital drawing of Quarter Jade, aka Jodi as a fairy with pink hair" title="Jodi" src="art/Jodi.png">
+
+
+                <img class="column dig hov smt-current-element" alt="Digital drawing of Mother Miranda from Resident Evil 8 with her wings extended and the word 'silence' behind her" title="Mother Miranda" src="art/Mother_Miranda.png">
+
+
+                <img class="column dig hov smt-current-element" alt="Digital drawing of a woman in a dimly lit bathroom staring at the viewer in the mirror" title="Dingy Bathroom" src="art/Dingy.png">
             
             </div>
             
@@ -457,7 +446,7 @@ toggle.onclick = function() {
         
         </div>
         
-        <script data-lightbox data-target-class="col" src="lightbox.js" defer></script>
+        <script data-lightbox data-target-class="gallery" src="lightbox.js" defer></script>
         
         <script>filterSelection("all") // Execute the function and show all columns
 function filterSelection(c) {
