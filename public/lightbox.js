@@ -52,7 +52,7 @@
         toggle.style.padding = '0 .5em';
         toggle.style.zIndex = 99;
 
-        const toggleText = document.createTextNode('enlarge');
+        const toggleText = document.createTextNode('view');
         toggle.appendChild(toggleText);
 
         toggle.addEventListener('click', () => {
