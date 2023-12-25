@@ -5,7 +5,7 @@
 :root,[data-theme="default"] {
     --bg: black;
     --text: white;
-    --font: lucida console;
+    --font: "lucida console", monospace, serif;
     --fontsize: 1em;
     --label: white;
     --animation: none;
@@ -46,6 +46,7 @@
         text-align: center;
         margin-left: 20px;
         max-width: 900px;
+        transition: 0.5s fade-in;
     }
     
     .sidebar {
@@ -58,6 +59,7 @@
         padding: 20px 10px;
         border: 2px solid var(--red);
         border-radius: 5px;
+        transition: 0.5s ease;
     }
     
     a {
@@ -125,6 +127,7 @@ animation-iteration-count: infinite;
         width: 200px;
         border: 1px solid white;
         margin: 20px;
+        transition: 0.2s ease;
     }
     
     p {
@@ -174,6 +177,38 @@ animation-iteration-count: infinite;
         display: block;
     }
     
+    /* lightbox */
+    
+    .lightbox-toggle {
+        background: rgb(0, 0, 0, 0.5);
+        color: white;
+        font-family: var(--font);
+        line-height: 2;
+        border: 1px solid white;
+        cursor: pointer;
+        transition: 0.2s ease;
+    }
+    
+    .lightbox-toggle:hover {
+        background: black;
+        transition: 0.2s ease;
+    }
+    
+    .lightbox button {
+        background: rgb(0, 0, 0, 0.5);
+        color: white;
+        font-family: var(--font);
+        border: 1px dashed white;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+    
+    .lightbox button:hover {
+        background: var(--red);
+        transition: 0.3s ease;
+    }
+    
+    
 @media only screen and (max-width: 1200px) {
 
     body {
@@ -193,6 +228,7 @@ animation-iteration-count: infinite;
         margin: 0;
         padding: 0;
         justify-content: center;
+        transition: 0.5s ease;
     }
     
     .sidebar section {
@@ -300,13 +336,6 @@ toggle.onclick = function() {
 </div>
             </section>
 
-            
-            <section class="links">
-            
-            <p>other places you can find my art = <a href="https://www.instagram.com/leviathren/" target="_blank">instagram</a>
-                </p>
-            
-            </section>
             
             <section class="top">
                 
@@ -424,7 +453,7 @@ toggle.onclick = function() {
         
         </div>
         
-            
+        <script data-lightbox data-target-class="col" src="lightbox.js" defer></script>
         
         <script>filterSelection("all") // Execute the function and show all columns
 function filterSelection(c) {
