@@ -28,30 +28,30 @@
         background-image: url(bg/bluestarsbg.gif);
         background-attachment: fixed;
         cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat947.ani), url(https://cur.cursors-4u.net/nature/nat-10/nat947.png), auto !important;
+        scrollbar-color: var(--blue) black;
+        scrollbar-width: thin;
     }
     
     html a {
         cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat949.ani), url(https://cur.cursors-4u.net/nature/nat-10/nat949.png), auto !important;
     }
     
-    .container {
-        display: flex;
-        width: 800px;
-        height: 100vh;
+    .grid {
+        display: grid;
+        width: 900px;
+        height: auto;
         margin: auto;
+        
+        grid-template-columns: [left-line] 20% [mid-line] auto [right-line];
+    
+        grid-template-areas: "sidebar main";
     }
     
     nav {
-        display: block;
-        width: 200px;
-        min-height: 400px;
+        grid-area: sidebar;
+        padding: 20px 0;
         background: black;
-        margin: auto;
         border: 4px double var(--grey);
-    }
-    
-    #myBtnContainer {
-        margin: 10px 0;
     }
     
     .btn {
@@ -63,10 +63,12 @@
         font-size: 12px;
         letter-spacing: 2;
         cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat949.ani), url(https://cur.cursors-4u.net/nature/nat-10/nat949.png), auto !important;
+        transition: 0.3s ease;
     }
 
     .btn:hover {
         background-color: #106686;
+        transition: 0.3s ease;
     }
     
     .btn.active {
@@ -75,12 +77,10 @@
     }
     
     main {
+        grid-area: main;
         font-family: Galmuri14, sans-serif;
-        display: block;
-        width: 600px;
         min-height: 400px;
         background: black;
-        margin: auto;
         border: 4px double var(--grey);
         color: white;
     }
@@ -141,10 +141,13 @@
     
     a {
         color: var(--blue);
+        transition: 0.3s ease;
     }
     
-    a:hover {
-        font-style: italic;
+    main a:hover {
+        color: black;
+        background: var(--blue);
+        transition: 0.3s ease;
     }
     
     @media only screen and (max-width: 750px) {
@@ -183,18 +186,18 @@
 
 <body>
     
-    <div class="container">
+    <div class="grid">
         
         <nav>
             
         <div id="myBtnContainer">
-            <li><a href="home.html"><button class="btn">home</button></a></li>
-            <li><button class="btn active" onclick="filterSelection('home')">landing</button></li>
-            <li><button class="btn" onclick="filterSelection('freq')">sites i frequent</button></li>
-            <li><button class="btn" onclick="filterSelection('read')">web culture</button></li>
-            <li><button class="btn" onclick="filterSelection('access')">accessability</button></li>
-                <li><button class="btn" onclick="filterSelection('code')">resources</button></li>
-                <li><button class="btn" onclick="filterSelection('credits')"> credits</button></li>
+            <li><a href="home.html"><button class="btn">Home</button></a></li>
+            <li><button class="btn active" onclick="filterSelection('home')">Landing</button></li>
+            <li><button class="btn" onclick="filterSelection('web')">Web Culture</button></li>
+            <li><button class="btn" onclick="filterSelection('read')">Reading</button></li>
+            <li><button class="btn" onclick="filterSelection('access')">Accessability</button></li>
+                <li><button class="btn" onclick="filterSelection('code')">Resources</button></li>
+                <li><button class="btn" onclick="filterSelection('credits')"> Credits</button></li>
 
             </div>
         
@@ -207,18 +210,8 @@
                 <p>not complete yet - be sure to come back again later!<br>this is a collection of links i want to save.</p>
             </div>
             
-            <div class="column freq">
-                <h1>Sites that I keep going back to because they're so cool/fun/useful/pretty</h1>
-                <ul>
-                    <li><a href="https://32bit.cafe/" target="_blank">32-bit.cafe</a><span> "a community [...] helping to make the personal web fruitful and bountiful again, full of self-expression and removing the capitalistic drive out of it"</span></li>
-                    <li><a href="https://sleepy-sage.neocities.org/movies" target="_blank">horror corner</a> by sleepy sage<span> all things horror</span></li>
-                    <li><a href="https://hillhouse.neocities.org/shrines/halloween/horror" target="_blank">get horrified!</a> by hill house<span> lots of horror media</span></li>
-                    <li><a href="https://artwork.neocities.org/halloween" target="_blank">A R T W O R K</a> by artwork<span> lots of halloween graphics</span></li>
-                </ul>
-            </div>
-            
-            <div class="column read">
-                <h1>Articles, blog posts, etc. about web history and culture that I enjoyed reading</h1>
+            <div class="column web">
+                <h2>Articles, blog posts, etc. about web history and culture that I enjoyed reading</h2>
                 <ul>
                     <li><a href="https://yesterweb.org/" target="_blank">the yesterweb manifesto</a><span> what the web revival was about and yesterweb's goals, organization, and community</span></li>
                     <li><a href="https://www.computerhistory.org/timeline/computers/" target="_blank">history of computers|timeline</a></li>
@@ -226,10 +219,19 @@
                 </ul>
             </div>
             
+            <div class="column read">
+                <h2>Various things you can read online</h2>
+                
+                <ul>
+                    <li><a href="https://lesliefeinberg.net/wp-content/uploads/2015/08/Stone-Butch-Blues-by-Leslie-Feinberg.pdf" target="_blank">Stone Butch Blues</a> by Leslie Feinberg</li>
+                </ul>
+            </div>
+            
             <div class="column access">
-                <h1>Reading material and resources on digital accessability</h1>
+                <h2>Reading material and resources on digital accessability</h2>
                 <p>i do not have physical disabilities myself so i cannot provide first-hand insights to accessability, but i will compile what i find on the internet that i find helpful here.</p>
                 <ul>
+                    <li><a href="https://accessibility.huit.harvard.edu/describe-content-images" target="_blank">Write helpful Alt Text to describe images</a> from Harvard University</li>
                     <li><a href="https://brucelawson.co.uk/2018/the-practical-value-of-semantic-html/" target="_blank">the practical value of semantic html</a> by bruce lawson</li>
                     <li><a href="https://tink.uk/understanding-semantics/" target="_blank">understanding semantics</a> by leonie watson</li>
                     <li><a href="https://www.smashingmagazine.com/2018/12/voiceover-screen-reader-web-apps/" target="_blank">i used the web for a day using a screen reader</a> by chris ashton</li>
@@ -239,8 +241,8 @@
             </div>
             
             <div class="column code">
-                <h1>Stuff for your sites</h1>
-                <h2>general coding help and tutorials</h2>
+                <h2>Stuff for your sites</h2>
+                <h3>general coding help and tutorials</h3>
                 <ul>
                     <li><a href="https://www.w3schools.com/html/html_intro.asp" target="_blank">introduction to HTML</a></li>
                     <li><a href="https://www.w3schools.com/" target="_blank">w3schools</a></li>
@@ -250,7 +252,7 @@
                     <li><a href="https://keithclark.co.uk/articles/pure-css-parallax-websites/" target="_blank">parallax effect</a> by keith clark<span> make different elements scroll at different speeds</span></li>
                     <li><a href="https://youtu.be/7JAmKyIzUmI?si=sZml6L0cdOock0k0" target="_blank">how to upload to neocities video</a></li>
                 </ul>
-                <h2>helpful tools</h2>
+                <h3>helpful tools</h3>
                 <ul>
                     <li><a href="https://www.htmlsymbols.xyz/" target="_blank">html symbol codes</a></li>
                     <li><a href="https://webaim.org/resources/contrastchecker/" target="_blank">webAIM: contrast checker</a></li>
@@ -259,7 +261,7 @@
                     <li><a href="https://tinypng.com/" target="_blank">tinypng</a><span> free image compression service</span></li>
                     <li><a href="https://www.iloveimg.com/" target="_blank">iloveimg</a><span> free bulk editor, has a great image compression tool</span></li>
                 </ul>
-                <h2>graphics</h2>
+                <h3>graphics</h3>
                 <ul>
                     <li><a href="https://favicons.neocities.org/" target="_blank">pixel heaven</a></li>
                     <li><a href="https://pixelsafari.neocities.org/" target="_blank">coco's pixel safari</a></li>
@@ -270,7 +272,7 @@
                     <li><a href="https://horrorgifs.neocities.org/" target="_blank">horrorgifsneocities</a><span> collection of horror gifs and images</span></li>
                     <li><a href="https://sushi-pixels.neocities.org/" target="_blank">sushi pixels neocities</a><span> sushi's collection of pixels</span></li>
                 </ul>
-                <h2>fun code and scripts</h2>
+                <h3>fun code and scripts</h3>
                 <ul>
                     <li><a href="https://webneko.net/" target="_blank">webneko</a><span> a little cat that chases your cursor around</span></li>
                     <li><a href="http://www.mf2fm.com/rv/dhtmlblockrain.php">block rain</a> by rv</li>
@@ -282,61 +284,54 @@
             </div>
             
             <div class="column credits">
-                <h1>Code, templates, and graphics I've used on my site!</h1>
+                <h2>Code, templates, and graphics I've used on my site!</h2>
                 
                 <h2>fonts</h2>
                 
                 <h3>pixel/cyber</h3>
                 <ul>
-                <li><a href="https://github.com/Quiple/Galmuri" target="_blank">galmuri</a> by quiple<span> nintendo DS-inspired font</span></li>
-                    <li><a href="https://www.dafont.com/easvhs.font" target="_blank">easvhs</a> by rurr</li>
+                <li><a href="https://github.com/Quiple/Galmuri" target="_blank">galmuri</a> by Quiple<span> nintendo DS-inspired font</span></li>
+                    <li><a href="https://www.dafont.com/easvhs.font" target="_blank">easvhs</a> by Rurr</li>
                     <li>lucida console</li>
-                <li><a href="https://www.dafont.com/doctor-glitch.font" target="_blank">doctor glitch</a> by woodcutter</li>
+                <li><a href="https://www.dafont.com/doctor-glitch.font" target="_blank">doctor glitch</a> by Woodcutter</li>
                 </ul>
                 <h3>horror</h3>
                 <ul>
-                <li><a href="https://www.dafont.com/haunting-attraction.font" target="_blank">haunting attraction</a> by sinister fonts</li>
+                <li><a href="https://www.dafont.com/haunting-attraction.font" target="_blank">haunting attraction</a> by Sinister Fonts</li>
                     <li><a href="https://www.dafont.com/midnight-minutes.font" target="_blank">midnight minutes</a> by rvst</li>
-                    <li><a href="https://www.dafont.com/october-crow.font" target="_blank">october crow</a> by sinister fonts</li>
-                    <li><a href="https://www.dafont.com/who-asks-satan.font" target="_blank">who asks satan</a> by font monger</li>
-                    <li><a href="https://www.dafont.com/bad-coma.font" target="_blank">bad coma</a> by imagex</li>
+                    <li><a href="https://www.dafont.com/october-crow.font" target="_blank">october crow</a> by Sinister Fonts</li>
+                    <li><a href="https://www.dafont.com/who-asks-satan.font" target="_blank">who asks satan</a> by Font Monger</li>
+                    <li><a href="https://www.dafont.com/bad-coma.font" target="_blank">bad coma</a> by Imagex</li>
                 </ul>
                 
                 <h3>type/other</h3>
             <ul>
-                <li><a href="https://www.dafont.com/angel-wish.font" target="_blank">angel wish</a> by stringlabs</li>
-                <li><a href="https://www.dafont.com/jmh-typewriter.font" target="_blank">jmh typewriter</a> by jorge moron</li>
-                <li><a href="https://www.dafont.com/rock-of-times.font" target="_blank">rock of times</a> by woodcutter</li>
-                <li><a href="https://www.dafont.com/white-on-black.font" target="_blank">white on black</a> by imagex</li>
+                <li><a href="https://www.dafont.com/angel-wish.font" target="_blank">angel wish</a> by Stringlabs</li>
+                <li><a href="https://www.dafont.com/jmh-typewriter.font" target="_blank">jmh typewriter</a> by Jorge Moron</li>
+                <li><a href="https://www.dafont.com/rock-of-times.font" target="_blank">rock of times</a> by Woodcutter</li>
+                <li><a href="https://www.dafont.com/white-on-black.font" target="_blank">white on black</a> by Imagex</li>
                 
                 </ul>
                 
                 <h2>code</h2>
             <ul>
-                <li><a href="https://stackoverflow.com/questions/9334084/moveable-draggable-div" target="_blank">draggable div</a> by ospider on stackoverflow<span> used: home page</span></li>
+                <li><a href="https://github.com/jasm1nii/jasmines-journal/blob/main/public_html/_assets/scripts/lightbox.js" target="_blank">lightbox script</a> by Jasmine<span> used: art gallery</span></li>
+                <li><a href="https://stackoverflow.com/questions/9334084/moveable-draggable-div" target="_blank">draggable div</a> by Ospider on stackoverflow<span> used: home page</span></li>
                 <li><a href="https://www.w3schools.com/howto/howto_js_draggable.asp" target="_blank">draggable html content</a> tutorial on w3schools<span> used: home page</span></li>
-                <li><a href="https://pastebin.com/PiDgrv3J">music player</a> by adilene (<a href="https://github.com/sayantanm19/js-music-player/blob/master/index.html">source code</a> by sayantanm19)<span> used: home page</span></li>
+                <li><a href="https://pastebin.com/PiDgrv3J">music player</a> by Adilene (<a href="https://github.com/sayantanm19/js-music-player/blob/master/index.html">source code</a> by Sayantanm19)<span> used: home page</span></li>
                 <li><a href="https://www.cbox.ws/">chat box</a> by cbox<span> used: home page</span></li>
-                <li><a href="https://fossheim.io/writing/posts/accessible-theme-picker-html-css-js/">theme switcher</a> by sarah l fossheim<span> used: home page, sleepy hollow page</span></li>
+                <li><a href="https://fossheim.io/writing/posts/accessible-theme-picker-html-css-js/">theme switcher</a> by Sarah L Fossheim<span> used: home page, sleepy hollow page</span></li>
                 
-                <li><a href="https://solaria.neocities.org/gallerytut" target="_blank">simple gallery</a> guide by solaria<span> used: art gallery</span></li>
+                <li><a href="https://solaria.neocities.org/gallerytut" target="_blank">simple gallery</a> guide by Solaria<span> used: art gallery</span></li>
                 <li><a href="https://www.w3schools.com/howto/howto_js_portfolio_filter.asp" target="_blank">gallery with filtering</a> by w3schools<span> used: like, every page with multiple 'sub-pages', such as this one</span></li>
             </ul>
                 <h2>graphics</h2>
             <ul>
                 <li><a href="https://gifcities.org/" target="_blank">gifcities</a> for a lot of my page decor/icons</li>
-                <li><a href="https://sadgrl.online/webmastery/downloads/tiledbgs">tiled backgrounds</a> by sadness</li>
-                <li><a href="https://www.deviantart.com/profiledecor/art/F2U-Bat-Flying-725897535">bat cursor</a> by profiledecor</li>
-                <li><a href="https://www.deviantart.com/profiledecor/art/F2U-Sketchbook-And-Copics-720364674">notebook pixels</a> by profiledecor</li>
-                <li><a href="https://www.deviantart.com/dynavera/art/FTU-Plant-Pixel-727400254">potted plant pixel</a> by dynavera</li>
-                <li><a href="https://www.deviantart.com/fabulousgod/art/little-plant-pixel-542867471">potted plant pixel</a> by fabulousgod</li>
-                <li><a href="https://www.deviantart.com/triangularpixels/art/Green-Leaf-Resource-Divider-Free-Use-489635734">plant cursor</a> by triangularpixels</li>
-                <li><a href="https://unsplash.com/photos/0Nos8QpdQOI?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink">greenhouse background</a> by krisjanis mezulis</li>
-                <li><a href="https://www.deviantart.com/king-lulu-deer/art/Urban-Garden-764863377">urban garden</a> by king-lulu-deer</li>
-                <li><a href="https://www.deviantart.com/rilvin/art/f2u-risen-757246049">crow</a> by rilvin</li>
-                <li><a href="https://www.deviantart.com/peachkonpeito/art/F2U-opalescent-spiderweb-768322387">spiderweb</a> by peachkonpeito</li>
-                <li><a href="https://www.cursors-4u.com/" target="_blank">cursors</a> from cursors-4u</li>
-                <li><a href="https://snailspng.tumblr.com/" target="_blank">pngs</a> by snail</li>
+                <li><a href="https://sadgrl.online/webmastery/downloads/tiledbgs">tiled backgrounds</a> by Sadness</li>
+                <li><a href="https://www.cursors-4u.com/" target="_blank">cursors</a> from Cursors-4u</li>
+                <li><a href="https://sleepy-sage.neocities.org/movies" target="_blank">horror graphics</a> from Sleepy Sage</li>
+                <li><a href="https://artwork.neocities.org/halloween" target="_blank">halloween graphics</a> from A R T W O R K</li>
             </ul>
             
 
