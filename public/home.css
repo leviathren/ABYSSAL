@@ -194,6 +194,7 @@ body a, button:hover {
 
 .startbtn {
     height: 100%;
+    font-family: lucida console;
 }
 
 button.startbtn {
@@ -220,6 +221,7 @@ nav {
     background: transparent;
     color: var(--fontcolor);
     text-decoration: none;
+    font-family: lucida console;
     border: none;
     word-wrap: break-word;
 }
@@ -340,6 +342,7 @@ button#windowclose:hover {
 .collapsible {
     background: transparent;
     color: var(--fontcolor);
+    font-family: lucida console;
     padding-left: 0;
     border: none;
     transition: ease background 0.5s;
@@ -353,6 +356,71 @@ button#windowclose:hover {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+}
+
+.palette {
+    display: flex;
+    justify-content: center;
+}
+
+.color {
+    display: flex;
+    height: 85px;
+    width: 85px;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.c1 {
+    background: var(--fontcolor);
+    color: var(--fontcolor);
+    transition: 0.3s ease;
+}
+
+.c1:hover {
+    color: var(--bg);
+}
+
+.c2 {
+    background: var(--bg);
+    color: var(--bg);
+    transition: 0.3s ease;
+}
+
+.c2:hover {
+    color: var(--fontcolor);
+}
+
+.c3 {
+    background: var(--accent);
+    color: var(--accent);
+    transition: 0.3s ease;
+}
+
+.c3:hover {
+    color: var(--fontcolor);
+}
+
+.c4 {
+    background: var(--link);
+    color: var(--link);
+    transition: 0.3s ease;
+}
+
+.c4:hover {
+    color: var(--bg);
+}
+
+.c5 {
+    background: var(--linkhov);
+    color: var(--linkhov);
+    transition: 0.3s ease;
+}
+
+.c5:hover {
+    color: var(--bg);
 }
 
 /* site links */
@@ -485,7 +553,6 @@ button#windowclose:hover {
 
 #div11 .content img {
     margin: 6px auto;
-    filter: none;
 }
 
 /* chatbox */
@@ -565,10 +632,6 @@ marquee img {
 
 h1 {
     margin: 20px 10px;
-}
-
-button {
-    font-family: "lucida console", monospace, serif;
 }
 
 a {
