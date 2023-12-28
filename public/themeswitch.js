@@ -34,9 +34,3 @@ const buttons = themeSwitcher.querySelectorAll('button');
 buttons.forEach((button) => {
    button.addEventListener('click', handleThemeSelection);
 });
-
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelector('button').addEventListener('click', function() {
-    console.log('Button clicked!');
-  });
-});
