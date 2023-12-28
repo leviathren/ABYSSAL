@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-theme="default" lang="en">
+<html lang="en">
 
     <head>
     
@@ -34,7 +34,7 @@
     </head>
 
     
-    <body>
+    <body id="body" class="default">
         
         <nav>
             
@@ -252,17 +252,17 @@
                 </div>
                 <div class="content theme-switcher">
 
-			<p>Heads up, theme switcher seems to be having issues and hasn't been working for everyone. I'm looking into what may be causing that. Sorry about that!</p>
+			<p>Trying out a new theme changer script, by <a href="https://squidknees.neocities.org/downloads" target="_blank">squidknees</a></p>
                         
-                    <button data-theme="default" aria-pressed="true" class="smt-current-element" title="noir" style="background-image:url('decor/darkpagedoll.gif')"></button>
-                        
-                    <button data-theme="forest" aria-pressed="false" class="smt-current-element" title="forest" style="background-image:url('decor/fairy.png')"></button>
+                    <button onclick="switchTheme('default')" class="smt-current-element" title="noir" style="background-image:url('decor/darkpagedoll.gif')"></button>
                     
-                    <button data-theme="golden" aria-pressed="false" class="smt-current-element" title="golden" style="background-image:url('decor/sunpagedoll.gif')"></button>
+                    <button onclick="switchTheme('forest')" class="smt-current-element" title="forest" style="background-image:url('decor/fairy.png')"></button>
                     
-                    <button data-theme="cyberpink" aria-pressed="false" class="smt-current-element" title="cyber grape" style="background-image:url('decor/mysticalcrystal.gif')"></button>
+                    <button onclick="switchTheme('golden')" class="smt-current-element" title="golden" style="background-image:url('decor/sunpagedoll.gif')"></button>
                     
-                    <button data-theme="skyblue" aria-pressed="false" class="smt-current-element" title="sky blue" style="background-image:url('decor/blue clouds.gif')"></button>
+                    <button onclick="switchTheme('cyberpink')" class="smt-current-element" title="cyber grape" style="background-image:url('decor/mysticalcrystal.gif')"></button>
+                    
+                    <button onclick="switchTheme('skyblue')" class="smt-current-element" title="sky blue" style="background-image:url('decor/blue clouds.gif')"></button>
                 </div>
             </div>
             
@@ -711,43 +711,7 @@ for (i = 0; i < coll.length; i++) {
         <script src="https://kit.fontawesome.com/f936906ae0.js" crossorigin="anonymous"></script>
         
         <!----- theme switcher ----->
-        <script>
-            const pressedButtonSelector = '[data-theme][aria-pressed="true"]';
-const defaultTheme = 'default';
-
-const applyTheme = (theme) => {
-  const target = document.querySelector(`[data-theme="${theme}"]`);
-  document.documentElement.setAttribute("data-selected-theme", theme);
-  document.querySelector(pressedButtonSelector).setAttribute('aria-pressed', 'false');
-  target.setAttribute('aria-pressed', 'true');
-};
-
-const handleThemeSelection = (event) => {
-  const target = event.target;
-  const isPressed = target.getAttribute('aria-pressed');
-  const theme = target.getAttribute('data-theme');        
-  
-  if(isPressed !== "true") {
-    applyTheme(theme);
-    localStorage.setItem('selected-theme', theme);
-  }
-}
-
-const setInitialTheme = () => {
-  const savedTheme = localStorage.getItem('selected-theme');
-  if(savedTheme && savedTheme !== defaultTheme) {
-    applyTheme(savedTheme);
-  }
-};
-
-setInitialTheme();
-
-const themeSwitcher = document.querySelector('.theme-switcher');
-const buttons = themeSwitcher.querySelectorAll('button');
-
-buttons.forEach((button) => {
-   button.addEventListener('click', handleThemeSelection);
-});</script>
+        <script src="themes.js"></script>
         
     </body>
 
