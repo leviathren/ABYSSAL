@@ -1,5 +1,4 @@
-:root,
-[data-selected-theme="default"]{
+:root{
     --bg: black;
     --fontcolor: white;
     --accent: #202020;
@@ -20,7 +19,7 @@
     --filter: saturate(0%) contrast(130%);
 }
 
-[data-selected-theme="forest"]{
+.forest{
     --bg: #080b06;
     --fontcolor: #b5c8aa;
     --accent: #283120;
@@ -41,7 +40,7 @@
     --filter: sepia(20%) saturate(20%) hue-rotate(50deg);
 }
 
-[data-selected-theme="golden"]{
+.golden{
     --bg: white;
     --fontcolor: #8a6000;
     --accent: #d7ad56;
@@ -62,7 +61,7 @@
     --filter: sepia(60%) saturate(80%) hue-rotate(5deg);
 }
 
-[data-selected-theme="cyberpink"]{
+.cyberpink{
     --bg: black;
     --fontcolor: #5bf550;
     --accent: #ee1dd5;
@@ -83,7 +82,7 @@
     --filter: saturate(100%) hue-rotate(300deg);
 }
 
-[data-selected-theme="skyblue"]{
+.skyblue{
     --bg: white;
     --fontcolor: #35467f;
     --accent: #bfceff;
