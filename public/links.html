@@ -2,24 +2,40 @@
 
 <style>
     
+    :root{
+        --bg: black;
+        --color: white;
+        --link: var(--blue);
+        --span: #b2b2b2;
+        --border: #404040;
+    }
+    
+    .light{
+        --bg: #9ed2da;
+        --color: #03222d;
+        --link: #009bb2;
+        --span: #505050;
+        --border: #1d1d1d;
+    }
+    
 ::-webkit-scrollbar {
-    background-color: black;
+    background-color: var(--bg);
     width: 5px;
     height: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--spaceblue);
+    background-color: var(--link);
 }
     
 ::-moz-scrollbar {
-    background-color: black;
+    background-color:  var(--bg);
     width: 5px;
     height: 5px;
 }
 
 ::-moz-scrollbar-thumb {
-    background-color: var(--spaceblue);
+    background-color: var(--link);
 }
     
     @import url('https://cdn.jsdelivr.net/npm/galmuri/dist/galmuri.css');
@@ -28,7 +44,7 @@
         background-image: url(bg/bluestarsbg.gif);
         background-attachment: fixed;
         cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat947.ani), url(https://cur.cursors-4u.net/nature/nat-10/nat947.png), auto !important;
-        scrollbar-color: var(--blue) black;
+        scrollbar-color: var(--link) var(--bg);
         scrollbar-width: thin;
     }
     
@@ -50,39 +66,49 @@
     nav {
         grid-area: sidebar;
         padding: 20px 0;
-        background: black;
-        border: 4px double var(--grey);
+        background: var(--bg);
+        border: 4px double var(--border);
     }
     
-    .btn {
-        margin: 4px;
+    button {
         background: transparent;
-        border: none;
-        color: white;
+        color: var(--color);
         font-family: vhs;
         font-size: 12px;
         letter-spacing: 2;
         cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat949.ani), url(https://cur.cursors-4u.net/nature/nat-10/nat949.png), auto !important;
         transition: 0.3s ease;
     }
-
-    .btn:hover {
-        background-color: #106686;
+    
+    button:hover {
+        background-color: var(--link);
         transition: 0.3s ease;
     }
     
-    .btn.active {
-        background-color: #106686;
-        color: white;
+    .theme {
+        margin: 6px;
+        padding: 4px 8px;
+        border: 1px solid var(--color);
+    }
+    
+    .btn {
+        margin: 4px;
+        border: none;
+    }
+    
+    .active {
+        background-color: var(--link);
+        color: var(--color);
     }
     
     main {
         grid-area: main;
         font-family: Galmuri14, sans-serif;
         min-height: 400px;
-        background: black;
-        border: 4px double var(--grey);
-        color: white;
+        padding: 20px;
+        background: var(--bg);
+        border: 4px double var(--border);
+        color: var(--color);
     }
     
     .column {
@@ -91,6 +117,11 @@
     
     .show {
         display: block;
+    }
+    
+    .flex {
+        display: flex;
+        justify-content: center;
     }
     
     h1 {
@@ -124,7 +155,7 @@
     }
     
     span {
-        color: var(--grey);
+        color: var(--span);
         font-size: 14px;
         font-style: italic;
     }
@@ -140,13 +171,13 @@
     }
     
     a {
-        color: var(--blue);
+        color: var(--link);
         transition: 0.3s ease;
     }
     
     main a:hover {
-        color: black;
-        background: var(--blue);
+        color: var(--color);
+        background: var(--link);
         transition: 0.3s ease;
     }
     
@@ -182,15 +213,21 @@
     <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galmuri/dist/galmuri.css">
     
-    <title>links out</title></head>
+    <title>Surf The Web</title></head>
 
-<body>
+<body id="body" class="dark">
     
     <div class="grid">
         
         <nav>
             
         <div id="myBtnContainer">
+            <div class="flex">
+            <button onclick="switchTheme('dark')" class="theme">dark</button>
+            
+            <button onclick="switchTheme('light')" class="theme">light</button>
+            </div>
+            
             <li><a href="home.html"><button class="btn">Home</button></a></li>
             <li><button class="btn active" onclick="filterSelection('home')">Landing</button></li>
             <li><button class="btn" onclick="filterSelection('web')">Web Culture</button></li>
@@ -320,7 +357,7 @@
                 <li><a href="https://www.w3schools.com/howto/howto_js_draggable.asp" target="_blank">draggable html content</a> tutorial on w3schools<span> used: home page</span></li>
                 <li><a href="https://pastebin.com/PiDgrv3J">music player</a> by Adilene (<a href="https://github.com/sayantanm19/js-music-player/blob/master/index.html">source code</a> by Sayantanm19)<span> used: home page</span></li>
                 <li><a href="https://www.cbox.ws/">chat box</a> by cbox<span> used: home page</span></li>
-                <li><a href="https://fossheim.io/writing/posts/accessible-theme-picker-html-css-js/">theme switcher</a> by Sarah L Fossheim<span> used: home page, sleepy hollow page</span></li>
+                <li><a href="https://squidknees.neocities.org/downloads">theme switcher</a> by Squidknees</li>
                 
                 <li><a href="https://solaria.neocities.org/gallerytut" target="_blank">simple gallery</a> guide by Solaria<span> used: art gallery</span></li>
                 <li><a href="https://www.w3schools.com/howto/howto_js_portfolio_filter.asp" target="_blank">gallery with filtering</a> by w3schools<span> used: like, every page with multiple 'sub-pages', such as this one</span></li>
@@ -390,6 +427,55 @@ for (var i = 0; i < btns.length; i++) {
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
   });
+}</script>
+    
+    <!------ themes ------>
+    <script>
+    //javascript theme switcher by squidknees @ neocities.
+
+//list of all theme names in toggling order. edit this line to put your theme names here
+const thms = ["dark", "light"];
+
+//remove all theme classes
+function removeTheme(){
+	var b = document.getElementById("body");
+	for (let i = 0; i < thms.length; i++){
+		b.classList.remove(thms[i]);
+	}
+}
+
+//run setTheme function on load
+setTheme()
+//give the body the appropriate theme class
+function setTheme(){
+	var b = document.getElementById("body");
+	if (thms.indexOf(localStorage.theme) == -1){
+		localStorage.theme = thm[0];
+	}
+	removeTheme();
+	b.classList.add(localStorage.theme);
+}
+
+//switchTheme("themename") changes the theme to themename. when using in html, replace quotation marks with &quot;
+function switchTheme(themename){
+	var b = document.getElementById("body");
+	removeTheme();
+	b.classList.add(themename);
+	localStorage.theme = themename;
+}
+
+//toggle to the next theme in a cycle
+function toggleTheme(){
+	var currenttheme = thms.indexOf(localStorage.theme);
+	if (currenttheme == -1){
+		switchTheme(thms[1]);
+	}
+	else if (currenttheme == thms.length - 1){
+		switchTheme(thms[0]);
+	}
+	else{
+		switchTheme(thms[currenttheme + 1]);
+	}
 }</script>
 
     </body>
