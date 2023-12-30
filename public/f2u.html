@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <style>
+        
+        :root{
+            --bg: black;
+            --fontcolor: #dddddd;
+            --navbg: #050505;
+            --mainbg: #101010;
+            --link: #00aa88;
+            --linkhov: #00eeaa;
+            --pre: #bbbbbb;
+            --prebg: #0d0d0d;
+            --preborder: #181818;
+            --hr: #404040;
+        }
+        
+        .light{
+            --bg: #404040;
+            --fontcolor: #202020;
+            --navbg: #c0c0c0;
+            --mainbg: #d2d2d2;
+            --link: #00aa88;
+            --linkhov: #00eeaa;
+            --pre: #303030;
+            --prebg: #cccccc;
+            --preborder: #aaaaaa;
+            --hr: #bbbbbb;
+        }
+    
+        html {
+            background: var(--bg);
+        }
+        
+        body {
+            height: 100%;
+            background: repeating-linear-gradient(to bottom, var(--hr) 0px, var(--bg) 1px, var(--bg) 2px, var(--bg) 3px, var(--mainbg) 3px
+            );
+            background-attachment: fixed;
+            color: var(--fontcolor);
+            font-family: "lucida console", monospace, serif;
+            margin: 0;
+            padding: 20px;
+            transition: 0.4s ease;
+        }
+        
+        .container {
+            display: flex;
+            width: 80%;
+            max-width: 900px;
+            margin: auto;
+            border: 1px solid var(--preborder);
+            transition: 0.4s ease;
+        }
+        
+        nav {
+            background: var(--navbg);
+            width: 20%;
+            padding: 20px;
+            transition: 0.4s ease;
+        }
+        
+        nav button {
+            background: none;
+            padding: 4px 10px;
+            color: var(--fontcolor);
+            border: 1px solid var(--link);
+            border-radius: 4px;
+            box-shadow: 0 0 8px grey;
+            margin: 6px;
+        }
+        
+        nav button:hover {
+            box-shadow: 0 0 8px inset grey;
+        }
+        
+        nav a {
+            display: block;
+        }
+        
+        main {
+            background: var(--mainbg);
+            width: 80%;
+            padding: 20px;
+            transition: 0.4s ease;
+        }
+        
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        #decor img {
+            width: 150px;
+            transition: 0.3s ease;
+        }
+        
+        #decor img:hover {
+            background: var(--fontcolor);
+        }
+        
+        pre {
+            background: var(--prebg);
+            color: var(--pre);
+            padding: 20px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            border: 1px solid var(--preborder);
+            border-radius: 8px;
+        }
+        
+        hr {
+            color: var(--hr);
+        }
+        
+        main hr {
+            margin: 40px;
+        }
+        
+        h1 {
+            font-size: 1.5em;
+        }
+        
+        h2 {
+            font-size: 1.2em;
+        }
+        
+        p {
+            font-size: 14px;
+        }
+        
+        a {
+            color: var(--link);
+            font-size: 14px;
+            transition: 0.2s ease;
+        }
+        
+        a:hover {
+            color: var(--linkhov);
+        }
+    
+        @media only screen and (max-width: 880px){
+            
+            body {
+                padding: 0;
+            }
+            
+            .container {
+                width: 100%;
+            }
+        }
+        
+        @media only screen and (max-width: 680px){
+            
+            .container {
+                flex-direction: column;
+            }
+            
+            nav {
+                width: auto;
+            }
+            
+            main {
+                width: auto;
+            }
+        }
+    
+    </style>
+    
+    <head>
+    
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="icon" type="image/png" href="decor/fangs.gif">
+        <title>For You...</title>
+        
+    </head>
+    
+    <body id="body" class="dark">
+        
+        <div class="container">
+        
+            <nav>
+                <div class="flex">
+            <button onclick="switchTheme('dark')" class="theme">dark</button>
+            
+            <button onclick="switchTheme('light')" class="theme">light</button>
+            </div>
+                
+                <hr>
+                
+                <a href="#code">Code</a>
+                <a href="decor">Page Decor</a>
+            </nav>
+            
+            <main>
+                <h1>Materials From Me To You</h1>
+                <p>These are things I've made that you are welcome to use for your own sites.</p>
+                
+                <hr>
+                
+                <section id="code">
+                    <h2>Code</h2>
+                    <p>Basic html page template for when I'm too lazy to type the same stuff out over and over:</p>
+                    
+                    <pre>
+&#60;!DOCTYPE html&#62;
+&#60;html lang="en"&#62;
+    
+    &#60;style&#62;&#60;/style&#62;
+    
+    &#60;head&#62;
+    
+        &#60;meta charset="UTF-8"&#62;
+        &#60;meta name="viewport" content="width=device-width, initial-scale=1.0"&#62;
+        
+        &#60;link rel="icon" type="image/png" href=""&#62;
+        &#60;title>&#60;/title&#62;
+        
+    &#60;/head&#62;
+    
+    &#60;body&#62;&#60;/body&#62;
+    
+&#60;/html&#62;
+                    </pre>
+                    
+                    
+                </section>
+                
+                <hr>
+                
+                <section id="decor">
+                    <h2>Page Decor</h2>
+                    <p>Credit is not necessary but would make you a super cool person. DO NOT HOTLINK. Save the images to your own site.</p>
+                    <div class="flex">
+                        <img src="decor/fangs.gif">
+                        <img src="decor/teeths.gif">
+                        <img src="decor/tilldeath.gif">
+                        <img src="decor/marooncircle.gif">
+                        <img src="decor/maroonwcircle.gif">
+                        <img src="decor/circleblack.gif">
+                        <img src="decor/whitecircle.gif">
+                        <img src="decor/darkgreencircle.gif">
+                        <img src="decor/greenwhitecircle.gif">
+                        <img src="decor/lightgreencircle.gif">
+                        <img src="decor/pinkblackcircle.gif">
+                        <img src="decor/pinkwhitecircle.gif">
+                        <img src="decor/browncircle.gif">
+                        <img src="decor/saturn.gif">
+                        <img src="decor/twinklestars.gif">
+                        <img src="decor/whiteheart.gif">
+                        <img src="decor/shootingstar.gif">
+                    </div>
+                </section>
+                
+            </main>
+        </div>
+        
+        <!------ themes ----->
+        
+        <script>
+    //javascript theme switcher by squidknees @ neocities.
+
+//list of all theme names in toggling order. edit this line to put your theme names here
+const thms = ["dark", "light"];
+
+//remove all theme classes
+function removeTheme(){
+	var b = document.getElementById("body");
+	for (let i = 0; i < thms.length; i++){
+		b.classList.remove(thms[i]);
+	}
+}
+
+//run setTheme function on load
+setTheme()
+//give the body the appropriate theme class
+function setTheme(){
+	var b = document.getElementById("body");
+	if (thms.indexOf(localStorage.theme) == -1){
+		localStorage.theme = thm[0];
+	}
+	removeTheme();
+	b.classList.add(localStorage.theme);
+}
+
+//switchTheme("themename") changes the theme to themename. when using in html, replace quotation marks with &quot;
+function switchTheme(themename){
+	var b = document.getElementById("body");
+	removeTheme();
+	b.classList.add(themename);
+	localStorage.theme = themename;
+}
+
+//toggle to the next theme in a cycle
+function toggleTheme(){
+	var currenttheme = thms.indexOf(localStorage.theme);
+	if (currenttheme == -1){
+		switchTheme(thms[1]);
+	}
+	else if (currenttheme == thms.length - 1){
+		switchTheme(thms[0]);
+	}
+	else{
+		switchTheme(thms[currenttheme + 1]);
+	}
+}</script>
+        
+    </body>
+</html>
