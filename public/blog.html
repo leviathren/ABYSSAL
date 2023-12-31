@@ -6,7 +6,7 @@
         --bgimg: url(bg/purplestars.gif);
         --bg: black;
         --color: white;
-        --border: #787878;
+        --border: #363636;
         --link: #6F48FF;
         --linkhov: #bfaeff;
     }
@@ -15,7 +15,7 @@
         --bgimg: url(bg/lightblue.png);
         --bg: #c7bde3;
         --color: #200b41;
-        --border: #787878;
+        --border: #705da7;
         --link: #4230cc;
         --linkhov: #8f5eff;
     }
@@ -34,6 +34,7 @@
     background: var(--link);
     color: var(--bg);
 }
+
     
     @import url('https://cdn.jsdelivr.net/npm/galmuri/dist/galmuri.css');
     
@@ -58,11 +59,10 @@
     .container {
         display: grid;
         
-        grid-template-columns: [left-line] 20% [mid-line] auto [right-line];
+        grid-template-columns: [left-line] 25% [mid-line] auto [right-line];
         grid-template-rows: [grid-start] auto [grid-end];
         grid-template-areas:
-            "side main"
-            ". main";
+            "side main";
         column-gap: 40px;
         
         width: 900px;
@@ -70,9 +70,12 @@
         margin: 40px auto;
     }
     
-    nav {
+    .sidebar {
         grid-area: side;
         position: fixed;
+    }
+    
+    nav {
         background: var(--bg);
         padding: 10px;
         margin: auto;
@@ -96,6 +99,11 @@
     
     button:hover {
         background-color: var(--linkhov);
+    }
+    
+    .comments {
+        margin: 20px 0;
+        border: 4px double var(--border);
     }
     
     main {
@@ -209,6 +217,7 @@
     
     <div class="container">
         
+        <div class="sidebar">
         <nav>
             
             <div class="center">
@@ -227,6 +236,11 @@
             <a href="#smallweb">What's the Small Web?</a>
         
         </nav>
+        
+        <div class="comments">
+        <iframe src="https://www3.cbox.ws/box/?boxid=3534383&boxtag=de5aCK" width="220" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>	
+        </div>
+            </div>
         
         <main>
             
