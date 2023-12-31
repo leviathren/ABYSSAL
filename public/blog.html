@@ -2,22 +2,22 @@
 
 <style>
     
-:root,
-    
-    [data-selected-theme="default"]{
+:root{
         --bgimg: url(bg/purplestars.gif);
         --bg: black;
         --color: white;
         --border: #787878;
         --link: #6F48FF;
+        --linkhov: #bfaeff;
     }
     
-    [data-selected-theme="light"]{
+.light{
         --bgimg: url(bg/lightblue.png);
-        --bg: #eff2fa;
-        --color: #2b3860;
+        --bg: #c7bde3;
+        --color: #2f1e4b;
         --border: #787878;
-        --link: #bacbff;
+        --link: #4230cc;
+        --linkhov: #a079f8;
     }
     
 ::-webkit-scrollbar {
@@ -37,6 +37,8 @@
         background-image: var(--bgimg);
         background-attachment: fixed;
         cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat947.ani), url(https://cur.cursors-4u.net/nature/nat-10/nat947.png), auto !important;
+        scrollbar-color: var(--link) var(--bg);
+        scrollbar-width: thin;
     }
     
     html a {
@@ -46,101 +48,62 @@
     body {
         font-family: Galmuri14, sans-serif;
         color: var(--color);
+        margin: 0;
     }
     
     .container {
-        display: flex;
-        width: 1000px;
+        display: grid;
+        
+        grid-template-columns: [left-line] 20% [mid-line] auto [right-line];
+        grid-template-rows: [grid-start] auto [grid-end];
+        grid-template-areas:
+            "side main"
+            ". main";
+        column-gap: 40px;
+        
+        width: 900px;
         height: 100vh;
-        margin: 20px auto;
+        margin: 40px auto;
     }
     
     nav {
+        grid-area: side;
         position: fixed;
-        display: block;
-        width: 200px;
-        min-height: 400px;
         background: var(--bg);
+        padding: 10px;
         margin: auto;
         border: 4px double var(--border);
     }
     
-    nav p {
-        margin-bottom: 0;
-        text-align: center;
+    nav a {
+        display: block;
     }
     
     button {
-        cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat949.ani), url(https://cur.cursors-4u.net/nature/nat-10/nat949.png), auto !important;
-    }
-    
-    .theme-switcher {
-        text-align: center;
-        padding-bottom: 10px;
-        border-bottom: 1px solid var(--border);
-    }
-    
-    .theme-switcher button {
         background: transparent;
         color: var(--color);
         border: 1px solid var(--link);
-        border-radius: 0;
         font-size: 12px;
         letter-spacing: 4;
-        width: 40%;
         padding: 5px;
-        margin: 5px 2px;
+        margin: 0 2px;
+        cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat949.ani), url(https://cur.cursors-4u.net/nature/nat-10/nat949.png), auto !important;
     }
     
-    .theme-switcher button:hover {
-        background-color: var(--link);
-    }
-    
-    #myBtnContainer {
-        margin: 10px 0;
-    }
-    
-    .btn {
-        margin: 4px;
-        background: transparent;
-        border: none;
-        color: var(--color);
-        font-size: 12px;
-        letter-spacing: 2;
-    }
-
-    .btn:hover {
-        background-color: var(--link);
-    }
-    
-    .btn.active {
-        background-color: var(--link);
-        color: var(--color);
+    button:hover {
+        background-color: var(--linkhov);
     }
     
     main {
-        display: block;
-        width: 700px;
-        min-height: 400px;
+        grid-area: main;
+    }
+    
+    article {
+        height: auto;
         background: var(--bg);
-        margin: 0 auto auto;
-        margin-left: 220px;
+        padding: 20px;
+        margin-bottom: 40px;
         border: 4px double var(--border);
-        color: var(--color);
-    }
-    
-    .column {
-        display: none;
-        padding: 30px;
-    }
-    
-    .show {
-        display: block;
-    }
-    
-    .hover {
-        -webkit-transition: 0.5s ease-in-out;
-        transition: 0.5s ease-in-out;
     }
     
     .center {
@@ -150,23 +113,27 @@
     }
     
     h1 {
-        font-size: 1.5em;
+        font-size: 1.6em;
         letter-spacing: 2;
         margin: 0 0 20px 0;
     }
     
     h2 {
-        font-size: 1em;
+        font-size: 1.2em;
         letter-spacing: 2;
     }
     
     h3 {
-        font-size: 0.8em;
+        font-size: 1em;
         letter-spacing: 2;
     }
     
     h3::before {
         content: '\2937  ';
+    }
+    
+    hr {
+        margin: 20px 0;
     }
     
     p {
@@ -190,32 +157,31 @@
     }
     
     a {
+        font-size: 14px;
         color: var(--link);
     }
     
     a:hover {
-        color: var(--color);
+        color: var(--linkhov);
     }
     
     figcaption {
         font-size: 0.6em;
     }
     
-    @media only screen and (max-width: 750px) {
+    @media only screen and (max-width: 950px) {
         
         .container {
-            display: block;
+            display: flex;
+            flex-direction: column;
+            column-gap: 0;
             width: auto;
+            margin: 0;
         }
         
         nav {
-            min-height: auto;
-            width: auto;
-        }
-        
-        #myBtnContainer {
-            display: block;
-            justify-content: center;
+            margin: 0;
+            height: auto;
         }
 
         main {
@@ -233,36 +199,34 @@
     <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galmuri/dist/galmuri.css">
     
-    <title>writings</title></head>
+    <title>Writings</title></head>
 
-<body>
+<body id="body" class="dark">
     
     <div class="container">
         
         <nav>
             
-            <div class="theme-switcher">
-                
-                <p>Choose a theme</p>
+            <div class="center">
+                <p>Choose a Theme</p>
             
-                <button data-theme="default" aria-pressed="true" class="smt-current-element hover">dark</button>
-                        
-                <button data-theme="light" aria-pressed="false" class="smt-current-element hover">light</button>
+                <button onclick="switchTheme('dark')" class="theme">Dark</button>
+            
+                <button onclick="switchTheme('light')" class="theme">Light</button>
             </div>
             
-        <div id="myBtnContainer">
+            <hr>
             
-            <li><a href="home.html"><button class="btn hover">home &#10531;</button></a></li>
-            <li><button class="btn active hover" onclick="filterSelection('home')">landing</button></li>
-            <li><button class="btn hover" onclick="filterSelection('1')">What's the Small Web?</button></li>
-
-            </div>
+            <a href="home.html">Home &#10531;</a>
+            <a href="#start">Landing</a>
+            <a href="#basics">Back to Basics</a>
+            <a href="#smallweb">What's the Small Web?</a>
         
         </nav>
         
         <main>
             
-            <div class="column home">
+            <article id="start">
                 
                 <h1>Welcome, Reader</h1>
                 
@@ -270,93 +234,101 @@
                 
                 <p>These are think-pieces and personal experiences, and shouldn't be taken as factual truths. I'm not an expert in anything.</p>
                 
-            </div>
+            </article>
             
-            <div class="column 1">
+            
+            
+            <article id="basics">
+            
+            <h2>Back to Basics</h2>
                 
-                <h1>What is the "Small Web"?</h1>
+                <p>I had been using javascript to hide/show blog posts and different "pages" within pages, but it was getting all too messy and cluttered in the code and in my head and I've decided to go back to the basics. For example, this page will no longer use javascript to hide and show posts depending on what button you click. Instead, I'm going back to a scrolling "feed" of blog posts, as you see here, where all posts are displayed on one page and you can just click links that will take you to the corresponding post on the page.</p>
                 
-                <h2>Intro</h2>
+                <p>I figure since I'm not familiar with javascript and I'm not trying to do anything crazy with my site, I don't need anything fancy. I just wanted a blog page where I could share my writings, so a simple scrollable page is enough.</p>
+                
+                <p>I reminded myself that my interest in the small web was the focus of this project anyways, and part of that is allowing my site to be as simple as I want. There are many cool things that you can add to a site that I think are really cool and handy, but I had to acknowledge that my js capabilities are not sufficient enough right now and trying to figure it all out without a solid foundation in it was just slowing down the process of me actually making the stuff I want to share on my site. My conclusion is: it's ok to have a simple setup to display your work, because it's the stuff you make that people want to see, not how you display it! (Though those with an interest in backend will probably be just as interested in that too!)</p>
+            
+            </article>
+            
+            
+            
+            <article id="smallweb">
+                
+                <h2>What is the "Small Web"?</h2>
+                
+                <h3>Intro</h3>
                 
                 <p>It's not a small spider's home. The "Small Web" is one of the many names that refers to the personal web, parts of the internet populated by people creating and sharing things for fun, rather than content made out of capitalist drive. The Small Web is part of a larger Web Revival Movement. You will probably hear these terms used interchangably, along with "Independent Web", "Old Web", and more, but what does it mean?</p>
                 
-                <h2>What Makes Up the Small Web?</h2>
+                <h3>What Makes Up the Small Web?</h3>
                 
                 <p>The Small Web is slower-paced as opposed to fast-paced content such as short-form videos and limited character-count posts. Things you'll commonly come across on the small web are blog posts, forums, personal websites, webrings, and more. It exists on the outskirts of the internet, also known as the "Peripheral Web", where corporations aren't present because it's far less populated. Contrast this to the "Core Web", which is made up of major platforms such as Google, Instagram, Facebook, TikTok, Twitter, YouTube, you get the idea. This is where you would find the majority of people on the internet, and where things like algorithms find and push content to the user. This is the main feature of the Core Web: shorter content, delivered quickly.</p>
                 
                 <p>Back to the Peripheral Web, or Small Web, you often have to search for content yourself. Take this site for example, you most likely found neocities.org somewhere, and somehow, through a lot of clicking I imagine, you ended up here. It didn't pop up at the top of your feed somewhere, because there is no algorithm out here. What I'm trying to say in a long-winded way, is that it takes more time for things to happen in the Small Web. It is also called the Slow Web for this reason.</p>
                 
-                <h2>Why the Small Web?</h2>
+                <h3>Why the Small Web?</h3>
                 
                 <p>For many who have migrated out here, this is a relieving break from an overwhelming digital culture that moves very quickly. Many people suffer from information overload due to the constant bombardment (I know, that's a strong word) of stuff that pops up on people's feeds. Consider how on many social media platforms, something may show on your feed that you may not be interested in, just because the algorithm thought you might be. Sometimes, you just want to see something specific you're feeling that day, so the Small - or Slow - Web, is what people go to for that. You may visit your favorite site you have bookmarked, or you may sift through posts on a forum dedicated to a certain topic you're interested in. </p>
                 
-                <h2>Wrap it Up</h2>
+                <h3>Wrap it Up</h3>
                 
                 <p>What you need to know if you're venturing into the Small Web for the first time, is that it is a place with a focus on building community, creativity, privacy, and fun. Things like NFT's, AI, corporate greed, and bad-faith gotcha arguments are widely unwelcome. You may participate or hang out on the Small Web in a myriad of ways, the limit is your imagination!</p>
-                
-                
-                
-            </div>
-            
+
+            </article>
         
         </main>
         
         
     </div>
     
-    <!----- theme switcher ----->
-        <script type="text/javascript" src="themeswitch.js"></script>
-    
-    
-    <!----- pages ------>
-            <script>
-                filterSelection("home") 
-                // Execute the function and show all columns
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("column");
-  if (c == "all") c = "";
-  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
+    <!------ themes ----->
+        
+        <script>
+    //javascript theme switcher by squidknees @ neocities.
+
+//list of all theme names in toggling order. edit this line to put your theme names here
+const thms = ["dark", "light"];
+
+//remove all theme classes
+function removeTheme(){
+	var b = document.getElementById("body");
+	for (let i = 0; i < thms.length; i++){
+		b.classList.remove(thms[i]);
+	}
 }
 
-// Show filtered elements
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {
-      element.className += " " + arr2[i];
-    }
-  }
+//run setTheme function on load
+setTheme()
+//give the body the appropriate theme class
+function setTheme(){
+	var b = document.getElementById("body");
+	if (thms.indexOf(localStorage.theme) == -1){
+		localStorage.theme = thm[0];
+	}
+	removeTheme();
+	b.classList.add(localStorage.theme);
 }
 
-// Hide elements that are not selected
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);
-    }
-  }
-  element.className = arr1.join(" ");
+//switchTheme("themename") changes the theme to themename. when using in html, replace quotation marks with &quot;
+function switchTheme(themename){
+	var b = document.getElementById("body");
+	removeTheme();
+	b.classList.add(themename);
+	localStorage.theme = themename;
 }
 
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
+//toggle to the next theme in a cycle
+function toggleTheme(){
+	var currenttheme = thms.indexOf(localStorage.theme);
+	if (currenttheme == -1){
+		switchTheme(thms[1]);
+	}
+	else if (currenttheme == thms.length - 1){
+		switchTheme(thms[0]);
+	}
+	else{
+		switchTheme(thms[currenttheme + 1]);
+	}
 }</script>
 
     </body>
