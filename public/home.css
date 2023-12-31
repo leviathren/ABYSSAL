@@ -558,6 +558,43 @@ button#windowclose:hover {
 #div12 {
     top: 40%;
     display: none;
+    max-height: 400px;
+}
+
+#div12 input, textarea {
+    background: var(--contentbg);
+    color: var(--fontcolor);
+    font-family: "lucida console", monospace, serif;
+    font-size: 1em;
+    border: 1px solid var(--toolbarborder);
+}
+
+input#name {
+    line-height: 1.4;
+}
+
+textarea#question {
+    width: 350px;
+    line-height: 1.4;
+    margin-right: 10px;
+    resize: none;
+}
+
+#send {
+    background: var(--contentbg);
+    line-height: 1.4;
+    color: var(--fontcolor);
+    border: 1px solid var(--toolbarborder);
+}
+
+#send:hover {
+    background: var(--toolbarhov);
+}
+
+.chatsend {
+    display: flex;
+    margin-top: 4px;
+    align-items: center;
 }
 
 /* notepad */
