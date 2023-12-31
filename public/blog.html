@@ -14,10 +14,10 @@
 .light{
         --bgimg: url(bg/lightblue.png);
         --bg: #c7bde3;
-        --color: #2f1e4b;
+        --color: #200b41;
         --border: #787878;
         --link: #4230cc;
-        --linkhov: #a079f8;
+        --linkhov: #8f5eff;
     }
     
 ::-webkit-scrollbar {
@@ -29,7 +29,11 @@
 ::-webkit-scrollbar-thumb {
     background-color: #6F48FF;
 }
-
+    
+::selection {
+    background: var(--link);
+    color: var(--bg);
+}
     
     @import url('https://cdn.jsdelivr.net/npm/galmuri/dist/galmuri.css');
     
