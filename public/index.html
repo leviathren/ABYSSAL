@@ -36,92 +36,71 @@
         overflow: hidden;
     }
     
-    html a {
-    }
-    
     body {
-        height: 100vh;
+        background: black;
+        color: #bbbbbb;
         margin: 0;
-        background: url(bg/binary.gif);
-        color: #c4c4c4;
         font-family: "lucida console", monospace, serif;
     }
     
-    .container {
-        height: 100%;
-        width: 100%;
-        margin: 0;
-        display: flex;
-        column-gap: 50px;
+    .grid {
+        display: grid;
+        grid-template-columns: [leftline] 55% [mid] auto [rightline];
+        grid-template-areas: "side main";
+        
+        height: 100vh;
     }
     
-    .sidebar {
-        background: black;
-        width: 55%;
-    }
-    
-    .sidebar section {
-        position: fixed;
-        margin: 20px;
-        width: 50%;
-        bottom: 0;
+    .side {
+        grid-area: side;
+        position: relative;
+        background: url(bg/blacktiles.jpg);
+        background-size: 400px;
+        padding: 40px;
     }
     
     .q {
-        font-size: 14;
-        font-style: italic;
-        max-width: 600px;
-        margin: 20px;
+        position: absolute;
+        right: 40px;
+        width: 580px;
+        text-align: right;
     }
     
-    .q blockquote {
-        line-height: 1.5;
+    .quotes {
+        width: auto;
+        position: absolute;
+        bottom: 0;
     }
     
     h1 {
-        width: 95%;
-    }
-    
-    h1 text {
-        background: white;
-        color: black;
-        font-size: 2em;
-        line-height: 1.4;
-        text-transform: uppercase;
-        padding: 8px;
+        width: 600px;
+        font-family: whiteonblack;
+        font-size: 3em;
+        color: #ddd;
+        text-align: left;
     }
     
     h2 {
-        float: right;
-        font-family: whiteonblack;
-        color: #eeeeee;
-        font-size: 2em;
+        width: 600px;
         text-align: right;
-        max-width: 550px;
-        margin: 0;
     }
     
-    .banner {
-        background: url('bg/blacktiles.jpg');
-        background-size: 400px;
-        min-height: 600px;
-        height: 55%;
+    h2 text {
+        background: #ddd;
+        color: black;
+        line-height: 1.4;
+        padding: 2px;
     }
     
     main {
-        display: flex;
-        height: 100%;
-        width: 40%;
-        margin: auto;
-        padding: 20px;
-        vertical-align: middle;
-        overflow-y: scroll;
-        scrollbar-color: #c4c4c4 black;
-        scrollbar-width: thin;
+        grid-area: main;
+        background: url(bg/binary.gif);
+        padding: 40px;
     }
     
     main section {
-        max-width: 350px;
+        text-align: center;
+        width: 300px;
         margin: auto;
     }
     
@@ -161,10 +140,9 @@
         text-shadow: 2px 0 grey, 4px 0 #505050, 6px 0 #202020, -2px 0 grey, -4px 0 #505050, -6px 0 #202020;
     }
     
-    .rings {
-        width: 250px;
-        margin: 40px auto;
-        text-align: center;
+    p {
+        letter-spacing: 2;
+        line-height: 1.5;
     }
     
     .hotline {
@@ -193,67 +171,43 @@
         text-decoration: underline;
     }
     
-    p {
-        text-align: center;
-        letter-spacing: 1.5px;
-        word-spacing: 2px;
-        line-height: 1.5;
+    @media only screen and (max-width: 1000px){
+        
+        html {
+            overflow: scroll;
+            scrollbar-color: #00aa88 black;
+            scrollbar-width: thin;
+        }
+        
+        .grid {
+            display: block;
+        }
+        
+        .side {
+            display: none;
+        }
+        
+        main {
+            100%;
+        }
+        
+        #enter {
+            position: relative;
+            display: block;
+            transform: none;
+            top: 0;
+            left: 0;
+        }
+        
+        #back {
+            position: relative;
+            display: block;
+            transform: none;
+            top: 0;
+            left: 0;
+        }
+        
     }
-    
-    .credits {
-        position: absolute;
-        bottom: 10px;
-        left: 0;
-        margin: 2px 8px;
-        font-size: 14px;
-    }
-    
-    .credits::after {
-        display: block;
-        content: '';
-        width: 100%;
-        height: 1px;
-        background: #c4c4c4;
-        margin-top: -10px;
-        transition: 300ms;
-    }
-    
-    .credits:hover::after {
-        width: 0px;
-    }
-    
-    
-@media (max-width: 1000px) {
-    
-    .sidebar {
-        display: none;
-    }
-    
-    main {
-        width: 100%;
-        padding: 40px 30px;
-    }
-    
-    #enter {
-        position: relative;
-        display: block;
-        top: 0;
-        left: 0;
-        transform: translate(0, 0)
-    }
-    
-    #back {
-        position: relative;
-        display: block;
-        top: 0;
-        left: 0;
-        transform: translate(0, 0)
-    }
-    
-    section {
-        width: 100%;
-    }
-}
     
     </style>
 
@@ -285,25 +239,19 @@
     
 <body>
     
-    <div class="container">
+    <div class="grid">
         
-        <div class="sidebar">
+        <div class="side">
             
-            <div class="banner"></div>
-        
-        <section>
             <div class="q">
-        <blockquote>"...and in a single day and night of misfortune all your warlike men in a body sank into the earth, and the island of Atlantis in like manner disappeared in the depths of the sea."</blockquote>- Plato, 360 BC</div>
-        
+            <blockquote>"...and in a single day and night of misfortune all your warlike men in a body sank into the earth, and the island of Atlantis in like manner disappeared in the depths of the sea."</blockquote>- Plato, 360 BC</div>
             
-                <h1><text>’Twas brillig, and the slithy toves Did gyre and gimble in the wabe.</text></h1>
+            <section class="quotes">
+                <h1>’Twas brillig, and the slithy toves Did gyre and gimble in the wabe.</h1>
                 
-                <h2>He took his vorpal sword in hand;
-      Long time the manxome foe he sought</h2>
-                
-                <p></p>
-                
-            </section>
+                <h2><text>He took his vorpal sword in hand;
+      Long time the manxome foe he sought</text></h2>
+                </section>
         
         </div>
         
@@ -322,27 +270,29 @@
                     <br>
                     [mobile friendly - looks cooler on desktop though]
                 </p>
+                
+            </section>
 
+            <section>
                 <p>
                     <a id="enter" href="home.html">[ enter ]</a>
 
                     <a id="back" href="https://neocities.org/site/leviathren">[ exit ]</a>
                 </p>
+            </section>
 
-                <div class="rings">                    
+                <section class="rings">                    
                     <iframe src="https://void.shroom.ink/widget/?slug=ren&hex=FFFFFF" height="250px" width="200px" scrolling="no" frameborder="0" alt="black and white image of mushroom, with words 'void dot shrooms webring' above three clickable buttons: left arrow, circle, and right arrow"></iframe>
                 
                     
                     <div class="hotline">
                         <a href="https://hotlinewebring.club/levi/previous">&#60;</a><a href="https://hotlinewebring.club/"> hotline webring </a><a href="https://hotlinewebring.club/levi/next">&#62;</a>
                     </div>
-                </div>
-                    
-                
-            </section>
+                </section>
+            
     </main>
     
-        <p class="credits smt-current-element" title="inspired by nonspace's spotlight tumblr theme and alternative magazine spreads">inspiration source</p>
+        
         
     </div>
     
