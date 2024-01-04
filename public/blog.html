@@ -34,7 +34,6 @@
     background: var(--link);
     color: var(--bg);
 }
-
     
     @import url('https://cdn.jsdelivr.net/npm/galmuri/dist/galmuri.css');
     
@@ -63,22 +62,19 @@
         grid-template-rows: [grid-start] auto [grid-end];
         grid-template-areas:
             "side main";
-        column-gap: 40px;
+        column-gap: 10px;
         
         width: 900px;
         height: 100vh;
         margin: 40px auto;
-    }
-    
-    .sidebar {
-        grid-area: side;
-        position: fixed;
+        transition: 0.3s ease;
     }
     
     nav {
+        grid-area: side;
+        position: fixed;
         background: var(--bg);
         padding: 10px;
-        margin: auto;
         border: 4px double var(--border);
     }
     
@@ -171,6 +167,7 @@
     a {
         font-size: 14px;
         color: var(--link);
+        transition: 0.2s ease;
     }
     
     a:hover {
@@ -192,12 +189,17 @@
         }
         
         nav {
+            position: relative;
             margin: 0;
             height: auto;
         }
 
         main {
             width: auto;
+        }
+        
+        article {
+            margin: 0;
         }
     }
     
@@ -217,7 +219,7 @@
     
     <div class="container">
         
-        <div class="sidebar">
+        
         <nav>
             
             <div class="center">
@@ -231,16 +233,11 @@
             <hr>
             
             <a href="home.html">Home &#10531;</a>
-            <a href="#start">Landing</a>
+            <a href="#start">Front Page</a>
             <a href="#basics">Back to Basics</a>
             <a href="#smallweb">What's the Small Web?</a>
         
         </nav>
-        
-        <div class="comments">
-        <iframe src="https://www3.cbox.ws/box/?boxid=3534383&boxtag=de5aCK" width="220" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>	
-        </div>
-            </div>
         
         <main>
             
