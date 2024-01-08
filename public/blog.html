@@ -9,6 +9,7 @@
         --border: #363636;
         --link: #6F48FF;
         --linkhov: #bfaeff;
+        --span: #4d4d4d;
     }
     
 .light{
@@ -16,8 +17,9 @@
         --bg: #c7bde3;
         --color: #200b41;
         --border: #705da7;
-        --link: #4230cc;
+        --link: #6116c9;
         --linkhov: #8f5eff;
+        --span: #606060;
     }
     
 ::-webkit-scrollbar {
@@ -43,6 +45,8 @@
         cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat947.ani), url(https://cur.cursors-4u.net/nature/nat-10/nat947.png), auto !important;
         scrollbar-color: var(--link) var(--bg);
         scrollbar-width: thin;
+        font-size: 1em;
+        line-height: 2em;
     }
     
     html a {
@@ -58,11 +62,11 @@
     .container {
         display: grid;
         
-        grid-template-columns: [left-line] 25% [mid-line] auto [right-line];
+        grid-template-columns: [left-line] 25% [mid-line] 75% [right-line];
         grid-template-rows: [grid-start] auto [grid-end];
         grid-template-areas:
             "side main";
-        column-gap: 10px;
+        column-gap: 20px;
         
         width: 900px;
         height: 100vh;
@@ -71,35 +75,68 @@
     }
     
     nav {
-        grid-area: side;
         position: fixed;
+        width: 200px;
         background: var(--bg);
         padding: 10px;
         border: 4px double var(--border);
     }
     
-    nav a {
+    .adjust text {
         display: block;
+        font-size: 12px;
+        line-height: 1;
+        margin: 10px auto 2px;
+    }
+    
+    nav .nav a {
+        display: block;
+        line-height: 1.4em;
     }
     
     button {
         background: transparent;
         color: var(--color);
         border: 1px solid var(--link);
+        text-align: center;
         font-size: 12px;
         letter-spacing: 4;
         padding: 5px;
-        margin: 0 2px;
         cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat949.ani), url(https://cur.cursors-4u.net/nature/nat-10/nat949.png), auto !important;
+        transition: 0.2s ease;
     }
     
     button:hover {
-        background-color: var(--linkhov);
+        background-color: var(--link);
     }
     
-    .comments {
-        margin: 20px 0;
-        border: 4px double var(--border);
+    button#minustext, #plustext, #minusheight, #plusheight {
+        width: 25px;
+    }
+    
+    .collapsible {
+        border: 1px solid var(--bg);
+        transition: ease 0.3s;
+    }
+    
+    .collapsible::after {
+        content: '▼';
+    }
+    
+    .active::after {
+        content: '▲';
+    }
+
+    .collapsible:hover {
+        border: 1px solid var(--link);
+        background: none;
+    }
+
+    .collapsed {
+        font-size: 12px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
     }
     
     main {
@@ -110,7 +147,7 @@
         height: auto;
         background: var(--bg);
         padding: 20px;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         border: 4px double var(--border);
     }
     
@@ -118,6 +155,10 @@
         display: block;
         text-align: center;
         margin: auto;
+    }
+    
+    .flex {
+        display: flex;
     }
     
     h1 {
@@ -141,18 +182,13 @@
     }
     
     hr {
-        margin: 20px 0;
-    }
-    
-    p {
-        font-size: 14px;
-        line-height: 2;
-    }
-    
-    span {
+        margin: 15px 0;
         color: var(--border);
-        font-size: 14px;
-        font-style: italic;
+    }
+    
+    .hr2 {
+        width: 40px;
+        margin-left: 6px;
     }
     
     ul {
@@ -164,14 +200,22 @@
         list-style-type: none;
     }
     
+    span {
+        color: var(--span);
+        font-size: 12px;
+        font-style: italic;
+    }
+    
     a {
         font-size: 14px;
         color: var(--link);
+        text-decoration: none;
         transition: 0.2s ease;
     }
     
     a:hover {
         color: var(--linkhov);
+        text-decoration: underline;
     }
     
     figcaption {
@@ -192,6 +236,7 @@
             position: relative;
             margin: 0;
             height: auto;
+            width: auto;
         }
 
         main {
@@ -214,7 +259,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galmuri/dist/galmuri.css">
     
     <title>Writings</title></head>
-
+    
 <body id="body" class="dark">
     
     <div class="container">
@@ -222,20 +267,50 @@
         
         <nav>
             
-            <div class="center">
-                <p>Choose a Theme</p>
-            
-                <button onclick="switchTheme('dark')" class="theme">Dark</button>
-            
-                <button onclick="switchTheme('light')" class="theme">Light</button>
+            <div class="adjust">
+                <div class="center">
+                    <text>Choose a Theme</text>
+
+                    <button onclick="switchTheme('dark')" class="theme">Dark</button>
+
+                    <button onclick="switchTheme('light')" class="theme">Light</button>
+                </div>
+
+                <div class="fiction_font-size-cont center">
+                    <text>Change Font Size</text>
+                    <button id="minustext" onclick="resizeText(-1)" aria-label="decrease font size">-</button>
+                    <button id="resettext" onclick="resetText()" aria-label="reset font size">Reset</button>
+                    <button id="plustext" onclick="resizeText(1)" aria-label="increase font size">+</button>
+                </div>
+
+                <div class="fiction_line-height-cont center">
+                    <text>Change Line Height</text>
+                    <button id="minusheight" onclick="resizeLine(-1)" aria-label="decrease line height">-</button>
+                    <button id="resetheight" onclick="resetLine()" aria-label="reset line height">Reset</button>
+                    <button id="plusheight" onclick="resizeLine(1)" aria-label="increase line height">+</button>
+                </div>
             </div>
             
             <hr>
             
-            <a href="home.html">Home &#10531;</a>
-            <a href="#start">Front Page</a>
-            <a href="#basics">Back to Basics</a>
-            <a href="#smallweb">What's the Small Web?</a>
+            <div class="nav">
+                <a href="home.html">Home &#10531;</a>
+                <a href="#start">Front Page<span> Back to Top</span></a>
+                
+                <div class="flex"><span>Posts</span><hr class="hr2"></div>
+                
+                <a href="#2024">The New Year - 2024</a>
+                <a href="#basics">Back to Basics</a>
+                <a href="#smallweb">What's the Small Web?</a>
+            </div>
+            
+            <hr>
+            
+            <button class="collapsible">Credits</button>
+            <div class="collapsed">
+                <a href="https://squidknees.neocities.org/downloads" target="_blank">Theme Changer</a> by squidknees.<br>
+                
+                <a href="https://github.com/Proxybat/little-code-snippets/tree/main/font-size%20and%20line-height%20modifier%20script" target="_blank">Font-size and line-height changer</a> by <a href="queenofarms.neocities.org" target="_blank">QueenofArms</a>.</div>
         
         </nav>
         
@@ -248,7 +323,21 @@
                 <p>Here, you will subject yourself to my ramblings.</p>
                 
                 <p>These are think-pieces and personal experiences, and shouldn't be taken as factual truths. I'm not an expert in anything.</p>
+            </article>
+            
+            <article id="2024">
+            
+                <h2>The New Year - 2024</h2>
                 
+                <p>This post is part of <a href="https://32bit.cafe/holidays2023/" target="_blank">32BITMAS</a>'s blog carnival!</p>
+                
+                <h3>Reflections</h3>
+                <p>2023 was a wild ride for me. I started off the year going on a research cruise with my class, my second time on a research vessel. The first handful of months was just wrapping up my final semesters of college and doing a ton of hands-on work, which was a very welcome change and challenge since I lost two years of in-person experience during my time there due to Covid. I had never done so much in my field (marine and aquatic sciences) before these two classes I took, and I was doing research posters/presentations, symposiums, showcases, and restoration efforts for the first seven months of the year. My class even won several awards/rewards! I then was hired by my professor for a research technician position in her lab, and I spent my summer doing a lot of manual labor and some labwork at the nanoscience technology department.</p>
+                <p>Then, a major life milestone occurred in August: I graduated with a bachelor's degree and walked the stage! It still feels kind of unreal; I've been a student all my life and following the expected track of a relatively academically achieving kid, and now that's done with (I do NOT plan on going back to school anytime soon...) and I'm thrust into the real, adult world without the structure of school. In a way, I feel less prepared than I did in high school, I felt more ambitious and mature and confident then, but now that I know more about the world and have experienced academia and the research field, I am so much more aware of all the things I don't know yet and it's intimidating. I'm currently still in that post-grad limbo of figuring out what I want/need to do next, but trying not to put too much pressure on myself to meet arbitrary standards I've subconsciously made for myself.</p>
+                <p>From August to the end of the year, I spent lots of time with my family because I was going to school on the other side of the continent the last four years and missed them dearly. During this time is when I learned about the Web Revival and got into site-building!</p>
+                <p>Overall, the year was eventfull and busy and I took the chance to slow down and relax once I went back home. I caught up with some childhood friends and helped deep clean most of the house, while driving my younger siblings around to and from school and spending quality time with them.</p>
+                <h3>What's To Come</h3>
+                <p>There were some hard parts of the year,  some deaths, and some depressive ruts here and there, but I'm happy to say this year was better than some of the past few recently, and I genuinely am looking forward to a new cycle in our lives. I feel like there's a shifting attitude amongst the people around me, maybe that's because my peers and I are at that age where people are either graduating or getting married or starting families (or all of the above), but for the first time in a while I feel like I'm looking forward to something, even if I'm not sure what that is quite yet.</p>
             </article>
             
             
@@ -262,7 +351,6 @@
                 <p>I figure since I'm not familiar with javascript and I'm not trying to do anything crazy with my site, I don't need anything fancy. I just wanted a blog page where I could share my writings, so a simple scrollable page is enough.</p>
                 
                 <p>I reminded myself that my interest in the small web was the focus of this project anyways, and part of that is allowing my site to be as simple as I want. There are many cool things that you can add to a site that I think are really cool and handy, but I had to acknowledge that my js capabilities are not sufficient enough right now and trying to figure it all out without a solid foundation in it was just slowing down the process of me actually making the stuff I want to share on my site. My conclusion is: it's ok to have a simple setup to display your work, because it's the stuff you make that people want to see, not how you display it! (Though those with an interest in backend will probably be just as interested in that too!)</p>
-            
             </article>
             
             
@@ -288,7 +376,6 @@
                 <h3>Wrap it Up</h3>
                 
                 <p>What you need to know if you're venturing into the Small Web for the first time, is that it is a place with a focus on building community, creativity, privacy, and fun. Things like NFT's, AI, corporate greed, and bad-faith gotcha arguments are widely unwelcome. You may participate or hang out on the Small Web in a myriad of ways, the limit is your imagination!</p>
-
             </article>
         
         </main>
@@ -345,6 +432,28 @@ function toggleTheme(){
 		switchTheme(thms[currenttheme + 1]);
 	}
 }</script>
+    
+    <!------ change font/line height ----->
+    
+    <script src="font-size-line-height-toggle.js"></script>
+    
+    <!-----  collapse content ----->
+        <script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
 
     </body>
 
