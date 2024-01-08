@@ -8,7 +8,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--purple);
+    background-color: #6F48FF;
 }
         
     body {
@@ -29,11 +29,13 @@
         padding: 30px;
         margin: 10 auto;
         overflow-y: auto;
+        scrollbar-color: #6F48FF black;
+        scrollbar-width: thin;
     }
     
     nav {
         text-align: center;
-        margin: 10px 0;
+        margin: 20px 0;
     }
     
     nav a {
@@ -44,8 +46,8 @@
     
     #statuscafe {
         padding: 15px;
-        margin: 30 40;
-        border: 1px solid var(--purple);
+        margin: 10px;
+        border: 1px solid #6F48FF;
     }
     #statuscafe-username {
         margin-bottom: 15px;
@@ -54,27 +56,43 @@
         margin: 0 1em .5em 1em;
     }
     
+    article {
+        padding: 20px;
+    }
+    
+    .rss {
+        transition: 0.2s ease;
+    }
+    
+    .rss:hover {
+        box-shadow: 4px 4px 0px #6F48FF;
+    }
+    
     h1 {
         text-transform: uppercase;
         letter-spacing: 4;
-        margin: 20px;
     }
     
     ul {
-        line-height: 1.5;
+        margin-left: -15px;
     }
     
     ul span {
-        color: var(--purple);
+        color: #6F48FF;
     }
     
     li {
         list-style-type: none;
-        margin-bottom: 20px;
+        line-height: 2.4;
     }
     
     a {
-        color: var(--purple);
+        color: #6F48FF;
+        transition: 0.2s ease;
+    }
+    
+    a:hover {
+        color: #b39eff;
     }
     
     .removed {
@@ -120,6 +138,7 @@
 
 
     <article>
+        <a title="Site updates for your aggregator" href="feed.xml" target="_blank"><img class="rss" src="btns/rss.gif"></a>
         <h1>lately</h1>
             <ul>
                 <li><span>Jan 7, 2024 -</span> published <a href="feed.xml">RSS feed</a> for this site-updates page and <a href="blog.xml">blog RSS feed</a></li>
