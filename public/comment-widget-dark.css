@@ -57,43 +57,45 @@
 #c_widget {
     box-sizing: border-box;
     height: 100%;
+    width: 600px;
     overflow: auto;
     padding: 15px;
-    background-image: ; /* F2U background provided by https://sadgrl.online/webmastery/downloads/tiledbgs */
+    background-image: ;
+    background: black;
     background-attachment: fixed;
-    font-family: lucida console;
+    font-family: "lucida console", monospace, serif;
     font-size: 1em;
-    color: var(--fontcolor);
+    color: white;
 }
 
 #c_widget button, #c_widget input[type=submit] {
     padding: 4px;
-    font-family: lucida console;
+    font-family: "lucida console", monospace, serif;
     text-decoration: none;
 	text-align: center;
     text-transform: uppercase;
-    background-color: var(--contentbg);
-    color: var(--fontcolor);
-    border: 2px outset var(--contentborder);
+    background-color: #080808;
+    color: white;
+    border: 2px outset #303030;
 }
 #c_widget button:hover, #c_widget input[type=submit]:hover {
-    color: var(linkhov);
-    border: 2px inset var(--linkhov);
+    color: #00eeaa;
+    border: 2px inset #00eeaa;
     transition: ease border 0.5s;
 }
 #c_widget button:disabled, #c_widget input[type=submit]:disabled {opacity: 60%;}
 #c_widget button:disabled:hover, #c_widget input[type=submit]:disabled:hover {
-    color: var(--linkhov);
-    border: 1px solid var(--linkhov);
+    color:#00eeaa;
+    border: 1px solid #00eeaa;
 }
 
 /* Input section */
 #c_inputDiv {
     margin-bottom: 15px;
     padding: 15px;
-    background-color: var(--contentbg);
+    background-color: ;
     letter-spacing: 4;
-    border: 3px outset var(--toolbarborder);
+    border: 3px outset #282828;
 }
 
 #c_widgetTitle {
@@ -102,8 +104,8 @@
     padding: 8px;
     text-transform: uppercase;
     font-style: italic;
-    background: var(--accent);
-    color: var(--fontcolor);
+    background: #151515;
+    color: white;
 }
 
 .c-inputWrapper {
@@ -113,12 +115,12 @@
 .c-input {
     width: 100%;
     padding: 4px;
-    background: var(--windowbg);
-    color: var(--fontcolor);
-    border: 2px inset var(--toolbarborder);
+    background: #101010;
+    color: white;
+    border: 2px inset #282828;
 	outline: none;
 }
-.c-input:focus {border: 2px solid var(--linkhov);}
+.c-input:focus {border: 2px solid #00eeaa;}
 
 .c-textInput {
     width: calc(100% - 10px);
@@ -132,7 +134,7 @@
     padding: 4px;
 }
 #c_replyingText {
-    color: var(--fontcolor);
+    color: white;
     text-align: right;
 }
 
@@ -140,9 +142,9 @@
 .c-comment {
     margin-bottom: 15px;
     padding: 10px;
-    border: 3px outset var(--toolbarborder);
-    color: var(--fontcolor); 
-    background: var(--contentbg);
+    border: 3px outset #282828;
+    color: white; 
+    background: #080808;
 }
 .c-reply {
     display: block;
@@ -151,15 +153,15 @@
     margin-left: auto;
     margin-right: 0;
     padding: 10px;
-    border: 1px dashed var(--accent);
-    background: var(--contentbg); 
+    border: 1px dashed #202020;
+    background: #080808; 
 }
 .c-reply:last-child {margin-bottom: 0;}
 .c-replyContainer {
     margin: -10px;
     margin-top: 10px;
     padding: 10px;
-    background-color: var(--contentbg);
+    background-color: #080808;
 }
 
 .c-name {
@@ -174,12 +176,12 @@
     text-transform: uppercase;
     text-decoration: none;
     font-style: italic;
-    color: var(--link);
+    color: #00aa88;
 }
-.c-site:hover {color: var(--linkhov);}
+.c-site:hover {color: #00eeaa;}
 .c-timestamp {
     float: right;
-    color: var(--fontcolor);
+    color: white;
     opacity: 75%;
 }
 .c-text {
@@ -187,10 +189,10 @@
     margin-left: -10px;
     margin-right: -10px;
     padding: 10px;
-    font-family: lucida console;
+    font-family: "lucida console", monospace, serif;
     font-size: 14px;
-    color: var(--fontcolor);
-    background-color: var(--contentbg);
+    color: white;
+    background-color: #080808;
 }
 
 /* Pagination */
