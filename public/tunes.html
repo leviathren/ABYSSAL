@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <style>
+        
+        .gridtunes {
+            display: grid;
+    
+            grid-template-columns: [left-line] 20% [line-2] auto [right-line];
+            
+            grid-template-rows: [grid-start] 120px [row1-end] 620px [grid-end];
+            
+            grid-template-areas: 
+                "header header"
+                "nav main";
+            
+            column-gap: 10px;
+            grid-row-gap: 10px;
+            max-width: 900px;
+            margin: 20px auto;
+            transition: 0.5s ease;
+        }
+        
+    @media only screen and (max-width: 900px) {
+    
+        .gridtunes {
+            width: 100%;
+            column-gap: 0px;
+            grid-row-gap: 0px;
+            margin: auto;
+            transition: 0.5s ease;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+
+        .gridtunes {
+            display: block;
+        }
+}
+    
+    </style>
+    
+    <head>
+    
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="icon" type="image/png" href="decor/headphone.gif">
+        <link rel="stylesheet" href="fonts.css">
+        <link rel="stylesheet" href="music.css">
+        
+        <title>Today's Tunes</title>
+        
+    </head>
+    
+    <body>
+    
+        <div class="gridtunes">
+        
+            <div class="header">
+            </div>
+            
+            <nav>
+                <a href="home.html">Go Home</a>
+                <a href="music.html">Back to Music Page</a>
+                <a href="#top">Back to Top</a>
+                <hr>
+                <a href="#jan24">January 2024</a>
+            </nav>
+        
+            <main>
+                <article id="top">
+                    <h1>Today's Tunes</h1>
+                    <p>What have I been listening to? + thoughts about the songs</p>
+                </article>
+                
+                <!-----
+                    <li>
+                        <a href="" target="_blank"></a>
+                            <ul>
+                                <li>Artist: </li>
+                                <li>Length: </li>
+                            </ul>
+                            Thoughts....
+                    </li>
+                ----->
+
+                
+                <article id="jan24">
+                    <h2>January 2024</h2>
+                    <ul>
+                        <li><a href="https://open.spotify.com/track/7Bqz2cjdtsdFyMYiAdZdnK?si=c8baf4ee00364b3c" target="_blank">Just a Lifetime</a>
+                            <ul>
+                                <li>Artist: The Legendary Pink Dots</li>
+                                <li>Length: 7:46</li>
+                            </ul>
+                            This song is so psychedelic and whimsy, it makes me feel like I'm floating through music and colors. I love whatever instrument they're using for that airy string plucking sound.. I'm not sure what it is but it sounds like a harpsichord. The song's a bit of goth and experimental rock. This song has gotten me into binge-listening to their entire discography.
+                        </li>
+                        
+                        <li>
+                        <a href="https://youtu.be/YyacCX-CFUM?si=9f6Gibmf2JYlMUcG" target="_blank">Kool-Aid</a>
+                            <ul>
+                                <li>Artist: Bring Me The Horizon</li>
+                                <li>Length: 3:48</li>
+                            </ul>
+                            This song was highly anticipated and I listened to it the day it was released and... I literally LAUGHED in excitement and hype because it was even better than I hoped (not that I have low expectations for BMTH, it was just that good). I don't even know how to describe it in terms of music genres, it's like something uniquely BMTH that I love. It's a similar vibe to AmEN!.
+                    </li>
+                    </ul>
+                </article>
+            </main>
+            
+        </div>
+    </body>
+    
+</html>
