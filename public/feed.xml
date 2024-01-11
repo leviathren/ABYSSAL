@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
 <channel>
-<title>ABYSSAL's Logbook</title>
+<title>ABYSSAL Newsletter</title>
 <link>https://leviathren.neocities.org/updates</link>
 <description>Site updates on ABYSSAL.</description>
+<lastBuildDate>
+    Thu, 11 Jan 2024 10:34:30 GMT
+</lastBuildDate>
+<ttl>20000</ttl>
 
 <item>
 <title>New Pages!</title>
