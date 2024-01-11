@@ -419,4 +419,8 @@ a:hover {
     .grid {
         display: block;
     }
+	
+    #amp, #app, #webamp {
+        display: none;
+    }
 }
