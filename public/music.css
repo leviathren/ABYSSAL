@@ -57,6 +57,7 @@
 }
 
 html {
+    overflow-x: hidden;
     scrollbar-color: var(--accent3) var(--dark);
     scrollbar-width: thin;
 }
@@ -95,12 +96,13 @@ body {
     
     grid-template-columns: [left-line] 284px [line-2] auto [line-3] 30% [right-line];
     
-    grid-template-rows: [grid-start] 140px [row1-end] 300px [row2-end] 360px [row3-end] 100px [row3-end] 200px [row4-end] 100px [grid-end];
+    grid-template-rows: [grid-start] 140px [row1-end] 300px [row2-end] 360px [row3-end] 30px [row4-end] 100px [row5-end] 200px [row6-end] 100px [grid-end];
     
     grid-template-areas: 
     "header header header"
     "nav main main"
     "webamp main main"
+    "headline headline  headline"
     "mid mid mid"
     "ft ft meme"
     "footer footer footer";
@@ -219,6 +221,13 @@ article:last-of-type {
      margin: 10px auto;
 }
 
+.headline {
+    grid-area: headline;
+    background: var(--dark);
+    color: var(--fontcolor);
+    border: var(--border2);
+}
+
 .banner {
     grid-area: mid;
     background: var(--accent);
@@ -227,18 +236,18 @@ article:last-of-type {
 }
 
 .marquee {
- --gap: 1rem;
-  position: relative;
-  display: flex;
-  overflow: hidden;
-  user-select: none;
+     --gap: 1rem;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
 }
 
 .marqueestuff {
-  flex-shrink: 0;
-  display: flex;
-  justify-content: space-around;
-  min-width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
     animation: scroll 28s linear infinite;
     margin: 0;
 }
@@ -263,7 +272,7 @@ article:last-of-type {
 
 @keyframes scroll {
   from {
-    transform: translateX(40%);
+    transform: translateX(50%);
   }
   to {
     transform: translateX(calc(-100% - var(--gap)));
@@ -339,8 +348,9 @@ footer p {
     color: var(--accent3);
 }
 
-.bookend {
+img.bookend {
     margin: 0 6px;
+    height: 25px;
 }
 
 .center {
@@ -419,8 +429,9 @@ a:hover {
     .grid {
         display: block;
     }
-	
+    
     #amp, #app, #webamp {
         display: none;
     }
+
 }
