@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <style>
+    
+    ::selection {
+        background: #00aa88;
+        color: black;
+    }
+    
+        html {
+            height: 100%;
+            cursor: url(https://cur.cursors-4u.net/cursors/cur-9/cur817.cur), auto !important;
+        }
+
+        body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            background: repeating-linear-gradient(
+            to bottom,
+            #202020 0px,
+            black 1px,
+            black 2px,
+            black 3px
+          );
+            background-attachment: fixed;
+            font-family: "lucida console", monospace, serif;
+            font-size: 0.8em;
+            color: white;
+            scrollbar-color: #00aa88 #101010;
+            scrollbar-width: thin;
+        }
+
+        #s-m-t-tooltip{
+            /* basic */
+            max-width: 250px;
+            z-index: 999999 !important;
+            margin: 24px 14px 7px 12px;
+            /* style and design */
+            background: black;
+            color: #00eeaa;
+            padding: 2px 8px;
+            text-decoration: none;
+            border: 1px solid #00aa88;
+            font-size: 14px;
+        }
+
+            nav {
+                background: black;
+                display: flex;
+                justify-content: center;
+                width: 800px;
+                font-size: 16px;
+                padding: 20px 0;
+                margin: 20px auto 0;
+                border: 1px solid #101010;
+            }
+
+            a {
+                color: #00aa88;
+                text-transform: uppercase;
+            }
+
+            a:hover {
+                color: #00eeaa;
+            }
+
+        main {
+            display: flex;
+            justify-content: center;
+            width: 800px;
+            background: black;
+            padding: 20px 0;
+            margin: 0 auto;
+            border: 1px solid #101010;
+        }
+        
+        #pagedoll {
+            position: absolute;
+            top: 40%;
+            left: 10%;
+            height: 400px;
+            z-index: -1;
+        }
+    </style>
+    
+    <head>
+    
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="icon" type="image/png" href="">
+        <title>ABYSSAL's Guestbook</title>
+        
+    </head>
+    
+    <body>
+    
+        <nav>
+            <a href="home.html">home</a>
+        </nav>
+        
+        <main>
+            <div id="c_widget"></div>
+            <script src="comment-widget.js"></script>
+        </main>
+        
+        <img id="pagedoll" src="decor/darkpagedoll.gif">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script src="https://static.tumblr.com/lspzyz3/xloqk6cgp/jquery.style-my-tooltips.js"></script>
+<script>
+							(function($){
+							$(document).ready(function(){
+							$("[title]").style_my_tooltips({
+							tip_follows_cursor: true,
+							tip_delay_time:100,
+							tip_fade_speed:300,
+							attribute:"title"
+							});
+							});
+							})(jQuery);
+</script>
+        
+    </body>
+    
+</html>
