@@ -10,7 +10,13 @@ var webPages = [
     
         ["https://youtu.be/YSCMoI-CSU0?si=Lugq-SprRUjdFsv_", "<img title='CLICK TO WATCH: Can You Feel My Heart (Mothica Version) by Mothica' src='decor/cyfmhmothica.jpg'>"],
     
-        ["https://youtu.be/YyacCX-CFUM?si=Wkd1j-O6SRRXMHs7", "<img title='CLICK TO WATCH: Kool-Aid by Bring Me The Horizon' src='decor/koolaidbmth.jpg'>"]
+        ["https://youtu.be/YyacCX-CFUM?si=Wkd1j-O6SRRXMHs7", "<img title='CLICK TO WATCH: Kool-Aid by Bring Me The Horizon' src='decor/koolaidbmth.jpg'>"],
+    
+        ["https://youtu.be/m4_9TFeMfJE?si=C-afzhkcFhgAP21J", "<img title='CLICK TO WATCH: Paint The Town Red by Doja Cat' src='decor/paintthetownred.png'>"],
+    
+        ["https://youtu.be/HUHC9tYz8ik?si=1oK2Avp0epJi55FY", "<img title='CLICK TO WATCH: bury a friend by Billie Eilish' src='decor/buryafriend.jpg'>"],
+    
+        ["https://youtu.be/-PZsSWwc9xA?si=tQuN7QiIxtiR6Lt3", "<img title='CLICK TO WATCH: all the good girls go to hell by Billie Eilish' src='decor/allthegoodgirls.jpg'>"]
         ]
 
 // this function shuffles the array (reorder the items randomly)
