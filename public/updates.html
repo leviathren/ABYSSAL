@@ -10,6 +10,11 @@
 ::-webkit-scrollbar-thumb {
     background-color: #6F48FF;
 }
+    
+    html {
+        scrollbar-color: #6F48FF black;
+        scrollbar-width: thin;
+    }
         
     body {
         font-family: vhs;
@@ -21,16 +26,15 @@
     }
     
     main {
-        display: block;
         background: black;
         height: 80%;
-        width: 60%;
         max-width: 700px;
         padding: 30px;
         margin: 10 auto;
         overflow-y: auto;
         scrollbar-color: #6F48FF black;
         scrollbar-width: thin;
+        transition: 0.4s ease;
     }
     
     nav {
@@ -108,7 +112,9 @@
         
         main {
             width: auto;
-            margin: auto;
+            height: 100%;
+            margin: 0;
+            transition: 0.4s ease;
         }
     }
 
@@ -141,6 +147,7 @@
         <a title="Site updates for your aggregator" href="feed.xml" target="_blank"><img class="rss" src="btns/rss.gif"></a>
         <h1>lately</h1>
             <ul>
+                <li><span>Jan 11, 2024 -</span> published <a href="music.html">music page</a>! where I share all kinds of things relating to my listening habits, and moved the <a href="guest.html">guestbook</a> to a separate page for itself</li>
                 <li><span>Jan 7, 2024 -</span> published <a href="feed.xml">RSS feed</a> for this site-updates page and <a href="blog.xml">blog RSS feed</a></li>
                 <li><span>Dec 30, 2023 -</span> published <a href="f2u.html">F2U page</a></li>
                 <li><span>Dec 2, 2023 -</span> started using github to deploy site</li>
