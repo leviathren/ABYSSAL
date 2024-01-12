@@ -7,12 +7,14 @@
 <lastBuildDate>
     Thu, 11 Jan 2024 10:34:30 GMT
 </lastBuildDate>
+<ttl>20000</ttl>
 
 <item>
 <title>New Pages!</title>
 <link>https://leviathren.neocities.org/updates</link>
-<pubDate>Thur, 11 Jan 2024 1:19:30 GMT</pubDate>
-<description>Published <a href="https://leviathren.neocities.org/music" target="_blank">music page</a>! where I share all kinds of things relating to my listening habits, and moved the <a href="https://leviathren.neocities.org/guest" target="_blank">guestbook</a> to a separate page for itself</description>
+<pubDate>Thu, 11 Jan 2024 09:20:00 -0800</pubDate>
+<description>Published <a href="https://leviathren.neocities.org/music">music page</a>! where I share all kinds of things relating to my listening habits, and moved the <a href="https://leviathren.neocities.org/guest">guestbook</a> to a separate page for itself.</description>
+<guid>https://leviathren.neocities.org/updates</guid>
 </item>
 </channel>
 </rss>
