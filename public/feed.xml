@@ -12,9 +12,15 @@
 <item>
 <title>New Pages!</title>
 <link>https://leviathren.neocities.org/updates</link>
-<pubDate>Thu, 11 Jan 2024 09:20:00 -0800</pubDate>
-<description>Published <a href="https://leviathren.neocities.org/music">music page</a>! where I share all kinds of things relating to my listening habits, and moved the <a href="https://leviathren.neocities.org/guest">guestbook</a> to a separate page for itself.</description>
+<pubDate>Thu, 11 Jan 2024 22:16:00 -0800</pubDate>
+<description>Published music page! where I share all kinds of things relating to my listening habits, and moved the guestbook to a separate page for itself.</description>
 <guid>https://leviathren.neocities.org/updates</guid>
+</item>
+    <item>
+<title>Leviathren attempts to write an RSS feed file</title>
+<link>https://leviathren.neocities.org/updates</link>
+<pubDate>Sun, 07 Jan 2024 06:06:30 GMT</pubDate>
+<description>Uploading first RSS file.</description>
 </item>
 </channel>
 </rss>
