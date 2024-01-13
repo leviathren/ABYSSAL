@@ -11,15 +11,17 @@
     background-color: #6F48FF;
 }
     
+    @import url('https://cdn.jsdelivr.net/npm/galmuri/dist/galmuri.css');
+    
     html {
         scrollbar-color: #6F48FF black;
         scrollbar-width: thin;
     }
         
     body {
-        font-family: vhs;
-        font-size: 1em;
-        letter-spacing: 2;
+        font-family: Galmuri14, monospace, serif;
+        font-size: 14px;
+        letter-spacing: 1.4;
         color: white;
         margin: 0;
         background-image: url(/bg/twinklingstarsbg.gif);
@@ -110,6 +112,10 @@
         color: #b39eff;
     }
     
+    img {
+        image-resolution: crisp-edges;
+    }
+    
     @media only screen and (max-width: 750px) {
         
         main {
@@ -128,6 +134,7 @@
     <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galmuri/dist/galmuri.css">
     <link rel="stylesheet" href='fonts.css'>
 <title>Ship's Log</title>
 </head>
@@ -142,9 +149,9 @@
             
         </nav>
         
-        <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=leviathren" defer></script>
-
-
+        <div class="center" style="color: #ccc; font-size: 14px;">Want an <img style="height: 22px; margin-bottom: -4px;" src="btns/rss.gif"> ? Click the HTML Journal button above to download the atom file.<br>Or: alt-click the HTML Journal button -> copy link -> paste into your RSS aggregator subscriptions.</div>
+        
+        
     <main>
         
         <h1>ABYSSAL Newsletter</h1>
