@@ -59,6 +59,20 @@
         margin: 0;
     }
     
+    #s-m-t-tooltip{
+	/* basic */
+	max-width: 250px;
+	z-index: 999999 !important;
+	margin: 24px 14px 7px 12px;
+	/* style and design */
+    background: var(--bgimg);
+    color: var(--link);
+    padding: 2px 8px;
+    text-decoration: none;
+    border: 1px solid var(--link);
+    font-size: 14px;
+}
+    
     .container {
         display: grid;
         
@@ -94,6 +108,19 @@
         line-height: 1.4em;
     }
     
+    nav li {
+        margin-left: -40px;
+    }
+    
+    time {
+        font-size: 12px;
+        color: var(--span);
+    }
+    
+    time::after {
+        content: '↴';
+    }
+    
     button {
         background: transparent;
         color: var(--color);
@@ -112,6 +139,14 @@
     
     button#minustext, #plustext, #minusheight, #plusheight {
         width: 25px;
+    }
+    
+    .rss {
+        transition: 0.2s ease;
+    }
+    
+    .rss:hover {
+        box-shadow: 4px 4px 0px #6F48FF;
     }
     
     .collapsible {
@@ -184,11 +219,6 @@
     hr {
         margin: 15px 0;
         color: var(--border);
-    }
-    
-    .hr2 {
-        width: 40px;
-        margin-left: 6px;
     }
     
     ul {
@@ -296,13 +326,14 @@
             <div class="nav">
                 <a href="home.html">Home &#10531;</a>
                 <a href="#start">Front Page<span> Back to Top</span></a>
-                <a class="smt-current-element" title="Blog updates straight to your RSS feed" href="blog.xml" target="_blank"><img class="badge" src="badges/rss80x15.png"></a>
+                <ul>
+                    <li><time>2024-01-07</time><a href="#2024">The New Year - 2024</a></li>
+                    <li><time>2023-12-30</time><a href="#basics">Back to Basics</a></li>
+                    <li><time>2023-12-16</time><a href="#smallweb">What's the Small Web?</a></li>
+                </ul>
                 
-                <div class="flex"><span>Posts</span><hr class="hr2"></div>
+                <a class="smt-current-element" title="Blog updates straight to your RSS feed" href="https://blog.miso.town/atom?url=https://leviathren.neocities.org/blog" target="_blank"><img class="rss" src="btns/htmljournal.png"></a>
                 
-                <a href="#2024">The New Year - 2024</a>
-                <a href="#basics">Back to Basics</a>
-                <a href="#smallweb">What's the Small Web?</a>
             </div>
             
             <hr>
@@ -319,7 +350,7 @@
             
             <article id="start">
                 
-                <h1>Welcome, Reader</h1>
+                <h1>ABYSSAL Writings</h1>
                 
                 <p>Here, you will subject yourself to my ramblings.</p>
                 
@@ -383,6 +414,22 @@
         
         
     </div>
+    
+    <!----- tooltips ----->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script src="https://static.tumblr.com/lspzyz3/xloqk6cgp/jquery.style-my-tooltips.js"></script>
+<script>
+							(function($){
+							$(document).ready(function(){
+							$("[title]").style_my_tooltips({
+							tip_follows_cursor: true,
+							tip_delay_time:100,
+							tip_fade_speed:300,
+							attribute:"title"
+							});
+							});
+							})(jQuery);
+</script>
     
     <!------ themes ----->
         
