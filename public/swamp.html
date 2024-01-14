@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <style>
+    
+        html {
+            height: 100%;
+            cursor: url(https://ani.cursors-4u.net/nature/nat-11/nat1037.cur), auto !important;
+        }
+        
+        body {
+            background: url('bg/deepwater.gif');
+            width: 600px;
+            height: 100%;
+            margin: auto;
+            font-family: comicsans;
+            font-size: 1.4em;
+            letter-spacing: 2px;
+            color: #00db21;
+            
+            display: grid;
+            grid-template-columns: [leftline] 1fr [line2] 1fr [midline] 1fr [line4] 1fr [rightline];
+            grid-template-rows: [topline] 140px [line2] auto [bottomline];
+            grid-template-areas: 
+                "header header header header"
+                "left mid1 mid2 right";
+            
+        }
+        
+        #s-m-t-tooltip{
+            /* basic */
+            max-width: 250px;
+            z-index: 999999 !important;
+            margin: 24px 14px 7px 12px;
+            /* style and design */
+            padding: 2px 8px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .about {
+            grid-area: header;
+        }
+        
+        /* columns */
+        
+        .column {
+        }
+        
+        .left {
+            grid-area: left;
+        }
+        
+        .left img {
+            transform: scaleX(-1);
+        }
+        
+        .leftedge {
+            position: relative;
+            margin: 80px 80px 0 0;
+        }
+        
+        .mid1 {
+            grid-area: mid1;
+        }
+        
+        .mid1 img {
+            transform: scaleX(-1);
+        }
+        
+        .mid2 {
+            grid-area: mid2;
+        }
+        
+        .right {
+            grid-area: right;
+        }
+        
+        /* frogs and lilys */
+        
+        img.froge {
+            position: absolute;
+            margin-left: 20px;
+            z-index: 2;
+        }
+        
+        img.lily {
+            position: absolute;
+            z-index: -2;
+        }
+        
+    </style>
+    
+    <head>
+    
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="fonts.css">
+        <link rel="icon" type="image/png" href="decor/froge.png">
+        <title>OUR SWAMP</title>
+        
+    </head>
+    
+    <body>
+        <div class="about">
+        <p>froge nation, send me your froge png's either on discord (@leviathren) or anywhere on my neocities if you want to chill in the swamp</p>
+        </div>
+    
+        <div class="column left">
+            
+            <div class="leftedge">
+                <img class="froge smt-current-element" title="LEVIATHREN" src="decor/frogelevi.png">
+                <img class="lily" src="decor/lilypad.png">
+            </div>
+            
+        </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script src="https://static.tumblr.com/lspzyz3/xloqk6cgp/jquery.style-my-tooltips.js"></script>
+<script>
+							(function($){
+							$(document).ready(function(){
+							$("[title]").style_my_tooltips({
+							tip_follows_cursor: true,
+							tip_delay_time:100,
+							tip_fade_speed:300,
+							attribute:"title"
+							});
+							});
+							})(jQuery);
+</script>
+    </body>
+    
+</html>
