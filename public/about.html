@@ -104,14 +104,6 @@
         color: #00eeaa;
     }
     
-    article {
-        padding: 20px;
-    }
-    
-    li {
-        margin-left: -20px;
-    }
-    
     /* BEGIN DIVS */
     
     #div1 {
@@ -134,8 +126,10 @@
         width: 250px;
     }
     
+    /* currently */
+    
     #div3 {
-        top: 50%;
+        top: 60%;
         left: 15%;
         width: 300px;
     }
@@ -146,7 +140,140 @@
         width: 250px;
     }
     
+    /* status */
+    #div5 {
+        width: 250px;
+        top: 15%;
+        right: 8%;
+    }
+
+    /* contact */
+    #div6 {
+        width: 250px;
+        top: 30%;
+        left: 16%;
+    }
+    
+    .badge {
+        transition: 0.4s ease;
+    }
+    
+    .badge:hover {
+        box-shadow: 2px 2px 0px #00aa88;
+    }
+    
+    #email img {
+        margin: 6px 0 4px;
+    }
+    
+    #email:hover + .contact {
+        font-size: 12px;
+    }
+    
+    .contact:hover {
+        font-size: 12px;
+    }
+    
+    .contact {
+        font-size: 0px;
+        margin-bottom: 4px;
+        transition: font-size 0.4s linear;
+    }
+
+    /* status cafe */
+    #statuscafe {
+        display: block;
+        margin: auto;
+        width: 100%;
+        background-color: var(--contentbg);
+        font-size: var(--fontsize);
+    }
+    #statuscafe-username {
+        margin: 10px 0;
+        font-style: italic;
+    }
+    #statuscafe-username a {
+        text-decoration: none;
+    }
+    #statuscafe-content {
+        margin: 0 10px 10px 10px;
+    }
+    #statusbtn {
+        margin-left: 10px;
+    }
+    
+    /* general */
+    article {
+        padding: 20px;
+    }
+    
+    li {
+        margin-left: -20px;
+    }
+    
+    a {
+        color: #00aa88;
+        transition: 0.2s ease;
+    }
+    
+    a:hover {
+        color: #00eeaa;
+    }
+    
     @media only screen and (max-width: 750px) {
+        
+        body {
+            flex-direction: column;
+        }
+        
+        main {
+            margin-top: 55px;
+        }
+        
+        .window {
+            position: relative;
+            display: block;
+        }
+        
+        #div1 {
+            top: 0;
+            left: 0;
+            width: auto;
+        }
+        
+        #div2 {
+            top: 0;
+            left: 0;
+            width: auto;
+        }
+        
+        #div3 {
+            top: 0;
+            left: 0;
+            width: auto;
+        }
+        
+        #div4 {
+            top: 0;
+            left: 0;
+            width: auto;
+        }
+        
+        #div5 {
+            top: 0;
+            left: 0;
+            width: auto;
+        }
+        
+        #div6 {
+            top: 0;
+            left: 0;
+            width: auto;
+        }
+        
+        #start {
+            top: 0;
+        }
         
     }
     
@@ -183,6 +310,12 @@
                     <p>I learned a few coding basics when I was in middle school during a class project where we had to make a game using simple commands.</p>
                     <p>I later learned more about html and css when I started college by messing with tumblr themes.</p>
                     <p>Only after I graduated did I get into Neocities and the Web Revival, where my interest in coding grew exponentially and I started to get more serious about learning and pouring more time into creating static sites from scratch.</p>
+                    <img src="badges/lgbtfriendly.png">
+                    <img src="badges/prochoice.gif">
+                    <img src="badges/punkinsidebutton.gif">
+                    <img src="badges/nightcoder.gif">
+                    <img src="badges/sinlust.gif">
+                    <img src="badges/smoking.png">
                     
                 </div>
             </div>
@@ -242,6 +375,33 @@
                         <li>Art<text style="color:#686868;">(sketching and painting)</text></li>
                         <li>Crafts<text style="color:#686868;">(clothing and accessory alterations, trinkets, sculptures, jewelry, pins, keychains, etc)</text></li>
                 </ul>
+                </div>
+            </div>
+            
+            <div id="div5" class="window">
+            <div id="header5" class="windowheader">
+                <img class="windowicon" src="decor/heart.png">Status<button id="windowclose" onclick="closeDiv(5)"></button>
+                </div>
+                <div class="toolbar">
+                    <span class="tools">file</span>
+                    <span class="tools">edit</span>
+                    <span class="tools">view</span>
+                </div>
+                <div class="content">
+                    <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div><a href="https://status.cafe/users/leviathren"><img id="statusbtn" class="hov" src="https://status.cafe/users/leviathren/badge.png" alt="Status Cafe Profile"/></a></div><script src="https://status.cafe/current-status.js?name=leviathren" defer></script>
+                </div>
+            </div>
+            
+            <div id="div6" class="window">
+            <div id="header6" class="windowheader"><img class="windowicon" src="decor/an-book.gif">Contact</div>
+                <div class="toolbar"><span class="tools">file</span>
+                    <span class="tools">edit</span>
+                    <span class="tools">view</span></div>
+                <div class="content">
+                    <a id="email" href="mailto:leviathrain@proton.me"><img class="badge" src="badges/contact.png"></a><div class="contact">leviathrain@proton.me</div>
+                    
+                    <a href="https://cohost.org/leviathren?page=0"><img class="badge" src="badges/cohost.png"></a>
+                    
                 </div>
             </div>
             
@@ -318,6 +478,8 @@ makeDragable('#header1', '#div1')
 makeDragable('#header2', '#div2')
 makeDragable('#header3', '#div3')
 makeDragable('#header4', '#div4')
+makeDragable('#header5', '#div5')
+makeDragable('#header6', '#div6')
         </script>
 
 </html>
