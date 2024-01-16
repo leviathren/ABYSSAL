@@ -23,6 +23,11 @@
         src: url("/fonts/badcoma.ttf");
     }
 
+@font-face {
+        font-family: comicsans;
+        src: url("fonts/comicsans.ttf");
+    }
+
 @import url('https://cdn.jsdelivr.net/npm/galmuri/dist/galmuri.css');
 
 /* to use above, link this in the html file: <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galmuri/dist/galmuri.css"> */
