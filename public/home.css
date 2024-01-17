@@ -226,6 +226,7 @@ nav {
     height: 25px;
     width: 25px;
     margin: auto;
+    image-rendering: pixelated;
 }
 
 .btn {
@@ -474,6 +475,10 @@ button#windowclose:hover {
     top: 50%;
     left: 72%;
     width: 380px;
+}
+
+#div6 img {
+    image-rendering: pixelated;
 }
 
 #div6 .content {
