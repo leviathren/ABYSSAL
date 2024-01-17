@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <style>
+        
+        ::selection {
+            background: white;
+            color: black;
+        }
+        
+        body {
+            background: url(bg/blacktiles.jpg);
+            background-size: 400px;
+            max-height: 100%;
+            max-width: 100%;
+            font-family: type;
+            color: white;
+            margin: 0;
+        }
+        
+        .container {
+            background: url(bg/blacktexture.jpg);
+            position: relative;
+            width: 1100px;
+            height: 740px;
+            margin: 40px auto 0;
+            border: 8px double #000000;
+            box-shadow: 0 0 40px #262626;
+        }
+        
+        main {
+            display: flex;
+            margin: 0;
+            overflow-y: hidden;
+            overflow-x: hidden;
+        }
+        
+        .spread {
+            position: relative;
+            display: flex;
+            column-gap: 50px;
+            padding: 20px 40px;
+            transition: 1s ease;
+        }
+        
+        .page {
+            background: url(bg/oldpaper.png);
+            background-size: cover;
+            height: 620px;
+            width: 405px;
+            padding: 40px;
+            overflow-y: hidden;
+            overflow-x: hidden;
+            transition: 1s ease;
+        }
+        
+        .nav {
+            position: absolute;
+            bottom: 15px;
+            width: 90%;
+            font-family: whiteonblack;
+        }
+        
+        .nav a {
+            color: white;
+            background: black;
+            font-size: 1.6em;
+        }
+        
+        .nav a:hover {
+            color: black;
+            background: white;
+        }
+        
+        .prev {
+            float: left;
+        }
+        
+        .next {
+            float: right;
+        }
+        
+        /* general */
+        
+        h1 {
+            font-family: whiteonblack;
+            font-size: 4em;
+            background: #0a0a0a;
+            padding: 10px;
+            margin: 0;
+            transform: rotate(-4deg);
+            box-shadow: 4px 2px 6px black;
+        }
+        
+        h2 {
+            font-family: whiteonblack;
+            font-size: 2em;
+            background: #0a0a0a;
+            padding: 10px;
+            box-shadow: 4px 2px 4px black;
+        }
+        
+        h3 {
+            font-family: whiteonblack;
+        }
+        
+        img {
+            box-shadow: -14px -10px 2px #0a0a0a;
+        }
+        
+        p {
+            display: table;
+            background: #0a0a0a;
+            padding: 4px 10px;
+            box-shadow: 4px 2px 4px black;
+        }
+        
+        a {
+            color: #00aa88;
+            text-shadow: 2px 2px 2px black;
+            transition: 0.2s ease;
+        }
+        
+        a:hover {
+            color: #00eeaa;
+        }
+        
+        /* specifics */
+        
+        #home {
+            position: absolute;
+            top: 100px;
+            left: -60px;
+            transform: rotate(-10deg);
+            font-size: 14px;
+            z-index: 1;
+        }
+        
+        #home:hover {
+            transform: rotate(-4deg);
+        }
+        
+        #bookmark img{
+            position: absolute;
+            top: -20px;
+            left: -50px;
+            z-index: 1;
+            transform: rotate(6deg);
+            box-shadow: none;
+        }
+        
+        #bookmark:hover img {
+            transform: rotate(12deg);
+            transition: 0.2s ease;
+        }
+        
+        .contents {
+            list-style-type: none;
+        }
+        
+        @media only screen and (max-width: 1000px) {
+            
+            #bookmark {
+                position: fixed;
+            }
+            
+            .container {
+                width: auto;
+                height: auto;
+                margin: 0;
+            }
+            
+            hr {
+                display: none;
+            }
+            
+            main {
+                display: block;
+            }
+            
+            .spread {
+                display: block;
+                margin: 40px auto;
+            }
+            
+            .page {
+                background: url(bg/dark_exabg.webp);
+                width: auto;
+                height: auto;
+            }
+            
+            .nav {
+                display: none;
+            }
+        }
+        
+        @media only screen and (max-width: 600px) {
+            
+            .spread {
+                margin: 0;
+                padding: 0;
+            }
+            
+            .page {
+                margin: 0;
+            }
+        }
+    
+    </style>
+    
+    <head>
+    
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="fonts.css">
+        <link rel="icon" type="image/png" href="decor/spiral.webp">
+        <title>Craft Studio</title>
+        
+    </head>
+    
+    <body>
+        
+        <div class="container">
+            
+        <a id="bookmark" href="#1"><img style="height: 140px;" src="decor/blackbutterfly.png"></a>
+            
+        <a id="home" href="home.html"><h2>HOME</h2></a>
+            
+        <hr style="position: absolute; left: 50%; top: 40px; height: 660px; width: 1px; color: #383838">
+        
+        <main>
+            
+            <div class="spread" id="1">
+                <div class="page">
+                    <h2 style="transform: rotate(1deg);">Table of Contents</h2>
+                    <ul class="contents">
+                        <li><a href="#1">Frontpage................................................................1</a></li>
+                        <li><a href="#2">Mossy Cap.................................................................2</a></li>
+                        <li><a href="#3">Elk Skull................................................................3</a></li>
+                        <li><a href="#4">Flower Earrings..................................................4</a></li>
+                        <li><a href="#5">Buttons.....................................................................5</a></li>
+                        <li><a href="#6">Buttons cont.........................................................6</a></li>
+                        <li><a href="#end">Credits......................................................................7</a></li>
+                    </ul>
+                </div>
+                <div class="page">
+                    <h1>Creations</h1>
+                    
+                    <p style="transform: rotate(4deg); float: right;">I like making things eheheheh</p>
+                    <p style="clear: both;">Use the table of contents to quickly skim and navigate the contents of this page.</p>
+                    <p>Click the butterfly bookmark at the top left to jump back to this spread.</p>
+                    
+                    <img style="height: 200px; box-shadow: none; transform: rotate(-10deg);" src="decor/fairywings.png">
+                    
+                    <p>See also: <a href="art.html">Art Gallery</a></p>
+                </div>
+                
+                <div class="nav">
+                    <a class="next" href="#2">Next</a>
+                </div>
+            </div>
+            
+            <!------------>
+            
+            <div class="spread" id="2">
+                <div class="page">
+                    <h2>Mossy Cap</h2>
+                    <img style="height: 300px; float: left; margin: 0 20px 0 10px;" src="crafts/mossycap.jpg">
+                    <p>This was my graduation cap I decorated and wore to my college graduation ceremony!</p>
+                    
+                    <img style="float: right;height: 100px; box-shadow: none; margin: -50px -16px -20px 0; transform: rotate(25deg);" src="decor/shell.png">
+                    
+                    <p>My field of study was biology, and while I was on </p>
+                    
+                    <p>the marine &#38; aquatic sciences track, I also really enjoyed ecology, so I decided to cover my cap with moss.</p>
+                    <p>I added fake lavender as a nod to the queer community. I believe representation is so</p>
+                </div>
+                <div class="page">
+                    <p>important, so I wanted to include that because queer people are and belong in STEM too. We are often associated more with creative fields, and while queer people have contributed so much priceless work in the arts, it is important that we are seen in the sciences as well! We are everywhere, and not going anywhere (but forward!).</p>
+                    <p>I am very grateful to have had an extremely supportive professor who championed and advocated for women and queer people in STEM. She would talk about discrimination and biases against marginalized groups, and would make sure that we were aware of it and given as many opportunities as she could provide.</p>
+                    <p>She shared my graduation photos to her lab's page and wrote such a sweet, proud sendoff :')</p>
+                    <p>I would share her work here (because she is so key to the field she works in!) but for the sake of keeping my IRL identity more private, I cannot :'( but just know, she slays.</p>
+                </div>
+                
+                <div class="nav">
+                    <a class="prev" href="#1">Previous</a>
+                    <a class="next" href="#3">Next</a>
+                </div>
+            </div>
+            
+            <!------------>
+            
+            <div class="spread" id="3">
+                <div class="page">
+                <h2>Elk Skull</h2>
+                    <img style="height: 350px; float: left; margin: 0 10px 0 0;" src="crafts/skull.jpg">
+                    <p>Once upon a time, I had photos of this prior to it going through multiple breakages and repairs,</p>
+                    <p>and before it took a fall with the aid of a curious cat. I looked</p>
+                    <p>everywhere for those photos but can't seem to find them, so here are current snapshots of it. Still beautifull, perhaps even more so.</p>
+                </div>
+                <div class="page">
+                    <img style="height: 250px; float: right; margin: 0 0 20px 30px;" src="crafts/skullleft.jpg">
+                    <p>It's not entirely an anatomically correct elk skull, but I did use a photo of one for reference.</p>
+                    <img style="height: 250px; float: left; margin: 0 10px 0 0;" src="crafts/skullright.jpg">
+                    <p>One of my greatest prides.</p>
+                    <p>Made from air-dry clay a few years ago.</p>
+                </div>
+                <div class="nav">
+                    <a class="prev" href="#2">Previous</a>
+                    <a class="next" href="#4">Next</a>
+                </div>
+            </div>
+            
+            <!------------>
+            
+            <div class="spread" id="4">
+                <div class="page">
+                <h2>Flower Earrings</h2>
+                    <img style="height: 350px; float: left; margin: 0 10px 0 0;" src="crafts/flowerearrings.jpg">
+                    <p>These are a pair of earrings I made as a birthday present for a friend :)</p>
+                    <p>The flower charms are from a pack of three I got at Michaels.</p>
+                    <p>The jump</p>
+                    <p>rings and earring hooks are probably also from Michaels, that or part of a skrinky-dink pack I got online.</p>
+                    <p>(Carabiner not part of the set)</p>
+                </div>
+                <div class="page">
+                    <h2>Fairy wings...<br>coming soon</h2>
+                </div>
+                <div class="nav">
+                    <a class="prev" href="#3">Previous</a>
+                    <a class="next" href="#5">Next</a>
+                </div>
+            </div>
+            
+            <!------------>
+            
+            <div class="spread" id="5">
+                <div class="page">
+                    <h2>Buttons</h2>
+                    
+                    <section>
+                    <img style="height: 180px; float: left; margin-right: 10px;" src="crafts/spiderman.jpg">
+                        <p>Have you seen Spiderman: Into the Spiderverse?? Because if you haven't you GOTTA. That's gotta be my favorite animated movie by far (except for my childhood</p>
+                        <p>favorites, for nostalgia reasons). The art style?? The storytelling?? The soundtrack? It's all so good. Of course I had to make a button inspired by Miles Morales's suit. I tried to mimic the graffiti paint drips and free-hand look to it.</p>
+                    </section>
+                    
+                    <section>
+                    <img style="height: 180px; float: right; clear: both; margin: 10px 0 0 30px;" src="crafts/boom.jpg">
+                        <p>Don't get wrapped up in shimmer smuggling, because this will be the last thing you see.</p>
+                    </section>
+                </div>
+                <div class="page">
+                    <p>This button is inspired by a scene from Arcane, where the Firelights bust a shimmer operation but get uh, ended, by Jinx and her explosives in the storage deck. A swing reveals a tag saying "BOOM" in her signature neon purple.</p>
+                    <p>I added a bunch of "VI"s around it, representing how Jinx is haunted by the memory of her sister and all the events that led to where she is.</p>
+                    <section>
+                    <img style="height: 200px; float: right; clear: both; margin: 10px 0 0 30px;" src="crafts/smallweb.jpg">
+                        <p>I made this button around the time I got into the neocities and was learning about the Web Revival :)</p>
+                        <p>I wanted to share the many great</p>
+                        <p>things about the small web, because I think it's a great place where people would enjoy the internet more again, but I didn't want to share it in very public spaces like posting links on the core web, for fear of</p>
+                        <p>(continued on next page...)</p>
+                    </section>
+                </div>
+                
+                <div class="nav">
+                    <a class="prev" href="#4">Previous</a>
+                    <a class="next" href="#6">Next</a>
+                </div>
+            </div>
+            
+            <!------------>
+            
+            <div class="spread" id="6">
+                <div class="page">
+                    <section>
+                        <p>trolls and unsavory kinds of malicious people who might see the niche corner of the internet as another place where they could spread their negativity.</p>
+                        <p>I'm sure most wouldn't want to put enough effort like making a site to do so, but you never know. I still wouldn't want them spewing stuff in people's shoutboxes.</p>
+                        <p>So! I decided to make a button simply saying "SMALL WEB" for my jacket and if it catches someone's eye and piques their interest, it's up to them if they put in the effort to research it and to fall down the rabbit hole on their own.</p>
+                    </section>
+                </div>
+                <div class="page">
+                    <section>
+                    <img style="height: 200px; float: left; margin: 10px 10px 0 0;" src="crafts/pokeball.jpg">
+                    <p>This is a button I made for my dad because he LOVES playing PokemonGO.</p>
+                    <p>I like that pokemon made their logo something so simple in design and yet</p>
+                    <p>so recognizable.</p>
+                    </section>
+                </div>
+                <div class="nav">
+                <a class="prev" href="#5">Previous</a>
+                    <a class="next" href="#end">Next</a></div>
+            </div>
+            
+            <!------------>
+            
+            <div class="spread" id="end">
+                <div class="page">
+                    <h2>Credits:</h2>
+                    <h3>Graphics:</h3>
+                    <ul>
+                        <li><a href="https://www.deviantart.com/ftourini/art/old-paper-stock-02-256716612" target="_blank">old paper image</a> by <a href="https://www.deviantart.com/ftourini/gallery" target="_blank">ftourini</a></li>
+                        <li>various page decor from <a href="https://snailspng.tumblr.com/" target="_blank">snailspng.tumblr.com</a></li>
+                    </ul>
+                    
+                    <h3>Fonts:</h3>
+                    See <a href="">Site Credits</a> page (coming soon)
+                </div>
+                <div class="page">
+                    
+                </div>
+                
+                <div class="nav">
+                    <a class="prev" href="#6">Previous</a>
+                </div>
+            </div>
+            
+        </main>
+        </div>
+    
+        <!----- <div class="spread" id="">
+                <div class="page"></div>
+                <div class="page"></div>
+                <div class="nav">
+                    <a class="prev" href="#">Previous</a>
+                    <a class="next" href="#">Next</a>
+                </div>
+            </div> ----->
+    </body>
+    
+</html>
