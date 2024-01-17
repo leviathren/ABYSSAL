@@ -27,36 +27,92 @@
         cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat949.ani), url(https://cur.cursors-4u.net/nature/nat-10/nat949.png), auto !important;
     }
     
+    #s-m-t-tooltip {
+        /* basic */
+        max-width: 250px;
+        z-index: 999999 !important;
+        margin: 24px 14px 7px 12px;
+        /* style and design */
+        background: black;
+        padding: 2px 8px;
+        text-decoration: none;
+        border: 1px solid #00d5ff;
+        font-size: 14px;
+    }
+    
     body {
         font-family: monospace;
         font-size: 1.1em;
         color: #00d5ff;
+        margin: 0;
     }
     
     main {
         width: 600px;
-        height: 450px;
-        margin: 40px auto;
+        height: 80%;
+        margin: 20px auto;
         padding: 40px;
         overflow: scroll;
         background: #0a0a0a;
-        border: 20px double #004b5b;
-        border-radius: 15px;
+        box-shadow: -10px 10px 0 #00d5ff;
         scrollbar-color: #004b5b black;
         scrollbar-width: thin;
     }
     
+    .flex {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    .flex section {
+        width: 50%;
+    }
+    
+    .left {
+        text-align: left;
+    }
+    
+    .right {
+        text-align: left;
+    }
+    
     section {
-        text-align: center;
     }
     
     .btn {
-        margin: 4px;
+        margin: 2px;
         max-width: 88px;
     }
     
+    .blocks {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .ph {
+        text-align: center;
+        text-decoration: none;
+        width: 88px;
+        height: 31px;
+        margin: 4px;
+    }
+    
+    .ph:hover {
+        box-shadow: 4px 4px 0 #00d5ff;
+    }
+    
+    /* general */
+    
+    img {
+        transition: 0.4s ease;
+    }
+    
+    img:hover {
+        box-shadow: 4px 4px 0 #00d5ff;
+    }
+    
     p {
-        margin: 30px;
+        margin: 30px 0;
     }
     
     a {
@@ -84,6 +140,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="fonts.css">
     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script src="https://static.tumblr.com/lspzyz3/xloqk6cgp/jquery.style-my-tooltips.js"></script>
+<script>
+							(function($){
+							$(document).ready(function(){
+							$("[title]").style_my_tooltips({
+							tip_follows_cursor: true,
+							tip_delay_time:100,
+							tip_fade_speed:300,
+							attribute:"title"
+							});
+							});
+							})(jQuery);
+</script>
+    
     <title>seaport</title></head>
 
 <body>
@@ -93,82 +164,167 @@
             <a id="top" href="home.html">&#60; home</a> //
             <a href="#disclaimer">disclaimer &#8628;</a>
         
-        <p>&#62;&#62; Traveler, you have found ABYSSAL's seaport, a hub where other sailors may dock and mingle with one another. Take a gander at the fine ships (sites) that catch your eye.</p>
+        <p>&#62;&#62; You have found ABYSSAL's seaport, a hub where other sailors may dock and mingle with one another. Take a gander at the fine ships (sites) that catch your eye.</p>
         
         <section class="flex">
-            <div class="left">
+            <section class="left">
         &#62;&#62; My buttons:<br><br>
-            <a href="home.html"><img class="btn hov" src="btns/leviathrenbutton.gif"></a>
-            <a href="home.html"><img class="btn hov" src="btns/ABYSSALbtn.gif"></a>
-                </div>
+            <a href="home.html"><img class="btn" src="btns/leviathrenbutton.gif"></a>
+            <a href="home.html"><img class="btn" src="btns/ABYSSALbtn.gif"></a>
+                </section>
             
-            <div class="right">
+            <section class="right">
             &#62;&#62; My IRL friends' buttons:<br><br>
-            <a href="https://that-mom-friend.neocities.org/" target="_blank"><img class="btn hov" src="btns/that-mom-friend-button.gif"></a>
-            <a href="https://saturniids.neocities.org/" target="_blank"><img class="btn hov" src="btns/ghostlightButton.gif"></a></div>
+            <a href="https://that-mom-friend.neocities.org/" target="_blank"><img class="btn" src="btns/that-mom-friend-button.gif"></a>
+            <a href="https://saturniids.neocities.org/" target="_blank"><img class="btn" src="btns/ghostlightButton.gif"></a>
+            </section>
         </section>
         
         <p>&#62;&#62; Net neighbors</p>
 
             <section class="mutuals">
                 
-                <a href="https://blackwater.neocities.org/" target="_blank"><img class="btn hov" src="btns/blackwater.gif"></a>
+                <a href="https://blackwater.neocities.org/" target="_blank"><img class="btn" src="btns/blackwater.gif"></a>
                 
-                <a href="https://grossgirl94.neocities.org/" target="_blank"><img class="btn hov" src="btns/grossgirl94.gif"></a>
+                <a href="https://onlywonder.net/" target="_blank"><img class="btn" src="btns/wonder.png"></a>
                 
-                <a href="https://deadrodrick.neocities.org/" target="_blank"><img class="btn hov" src="btns/DeadRodrick.png"></a>
+                <a href="https://grossgirl94.neocities.org/" target="_blank"><img class="btn" src="btns/grossgirl94.gif"></a>
                 
-                <a href="https://screamingegg.neocities.org/" target="_blank"><img class="btn hov" src="btns/screamingegg.png"></a>
+                <a href="https://glassheart.neocities.org/" target="_blank"><img class="btn" src="btns/glassheart.png"></a>
                 
-                <a href="https://nymphblood.neocities.org/" target="_blank"><img class="btn hov" src="btns/primordial.png"></a>
+                <a href="https://pickeraparter.com" target="_blank"><img class="btn" src="btns/pickeraparter.gif"></a>
                 
-                <a href="https://jlehr.neocities.org/" target="_blank"><img class="btn hov" src="btns/lehr.gif"></a>
+                <a href="https://deadrodrick.neocities.org/" target="_blank"><img class="btn" src="btns/DeadRodrick.png"></a>
                 
-                <a href="https://doqmeat.neocities.org/" target="_blank"><img class="btn hov" src="btns/doqmeat.png"></a>
+                <a href="https://corq.neocities.org/" target="_blank"><img class="btn" src="btns/corbin.png"></a>
                 
-                <a href="https://spiritcellar.neocities.org/" target="_blank"><img class="btn hov" src="btns/spiritcellar.gif"></a>
+                <a href="https://screamingegg.neocities.org/" target="_blank"><img class="btn" src="btns/screamingegg.png"></a>
                 
-                <a href="https://milestailsprower.neocities.org/" target="_blank"><img class="btn hov" src="btns/chaogarden.png"></a>
+                <a href="https://nymphblood.neocities.org/" target="_blank"><img class="btn" src="btns/primordial.png"></a>
                 
-                <a href="https://pepper.gay/homepage" target="_blank"><img class="btn hov" src="btns/ghostpepper.png"></a>
+                <a href="https://lemonbaskets.neocities.org/" target="_blank"><img class="btn" src="btns/lemonbaskets.png"></a>
                 
-                <a href="https://inkcaps.neocities.org/" target="_blank"><img class="btn hov" src="btns/inkcaps.gif"></a>
+                <a href="https://jlehr.neocities.org/" target="_blank"><img class="btn" src="btns/lehr.gif"></a>
                 
-                <a href="https://that-mom-friend.neocities.org/" target="_blank"><img class="btn hov" src="btns/that-mom-friend-button.gif"></a>
+                <a href="https://space-bar.neocities.org/" target="_blank"><img class="btn" src="btns/spacebar.gif"></a>
                 
-                <a href="https://dogfish99.neocities.org/" target="_blank"><img class="btn hov" src="btns/dogfish.png"></a>
+                <a href="https://doqmeat.neocities.org/" target="_blank"><img class="btn" src="btns/doqmeat.png"></a>
                 
-                <a href="https://manyface.neocities.org/" target="_blank"><img class="btn hov" src="btns/manyface.png"></a>
+                <a href="https://divergentrays.com/" target="_blank"><img class="btn" src="btns/divergentrays.png"></a>
                 
-                <a href="https://xandra.cc/" target="_blank"><img class="btn hov" src="btns/museumofalexandra.png"></a>
+                <a href="https://spiritcellar.neocities.org/" target="_blank"><img class="btn" src="btns/spiritcellar.gif"></a>
                 
-                <a href="https://spiritcellar.art/" target="_blank"><img class="btn hov" src="btns/spiritcellarart.gif"></a>
+                <a href="https://boatemhq.neocities.org/" target="_blank"><img class="btn" src="btns/chaogarden.png"></a>
                 
-                <a href="https://saturniids.neocities.org/" target="_blank"><img class="btn hov" src="btns/ghostlightButton.gif"></a>
+                <a href="https://10kph.neocities.org" target="_blank"><img class="btn" src="btns/10kph.png"></a>
                 
-                <a href="https://velvet-boutique.neocities.org/" target="_blank"><img class="btn hov" src="btns/velvet.png"></a>
+                <a href="https://pepper.gay/homepage" target="_blank"><img class="btn" src="btns/ghostpepper.png"></a>
                 
-                <a href="https://artwork.neocities.org/" target="_blank"><img class="btn hov" src="btns/artwork.gif"></a>
+                <a href="https://inkcaps.neocities.org/" target="_blank"><img class="btn" src="btns/inkcaps.gif"></a>
                 
-                <a href="https://frills.dev/" target="_blank"><img class="btn hov" src="btns/fri11s.png"></a>
+                <a href="https://lonelyjuly.online/" target="_blank"><img class="btn" src="btns/lonelyjuly.gif"></a>
                 
+                <a href="https://creaturefeature.neocities.org/" target="_blank"><img class="btn" src="btns/creaturefeature.png"></a>
                 
-                <a href="https://hillhouse.neocities.org/" target="_blank"><img class="btn hov" src="btns/hillhouse3.png"></a>
+                <a href="https://gothomousspider.neocities.org/" target="_blank"><img class="btn" src="btns/gothomousspider.png"></a>
                 
-                <a href="https://remiku.neocities.org/" target="_blank"><img class="btn hov" src="btns/remiku.png"></a>
+                <a href="https://that-mom-friend.neocities.org/" target="_blank"><img class="btn" src="btns/that-mom-friend-button.gif"></a>
                 
-                <a href="https://lostletters.neocities.org/" target="_blank"><img class="btn hov" src="btns/LostLetters.gif"></a>
+                <a href="https://dogfish99.neocities.org/" target="_blank"><img class="btn" src="btns/dogfish.png"></a>
                 
-                <a href="https://sushi-pixels.neocities.org/" target="_blank"><img class="btn hov" src="btns/sushipixels.png"></a>
+                <a href="https://manyface.neocities.org/" target="_blank"><img class="btn" src="btns/manyface.png"></a>
                 
-                <a href="https://forgettablename.neocities.org/" target="_blank"><img class="btn hov" src="btns/forgettablename.gif"></a>
+                <a href="https://xandra.cc/" target="_blank"><img class="btn" src="btns/museumofalexandra.png"></a>
                 
-                <a href="https://buntsukim.neocities.org/" target="_blank"><img class="btn hov" src="btns/buntsukim.jpg"></a>
+                <a href="https://spiritcellar.art/" target="_blank"><img class="btn" src="btns/spiritcellarart.gif"></a>
                 
-                <a href="https://randoseru.neocities.org/" target="_blank"><img class="btn hov" src="/btns/sunflower.gif" style="width:88px;height:31px;"></a>
+                <a href="https://coeurl.neocities.org/" target="_blank"><img class="btn" src="btns/coeurl.png"></a>
                 
-                <a href="https://paintkiller.neocities.org/" target="_blank"><img class="btn hov" src="btns/paintkiller.gif"></a>
+                <a href="https://rotaryphoney.neocities.org/" target="_blank"><img class="btn" src="btns/rotaryphoney.gif"></a>
                 
+                <a href="https://webpage1990colourised.neocities.org/" target="_blank"><img class="btn" src="btns/Webpage-1990-Colourised.gif"></a>
+                
+                <a href="https://saturniids.neocities.org/" target="_blank"><img class="btn" src="btns/ghostlightButton.gif"></a>
+                
+                <a href="https://neotomic.neocities.org" target="_blank"><img class="btn" src="btns/neotomicart.gif"></a>
+                
+                <a href="https://velvet-boutique.neocities.org/" target="_blank"><img class="btn" src="btns/velvet.png"></a>
+                
+                <a href="https://swiftred.neocities.org" target="_blank"><img class="btn" src="btns/SwiftRed.png"></a>
+                
+                <a href="https://krokodil.neocities.org/" target="_blank"><img class="btn" src="btns/krokodil.png"></a>
+                
+                <a href="https://artwork.neocities.org/" target="_blank"><img class="btn" src="btns/artwork.gif"></a>
+                
+                <a href="https://frills.dev/" target="_blank"><img class="btn" src="btns/fri11s.png"></a>
+                
+                <a href="https://sanguineroyal.com/" target="_blank"><img class="btn" src="btns/sanguine.gif"></a>
+                
+                <a href="https://hillhouse.neocities.org/" target="_blank"><img class="btn" src="btns/hillhouse3.png"></a>
+                
+                <a href="https://nereidcreation.neocities.org/" target="_blank"><img class="btn" src="btns/nereid.gif"></a>
+                
+                <a href="https://remiku.neocities.org/" target="_blank"><img class="btn" src="btns/remiku.png"></a>
+                
+                <a href="https://lostletters.neocities.org/" target="_blank"><img class="btn" src="btns/LostLetters.gif"></a>
+                
+                <a href="https://sushi-pixels.neocities.org/" target="_blank"><img class="btn" src="btns/sushipixels.png"></a>
+                
+                <a href="https://forgettablename.neocities.org/" target="_blank"><img class="btn" src="btns/forgettablename.gif"></a>
+                
+                <a href="https://buntsukim.neocities.org/" target="_blank"><img class="btn" src="btns/buntsukim.jpg"></a>
+                
+                <a href="https://randoseru.neocities.org/" target="_blank"><img class="btn" src="/btns/sunflower.gif" style="width:88px;height:31px;"></a>
+                
+                <a href="https://paintkiller.neocities.org/" target="_blank"><img class="btn" src="btns/paintkiller.gif"></a>
+                
+                <a href="https://much-ado-about-everything.neocities.org/" target="_blank"><img class="btn" src="btns/muchado.png"></a>
+                
+                <p>&#62;&#62; Neighbors with no buttons (that I could find)</p>
+                
+                <section class="blocks">
+                
+                <a style="background: #f0f2b6; color: black" class="btn ph" href="https://blazingcobaltx.neocities.org/" target="_blank">Blazing Cobalt</a>
+                
+                <a style="background: #ea93cf; color: #8b8bfc;" class="btn ph" href="https://howlingmoonrise.neocities.org/" target="_blank">Howl</a>
+                
+                <a style="background: #4fb6f7; color: #e2f2ae;" class="btn ph" href="https://dibs.neocities.org/" target="_blank">Dibs</a>
+                
+                <a style="background: #1f1f1f; color: #b2b2b2;" class="btn ph" href="https://s8seer.github.io/" target="_blank">s8seer</a>
+                
+                <a style="background: #121212; color: #8b2ddb;" class="btn ph" href="https://culturalwasteland.neocities.org/" target="_blank">Cultural Wasteland</a>
+                
+                <a style="background: #101010; color: #e54d0a;" class="btn ph" href="https://coffeemuncho.neocities.org/" target="_blank">Coffee Muncho</a>
+                
+                <a style="background: #ffffff; color: #000000;" class="btn ph" href="https://coffeemuncho.neocities.org/" target="_blank">wichitalk</a>
+                
+                <a style="background: #121212; color: #5807b5;" class="btn ph" href="https://burntangel.neocities.org/" target="_blank">burntangel</a>
+                
+                <a style="background: #000000; color: #ffffff;" class="btn ph smt-current-element" title="You enter an eerie graveyard. Someone awaits you." href="https://multohhh.neocities.org/" target="_blank">multohhh</a>
+                
+                <a style="background: #211c33; color: #5174a3;" class="btn ph" title="A CRAZY cool interactive site,, so much to explore and if you find the tour? so cool. get lost in it." href="https://moonkitty.neocities.org" target="_blank">moonkitty</a>
+                
+                <a style="background: #3b3b3b; color: #ffffff;" class="btn ph" title="short stories! with mysterious characters" href="https://mapleverse.neocities.org/" target="_blank">mapleverse</a>
+                
+                <a style="background: #ffffff; color: #000000;" class="btn ph" title="heck" href="https://heck.computer/" target="_blank">heck</a>
+                
+                <a style="background: #000000; color: #3cce4e;" class="btn ph" title="Cyberpunk" href="https://psionicblades.neocities.org/" target="_blank">psionic blades</a>
+                
+                <a style="background: #a07979; color: #f5dbdb;" class="btn ph" title="Beautiful dreamy art, like stained glass." href="https://seaglass.ink/" target="_blank">Seaglass</a>
+                
+                <a style="background: #1a2d5f; color: #bbbff0;" class="btn ph" href="https://chroniclerenigma.neocities.org/" target="_blank">Stargazer 7</a>
+                
+                <a style="background: #101b39; color: #646cce;" class="btn ph" href="https://cryptidcafe.net/" target="_blank">Cryptid Cafe</a>
+                
+                <a style="background: #390971; color: #22e641;" class="btn ph" href="https://momomarie.neocities.org/" target="_blank">Momo Marie</a>
+                
+                <a style="background: #1f1616; color: #e0c845;" class="btn ph" href="https://rageinducer.neocities.org/" target="_blank">Rage Inducer</a>
+                
+                <a style="background: #000000; color: #910606;" class="btn ph" href="https://eidodo.neocities.org/" target="_blank">EIDODO</a>
+                
+                <a style="background: #c3d5f2; color: #0256c7;" class="btn ph" href="https://larkandmagpie.neocities.org/" target="_blank">Lark and Magpie</a>
+                    
+                    </section>
             
             </section>
         
@@ -177,53 +333,51 @@
             <section class="more">
 
                 
-                <a href="https://netdrifter2000.neocities.org/" target="_blank"><img class="btn hov" src="btns/netdrifter.png"></a>
+                <a href="https://netdrifter2000.neocities.org/" target="_blank"><img class="btn" src="btns/netdrifter.png"></a>
                 
-                <a href="https://cinni.net/" target="_blank"><img class="btn hov" src="btns/cinni.gif"></a>
+                <a href="https://cinni.net/" target="_blank"><img class="btn" src="btns/cinni.gif"></a>
                 
-                <a href="https://glamourgoblin.neocities.org/" target="_blank"><img class="btn hov" src="btns/glamourgoblin.gif"></a>
+                <a href="https://glamourgoblin.neocities.org/" target="_blank"><img class="btn" src="btns/glamourgoblin.gif"></a>
                 
-                <a href="https://sleepy-sage.neocities.org/" target="_blank"><img class="btn hov" src="btns/sleepysage.png"></a>
+                <a href="https://sleepy-sage.neocities.org/" target="_blank"><img class="btn" src="btns/sleepysage.png"></a>
                 
-                <a href="https://raincoats.neocities.org/" target="_blank"><img class="btn hov" src="btns/raincoats.png"></a>
+                <a href="https://raincoats.neocities.org/" target="_blank"><img class="btn" src="btns/raincoats.png"></a>
                 
-                <a href="https://platinumtulip.garden/" target="_blank"><img class="btn hov" src="btns/platinumtulip.gif"></a>
+                <a href="https://platinumtulip.garden/" target="_blank"><img class="btn" src="btns/platinumtulip.gif"></a>
                 
-                <a href="https://humanfinny.neocities.org/" target="_blank"><img class="btn hov" src="btns/humanfinny.jpg"></a>
+                <a href="https://humanfinny.neocities.org/" target="_blank"><img class="btn" src="btns/humanfinny.jpg"></a>
                 
-                <a href="https://melonking.net/" target="_blank"><img class="btn hov" src="btns/melonking.gif"></a>
+                <a href="https://melonking.net/" target="_blank"><img class="btn" src="btns/melonking.gif"></a>
                 
-                <a href="https://lostlove.neocities.org/" target="_blank"><img class="btn hov" src="btns/lunospace.gif"></a>
+                <a href="https://lostlove.neocities.org/" target="_blank"><img class="btn" src="btns/lunospace.gif"></a>
                 
-                <a href="https://linwood.neocities.org/" target="_blank"><img class="btn hov" src="btns/linwoodbtn.gif"></a>
+                <a href="https://linwood.neocities.org/" target="_blank"><img class="btn" src="btns/linwoodbtn.gif"></a>
                 
-                <a href="https://32bit.cafe" target="_blank"><img class="btn hov" src="btns/32b.png"></a>
+                <a href="https://32bit.cafe" target="_blank"><img class="btn" src="btns/32b.png"></a>
                 
-                <a href="https://sadgrl.online/" target="_blank"><img class="btn hov" src="btns/sadgrlonline.gif"></a>
+                <a href="https://sadgrl.online/" target="_blank"><img class="btn" src="btns/sadgrlonline.gif"></a>
                 
-                <a href="https://callmemanatee.neocities.org/" target="_blank"><img class="btn hov" src="btns/manatee_button.png"></a>
+                <a href="https://callmemanatee.neocities.org/" target="_blank"><img class="btn" src="btns/manatee_button.png"></a>
                 
-                <a href="https://tinydiorama.neocities.org/" target="_blank"><img class="btn hov" src="btns/tinydiorama-button.gif"></a>
+                <a href="https://tinydiorama.neocities.org/" target="_blank"><img class="btn" src="btns/tinydiorama-button.gif"></a>
                 
-                <a href="https://auzziejay.com/" target="_blank"><img class="btn hov" src="btns/auzziejay.gif"></a>
+                <a href="https://auzziejay.com/" target="_blank"><img class="btn" src="btns/auzziejay.gif"></a>
                 
-                <a href="https://dimden.dev/" target="_blank"><img class="btn hov" src="https://dimden.dev/services/images/88x31.gif"></a>
+                <a href="https://dimden.dev/" target="_blank"><img class="btn" src="https://dimden.dev/services/images/88x31.gif"></a>
                 
-                <a href="https://staticattic.neocities.org/" target="_blank"><img class="btn hov" src="btns/staticattic.png"></a>
+                <a href="https://staticattic.neocities.org/" target="_blank"><img class="btn" src="btns/staticattic.png"></a>
                 
-                <a href="https://doubleincision.com/" target="_blank"><img class="btn hov" src="btns/surge.png"></a>
+                <a href="https://doubleincision.com/" target="_blank"><img class="btn" src="btns/surge.png"></a>
                 
-                <a href="https://nine-moonbeams.neocities.org/" target="_blank"><img class="btn hov" src="btns/nine-moonbeams.gif"></a>
+                <a href="https://nine-moonbeams.neocities.org/" target="_blank"><img class="btn" src="btns/nine-moonbeams.gif"></a>
                 
-                <a href="https://solaria.neocities.org/" target="_blank"><img class="btn hov" src="btns/solaria.gif"></a>
+                <a href="https://solaria.neocities.org/" target="_blank"><img class="btn" src="btns/solaria.gif"></a>
                 
-                <a href="https://doctordizzy.space/" target="_blank"><img class="btn hov" src="btns/dizzy.gif"></a>
+                <a href="https://doctordizzy.space/" target="_blank"><img class="btn" src="btns/dizzy.gif"></a>
                 
-                <a href="https://waffles-cosmic-void.neocities.org/" target="_blank"><img class="btn hov" src="btns/waffles.png"></a>
+                <a href="https://waffles-cosmic-void.neocities.org/" target="_blank"><img class="btn" src="btns/waffles.png"></a>
                 
-                <a href="https://divergentrays.com/" target="_blank"><img class="btn hov" src="btns/divergentrays.png"></a>
-                
-                <a href="https://devils.neocities.org/" target="_blank"><img class="btn hov" src="btns/devils.gif"></a>
+                <a href="https://devils.neocities.org/" target="_blank"><img class="btn" src="btns/devils.gif"></a>
     
        
             </section>
@@ -231,6 +385,8 @@
         <p>&#62;&#62; I try to look for buttons but if I missed yours, please let me know! Organized roughly by color.</p>
         
         <p id="disclaimer">&#62;&#62; DISCLAIMER: Buttons are added by my discretion, and I will only link sites that I feel are safe spaces. Buttons will be removed if I find that a site no longer fits the community that I strive to foster. Do not link me on your site if you hold bigoted, harmful views.</p>
+        
+        <p>&#62;&#62;  To-Do: add site descriptions to each of these....</p>
         
         <p><a href="#top">&#60; back to top</a></p>
         
