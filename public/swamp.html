@@ -11,7 +11,7 @@
         body {
             background: url('bg/deepwater.gif');
             width: 600px;
-            height: 100%;
+            height: 95%;
             margin: auto;
             font-family: comicsans;
             font-size: 1.4em;
@@ -20,10 +20,11 @@
             
             display: grid;
             grid-template-columns: [leftline] 1fr [line2] 1fr [midline] 1fr [line4] 1fr [rightline];
-            grid-template-rows: [topline] 140px [line2] auto [bottomline];
+            grid-template-rows: [topline] 260px [line2] auto [line3] 200px [bottomline];
             grid-template-areas: 
                 "header header header header"
-                "left mid1 mid2 right";
+                "left mid1 mid2 right"
+                "end end end end";
             
         }
         
@@ -40,6 +41,19 @@
         
         .about {
             grid-area: header;
+            position: relative;
+        }
+        
+        .end {
+            grid-area: end;
+        }
+        
+        a {
+            color: white;
+        }
+        
+        a:hover {
+            color: greenyellow;
         }
         
         /* columns */
@@ -56,8 +70,9 @@
         }
         
         .leftedge {
+            height: 80px;
             position: relative;
-            margin: 80px 80px 0 0;
+            margin: 0 80px 0 0;
         }
         
         .mid1 {
@@ -80,7 +95,7 @@
         
         img.froge {
             position: absolute;
-	    max-height: 32px;
+            max-height: 32px;
             margin-left: 20px;
             z-index: 2;
         }
@@ -104,23 +119,33 @@
     </head>
     
     <body>
+        
         <div class="about">
-        <p>froge nation, send me your froge png's either on discord (@leviathren) or anywhere on my neocities if you want to chill in the swamp</p>
+            <h1>RIBBIT</h1>
+            <p>Where are all these frogs coming from?</p>
+            <p>This funny looking guy <img src="decor/froge.png"> is a <a href="https://zeldawiki.wiki/wiki/Eyeball_Frog" target="_blank">sprite of Eyeball Frog from Ocarina of Time</a></p>
+            <img style="position: absolute; top: 10%; left: -220px;" src="decor/eyeballfrog.png">
         </div>
     
         <div class="column left">
             
             <div class="leftedge">
-                <img class="froge smt-current-element" title="LEVIATHREN" src="decor/frogelevi.png">
+                <a title="LEVIATHREN" class="smt-current-element" href="home.html" target="_blank"><img class="froge smt-current-element" src="decor/frogelevi.png"></a>
+                <img class="lily" src="decor/lilypad.png">
+            </div>
+            
+            <div class="leftedge">
+                <a title="Coby Cat" class="smt-current-element" href="https://cobycat.neocities.org/" target="_blank"><img class="froge smt-current-element" src="decor/frogefroby.png"></a>
                 <img class="lily" src="decor/lilypad.png">
             </div>
             
         </div>
-
-	    <div class="column mid1">
+        
+        <div class="column mid1">
             
             <div class="leftedge">
-                <img class="froge smt-current-element" title="Mx Autumn" src="decor/frogeautumn.png">
+                <a title="Mx Autumn" class="smt-current-element" href="https://photogabble.co.uk/" target="_blank"><img class="froge" src="decor/frogeautumn.png"></a>
+                
                 <img class="lily" src="decor/lilypad.png">
             </div>
             
@@ -129,7 +154,12 @@
         <div class="column mid2">
             
             <div class="leftedge">
-                <img class="froge smt-current-element" title="Sanguine Royal" src="decor/frogekrish.jpg">
+                <a title="Sanguine Royal" class="smt-current-element" href="https://sanguineroyal.com/" target="_blank"><img class="froge smt-current-element" src="decor/frogekrish.jpg"></a>
+                <img class="lily" src="decor/lilypad.png">
+            </div>
+            
+            <div class="leftedge">
+                <a title="Queen of Arms" class="smt-current-element" href="https://queenofarms.neocities.org/" target="_blank"><img class="froge smt-current-element" src="decor/frogequeenofarms.png"></a>
                 <img class="lily" src="decor/lilypad.png">
             </div>
             
@@ -138,11 +168,15 @@
         <div class="column right">
             
             <div class="leftedge">
-                <img class="froge smt-current-element" title="Velvet Boutique" src="decor/frogevelvet.png">
+                <a title="Velvet Boutique"  class="smt-current-element" href="https://velvet-boutique.neocities.org/" target="_blank"><img class="froge smt-current-element" src="decor/frogevelvet.png"></a>
                 <img class="lily" src="decor/lilypad.png">
             </div>
             
         </div>
+        
+        <div class="end">
+            <a href="https://photogabble.co.uk/button-board/" target="_blank"><img src="btns/frogebtn.png"></a> a button, if you want to link this page, for some strange reason. Thank you <a href="https://photogabble.co.uk/froge/" target="_blank">Mx Autumn</a> for the lovely button! ribbit
+        <p>send me your froge png either on discord (@leviathren) or anywhere on my neocities if you want to chill in the swamp. we're just a silly pond of frogs :)</p></div>
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 <script src="https://static.tumblr.com/lspzyz3/xloqk6cgp/jquery.style-my-tooltips.js"></script>
