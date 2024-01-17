@@ -434,14 +434,9 @@ button#windowclose:hover {
 /* cache alert */
 #div4 {
     display: none;
-    width: 200px;
+    width: 250px;
     top: 6%;
     left: 20%;
-}
-
-#div4 .content {
-    height: 100px;
-    overflow-y: scroll;
 }
 
 /* themes */
