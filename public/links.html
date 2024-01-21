@@ -4,18 +4,18 @@
     
     :root{
         --bg: black;
-        --color: white;
+        --color: #dddddd;
         --link: var(--blue);
-        --span: #b2b2b2;
+        --span: #959595;
         --border: #404040;
     }
     
     .light{
-        --bg: #9ed2da;
-        --color: #03222d;
-        --link: #009bb2;
-        --span: #505050;
-        --border: #1d1d1d;
+        --bg: #697376;
+        --color: #021d27;
+        --link: #01475c;
+        --span: #343434;
+        --border: #0d0d0d;
     }
     
 ::-webkit-scrollbar {
@@ -28,28 +28,24 @@
     background-color: var(--link);
 }
     
-::-moz-scrollbar {
-    background-color:  var(--bg);
-    width: 5px;
-    height: 5px;
-}
-
-::-moz-scrollbar-thumb {
-    background-color: var(--link);
-}
+    ::selection {
+        background: var(--link);
+        color: var(--bg);
+    }
     
     @import url('https://cdn.jsdelivr.net/npm/galmuri/dist/galmuri.css');
     
     html {
-        background-image: url(bg/bluestarsbg.gif);
-        background-attachment: fixed;
-        cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat947.ani), url(https://cur.cursors-4u.net/nature/nat-10/nat947.png), auto !important;
         scrollbar-color: var(--link) var(--bg);
         scrollbar-width: thin;
     }
     
-    html a {
-        cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat949.ani), url(https://cur.cursors-4u.net/nature/nat-10/nat949.png), auto !important;
+    body {
+        background-image: url(bg/bluestarsbg.gif);
+        background-attachment: fixed;
+        font-family: Galmuri14, sans-serif;
+        color: var(--color);
+        cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat947.ani), url(https://cur.cursors-4u.net/nature/nat-10/nat947.png), auto !important;
     }
     
     .grid {
@@ -58,65 +54,52 @@
         height: auto;
         margin: auto;
         
-        grid-template-columns: [left-line] 20% [mid-line] auto [right-line];
+        grid-template-columns: [left-line] 24% [mid-line] auto [right-line];
     
         grid-template-areas: "sidebar main";
     }
     
     nav {
-        grid-area: sidebar;
-        padding: 20px 0;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        width: 160px;
+        padding: 20px 10px;
         background: var(--bg);
         border: 4px double var(--border);
     }
     
-    button {
-        background: transparent;
-        color: var(--color);
-        font-family: vhs;
+    nav a {
+        color: var(--link);
         font-size: 12px;
         letter-spacing: 2;
-        cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat949.ani), url(https://cur.cursors-4u.net/nature/nat-10/nat949.png), auto !important;
-        transition: 0.3s ease;
+        margin: 4px;
     }
     
-    button:hover {
-        background-color: var(--link);
-        transition: 0.3s ease;
-    }
-    
-    .theme {
+    button {
+        background: var(--bg);
+        font-family: Galmuri14, sans-serif;
+        color: var(--color);
         margin: 6px;
         padding: 4px 8px;
         border: 1px solid var(--color);
+        transition: 0.4s ease;
     }
     
-    .btn {
-        margin: 4px;
-        border: none;
-    }
-    
-    .active {
-        background-color: var(--link);
-        color: var(--color);
+    button:hover {
+        background: var(--link);
+        cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat949.ani), url(https://cur.cursors-4u.net/nature/nat-10/nat949.png), auto !important;
     }
     
     main {
         grid-area: main;
-        font-family: Galmuri14, sans-serif;
-        min-height: 400px;
-        padding: 20px;
+    }
+    
+    section {
         background: var(--bg);
         border: 4px double var(--border);
-        color: var(--color);
-    }
-    
-    .column {
-        display: none;
-    }
-    
-    .show {
-        display: block;
+        padding: 40px;
+        margin-bottom: 40px;
     }
     
     .flex {
@@ -127,19 +110,16 @@
     h1 {
         font-size: 1.5em;
         letter-spacing: 2;
-        margin: 30px;
     }
     
     h2 {
         font-size: 1.1em;
         letter-spacing: 2;
-        margin: 20px 0 0 30px;
     }
     
     h3 {
         font-size: 0.8em;
         letter-spacing: 2;
-        margin: 20px 0 0 30px;
     }
     
     h3::before {
@@ -147,11 +127,8 @@
     }
     
     p {
-        font-family: vhs;
         font-size: 1em;
-        letter-spacing: 2;
-        margin: 30px;
-        line-height: 2;
+        line-height: 1.6em;
     }
     
     span {
@@ -160,22 +137,18 @@
         font-style: italic;
     }
     
-    ul {
-        font-family: vhs;
+    li {
         letter-spacing: 2;
-        line-height: 2;
-    }
-    
-    main ul {
-        margin-left: 10px;
+        margin-bottom: 10px;
     }
     
     a {
         color: var(--link);
         transition: 0.3s ease;
+        cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat949.ani), url(https://cur.cursors-4u.net/nature/nat-10/nat949.png), auto !important;
     }
     
-    main a:hover {
+    a:hover {
         color: var(--color);
         background: var(--link);
         transition: 0.3s ease;
@@ -221,51 +194,83 @@
         
         <nav>
             
-        <div id="myBtnContainer">
             <div class="flex">
             <button onclick="switchTheme('dark')" class="theme">dark</button>
             
             <button onclick="switchTheme('light')" class="theme">light</button>
             </div>
             
-            <li><a href="home.html"><button class="btn">Home</button></a></li>
-            <li><button class="btn active" onclick="filterSelection('home')">Landing</button></li>
-            <li><button class="btn" onclick="filterSelection('web')">Web Culture</button></li>
-            <li><button class="btn" onclick="filterSelection('read')">Reading</button></li>
-            <li><button class="btn" onclick="filterSelection('access')">Accessability</button></li>
-                <li><button class="btn" onclick="filterSelection('code')">Resources</button></li>
-                <li><button class="btn" onclick="filterSelection('credits')"> Credits</button></li>
+            <a href="home.html">Home</a>
+            <a href="#top">Back To Top</a>
+            <a href="#code">Coding Resources</a>
+            <a href="#tools">Stuff for Sites</a>
+            <a href="#access">Accessability</a>
+            <a href="#web">Web Culture</a>
+            <a href="#read">Reading</a>
+            <a href="#graphics">Graphics</a>
 
-            </div>
         
         </nav>
         
         <main>
             
-            <div class="column home">
+            <section id="top">
                 <h1>Links Across The Web!</h1>
                 <p>This is a "living" page in the sense that it is continually added to.</p>
-            </div>
+            </section>
             
-            <div class="column web">
-                <h2>Articles, Blog Posts, etc. About Web History And Culture That I Enjoyed Reading</h2>
-                <ul>
-                    <li><a href="https://yesterweb.org/" target="_blank">The Yesterweb Manifesto</a><span> what the web revival was about and yesterweb's goals, organization, and community</span></li>
-                    <li><a href="https://www.computerhistory.org/timeline/computers/" target="_blank">History of Computers|Timeline</a></li>
-                    <li><a href="https://neonaut.neocities.org/cyber/crypt/" target="_blank">Cyber Mauseoleums</a> by Neonaut<span> the preservation of cyber ghosts and the argument against deletion</span></li>
-                    <li><a href="https://www.rollingstone.com/culture/culture-commentary/internet-future-about-to-get-weird-1234938403/" target="_blank">The Internet Is About to Get Weird Again</a> by Anil Dash<span> the environment online suggests we may see a major shift in internet culture soon</span></li>
-                </ul>
-            </div>
-            
-            <div class="column read">
-                <h2>Various things you can read online</h2>
+            <section id="code">
+                <h2>Coding Resources</h2>
                 
+                <h3>General Coding Help and Tutorials</h3>
                 <ul>
-                    <li><a href="https://lesliefeinberg.net/wp-content/uploads/2015/08/Stone-Butch-Blues-by-Leslie-Feinberg.pdf" target="_blank">Stone Butch Blues</a> by Leslie Feinberg<span> trigger warning for homophobia, sexual assault, and heavy topics in general</span></li>
+                    <li><a href="https://www.w3schools.com/html/html_intro.asp" target="_blank">Introduction to HTML</a></li>
+                    <li><a href="https://www.w3schools.com/" target="_blank">w3schools</a></li>
+                    <li><a href="https://32bit.cafe/" target="_blank">32-bit.cafe</a><span> Small web community with lots of resources</span></li>
+                    <li><a href="https://solaria.neocities.org/gallerytut" target="_blank">Simple Gallery</a> Guide by solaria</li>
+                <li><a href="https://www.w3schools.com/howto/howto_js_portfolio_filter.asp" target="_blank">Gallery with Filtering</a> by w3schools</li>
+                    <li><a href="https://keithclark.co.uk/articles/pure-css-parallax-websites/" target="_blank">Parallax Effect</a> by Keith Clark<span> Make different elements scroll at different speeds</span></li>
+                    <li><a href="https://youtu.be/7JAmKyIzUmI?si=sZml6L0cdOock0k0" target="_blank">How to Upload to Neocities Video</a></li>
                 </ul>
-            </div>
+                <h3>Fun Code and Scripts</h3>
+                <ul>
+                    <li><a href="https://webneko.net/" target="_blank">Webneko</a><span> A little cat that chases your cursor around</span></li>
+                    <li><a href="http://www.mf2fm.com/rv/dhtmlblockrain.php">Block Rain</a> by rv</li>
+                    <li><a href="https://pastebin.com/PiDgrv3J">Music Player</a> by adilene (<a href="https://github.com/sayantanm19/js-music-player/blob/master/index.html">source code</a> by sayantanm19)</li>
+                    <li><a href="https://dimden.dev/moonwidget/" target="_blank">Moon Widget</a> by Dimden</li>
+                    <li><a href="https://www.cutercounter.com">Free Hit Counter</a> by Cutercounter</li>
+                </ul>
+            </section>
             
-            <div class="column access">
+            <section id="tools">
+                <h2>Stuff For Your Sites</h2>
+                
+                <h3>RSS</h3>
+                <ul>
+                    <li><a href="https://www.acf.hhs.gov/what-rss" target="_blank">What is RSS?</a></li>
+                    <li><a href="https://www.hesa.ac.uk/support/user-guides/xml-files" target="_blank">Guidance and Support With Using XML</a> by HESA</li>
+                    <li><a href="https://freshrss.org/" target="_blank">FreshRSS</a><span> An RSS aggregator</span></li>
+                    <li><a href="https://cyber.harvard.edu/rss/rss.html" target="_blank">RSS 2.0 Specification by Harvard Law</a><span> Explanations for various RSS tags</span></li>
+                    <li><a href="https://validator.w3.org/feed/" target="_blank">W3C Feed Validation Service</a><span> Check to see if your RSS file would work in an aggregator</span></li>
+                </ul>
+                <h3>Helpful In-Browser Tools</h3>
+                <ul>
+                    <li><a href="https://greenwichmeantime.com/" target="_blank">Greenwich Mean Time</a><span> See what time it is around the world and what a location's GMT is</span></li>
+                    <li><a href="https://timestampgenerator.com/" target="_blank">Timestamp Generator</a></li>
+                    <li><a href="https://www.htmlsymbols.xyz/" target="_blank">HTML Symbol Codes</a></li>
+                    <li><a href="https://webaim.org/resources/contrastchecker/" target="_blank">WebAIM: Contrast Checker</a></li>
+                    <li><a href="https://sadgrl.online/projects/layout-builder/" target="_blank">Layout Builder</a> by Sadness</li>
+                    <li><a href="https://neonaut.neocities.org/brain/image-compression" target="_blank">Become a Compression Sorcerer</a> by Neonaut<span> All about image compression, with links to tools</span></li>
+                    <li><a href="https://tinypng.com/" target="_blank">tinypng</a><span> Free image compression service</span></li>
+                    <li><a href="https://www.iloveimg.com/" target="_blank">iloveimg</a><span> Free bulk editor, has a great image compression tool</span></li>
+                </ul>
+                <h3>Curated Lists of Stuff</h3>
+                <ul>
+                    <li><a href="https://kalechips.net/stuff/hosting" target="_blank">Web Hosts</a> by Kalechips</li>
+                </ul>
+            </section>
+            
+            <section id="access">
                 <h2>Reading Naterial And Resources On Digital Accessability</h2>
                 <p>I do not have physical disabilities myself so I cannot provide first-hand insights to accessability, but I will compile what I find on the internet that I find helpful here.</p>
                 <ul>
@@ -276,168 +281,52 @@
                 <li><a href="https://solaria.neocities.org/accessibility#sem" target="_blank">Web Accessability</a> by Solaria</li>
                 
                 </ul>
-            </div>
+            </section>
             
-            <div class="column code">
-                <h2>Stuff for your sites</h2>
-                <h3>RSS</h3>
+            <section id="web">
+                <h2>Articles, Blog Posts, etc. About Web History And Culture That I Enjoyed Reading</h2>
                 <ul>
-                    <li><a href="https://www.acf.hhs.gov/what-rss" target="_blank">What is RSS?</a></li>
-                    <li><a href="https://freshrss.org/" target="_blank">FreshRSS</a><span> an RSS aggregator</span></li>
-                    <li><a href="https://cyber.harvard.edu/rss/rss.html" target="_blank">RSS 2.0 Specification by Harvard Law</a><span> explanations for various RSS tags</span></li>
-                    <li><a href="https://validator.w3.org/feed/" target="_blank">W3C Feed Validation Service</a><span> check to see if your RSS file would work in an aggregator</span></li>
+                    <li><a href="https://yesterweb.org/" target="_blank">The Yesterweb Manifesto</a><span> What the web revival was about and yesterweb's goals, organization, and community</span></li>
+                    <li><a href="https://www.computerhistory.org/timeline/computers/" target="_blank">History of Computers|Timeline</a></li>
+                    <li><a href="https://neonaut.neocities.org/cyber/crypt/" target="_blank">Cyber Mauseoleums</a> by Neonaut<span> The preservation of cyber ghosts and the argument against deletion</span></li>
+                    <li><a href="https://www.rollingstone.com/culture/culture-commentary/internet-future-about-to-get-weird-1234938403/" target="_blank">The Internet Is About to Get Weird Again</a> by Anil Dash<span> The environment online suggests we may see a major shift in internet culture soon</span></li>
                 </ul>
-                <h3>General Coding Help and Tutorials</h3>
+            </section>
+            
+            <section id="read">
+                <h2>Various things you can read online</h2>
+                
                 <ul>
-                    <li><a href="https://www.w3schools.com/html/html_intro.asp" target="_blank">Introduction to HTML</a></li>
-                    <li><a href="https://www.w3schools.com/" target="_blank">w3schools</a></li>
-                    <li><a href="https://32bit.cafe/" target="_blank">32-bit.cafe</a><span> small web community with lots of resources</span></li>
-                    <li><a href="https://solaria.neocities.org/gallerytut" target="_blank">Simple Gallery</a> guide by solaria</li>
-                <li><a href="https://www.w3schools.com/howto/howto_js_portfolio_filter.asp" target="_blank">Gallery with Filtering</a> by w3schools</li>
-                    <li><a href="https://keithclark.co.uk/articles/pure-css-parallax-websites/" target="_blank">Parallax Effect</a> by Keith Clark<span> make different elements scroll at different speeds</span></li>
-                    <li><a href="https://youtu.be/7JAmKyIzUmI?si=sZml6L0cdOock0k0" target="_blank">How to Upload to Neocities Video</a></li>
+                    <li><a href="https://lesliefeinberg.net/wp-content/uploads/2015/08/Stone-Butch-Blues-by-Leslie-Feinberg.pdf" target="_blank">Stone Butch Blues</a> by Leslie Feinberg<span> trigger warning for homophobia, sexual assault, and heavy topics in general</span></li>
                 </ul>
-                <h3>Helpful Tools</h3>
+            </section>
+            
+            
+            <section id="graphics">
+                <h2>Graphics</h2>
+                <p>Should go without saying but, these sites are IMAGE HEAVY.</p>
                 <ul>
-                    <li><a href="https://greenwichmeantime.com/" target="_blank">Greenwich Mean Time</a><span> see what time it is around the world and what a location's GMT is</span></li>
-                    <li><a href="https://www.htmlsymbols.xyz/" target="_blank">HTML Symbol Codes</a></li>
-                    <li><a href="https://webaim.org/resources/contrastchecker/" target="_blank">WebAIM: Contrast Checker</a></li>
-                    <li><a href="https://sadgrl.online/projects/layout-builder/" target="_blank">Layout Builder</a> by Sadness</li>
-                    <li><a href="https://neonaut.neocities.org/brain/image-compression" target="_blank">Become a Compression Sorcerer</a> by Neonaut<span> all about image compression, with links to tools</span></li>
-                    <li><a href="https://tinypng.com/" target="_blank">tinypng</a><span> free image compression service</span></li>
-                    <li><a href="https://www.iloveimg.com/" target="_blank">iloveimg</a><span> free bulk editor, has a great image compression tool</span></li>
-                </ul>
-                <h3>Graphics</h3>
-                <ul>
+                    <li><a href="https://web.badges.world/" target="_blank">Web Badges World</a><span> Large collection of 80x15 badges</span></li>
+                    <li><a href="https://cyber.dabamos.de/88x31/index.html" target="_blank">The 88x31 GIF Collection</a><span> Large collection of 88x31 buttons</span></li>
+                    <li><a href="https://hekate2.github.io/buttonmaker/" target="_blank">88x31 Web Button Maker</a> by Hekate<span> Make your own button!</span></li>
+                    <li><a href="http://www.acasystems.com/en/button-maker/" target="_blank">ACA 80x15 Badge Maker</a><span> Make your own badge!</span></li>
                     <li><a href="https://favicons.neocities.org/" target="_blank">Pixel Heaven</a></li>
                     <li><a href="https://pixelsafari.neocities.org/" target="_blank">Coco's Pixel Safari</a></li>
-                    <li><a href="https://pixels.crd.co/#pixels" target="_blank">Pixels.crd.co</a><span> favicons organized by color</span></li>
-                    <li><a href="http://www.acasystems.com/en/button-maker/" target="_blank">ACA 80x15 Button Maker</a></li>
-                    <li><a href="https://www.cursors-4u.com/" target="_blank">Cursors-4u</a><span> big bank of unique and custom cursors</span></li>
-                    <li><a href="https://gifcities.org/" target="_blank">Gifcities</a><span> library of gifs</span></li>
-                    <li><a href="https://horrorgifs.neocities.org/" target="_blank">Horrorgifsneocities</a><span> collection of horror gifs and images</span></li>
-                    <li><a href="https://sushi-pixels.neocities.org/" target="_blank">Sushi Pixels neocities</a><span> sushi's collection of pixels</span></li>
-                </ul>
-                <h3>Fun Code and Scripts</h3>
-                <ul>
-                    <li><a href="https://webneko.net/" target="_blank">Webneko</a><span> a little cat that chases your cursor around</span></li>
-                    <li><a href="http://www.mf2fm.com/rv/dhtmlblockrain.php">Block Rain</a> by rv</li>
-                    <li><a href="https://pastebin.com/PiDgrv3J">Music Player</a> by adilene (<a href="https://github.com/sayantanm19/js-music-player/blob/master/index.html">source code</a> by sayantanm19)</li>
-                    <li><a href="https://dimden.dev/moonwidget/" target="_blank">Moon Widget</a> by Dimden</li>
-                    <li><a href="https://www.cutercounter.com">Free Hit Counter</a> by Cutercounter</li>
+                    <li><a href="https://pixels.crd.co/#pixels" target="_blank">Pixels.crd.co</a><span> Favicons organized by color</span></li>
+                    <li><a href="https://www.cursors-4u.com/" target="_blank">Cursors-4u</a><span> Big bank of unique and custom cursors</span></li>
+                    <li><a href="https://gifcities.org/" target="_blank">Gifcities</a><span> Library of gifs</span></li>
+                    <li><a href="https://horrorgifs.neocities.org/" target="_blank">Horrorgifsneocities</a><span> Collection of horror gifs and images</span></li>
+                    <li><a href="https://sushi-pixels.neocities.org/" target="_blank">Sushi Pixels neocities</a><span> Sushi's collection of pixels</span></li>
                 </ul>
             
-            </div>
+            </section>
             
-            <div class="column credits">
-                <h2>Code, Templates, and Graphics I've Used On My Site</h2>
-                
-                <h2>Fonts</h2>
-                
-                <h3>Pixel/Cyber</h3>
-                <ul>
-                <li><a href="https://github.com/Quiple/Galmuri" target="_blank">Galmuri</a> by Quiple<span> nintendo DS-inspired font</span></li>
-                    <li><a href="https://www.dafont.com/easvhs.font" target="_blank">Easvhs</a> by Rurr</li>
-                    <li>Lucida Console</li>
-                <li><a href="https://www.dafont.com/doctor-glitch.font" target="_blank">Doctor Glitch</a> by Woodcutter</li>
-                </ul>
-                <h3>Horror</h3>
-                <ul>
-                <li><a href="https://www.dafont.com/haunting-attraction.font" target="_blank">Haunting Attraction</a> by Sinister Fonts</li>
-                    <li><a href="https://www.dafont.com/midnight-minutes.font" target="_blank">Midnight Minutes</a> by rvst</li>
-                    <li><a href="https://www.dafont.com/october-crow.font" target="_blank">October Crow</a> by Sinister Fonts</li>
-                    <li><a href="https://www.dafont.com/who-asks-satan.font" target="_blank">Who Asks Satan</a> by Font Monger</li>
-                    <li><a href="https://www.dafont.com/bad-coma.font" target="_blank">Bad Coma</a> by Imagex</li>
-                </ul>
-                
-                <h3>Type/Other</h3>
-            <ul>
-                <li><a href="https://www.dafont.com/angel-wish.font" target="_blank">Angel Wish</a> by Stringlabs</li>
-                <li><a href="https://www.dafont.com/jmh-typewriter.font" target="_blank">JMH Typewriter</a> by Jorge Moron</li>
-                <li><a href="https://www.dafont.com/rock-of-times.font" target="_blank">Rock of Times</a> by Woodcutter</li>
-                <li><a href="https://www.dafont.com/white-on-black.font" target="_blank">White On Black</a> by Imagex</li>
-                
-                </ul>
-                
-                <h2>Code</h2>
-            <ul>
-                <li><a href="https://github.com/Proxybat/little-code-snippets/tree/main/font-size%20and%20line-height%20modifier%20script" target="_blank">Font-size and line-height changer</a> by <a href="queenofarms.neocities.org" target="_blank">QueenofArms</a></li>
-                <li><a href="https://github.com/jasm1nii/jasmines-journal/blob/main/public_html/_assets/scripts/lightbox.js" target="_blank">Lightbox Script</a> by Jasmine<span> used: art gallery</span></li>
-                <li><a href="https://stackoverflow.com/questions/9334084/moveable-draggable-div" target="_blank">Draggable Div</a> by Ospider on stackoverflow<span> used: home page</span></li>
-                <li><a href="https://www.w3schools.com/howto/howto_js_draggable.asp" target="_blank">Draggable HTML Content</a> tutorial on w3schools<span> used: home page</span></li>
-                <li><a href="https://pastebin.com/PiDgrv3J">Music Player</a> by Adilene (<a href="https://github.com/sayantanm19/js-music-player/blob/master/index.html">source code</a> by Sayantanm19)<span> used: home page</span></li>
-                <li><a href="https://www.cbox.ws/">Chat Box</a> by cbox<span> used: home page</span></li>
-                <li><a href="https://squidknees.neocities.org/downloads">Theme Switcher</a> by Squidknees</li>
-                
-                <li><a href="https://solaria.neocities.org/gallerytut" target="_blank">Simple Gallery</a> guide by Solaria<span> used: art gallery</span></li>
-                <li><a href="https://www.w3schools.com/howto/howto_js_portfolio_filter.asp" target="_blank">Gallery With Filtering</a> by w3schools<span> used: like, every page with multiple 'sub-pages', such as this one</span></li>
-            </ul>
-                <h2>Graphics</h2>
-            <ul>
-                <li><a href="https://gifcities.org/" target="_blank">Gifcities</a> for a lot of my page decor/icons</li>
-                <li><a href="https://sadgrl.online/webmastery/downloads/tiledbgs">Tiled Backgrounds</a> by Sadness</li>
-                <li><a href="https://www.cursors-4u.com/" target="_blank">Cursors</a> from Cursors-4u</li>
-                <li><a href="https://sleepy-sage.neocities.org/movies" target="_blank">Horror Graphics</a> from Sleepy Sage</li>
-                <li><a href="https://artwork.neocities.org/halloween" target="_blank">Halloween Graphics</a> from A R T W O R K</li>
-            </ul>
-            
-
-            </div>
-        
         </main>
         
         
     </div>
     
-            <script>
-                filterSelection("home") 
-                // Execute the function and show all columns
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("column");
-  if (c == "all") c = "";
-  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
-}
 
-// Show filtered elements
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {
-      element.className += " " + arr2[i];
-    }
-  }
-}
-
-// Hide elements that are not selected
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);
-    }
-  }
-  element.className = arr1.join(" ");
-}
-
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}</script>
     
     <!------ themes ------>
     <script>
