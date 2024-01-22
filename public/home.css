@@ -21,11 +21,11 @@
 
 .forest{
     --bg: #080b06;
-    --fontcolor: #b5c8aa;
-    --accent: #283120;
+    --fontcolor: #c8e3bf;
+    --accent: #1a2914;
     --highlight: #edf4ea;
-    --link: #edf4ea;
-    --linkhov: #baf496;
+    --link: #62904e;
+    --linkhov: #9cd18c;
     --shortcuthov: rgb(0, 0, 0, 0.5);
     --toolbarhov: rgb(40, 48, 32, 0.8);
     --windowbg: #080808;
@@ -66,8 +66,8 @@
     --fontcolor: #5bf550;
     --accent: #ee1dd5;
     --highlight: #ee1dd5;
-    --link: #ee1dd5;
-    --linkhov: #ff8bf1;
+    --link: #ff68ed;
+    --linkhov: #e500c9;
     --shortcuthov: rgb(50, 4, 50, 0.6);
     --toolbarhov: rgb(70, 3, 62, 0.5);
     --windowbg: #960986;
@@ -101,6 +101,49 @@
     --cursor: url(https://cur.cursors-4u.net/cursors/cur-9/cur830.cur), auto !important;
     --cursorhov: url(https://cur.cursors-4u.net/cursors/cur-9/cur817.cur), auto !important;
     --filter: saturate(40%) hue-rotate(190deg);
+}
+
+.toxic {
+    --bg: black;
+    --fontcolor: #00ff1d;
+    --accent: #00c617;
+    --highlight: #00ff1d;
+    --link: #A80EFF;
+    --linkhov: #d283ff;
+    --shortcuthov: rgb(1, 30, 1, 0.8);
+    --toolbarhov: rgb(0, 70, 3, 0.6);
+    --windowbg: #001402;
+    --contentbg: #000000;
+    --startbg: #001402;
+    --windowborder: #0f1f10;
+    --toolbarborder: #00760c;
+    --contentborder: #004b08;
+    --pagedoll: url("decor/biohazard.gif");
+    --pdfilter: hue-rotate(120deg) brightness(400%);
+    --cursor: url(https://cur.cursors-4u.net/cursors/cur-9/cur829.cur), auto !important;
+    --cursorhov: url(https://cur.cursors-4u.net/cursors/cur-9/cur817.cur), auto !important;
+    --filter: sepia(100%) saturate(500%) contrast(150%) hue-rotate(50deg);
+}
+
+.peonies {
+    --bg: #ffc1db;
+    --fontcolor: white;
+    --accent: #ffd2e5;
+    --highlight: #ffc1db;
+    --link: #af225d;
+    --linkhov: #ffaad2;
+    --shortcuthov: rgb(212, 145, 175, 0.4);
+    --toolbarhov: rgb(235, 170, 199, 0.6);
+    --windowbg: #ffc1db;
+    --contentbg: #eaa1bf;
+    --startbg: #ffc1db;
+    --windowborder: #f59cc1;
+    --toolbarborder: #ed95ba;
+    --contentborder: #ffafd0;
+    --pagedoll: url("decor/peonies.png");
+    --cursor: url(https://cur.cursors-4u.net/cursors/cur-9/cur818.cur), auto !important;
+    --cursorhov: url(https://cur.cursors-4u.net/cursors/cur-9/cur817.cur), auto !important;
+    --filter: sepia(80%) hue-rotate(290deg);
 }
 
 ::-webkit-scrollbar {
@@ -457,6 +500,7 @@ button#windowclose:hover {
     height: 35px;
     width: 35px;
     border: 1px solid var(--contentborder);
+    margin: 2px;
 }
 
 .theme-switcher button:hover {
