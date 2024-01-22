@@ -1,7 +1,7 @@
 //javascript theme switcher by squidknees @ neocities.
 
 //list of all theme names in toggling order. edit this line to put your theme names here
-const thms = ["default", "forest", "golden", "cyberpink", "skyblue"];
+const thms = ["default", "forest", "golden", "cyberpink", "skyblue", "toxic", "peonies"];
 
 //remove all theme classes
 function removeTheme(){
