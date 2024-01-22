@@ -34,7 +34,7 @@
     --windowborder: #1a2114;
     --toolbarborder: #283120;
     --contentborder: #283120;
-    --pagedoll: url("decor/fairy.png");
+    --: url("decor/fairy.png");
     --cursor: url(https://cur.cursors-4u.net/cursors/cur-9/cur829.cur), auto !important;
     --cursorhov: url(https://cur.cursors-4u.net/cursors/cur-9/cur817.cur), auto !important;
     --filter: sepia(20%) saturate(20%) hue-rotate(50deg);
@@ -55,7 +55,7 @@
     --windowborder: #c2880b;
     --toolbarborder: #d4a136;
     --contentborder: #d4a136;
-    --pagedoll: url("decor/sunpagedoll.gif");
+    --: url("decor/sun.gif");
     --cursor: url(https://cur.cursors-4u.net/cursors/cur-9/cur836.cur), auto !important;
     --cursorhov: url(https://cur.cursors-4u.net/cursors/cur-9/cur817.cur), auto !important;
     --filter: sepia(60%) saturate(80%) hue-rotate(5deg);
@@ -76,7 +76,7 @@
     --windowborder: #cc54c0;
     --toolbarborder: #b332a6;
     --contentborder: #941486;
-    --pagedoll: url("decor/mysticalcrystal.gif");
+    --: url("decor/mysticalcrystal.gif");
     --cursor: url(https://cur.cursors-4u.net/cursors/cur-9/cur838.cur), auto !important;
     --cursorhov: url(https://cur.cursors-4u.net/cursors/cur-9/cur817.cur), auto !important;
     --filter: saturate(100%) hue-rotate(300deg);
@@ -97,7 +97,7 @@
     --windowborder: #eeeeee;
     --toolbarborder: #dddddd;
     --contentborder: #eeeeee;
-    --pagedoll: url("decor/blue clouds.gif");
+    --: url("decor/blue clouds.gif");
     --cursor: url(https://cur.cursors-4u.net/cursors/cur-9/cur830.cur), auto !important;
     --cursorhov: url(https://cur.cursors-4u.net/cursors/cur-9/cur817.cur), auto !important;
     --filter: saturate(40%) hue-rotate(190deg);
@@ -118,7 +118,7 @@
     --windowborder: #0f1f10;
     --toolbarborder: #00760c;
     --contentborder: #004b08;
-    --pagedoll: url("decor/biohazard.gif");
+    --: url("decor/biohazard.gif");
     --pdfilter: hue-rotate(120deg) brightness(400%);
     --cursor: url(https://cur.cursors-4u.net/cursors/cur-9/cur829.cur), auto !important;
     --cursorhov: url(https://cur.cursors-4u.net/cursors/cur-9/cur817.cur), auto !important;
@@ -140,7 +140,7 @@
     --windowborder: #f59cc1;
     --toolbarborder: #ed95ba;
     --contentborder: #ffafd0;
-    --pagedoll: url("decor/peonies.png");
+    --: url("decor/peonies.png");
     --cursor: url(https://cur.cursors-4u.net/cursors/cur-9/cur818.cur), auto !important;
     --cursorhov: url(https://cur.cursors-4u.net/cursors/cur-9/cur817.cur), auto !important;
     --filter: sepia(80%) hue-rotate(290deg);
@@ -571,6 +571,7 @@ button#windowclose:hover {
     height: 400px;
     background: no-repeat var(--pagedoll);
     background-size: contain;
+    filter: var(--pdfilter);
     overflow: visible;
 }
 
