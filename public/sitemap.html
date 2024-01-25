@@ -24,6 +24,7 @@
             /* style and design */
             color: white;
             font-size: 14px;
+            line-height: 1.2;
             padding: 8px;
             border: 2px inset black;
             background: #080808;
@@ -103,7 +104,7 @@
         a.startbtn {
             display: block;
             height: 100%;
-            width: 30px;
+            width: 50px;
             padding: 10px 20px;
             background: #101010;
             color: white;
@@ -114,26 +115,33 @@
             background: rgb(48, 48, 48, 0.2);
         }
         
-        h3 {
+        h1 {
+            display: inline;
+            font-size: 1em;
+            margin: 0;
+        }
+        
+        h2 {
             font-size: 1.2em;
+            margin: 0 0 10px;
+        }
+        
+        h2::before {
+            content: '\2937  ';
+        }
+        
+        h3 {
+            font-size: 1em;
+            margin: 0 30px;
         }
         
         h3::before {
             content: '\2937  ';
         }
         
-        h4 {
-            font-size: 1em;
-            margin-left: 30px;
-        }
-        
-        h4::before {
-            content: '\2937  ';
-        }
-        
         ul {
             list-style-type: '- ';
-            margin-left: 35px;
+            margin: 0 35px;
         }
         
         a {
@@ -169,38 +177,38 @@
         
             <div id="sitemap" class="window">
             <div class="windowheader">
-                <img class="windowicon" src="decor/computer.gif">sitemap
-                </div>
-                
-                <div class="toolbar smt-current-element" title="this toolbar is just cosmetic">
-                    <span class="tools">file</span>
-                    <span class="tools">edit</span>
-                    <span class="tools">view</span>
+                <img class="windowicon" src="decor/computer.gif"><h1>sitemap</h1>
                 </div>
                 
                 <div class="content">
                 
-                <h3><a href="home.html">Home</a></h3>
+                <h2><a href="home.html">Home</a></h2>
                     
-                <h4>Site</h4>
+                <h3>Site</h3>
                     <ul>
-                        <li><a href="blog.html">Ship's Log</a> <div class="info smt-current-element" title="site updates">[?]</div>
+                        <li><a href="blog.html">Site Updates</a>
                         </li>
                         
                         <li><a href="layouts.html">Layout Archive</a></li>
                         
                         <li><a href="sitemap.html">Sitemap</a> <div class="info smt-current-element" title="you are here">[?]</div></li>
+                        
+                        <li><a href="credits.html">Info and Credits</a></li>
                     
                     </ul>
                     
                     
-                <h4>Me</h4>
+                <h3>Me</h3>
                     <ul>
                         <li><a href="about.html">About Me</a></li>
                         
-                        <li><a href="art.html">Art Gallery</a></li>
+                        <li><a href="art.html">Art Gallery</a> <div class="info smt-current-element" title="display of my artwork">[?]</div></li>
+                        
+                        <li><a href="crafts.html">Craft Studio</a> <div class="info smt-current-element" title="display of crafts i've made">[?]</div></li>
                         
                         <li><a href="blog.html">Blog</a></li>
+                        
+                        <li><a href="music.html">Music Page</a> <div class="info smt-current-element" title="sharing music that i listen to">[?]</div></li>
                         
                         <li><a href="pixels.html">Pixel Clubs</a> <div class="info smt-current-element" title="pixel clubs I've joined">[?]</div></li>
                         
@@ -209,29 +217,37 @@
                     </ul>
                     
                     
-                <h4>You</h4>
+                <h3>You</h3>
                     <ul>
                         
                         <li><a href="f2u.html">Free to Use Materials</a></li>
                         
-                        <li><a href="buttons.html">Net Neighbors</a> <div class="info smt-current-element" title="button wall of my mutuals and cool sites">[?]</div></li>
+                        <li><a href="buttons.html">Neighbor Button Wall</a> <div class="info smt-current-element" title="links to mutuals and other cool sites">[?]</div></li>
                         
                         <li><a href="hallofrock.html">HALL OF ROCK Pixel Club</a> <div class="info smt-current-element" title="my guitar-themed pixel club :) ">[?]</div></li>
                         
-                        <li><a href="links.html">Surf The Web</a> <div class="info smt-current-element" title="links to external sites, resources, credits">[?]</div></li>
+                        <li><a href="links.html">Various Links Out</a> <div class="info smt-current-element" title="links to external tools and resources">[?]</div></li>
                         
-                        <li><a href="collections.html">Collections</a> <div class="info smt-current-element" title="my collection of stamps, buttons, and blinkies">[?]</div></li>
+                        <li><a href="collections.html">Web Graphics Collections</a> <div class="info smt-current-element" title="my collection of stamps, buttons, and blinkies">[?]</div></li>
+                        
+                        <li><a href="guest.html">Guestbook</a></li>
+                        
+                        <li><a href="swamp.html">Collection of Eyeball Frogs</a> <div class="info smt-current-element" title="some net neighbors became frogs and made customized eyeball frog sprites">[?]</div></li>
+                    </ul>
+                    
+                    <h3>Seasonal</h3>
+                    <ul>
                         
                         <li><a href="haunt.html">Sleepy Hollow</a> <div class="info smt-current-element" title="halloween/horror-inspired page">[?]</div></li>
                         
-                        
+                        <li><a href="https://32bit.cafe/holidays2023/display/">Link Out to 32Bitmas</a> <div class="info smt-current-element" title="holiday/end of year community event">[?]</div></li>
                     </ul>
                 </div>
             </div>
             
             
             <div id="start">
-            <a class="startbtn" href="home.html">home</a>
+            <a class="startbtn" href="home.html">home <b>&#10531;</b></a>
             </div>
         </main>
     
