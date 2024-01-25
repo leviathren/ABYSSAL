@@ -55,7 +55,7 @@
     --windowborder: #c2880b;
     --toolbarborder: #d4a136;
     --contentborder: #d4a136;
-    --pagedoll: url("decor/sun.gif");
+    --pagedoll: url("decor/sunpagedoll.gif");
     --cursor: url(https://cur.cursors-4u.net/cursors/cur-9/cur836.cur), auto !important;
     --cursorhov: url(https://cur.cursors-4u.net/cursors/cur-9/cur817.cur), auto !important;
     --filter: sepia(60%) saturate(80%) hue-rotate(5deg);
@@ -242,7 +242,7 @@ body a, button:hover {
     right: 0;
 }
 
-nav {
+.desktop {
     width: 100px;
     text-align: center;
 }
@@ -469,6 +469,12 @@ button#windowclose:hover {
     width: 200px;
 }
 
+#div2 ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
 /* mobile notif */
 #div3 {
     display: none;
@@ -579,16 +585,6 @@ button#windowclose:hover {
     margin-left: 4px;
 }
 
-.window ul {
-    list-style-type: none;
-    margin: 0 0 20px 0;
-}
-
-.window li {
-    list-style: none;
-    margin-left: -30px;
-}
-
 marquee img {
     max-height: 31px;
 }
@@ -620,6 +616,8 @@ marquee img {
     margin: 0;
 }
 
+/* general */
+
 hr {
     margin: 40px;
     color: var(--toolbarborder);
@@ -637,10 +635,6 @@ a:hover {
 
 p {
     margin: 10px;
-}
-
-li {
-    margin: 4px 0;
 }
 
 img {
