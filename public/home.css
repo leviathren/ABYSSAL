@@ -530,16 +530,30 @@ button#windowclose:hover {
     height: 250px;
 }
 
-/* guestbook */
+/* status */
 #div7 {
-    max-width: 600px;
-    top: 18%;
-    z-index: 9999;
+    top: 34%;
+    left: 80%;
 }
 
-#div7 .content {
-    max-height: 600px;
-    overflow-y: scroll;
+#statuscafe-username {
+    margin-bottom: .5em;
+}
+
+#div7 .content span {
+    display: block;
+    animation: blink 1s step-end infinite;
+    background: var(--fontcolor);
+}
+
+@keyframes blink {
+  from,
+  to {
+    background: transparent;
+  }
+  50% {
+    background: var(--fontcolor);
+  }
 }
 
 /* music player */
