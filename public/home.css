@@ -49,7 +49,7 @@
     --linkhov: #da9a0a;
     --shortcuthov: rgb(234, 221, 194, 0.8);
     --toolbarhov: rgb(234, 221, 194, 0.8);
-    --windowbg: #faf2e0;
+    --windowbg: #f0dbab;
     --contentbg: #f8edd2;
     --startbg: #f8edd2;
     --windowborder: #c2880b;
@@ -73,9 +73,9 @@
     --windowbg: #960986;
     --contentbg: #44163f;
     --startbg: #960986;
-    --windowborder: #cc54c0;
+    --windowborder: #bf00ac;
     --toolbarborder: #b332a6;
-    --contentborder: #941486;
+    --contentborder: #d117bd;
     --pagedoll: url("decor/mysticalcrystal.gif");
     --cursor: url(https://cur.cursors-4u.net/cursors/cur-9/cur838.cur), auto !important;
     --cursorhov: url(https://cur.cursors-4u.net/cursors/cur-9/cur817.cur), auto !important;
@@ -91,12 +91,12 @@
     --linkhov: #4c5faa;
     --shortcuthov: rgb(226, 232, 255, 0.8);
     --toolbarhov: rgb(226, 232, 255, 0.6);
-    --windowbg: #fdfdfd;
-    --contentbg: #f4f4f4;
+    --windowbg: #dfe6ff;
+    --contentbg: #f3f5fa;
     --startbg: #bfceff;
-    --windowborder: #eeeeee;
+    --windowborder: #dde5ff;
     --toolbarborder: #dddddd;
-    --contentborder: #eeeeee;
+    --contentborder: #b8c1e0;
     --pagedoll: url("decor/blue clouds.gif");
     --cursor: url(https://cur.cursors-4u.net/cursors/cur-9/cur830.cur), auto !important;
     --cursorhov: url(https://cur.cursors-4u.net/cursors/cur-9/cur817.cur), auto !important;
@@ -128,18 +128,18 @@
 .peonies {
     --bg: #ffc1db;
     --fontcolor: white;
-    --accent: #ffd2e5;
+    --accent: #e88eb4;
     --highlight: #ffc1db;
     --link: #af225d;
     --linkhov: #ffaad2;
     --shortcuthov: rgb(212, 145, 175, 0.4);
     --toolbarhov: rgb(235, 170, 199, 0.6);
-    --windowbg: #ffc1db;
-    --contentbg: #eaa1bf;
+    --windowbg: #eaa3c1;
+    --contentbg: #f2b4ce;
     --startbg: #eaa1bf;
-    --windowborder: #f59cc1;
+    --windowborder: #ffbad7;
     --toolbarborder: #ed95ba;
-    --contentborder: #ffafd0;
+    --contentborder: #ffbdd8;
     --pagedoll: url("decor/peonies.png");
     --cursor: url(https://cur.cursors-4u.net/cursors/cur-9/cur818.cur), auto !important;
     --cursorhov: url(https://cur.cursors-4u.net/cursors/cur-9/cur817.cur), auto !important;
@@ -537,7 +537,14 @@ button#windowclose:hover {
 }
 
 #statuscafe-username {
+    background: var(--windowbg);
+    color: var(--accent);
+    font-style: italic;
     margin-bottom: .5em;
+}
+
+#statuscafe-username a {
+    color: var(--contentborder);
 }
 
 #div7 .content span {
