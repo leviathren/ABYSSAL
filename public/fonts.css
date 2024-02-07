@@ -68,6 +68,21 @@
 }
 
 @font-face {
+        font-family: kiss;
+        src: url("fonts/Kiss Kiss - TTF.ttf");
+}
+
+@font-face {
+        font-family: love;
+        src: url("fonts/LoveInYou.otf");
+}
+
+@font-face {
+        font-family: lovesick;
+        src: url("fonts/LovesAOE.ttf");
+}
+
+@font-face {
     font-family: midnight;
     src: url("fonts/MidnightMinutes_DEMO.otf");
 }
@@ -83,8 +98,18 @@
 }
 
 @font-face {
+        font-family: ss;
+        src: url("fonts/S&S Grey Hood Seven.otf");
+}
+
+@font-face {
         font-family: whiteonblack;
         src: url("/fonts/whiteonblack.ttf");
+    }
+
+@font-face {
+        font-family: valtin;
+        src: url("fonts/Valtin Demo.ttf");
     }
 
 @font-face {
