@@ -117,7 +117,7 @@
         .grid {
             display: grid;
             grid-template-columns: [leftline] 400px [line2] 350px [line3] 300px [rightline];
-            grid-template-rows: [topline] 400px [second] 700px [bottomline];
+            grid-template-rows: [topline] 340px [second] auto [bottomline];
             grid-template-areas:
                 "lyrics vid stat"
                 "lyrics main right"
@@ -180,10 +180,14 @@
             grid-area: lyrics;
         }
         
-        #butches {
+        .main {
             grid-area: main;
+        }
+        
+        #butches {
             height: 370px;
             width: 250px;
+            margin-bottom: 80px;
         }
         
         #stat {
@@ -206,9 +210,21 @@
         
         #bar {
             grid-area: right;
+            height: 500px;
             background: var(--pale);
             color: var(--redd);
             text-align: center;
+        }
+        
+        #lyrics2 {
+            position: relative;
+        }
+        
+        #wait {
+            position: absolute;
+            top: 300px;
+            left: -460px;
+            transform: rotate(-6deg);
         }
         
         @media only screen and (max-width: 1000px) {
@@ -261,6 +277,14 @@
             #bar {
                 width: auto;
                 height: auto;
+            }
+            
+            #wait {
+                position: relative;
+                top: 0;
+                left: 0;
+                width: auto;
+                transform: none;
             }
         }
         
@@ -346,11 +370,82 @@
                         I'm home again.</p>
                         <iframe id="bvb" width="460" height="260" src="https://www.youtube.com/embed/EiRkHLP8ys0?si=eCXAF0e1qV3hEnnz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </section>
-                    
+
+                    <div class="main">
                     <section id="butches">
                     <figure style="margin: 0;">
                     <img id="butchbar" src="decor/butches.jpg" style="height: 300px;"><figcaption>"I Imagine the Butches’ Stripper Bar"<br>by Jill McDonough</figcaption></figure></section>
-                    
+
+                        <section id="lyrics2">
+                        <h2>Waiting</h2>
+                        <h3>- Jamie Campbell Bower</h3>
+                        <p>Lights go down<br>
+You try to not make a sound<br>
+Hearts collide<br>
+We still have plenty of time<br><br>
+
+I'm like a child, a boy young man of 23<br>
+And I believe in us 'cause you believe in me,<br>
+Believe in me<br><br>
+
+And I'll wait for you in the dark<br>
+Arms outstretched comforting lover<br>
+My bones may be falling apart<br>
+But I'll wait for you come this summer<br><br>
+
+And I'll wait for you in the dark<br>
+Arms outstretched comforting lover<br>
+My bones may be falling apart<br>
+But I'll wait for you come this summer<br><br>
+
+Lights go down<br>
+We try to not make a sound<br>
+Hearts collide<br>
+I still have plenty of time<br><br>
+
+I'm like a child, a boy, young man of 23<br>
+And I believe in us 'cause you believe in me,<br>
+Believe in me<br><br>
+
+And I'll wait for you in the dark<br>
+Arms outstretched comforting lover<br>
+My bones may be falling apart<br>
+But I'll wait for you come this summer<br><br>
+                            
+And I'll wait for you in the dark<br>
+Arms outstretched comforting lover<br>
+My bones may be falling apart<br>
+But I'll wait for you come this summer<br><br>
+
+So come close, and I'll scream<br>
+Oh just let me be me<br>
+And I fail to see<br>
+The dark skies aren't all that dwell inside me<br><br>
+
+And I'll wait for you in the dark<br>
+Arms outstretched comforting lover<br>
+My bones may be falling apart<br>
+But I'll wait for you come this summer<br><br>
+
+And I'll wait for you in the dark<br>
+Arms outstretched comforting lover<br>
+My bones may be falling apart<br>
+But I'll wait for come this summer<br><br>
+
+And I'll wait for you in the dark<br>
+Arms outstretched comforting lover<br>
+My bones may be falling apart<br>
+But I'll wait for come this summer<br><br>
+
+And I'll wait for you in the dark<br>
+Arms outstretched comforting lover<br>
+My bones may be falling apart<br>
+But you'll help put me back together</p>
+                        
+                        <iframe id="wait" width="460" height="280" src="https://www.youtube.com/embed/exrjsBoy14Q?si=AJerbwtjChzPgV3m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </section>
+                    </div>
+                        
                     <section id="stat">
                         <h3>Sex Education:</h3>
                         <a href="https://www.glsen.org/sexed" target="_blank">LGBTQ-Inclusive Sexual Health Education</a>
