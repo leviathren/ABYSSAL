@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <style>
+        
+        :root{
+            --pale: #ffdfdf;
+            --redd: #670606;
+            --pink: #f28a9e;
+        }
+        
+        ::-webkit-scrollbar {
+            height: 4px;
+            width: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--redd);
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: black;
+        }
+        
+        html {
+            scrollbar-color: var(--redd) black;
+            scrollbar-width: thin;
+        }
+    
+        body {
+            background: black;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+        }
+        
+        .container {
+            display: flex;
+            height: 100%;
+            width: 100%;
+        }
+        
+        .side {
+            background: url(bg/morrisss.png);
+            padding: 20px 0 20px 20px;
+            font-family: angel;
+            font-size: 24px;
+            color: var(--redd);
+            /* border by hill house! */
+            border-right: 60px solid transparent; /* change the number here to make the border bigger or smaller! for best results keep it between 40-84px. */
+            border-image-source: url(decor/lacewhite.png);
+            border-image-slice: 84; /* don't change this! */
+            border-image-repeat: round; /* this makes the border smoothly fit any size container */
+            border-image-outset:1; /* this puts the border outside your container */
+            margin-right: 50px;
+        }
+        
+        .side a, img {
+            font-size: 28px;
+            color: #c11a1a;
+            transition: 0.4s ease;
+        }
+        
+        .side a:hover {
+            color: var(--redd);
+        }
+        
+        .side a img:hover {
+            transition: 0.4s ease;
+            box-shadow: 4px 4px 0 var(--redd);
+        }
+        
+        .collapsible {
+            background: var(--redd);
+            color: white;
+            font-family: valtin;
+            font-size: 18px;
+            border: none;
+            transition: ease 0.3s;
+        }
+        
+        .collapsible:hover {
+            background: #ff95aa;
+            color: var(--redd);
+        }
+
+        .collapsible::after {
+            content: '▼';
+        }
+        
+        .active {
+            background: var(--redd);
+            color: #ff95aa;
+        }
+
+        .active::after {
+            content: '▲';
+        }
+        
+        .active:hover {
+            background: var(--redd);
+            color: white;
+        }
+
+        .collapsed {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+        
+        .right {
+            background: url(bg/repeathearts.png);
+            width: 100%;
+            padding: 40px;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: [leftline] 400px [line2] 350px [line3] 300px [rightline];
+            grid-template-rows: [topline] 400px [second] 700px [bottomline];
+            grid-template-areas:
+                "lyrics vid stat"
+                "lyrics main right"
+                ;
+            
+            column-gap: 80px;
+            color: var(--pale);
+        }
+        
+        /* general */
+        
+        section {
+            background: var(--redd);
+            padding: 20px;
+            margin: 20px;
+            font-size: 18px;
+            outline: 2px dashed var(--pale);
+            outline-offset: 15px;
+            box-shadow: 0 0 28px var(--red);
+        }
+        
+        hr {
+            color: #ed6f6f;
+        }
+        
+        h1 {
+            font-family: valtin;
+            font-size: 4em;
+            color: #ffeeee;
+            margin: 20px 0;
+        }
+        
+        h2 {
+            font-family: angel;
+            font-size: 50px;
+            margin: 10px 0;
+        }
+        
+        h3 {
+            font-family: angel;
+            font-size: 24px;
+        }
+        
+        span {
+            font-family: ss;
+        }
+        
+        #bvb {
+            grid-area: vid;
+            position: absolute;
+            top: 60px;
+            right: -420px;
+            transform: rotate(6deg);
+        }
+        
+        #lyrics {
+            width: 350px;
+            height: 1020px;
+            position: relative;
+            grid-area: lyrics;
+        }
+        
+        #butches {
+            grid-area: main;
+            height: 370px;
+            width: 250px;
+        }
+        
+        #stat {
+            grid-area: stat;
+            background: var(--pink);
+            color: var(--redd);
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        #stat a {
+            color: white;
+            transition: 0.4s ease;
+        }
+        
+        #stat a:hover {
+            color: var(--pale);
+        }
+        
+        #bar {
+            grid-area: right;
+            background: var(--pale);
+            color: var(--redd);
+            text-align: center;
+        }
+        
+        @media only screen and (max-width: 1000px) {
+            
+            .container {
+                display: block;
+            }
+            
+            .side {
+                width: auto;
+                margin: 0;
+                border: none;
+            }
+            
+            .right {
+                width: auto;
+            }
+            
+            .grid {
+                display: block;
+            }
+            
+            section {
+                margin: 40px auto;
+            }
+            
+            #bvb {
+                position: relative;
+                top: 0;
+                right: 0;
+                width: auto;
+                transform: none;
+            }
+            
+            #lyrics {
+                width: auto;
+                height: auto;
+            }
+
+            #butches {
+                width: auto;
+                height: auto;
+            }
+
+            #stat {
+                width: auto;
+                height: auto;
+            }
+
+            #bar {
+                width: auto;
+                height: auto;
+            }
+        }
+        
+    </style>
+    
+    <head>
+    
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="fonts.css">
+        
+        <link rel="icon" type="image/png" href="decor/hearts.gif">
+        <title>My Valentine</title>
+        
+    </head>
+    
+    <body>
+    
+        <div class="container">
+        
+            <div class="side">
+                
+                <a href="home.html">Home <b>&#10531;</b></a>
+                
+                <hr>
+                
+                <p>Love on the web &#x2764;</p>
+                <p>This page was coded with love for</p><a href="https://tilde.32bit.cafe/~ribose/events/valentines2024/" target="_blank"><img src="btns/32bitval.png"></a>
+                
+                <p style="font-family: kiss; font-size: 100px; color: var(--redd); margin: 0;">G</p>
+                
+                <hr>
+                
+                <button class="collapsible">Credits</button>
+                <div class="collapsed">
+                    <a href="https://hillhouse.neocities.org/materials" target="_blank">Background graphics and white lace</a> by <a href="https://hillhouse.neocities.org/" target="_blank">Hill House</a>.
+                </div>
+                
+            </div>
+        
+            <div class="right">
+                
+                <h1>My Valentine</h1>
+                
+                <div class="grid">
+                
+                    <section id="lyrics">
+                        <h2>The Mortician's Daughter</h2>
+                        <h3>- Black Veil Brides</h3>
+                        <p>
+                        I open my lungs dear<br>
+                        I sing this song at funerals... no rush.<br>
+                        These lyrics heard a thousand times, just plush.<br>
+                        Baby boy you've held so tightly,<br>
+                        This pain it visits almost nightly<br>
+                        Missing hotel beds, I feel your touch.<br><br>
+                        I will await dear, a patience of eternity, my crush.<br>
+                        A universal still.<br>
+                        No rust.<br>
+                        No dust will ever grow on this frame,<br>
+                        One million years, and I will say your name.<br>
+                        I love you more than I can ever scream.<br><br>
+                        We booked our flight those years ago,<br>
+                        I said, "I love you, " as I left you.<br>
+                        Regrets still haunt my hollow head,<br>
+                        But I promised you I will see you again, again.<br><br>
+                        I sit here and smile dear.<br>
+                        I smile because I think of you and I blush.<br>
+                        These bleeding hollow dials... this fuss.<br>
+                        A fuss is made of miles and travels<br>
+                        When roadways are but stones and gravel.<br>
+                        A bleeding heart can conquer every crush.<br><br>
+                        We booked our flight those years ago<br>
+                        You said you loved me as you left me.<br>
+                        Regrets still haunt your saddened head,<br>
+                        But I promised you that I will see you,<br>
+                        We booked our flight those years ago<br>
+                        I said I loved you as I left you<br>
+                        Regret's no longer in my head,<br>
+                        But I promised you and now<br>
+                        I'm home again, again, again, I'm home again, again, again.<br><br>
+                        I'm home again.</p>
+                        <iframe id="bvb" width="460" height="260" src="https://www.youtube.com/embed/EiRkHLP8ys0?si=eCXAF0e1qV3hEnnz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </section>
+                    
+                    <section id="butches">
+                    <figure style="margin: 0;">
+                    <img id="butchbar" src="decor/butches.jpg" style="height: 300px;"><figcaption>"I Imagine the Butches’ Stripper Bar"<br>by Jill McDonough</figcaption></figure></section>
+                    
+                    <section id="stat">
+                        <h3>Sex Education:</h3>
+                        <a href="https://www.glsen.org/sexed" target="_blank">LGBTQ-Inclusive Sexual Health Education</a>
+                        <a href="https://www.queersexedcc.com/zines" target="_blank">Queer Sex Ed Community Curriculum Zine Archive</a>
+                    </section>
+                    
+                    <section id="bar">
+                        <h3>FULL OF LOVE</h3>
+                        <img src="btns/lesbianbtn.png">
+                        <img src="btns/lesbianbutton.png"><a href="https://www.pillowfort.social/posts/1632320" target="_blank">
+                        <img src="btns/lesbian.png"></a>
+                        <img src="btns/queerbtn.png">
+                        <img src="btns/madewithpridebtn.gif">
+                        <img src="btns/gaywomenbtn.gif">
+                        <hr>
+                        <img src="btns/rainbowbtn.gif">
+                        <img src="btns/aromantic.png">
+                        <img src="btns/asexual.png">
+                        <img src="btns/asexuals_now.gif">
+                        <img src="btns/bi.png">
+                        <img src="btns/bisexual.png">
+                        <img src="btns/demiromantic.png">
+                        <img src="btns/demisexual.png">
+                        <img src="btns/gay.gif">
+                        <img src="btns/gayy.png">
+                        <img src="btns/kneesocks.gif">
+                        <img src="btns/pan.png">
+                        <img src="btns/polyam.png">
+                        <img src="btns/queer2.png">
+                        <img src="btns/siteisgay.gif">
+                        <img src="btns/gaypride.gif">
+                    </section>
+                </div>
+                
+            </div>
+        </div>
+    
+        <!----- scripts ----->
+        <script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+    </body>
+    
+</html>
