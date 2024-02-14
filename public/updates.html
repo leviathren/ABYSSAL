@@ -19,12 +19,11 @@
     }
         
     body {
-        font-family: Galmuri14, monospace, serif;
+        font-family: "lucida console", monospace, serif;
         font-size: 14px;
-        letter-spacing: 1.4;
         color: white;
         margin: 0;
-        background-image: url(/bg/twinklingstarsbg.gif);
+        background-image: url(bg/purplestars.gif);
         background-attachment: fixed;
     }
     
@@ -44,39 +43,53 @@
     
     .container {
         background: black;
-        width: 700px;
-        padding: 30px;
+        width: 1000px;
+        padding: 10px;
         margin: auto;
         transition: 0.4s ease;
+        
+        display: grid;
+        grid-template-columns: [line1] 200px [line2] auto [line3] 200px [line4];
+        grid-template-rows: [topline] 150px [secondline] 700px [thirdline] 80px [fourthline];
+        grid-template-areas:
+            "banner banner banner"
+            "leftbar mid rightbar"
+            "footer footer footer";
+        column-gap: 20px;
+        grid-row-gap: 20px;
+    }
+    
+    .banner {
+        grid-area: banner;
+        background: url(decor/updatesbanner.png);
+        background-size: cover;
+        background-position: center;
+        transition: 0.8s ease;
+    }
+    
+    /* left */
+    
+    .leftbar {
+        grid-area: leftbar;
+    }
+    
+    .leftbar section {
+        margin-bottom: 20px;
     }
     
     nav {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 20px 0;
+        background: black;
+        padding: 15px;
+        border: 1px solid var(--purple);
+        box-shadow: 2px 2px 12px var(--purple);
+        margin-bottom: 20px;
     }
     
     nav a {
+        display: table;
+        font-size: 16px;
         text-transform: uppercase;
         text-decoration: none;
-        margin: 0 20px;
-    }
-    
-    #statuscafe {
-        padding: 15px;
-        margin: 10px;
-        border: 1px solid #6F48FF;
-    }
-    #statuscafe-username {
-        margin-bottom: 15px;
-    }
-    #statuscafe-content {
-        margin: 0 1em .5em 1em;
-    }
-    
-    main {
-        padding: 10px;
     }
     
     .rss {
@@ -87,8 +100,67 @@
         box-shadow: 4px 4px 0px #6F48FF;
     }
     
+    /* right */
+    
+    .rightbar {
+        grid-area: rightbar;
+    }
+    
+    .rightbar section {
+        margin-bottom: 20px;
+    }
+    
+    #statuscafe {
+    }
+    #statuscafe-username {
+        font-size: 10px;
+        color: grey;
+    }
+    #statuscafe-username a {
+        font-size: 14px;
+    }
+    #statuscafe-content {
+    }
+    
+    /* footer */
+    footer {
+        grid-area: footer;
+        text-align: center;
+        padding: 15px;
+        border: 1px solid var(--purple);
+        box-shadow: 2px 2px 12px var(--purple);
+    }
+    
+    /* middle */
+    
+    main {
+        grid-area: mid;
+        background: #0a0a0a;
+        padding: 15px;
+        overflow: scroll;
+        border: 1px solid var(--purple);
+        box-shadow: 2px 2px 12px var(--purple);
+    }
+    
+    /* general stuff */
+    
     article {
-        margin-bottom: 60px;
+        margin-bottom: 40px;
+    }
+    
+    article p {
+        padding: 2px 8px;
+    }
+    
+    section {
+        background: black;
+        padding: 15px;
+        border: 1px solid var(--purple);
+        box-shadow: 2px 2px 12px var(--purple);
+    }
+    
+    hr {
+        color: var(--purple);
     }
     
     h1 {
@@ -103,13 +175,28 @@
         padding: 2px 8px;
     }
     
+    h3 {
+        margin: 0 0 10px;
+    }
+    
+    h4 {
+        color: grey;
+        font-size: 10px;
+        font-weight: 100;
+        margin: 0;
+    }
+    
     a {
-        color: #6F48FF;
-        transition: 0.2s ease;
+        color: #815eff;
+        transition: 0.4s ease;
     }
     
     a:hover {
         color: #b39eff;
+    }
+    
+    ul {
+        list-style-image: url(decor/purplestars.gif);
     }
     
     img {
@@ -136,35 +223,80 @@
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galmuri/dist/galmuri.css">
     <link rel="stylesheet" href='fonts.css'>
-<title>Ship's Log</title>
+    <link rel="icon" href="decor/note.png">
+<title>ABYSSAL NEWSLETTER</title>
 </head>
 
 <body>
     
     <div class="container">
         
-        <nav>
-            <a href="home.html">home</a>
-            <a class="smt-current-element" title="Site updates straight to your RSS aggregator" href="https://journal.miso.town/atom?url=https://leviathren.neocities.org/updates" target="_blank"><img class="rss" src="btns/htmljournal.png"></a>
+        <section class="banner"><a href="art.html"><img src="decor/sparkles.gif"></a></section>
+        
+        <div class="leftbar">
+        
+            <nav>
+                <a href="home.html">home</a>
+                <a href="sitemap.html">sitemap</a>
+            </nav>
             
-        </nav>
+            <section>
+                <h3>Site Construction</h3>
+                <h4>What's being worked on</h4>
+                <ul>
+                    <li>New home page welcome/about</li>
+                    <li>Free templates</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h3>RSS Feed</h3>
+                <a class="smt-current-element" title="Site updates straight to your RSS aggregator" href="https://journal.miso.town/atom?url=https://leviathren.neocities.org/updates" target="_blank"><img class="rss" src="btns/htmljournal.png"></a>
+                <p title="Click the button above to download the atom file. Or, alt-click the HTML Journal button -> copy link -> paste into your RSS aggregator.">[?]</p>
+            </section>
+        </div>
         
-        <div class="center" style="color: #ccc; font-size: 14px;">Want an <img style="height: 22px; margin-bottom: -4px;" src="btns/rss.gif"> ? Click the HTML Journal button above to download the atom file.<br>Or: alt-click the HTML Journal button -> copy link -> paste into your RSS aggregator subscriptions.</div>
+        <div class="rightbar">
         
+            <section id="statuscafe">
+                <h3>Webweaver Status</h3><div id="statuscafe-username"></div><div id="statuscafe-content"></div></section>
+            <script src="https://status.cafe/current-status.js?name=leviathren" defer></script>
+            
+            <section>
+                <h3>UTC</h3>
+                <iframe src="https://free.timeanddate.com/clock/i98qqjpe/n1440/fn12/fcfff/tct/pct/ahl/tt0/tw0/tm1/ta1/tb4" frameborder="0" width="129" height="36" allowtransparency="true"></iframe>
+                <hr>
+                <h3>ABYSSAL's Time</h3>
+                <iframe src="https://free.timeanddate.com/clock/i98qqjpe/n217/fn12/fcfff/tct/pct/ahl/tt0/tw0/tm1/ta1/tb4" frameborder="0" width="129" height="36" allowtransparency="true"></iframe>
+
+            </section>
+
+            <section>
+                <h3>ABYSSAL's Lunar Phase</h3>
+                <iframe width="170" height="180" style="border:none" src="https://dimden.dev/moon?custom=1&textColor=%236F48FF&linkColor=%23ffffff" name="dimdenmoonwidget"></iframe>
+            </section>
+
+        </div>
+        
+        <footer>
+            <p>ABYSSAL Newsletter <img src="decor/tinysparkle.gif"> Coded by LEVIATHREN <img src="decor/tinysparkle.gif"> Hosted on Neocities (C) 2023 - 2024</p>
+        </footer>
         
     <main>
         
         <h1>ABYSSAL Newsletter</h1>
-
-	<article><h2>2024-02-06</h2><p><a href="https://leviathren.neocities.org/val24" target="_blank">My Valentine</a> page for <a href="https://tilde.32bit.cafe/~ribose/events/valentines2024/" target="_blank">32-Bit Valentines</a> is up! Check out a couple of my favorite love songs.</p></article>
-
-	<article><h2>2024-01-24</h2><p>Moved site credits to a separate <a href="https://leviathren.neocities.org/credits" target="_blank">Credits</a> page, which includes some background about the site.</p></article>
-	    
+        
+        <article><h2>2024-02-13</h2><p>Revamped the <a href="https://leviathren.neocities.org/updates" target="_blank">Updates Page</a> to a newsletter/newspaper layout.</p></article>
+        
+        <article><h2>2024-02-06</h2><p><a href="https://leviathren.neocities.org/val24" target="_blank">My Valentine</a> page for <a href="https://tilde.32bit.cafe/~ribose/events/valentines2024/" target="_blank">32-Bit Valentines</a> is up! Check out a couple of my favorite love songs.</p></article>
+        
+        <article><h2>2024-01-24</h2><p>Moved site credits to a separate <a href="https://leviathren.neocities.org/credits" target="_blank">Credits</a> page, which includes some background about the site.</p></article>
+        
         <article><h2>2024-01-21</h2><p>Two new themes, "Toxic Waste" and "Peonies", added to <a href="https://leviathren.neocities.org/home" target="_blank">home</a> page!</p></article>
         
         <article><h2>2024-01-17</h2><p>New <a href="https://leviathren.neocities.org/crafts" target="_blank">Crafts Page</a>! Layout inspired by scrapbooking. Also did a long overdue, massiveee update to the <a href="https://leviathren.neocities.org/buttons" target="_blank">Net Neighbors</a> page, adding lots of mutuals! Including those without buttons.</p></article>
         
-	<article><h2>2024-01-13</h2><p>Started using m15o's <a href="https://blog.miso.town/" target="_blank">HTML Blog/Journal</a> for RSS updates!</p></article>
+        <article><h2>2024-01-13</h2><p>Started using m15o's <a href="https://blog.miso.town/" target="_blank">HTML Blog/Journal</a> for RSS updates!</p></article>
             
         <article><h2>2024-01-11</h2><p>Published <a href="music.html">music page</a>! where I share all kinds of things relating to my listening habits, and moved the <a href="guest.html">guestbook</a> to a separate page for itself</p></article>
         
