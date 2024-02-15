@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <style>
+        
+        ::-webkit-scrollbar {
+            background-color: #fdb9b9;
+            width: 5px;
+            height: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: white;
+        }
+        
+        ::selection {
+            background: #e84949;
+            color: white;
+        }
+        
+        html {
+            scrollbar-color: white #fdb9b9;
+            scrollbar-width: thin;
+        }
+        
+        body {
+            background: #ea9898;
+            font-family: monospace;
+            color: #500000;
+            
+            margin: 0;
+        }
+        
+        .grid {
+            background: #fdb9b9;
+            
+            width: 1000px;
+            padding: 10px;
+            margin: auto;
+            
+            display: grid;
+            grid-template-columns: [line1] 200px [line2] auto [line3] 200px [line4];
+            grid-template-rows: [topline] 150px [secondline] 700px [thirdline] 80px [fourthline];
+            grid-template-areas:
+                "banner banner banner"
+                "leftbar mid rightbar"
+                "footer footer footer";
+            column-gap: 20px;
+            grid-row-gap: 20px;
+        }
+        
+        /* top */
+        .banner {
+            background: #f77c7c;
+            
+            grid-area: banner;
+        }
+
+        /* left */
+        .leftbar {
+            background: #e25555;
+            padding: 10px;
+            
+            grid-area: leftbar;
+        }
+
+        /* right */
+        .rightbar {
+            background: #ffd6d6;
+            padding: 10px;
+            
+            grid-area: rightbar;
+        }
+
+        /* bottom */
+        footer {
+            background: #641a1a;
+            padding: 10px;
+            color: white;
+            text-align: center;
+            
+            grid-area: footer;
+        }
+
+        /* middle */
+        main {
+            background: #ff9797;
+            padding: 10px;
+            
+            grid-area: mid;
+            overflow: scroll;
+        }
+        
+        /* box divs */
+        .box {
+            background: #fff;
+            padding: 4px;
+            margin: 0 0 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 6px white;
+        }
+        
+        /* general */
+        article {
+            background: #ffc1c1;
+            padding: 10px;
+            margin: 0 0 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 6px #ffd8d8;
+        }
+        
+        h1 {
+            font-size: 2em;
+        }
+        
+        h2 {
+            font-size: 1.4em;
+        }
+        
+        p {
+            font-size: 1.2em;
+        }
+        
+        a {
+            color: #e84949;
+            transition: 0.4s ease;
+        }
+        
+        a:hover {
+            color: #b70000;
+        }
+        
+        @media only screen and (max-width: 1000px) {
+            .grid {
+                width: auto;
+                display: flex;
+                flex-direction: column;
+            }
+            
+            footer {
+                order: 6;
+            }
+        }
+    
+    </style>
+    
+    <head>
+    
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="icon" type="image/png" href="">
+        <title>Site Title Goes Here</title>
+        
+    </head>
+    
+    <body>
+        
+        <div class="grid">
+        
+            <!----- You can put more content in the banner or give it an image for a background in the css, whatever you want ----->
+            <div class="banner"></div>
+            
+            <div class="leftbar">
+                <div class="box">
+                    <p>It may be a good idea to use one of these sidebars or the banner to house your page/site navigation.</p>
+                </div>
+                <div class="box">
+                    <p>This is an example of text that you might put in this sidebar. You may want to just put a paragraph tag directly in the 'leftbar' div, or you can divide it into sections or divs. Up to you.</p>
+                </div>
+                <div class="box">
+                    <p>This is another box you could put in the sidebar. I would add images, links, etc. to make this look more interesting but I'm too lazy.</p>
+                </div>
+            </div>
+            
+            <div class="rightbar">
+                <div class="box">
+                    <p>What will you put here?</p>
+                </div>
+                <div class="box">
+                    <p>See my <a href="https://leviathren.neocities.org/updates" target="_blank">Newsletter</a> where I first made this grid to see what I put in my sidebars.</p>
+                </div>
+            </div>
+            
+            <footer><p>Footer stuff goes here.</p></footer>
+            
+            <main>
+                <article>
+                    <h1>Crush</h1>
+                    <h2>A simple css grid template</h2>
+                    
+                    <section>
+                        <p>This template coded by <a href="https://leviathren.neocities.org" target="_blank">Leviathren</a> is free to use! I only ask that you don't remove the credit in the notes (the greyed out text at the top of the code that doesn't display on the page).</p>
+                    </section>
+                    
+                    <section>
+                        <p>The 'main' tag is at the bottom of all the other sections because I assume this section of the page will contain the most content, and would therefore make it a pain scrolling past to get to other parts of the page with the more you add. Shorter sections, the banner, sidebars, and footer are higher in the code despite not necessarily being displayed that way on the page. You can move things about to suit your needs of course.</p>
+                    </section>
+                    
+                    <section>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        
+                        <p>Vel quam elementum pulvinar etiam non quam lacus. Cursus in hac habitasse platea dictumst quisque. Mauris cursus mattis molestie a iaculis at erat pellentesque adipiscing. Sem fringilla ut morbi tincidunt augue. Urna et pharetra pharetra massa massa. Et leo duis ut diam quam nulla porttitor. Adipiscing commodo elit at imperdiet. Arcu non sodales neque sodales ut etiam. Sed turpis tincidunt id aliquet risus feugiat in. Nisi lacus sed viverra tellus in hac habitasse. Faucibus turpis in eu mi bibendum neque egestas congue quisque. Neque volutpat ac tincidunt vitae semper. Malesuada fames ac turpis egestas. Augue lacus viverra vitae congue eu. At tempor commodo ullamcorper a lacus vestibulum. Duis ut diam quam nulla porttitor massa. Id velit ut tortor pretium viverra suspendisse. Mattis nunc sed blandit libero volutpat sed. Neque egestas congue quisque egestas.</p>
+                    </section>
+                </article>
+            </main>
+        </div>
+        
+    </body>
+    
+</html>
