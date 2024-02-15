@@ -193,11 +193,11 @@ body a, button:hover {
 	z-index: 999999 !important;
 	margin: 24px 14px 7px 12px;
 	/* style and design */
-    color: var(--fontcolor);
+    color: var(--contentbg);
     font-size: 14px;
-	padding: 8px;
-    border: 2px inset var(--windowborder);
-    background: var(--contentbg);
+	padding: 6px;
+    border: 2px ridge var(--windowborder);
+    background: var(--fontcolor);
 }
 
 #start {
@@ -255,7 +255,7 @@ body a, button:hover {
     background: transparent;
     color: var(--fontcolor);
     text-decoration: none;
-    font-family: lucida console;
+    font-family: "lucida console", monospace, serif;
     border: none;
     word-wrap: break-word;
 }
@@ -270,20 +270,6 @@ body a, button:hover {
     width: 25px;
     margin: auto;
     image-rendering: pixelated;
-}
-
-.btn {
-    background: transparent;
-    color: var(--link);
-    text-decoration: underline;
-    letter-spacing: 1.5;
-    border: none;
-    margin: 0;
-    padding: 0;
-}
-
-.btn:hover {
-    color: var(--linkhov);
 }
 
 img.bullet {
@@ -370,31 +356,16 @@ button#windowclose:hover {
 #div1 {
     top: 15%;
     left: 50%;
-    width: 450px;
+    width: 500px;
     z-index: 999;
 }
 
 #div1 .content {
-    max-height: 500px;
+    max-height: 600px;
 }
 
-.collapsible {
-    background: transparent;
-    color: var(--fontcolor);
-    font-family: lucida console;
-    padding-left: 0;
-    border: none;
-    transition: ease background 0.5s;
-}
-
-.active, .collapsible:hover {
-    background: var(--accent);
-}
-
-.collapsed {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
+.badges {
+    margin: 20px 0;
 }
 
 .palette {
@@ -588,6 +559,22 @@ button#windowclose:hover {
     overflow-y: scroll;
 }
 
+/* pets */
+#div11 {
+    display: none;
+    top: 10%;
+}
+
+#div11 .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#div11 img {
+    filter: none;
+}
+
 /*****       END DIVS       *****/
 
 #pagedoll {
@@ -600,10 +587,6 @@ button#windowclose:hover {
     background-size: contain;
     filter: var(--pdfilter);
     overflow: visible;
-}
-
-.window p {
-    margin-left: 4px;
 }
 
 marquee img {
@@ -639,8 +622,20 @@ marquee img {
 
 /* general */
 
+section {
+    margin: 0 6px;
+}
+
+h1 {
+    font-size: 18px;
+}
+
+h2 {
+    font-size: 16px;
+}
+
 hr {
-    margin: 40px;
+    margin: 40px 0px;
     color: var(--toolbarborder);
 }
 
@@ -652,10 +647,6 @@ a {
 a:hover {
     color: var(--linkhov);
     transition: 0.2s ease;
-}
-
-p {
-    margin: 10px;
 }
 
 img {
