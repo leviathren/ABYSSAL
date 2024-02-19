@@ -111,6 +111,7 @@
                                 <div class="color c4">LINK</div>
                                 <div class="color c5">LINK<br>HOVER</div>
                             </div>
+				<div class="updated">Last Updated: <span id="lastupdate"></span></div>
                         </section>
                                     
                 </article>
@@ -192,22 +193,26 @@
                     <span class="tools">edit</span>
                     <span class="tools">view</span>
                 </div>
-                <div class="content theme-switcher">
+                <div class="content">
+			<div class="visitor">You're visitor <span id="hitcount"></span></div>
 
-                    <button onclick="switchTheme('default')" class="smt-current-element" title="Noir (dark)" style="background-image:url('decor/darkpagedoll.gif')"></button>
-                    
-                    <button onclick="switchTheme('forest')" class="smt-current-element" title="Forest (dark)" style="background-image:url('decor/fairy.png')"></button>
-                    
-                    <button onclick="switchTheme('golden')" class="smt-current-element" title="Golden (light)" style="background-image:url('decor/sunpagedoll.gif')"></button>
-                    
-                    <button onclick="switchTheme('cyberpink')" class="smt-current-element" title="Cyber Grape (eyestrain)" style="background-image:url('decor/mysticalcrystal.gif')"></button>
-                    
-                    <button onclick="switchTheme('skyblue')" class="smt-current-element" title="Sky (light)" style="background-image:url('decor/blue clouds.gif')"></button>
-                    
-                    <button onclick="switchTheme('toxic')" class="smt-current-element toxicbtn" title="Toxic Waste (eyestrain)" style="background-image:url('decor/greenbiohazard.gif');"></button>
-                    
-                    <button onclick="switchTheme('peonies')" class="smt-current-element" title="Peonies (light + low contrast)" style="background-image:url('decor/peonies.png');"></button>
-                </div>
+			<div class="theme-switcher">
+
+	                    <button onclick="switchTheme('default')" class="smt-current-element" title="Noir (dark)" style="background-image:url('decor/darkpagedoll.gif')"></button>
+	                    
+	                    <button onclick="switchTheme('forest')" class="smt-current-element" title="Forest (dark)" style="background-image:url('decor/fairy.png')"></button>
+	                    
+	                    <button onclick="switchTheme('golden')" class="smt-current-element" title="Golden (light)" style="background-image:url('decor/sunpagedoll.gif')"></button>
+	                    
+	                    <button onclick="switchTheme('cyberpink')" class="smt-current-element" title="Cyber Grape (eyestrain)" style="background-image:url('decor/mysticalcrystal.gif')"></button>
+	                    
+	                    <button onclick="switchTheme('skyblue')" class="smt-current-element" title="Sky (light)" style="background-image:url('decor/blue clouds.gif')"></button>
+	                    
+	                    <button onclick="switchTheme('toxic')" class="smt-current-element toxicbtn" title="Toxic Waste (eyestrain)" style="background-image:url('decor/greenbiohazard.gif');"></button>
+	                    
+	                    <button onclick="switchTheme('peonies')" class="smt-current-element" title="Peonies (light + low contrast)" style="background-image:url('decor/peonies.png');"></button>
+			</div>
+		</div>
             </div>
             
             <div id="div6" class="window">
@@ -356,9 +361,7 @@
                 To-Do:
                     <ul>
                         <li>- site descriptions for button wall</li>
-                        <li>- pride room</li>
                         <li>- web manifesto</li>
-                        <li>- templates?</li>
                     </ul>
                 </div>
             </div>
@@ -401,6 +404,28 @@
         
     
         <!----- scripts ----->
+
+	<!----- last updated ----->
+        <script>
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var site_data = JSON.parse(this.responseText);
+        var num_arr = site_data.info.views.toString().split("");
+        var num_str = "";
+        for (i = 0; i < num_arr.length; i++) {
+            num_str += num_arr[i];
+            if ( (num_arr.length-1 - i) % 3 == 0 && (num_arr.length-1 - i) != 0 ) {num_str += ",";}
+            var date_str = site_data.info.last_updated;
+            var date_obj = new Date(site_data.info.last_updated);
+            document.getElementById("lastupdate").innerHTML = (date_obj.getMonth()+1) + "-" + date_obj.getDate() + "-" + date_obj.getFullYear();
+        }
+        document.getElementById("hitcount").innerHTML = num_str;
+    }
+};
+xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=leviathren", true);
+xhttp.send();
+</script>
         
         <!----- open and close windows ----->
         <script>
