@@ -433,6 +433,14 @@ button#windowclose:hover {
     color: var(--bg);
 }
 
+.updated {
+    display: table;
+    background: var(--windowbg);
+    padding: 12px 18px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+}
+
 /* site links */
 #div2 {
     top: 4%;
@@ -464,6 +472,18 @@ button#windowclose:hover {
     width: 210px;
     top: 10%;
     right: 5%;
+}
+
+.visitor {
+    background: var(--windowbg);
+    padding: 10px;
+    margin: 0 0 8px;
+}
+
+#hitcount, #lastupdate {
+    background: linear-gradient(20deg, var(--accent) , var(--link));
+    padding: 2px 4px;
+    line-height: 2em;
 }
 
 .theme-switcher {
