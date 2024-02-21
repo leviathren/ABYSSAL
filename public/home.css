@@ -476,8 +476,15 @@ button#windowclose:hover {
 
 .visitor {
     background: var(--windowbg);
-    padding: 10px;
+    padding: 6px 10px;
     margin: 0 0 8px;
+}
+
+.visitor div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0 0;
 }
 
 #hitcount, #lastupdate {
