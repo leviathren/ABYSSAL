@@ -530,7 +530,7 @@ button#windowclose:hover {
 
 /* status */
 #div7 {
-    max-width: 250px;
+    width: 250px;
     top: 34%;
     left: 80%;
 }
