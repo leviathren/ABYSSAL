@@ -10,21 +10,21 @@
     (But change the script src URL to wherever you have this widget stored on your site!)
 
         <div id="c_widget"></div>
-        <script src="hauntcomment-widget.js"></script>
+        <script src="comment-widget.js"></script>
 
     Have fun! Bug reports are encouraged if you happen to run into any issues.
     - Ayano (https://virtualobserver.moe/)
 */
 
 // The values in this section are REQUIRED for the widget to work! Keep them in quotes!
-const s_stylePath = '/hauntcomment-widget-dark.css'; // Define the path for the stylesheet (ie. /styles/commentwidget.css)
-const s_formId = '1FAIpQLSeDXCW2GxFrs_OThVwTmawsPfrhbIGilB8b0b_gEVXwF2IEIw'; // The Google Form
-const s_nameId = '743075380'; // The Name field ID
-const s_websiteId = '681354258'; // The Website field ID
-const s_textId = '1762444121'; // The Text field ID
-const s_pageId = '1141229384'; // The Page field ID
-const s_replyId = '359443944'; // The Reply field ID
-const s_sheetId = '1WVmNwJ0TUFYpMPdlMwMyTwCVFB3AVlWDJv6E0dMHFUY'; // The Google Sheet
+const s_stylePath = '/hauntcomment-widget-dark.css';
+const s_formId = '1FAIpQLSeDXCW2GxFrs_OThVwTmawsPfrhbIGilB8b0b_gEVXwF2IEIw';
+const s_nameId = '743075380';
+const s_websiteId = '681354258';
+const s_textId = '1762444121';
+const s_pageId = '1141229384';
+const s_replyId = '359443944';
+const s_sheetId = '1WVmNwJ0TUFYpMPdlMwMyTwCVFB3AVlWDJv6E0dMHFUY';
 
 // The values below are necessary for accurate timestamps, I've filled it in with EST as an example
 const s_timezone = -8; // Your personal timezone (Example: UTC-5:00 is -5 here, UTC+10:30 would be 10.5)
@@ -34,13 +34,14 @@ const s_dstStart = ['March', 'Sunday', 2, 2]; // Example shown is the second Sun
 const s_dstEnd = ['November', 'Sunday', 1, 2]; // Example shown is the first Sunday of November at 2:00 am
 
 // Misc - Other random settings
-const s_commentsPerPage = 4; // The max amount of comments that can be displayed on one page, any number >= 1 (Replies not counted)
+const s_commentsPerPage = 5; // The max amount of comments that can be displayed on one page, any number >= 1 (Replies not counted)
 const s_maxLength = 500; // The max character length of a comment
 const s_maxLengthName = 16; // The max character length of a name
 const s_commentsOpen = true; // Change to false if you'd like to close your comment section site-wide (Turn it off on Google Forms too!)
 const s_collapsedReplies = true; // True for collapsed replies with a button, false for replies to display automatically
 const s_longTimestamp = false; // True for a date + time, false for just the date
-const s_includeUrlParameters = false; // Makes new comment sections on pages with URL parameters when set to true (If you don't know what this does, leave it disabled)
+let s_includeUrlParameters = false; // Makes new comment sections on pages with URL parameters when set to true (If you don't know what this does, leave it disabled)
+const s_fixRarebitIndexPage = false; // If using Rarebit, change to true to make the index page and page 1 of your webcomic have the same comment section
 
 // Word filter - Censor profanity, etc
 const s_wordFilterOn = false; // True for on, false for off
@@ -57,7 +58,7 @@ const s_textFieldLabel = 'Message';
 const s_submitButtonLabel = 'Send';
 const s_loadingText = 'Listening for thoughts...';
 const s_noCommentsText = 'No secrets yet';
-const s_closedCommentsText = 'Comments are closed';
+const s_closedCommentsText = 'Comments are closed for now...';
 const s_websiteText = 'Website'; // The links to websites left by users on their comments
 const s_replyButtonText = 'Reply'; // The button for replying to someone
 const s_replyingText = 'Replying to'; // The text that displays while the user is typing a reply
@@ -71,6 +72,9 @@ const s_rightButtonText = '>>';
     However, feel free to edit this code as much as you like! Just please don't remove my credit if possible <3
 */
 
+// Fix the URL parameters setting for Rarebit just in case
+if (s_fixRarebitIndexPage) {s_includeUrlParameters = true}
+
 // Apply CSS
 const c_cssLink = document.createElement('link');
 c_cssLink.type = 'text/css';
@@ -81,16 +85,16 @@ document.getElementsByTagName('head')[0].appendChild(c_cssLink);
 // HTML Form
 const v_mainHtml = `
     <div id="c_inputDiv">
-        <form id="c_form" onsubmit="v_submitted = true" method="post" target="c_hiddenIframe" action="https://docs.google.com/forms/d/e/${s_formId}/formResponse"></form>
+        <form id="c_form" onsubmit="c_submitButton.disabled = true; v_submitted = true;" method="post" target="c_hiddenIframe" action="https://docs.google.com/forms/d/e/${s_formId}/formResponse"></form>
     </div>
     <div id="c_container">${s_loadingText}</div>
 `;
 const v_formHtml = `
-    <h2 id="c_widgetTitle" class="smt-current-element" title="guestbook/chatbox">${s_widgetTitle}</h2>
+    <h2 id="c_widgetTitle">${s_widgetTitle}</h2>
 
     <div id="c_nameWrapper" class="c-inputWrapper">
         <label class="c-label c-nameLabel" for="entry.${s_nameId}">${s_nameFieldLabel}</label>
-        <input class="c-input c-nameInput smt-current-element" title="what are you called, lost one?" name="entry.${s_nameId}" id="entry.${s_nameId}" type="text" maxlength="${s_maxLengthName}" required>
+        <input class="c-input c-nameInput" name="entry.${s_nameId}" id="entry.${s_nameId}" type="text" maxlength="${s_maxLengthName}" required>
     </div>
 
     <div id="c_websiteWrapper" class="c-inputWrapper">
@@ -100,7 +104,7 @@ const v_formHtml = `
 
     <div id="c_textWrapper" class="c-inputWrapper">
         <label class="c-label c-textLabel" for="entry.${s_textId}">${s_textFieldLabel}</label>
-        <textarea class="c-input c-textInput smt-current-element" title="what did you want to share?" name="entry.${s_textId}" id="entry.${s_textId}" rows="4" cols="50"  maxlength="${s_maxLength}" required></textarea>
+        <textarea class="c-input c-textInput" name="entry.${s_textId}" id="entry.${s_textId}" rows="4" cols="50"  maxlength="${s_maxLength}" required></textarea>
     </div>
 
     <input id="c_submitButton" name="c_submitButton" type="submit" value="${s_submitButtonLabel}" disabled>
@@ -134,6 +138,7 @@ else {c_submitButton = document.createElement('button')}
 // Add invisible page input to document
 let v_pagePath = window.location.pathname;
 if (s_includeUrlParameters) {v_pagePath += window.location.search}
+if (s_fixRarebitIndexPage && v_pagePath == '/') {v_pagePath = '/?pg=1'}
 const c_pageInput = document.createElement('input');
 c_pageInput.value = v_pagePath; c_pageInput.type = 'text'; c_pageInput.style.display = 'none';
 c_pageInput.id = 'entry.' + s_pageId; c_pageInput.name = c_pageInput.id; 
@@ -145,7 +150,7 @@ c_replyingText.style.display = 'none'; c_replyingText.id = 'c_replyingText';
 c_form.appendChild(c_replyingText);
 c_replyingText = document.getElementById('c_replyingText');
 
-// Add the invisble reply input to document
+// Add the invisible reply input to document
 let c_replyInput = document.createElement('input');
 c_replyInput.type = 'text'; c_replyInput.style.display = 'none';
 c_replyInput.id = 'entry.' + s_replyId; c_replyInput.name = c_replyInput.id;
@@ -174,6 +179,13 @@ function getComments() {
     // Reset reply stuff to default
     c_replyingText.style.display = 'none';
     c_replyInput.value = '';
+
+    // Clear input fields too
+    if (s_commentsOpen) {
+        document.getElementById(`entry.${s_nameId}`).value = '';
+        document.getElementById(`entry.${s_websiteId}`).value = '';
+        document.getElementById(`entry.${s_textId}`).value = '';
+    }
 
     // Get the data
     const url = `https://docs.google.com/spreadsheets/d/${s_sheetId}/gviz/tq?`;
@@ -220,7 +232,7 @@ function getComments() {
         if (comments.length == 0 || Object.keys(comments[0]).length < 2) { // Once again, Google Sheets can be weird
             c_container.innerHTML = s_noCommentsText;
         } else {displayComments(comments)}
-
+        
         c_submitButton.disabled = false // Now that everything is done, re-enable the submit button
     })
 }
