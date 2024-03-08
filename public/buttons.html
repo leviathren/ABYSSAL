@@ -18,9 +18,11 @@
     }
     
     html {
-        background-image: url(bg/bluestarsbg.gif);
-        background-attachment: fixed;
+        height: 100%;
+        background: black;
         cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat947.ani), url(https://cur.cursors-4u.net/nature/nat-10/nat947.png), auto !important;
+        scrollbar-color: #004b5b black;
+        scrollbar-width: thin;
     }
     
     html a {
@@ -48,57 +50,17 @@
     }
     
     main {
-        width: 600px;
-        height: 80%;
-        margin: 20px auto;
         padding: 40px;
-        overflow: scroll;
-        background: #0a0a0a;
-        box-shadow: -10px 10px 0 #00d5ff;
-        scrollbar-color: #004b5b black;
-        scrollbar-width: thin;
+        width: 1000px;
     }
     
-    .flex {
-        display: flex;
-        justify-content: space-evenly;
-    }
-    
-    .flex section {
-        width: 50%;
-    }
-    
-    .left {
-        text-align: left;
-    }
-    
-    .right {
-        text-align: left;
-    }
-    
-    section {
+    th, td {
+        border: 1px dashed;
+        padding: 10px;
     }
     
     .btn {
-        margin: 2px;
         max-width: 88px;
-    }
-    
-    .blocks {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    
-    .ph {
-        text-align: center;
-        text-decoration: none;
-        width: 88px;
-        height: 31px;
-        margin: 4px;
-    }
-    
-    .ph:hover {
-        box-shadow: 4px 4px 0 #00d5ff;
     }
     
     /* general */
@@ -125,10 +87,11 @@
         transition: 0.3s ease;
     }
     
-    @media only screen and (max-width: 750px) {
+    @media only screen and (max-width: 1040px) {
 
         main {
             width: auto;
+            padding: 10px;
         }
     }
     
@@ -139,6 +102,7 @@
     <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="fonts.css">
+    <link rel="icon" href="decor/blkanchor.gif">
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 <script src="https://static.tumblr.com/lspzyz3/xloqk6cgp/jquery.style-my-tooltips.js"></script>
@@ -155,264 +119,495 @@
 							})(jQuery);
 </script>
     
-    <title>seaport</title></head>
+    <title>Seaport</title></head>
 
 <body>
     
     <main>
         
-            <a id="top" href="home.html">&#60; home</a> //
-            <a href="#disclaimer">disclaimer &#8628;</a>
+            <a id="top" href="home.html">&#60; home</a>
         
         <p>&#62;&#62; You have found ABYSSAL's seaport, a hub where other sailors may dock and mingle with one another. Take a gander at the fine ships (sites) that catch your eye.</p>
         
-        <section class="flex">
-            <section class="left">
-        &#62;&#62; My buttons:<br><br>
-            <a href="home.html"><img class="btn" src="btns/leviathrenbutton.gif"></a>
-            <a href="home.html"><img class="btn" src="btns/ABYSSALbtn.gif"></a>
-                </section>
+        <p id="disclaimer">&#62;&#62; DISCLAIMER: Buttons are added by my discretion, and I will only link sites that I feel are safe spaces. Buttons will be removed if I find that a site no longer fits the community that I strive to foster. Do not link me on your site if you hold bigoted, harmful views.</p>
             
-            <section class="right">
+            <p>
             &#62;&#62; Friends I've roped into Neocities:<br><br>
             <a href="https://that-mom-friend.neocities.org/" target="_blank"><img class="btn" src="btns/that-mom-friend-button.gif"></a>
             <a href="https://saturniids.neocities.org/" target="_blank"><img class="btn" src="btns/ghostlightButton.gif"></a>
-            </section>
-        </section>
+            </p>
         
-        <p>&#62;&#62; Net neighbors. Currently working on adding site hover-descriptions.</p>
-
-            <section class="mutuals">
-                
-                <!----- black ----->
-                <a title="A collection of thoughts on dark, horror media." href="https://blackwater.neocities.org/" target="_blank"><img class="btn" src="btns/blackwater.gif"></a>
-                
-                <a title="A personal site with cool projects." href="https://glassheart.neocities.org/" target="_blank"><img class="btn" src="btns/glassheart.png"></a>
-                
-                <a title="A personal site reminiscent of the old web." href="https://willdotjpg.gay/" target="_blank"><img class="btn" src="btns/willdotjpg.png"></a>
-                
-                <a title="A punk-rock personal site with a personal blog and projects." href="https://grossgirl94.neocities.org/" target="_blank"><img class="btn" src="btns/grossgirl94.gif"></a>
-                
-                <a title="Inspired by early dragon quest games, full of shrines, recipes, and writings." href="https://onlywonder.net/" target="_blank"><img class="btn" src="btns/wonder.png"></a>
-                
-                <a title="A horror site with some cool writings" href="https://pickeraparter.com" target="_blank"><img class="btn" src="btns/pickeraparter.gif"></a>
-                
-                <a title="A circus with a lot of resources, also the webring owner of Shroom.ink." href="https://deadrodrick.neocities.org/" target="_blank"><img class="btn" src="btns/DeadRodrick.png"></a>
-                
-                <a title="A blue site with a blog, art gallery, and some fun graphics." href="https://corq.neocities.org/" target="_blank"><img class="btn" src="btns/corbin.png"></a>
-                
-                <a title="A compact personal site that likes sharks :3." href="https://screamingegg.neocities.org/" target="_blank"><img class="btn" src="btns/screamingegg.png"></a>
-                
-                <a title="A gothic dungeon with endless chambers to roam." href="https://nymphblood.neocities.org/" target="_blank"><img class="btn" src="btns/primordial.png"></a>
-                
-                <a title="A really polished personal site with lots of resources for building the small web." href="https://flamedfury.com/" target="_blank"><img class="btn" src="btns/flamedfury22.gif"></a>
-                
-                <a title="Inside a wooden igloo is a personal site containing interests and projects." href="https://lemonbaskets.neocities.org/" target="_blank"><img class="btn" src="btns/lemonbaskets.png"></a>
-                
-                <a title="EYESTRAIN WARNING. A personal site with lots of original music and projects." href="https://jlehr.neocities.org/" target="_blank"><img class="btn" src="btns/lehr.gif"></a>
-                
-                <a title="A fun, colorful personal site with some shrines, graphics, and fun widgets for visitors." href="https://wrender.neocities.org/" target="_blank"><img class="btn" src="btns/wrendering.gif"></a>
-                
-                <a href="https://platinumtulip.garden/" target="_blank"><img class="btn" src="btns/platinumtulip.gif"></a>
-                
-                <!----- purple ----->
-                
-                <a title="A personal site with tons of really good resources for small web/site building!" href="https://lostletters.neocities.org/" target="_blank"><img class="btn" src="btns/LostLetters.gif"></a>
-                
-                <a title="Lots of web graphics for your site." href="https://sushi-pixels.neocities.org/" target="_blank"><img class="btn" src="btns/sushipixels.png"></a>
-                
-                <a href="https://virtualobserver.moe/" target="_blank"><img class="btn" src="btns/virtualobserver.png"></a>
-                
-                <a href="https://cinni.net/" target="_blank"><img class="btn" src="btns/cinni.gif"></a>
-                
-                <a href="https://10kph.neocities.org" target="_blank"><img class="btn" src="btns/10kph.png"></a>
-                
-                <a href="https://www.bruh.ltd/" target="_blank"><img class="btn" src="btns/bruh.png"></a>
-                
-                <a href="https://boatemhq.neocities.org/" target="_blank"><img class="btn" src="btns/chaogarden.png"></a>
-                
-                <a href="https://nine-moonbeams.neocities.org/" target="_blank"><img class="btn" src="btns/nine-moonbeams.gif"></a>
-                
-                <a href="https://doqmeat.neocities.org/" target="_blank"><img class="btn" src="btns/doqmeat.png"></a>
-                
-                <a href="https://spiritcellar.neocities.org/" target="_blank"><img class="btn" src="btns/spiritcellar.gif"></a>
-                
-                <a href="https://doctordizzy.space/" target="_blank"><img class="btn" src="btns/dizzy.gif"></a>
-                
-                <a href="https://solaria.neocities.org/" target="_blank"><img class="btn" src="btns/solaria.gif"></a>
-                
-                <a href="https://waffles-cosmic-void.neocities.org/" target="_blank"><img class="btn" src="btns/waffles.png"></a>
-                
-                <a href="https://divergentrays.com/" target="_blank"><img class="btn" src="btns/divergentrays.png"></a>
-                
-                <!----- blue ----->
-                
-                <a href="https://doubleincision.com/" target="_blank"><img class="btn" src="btns/surge.png"></a>
-                
-                <a href="https://time-travelling-birb.neocities.org/" target="_blank"><img class="btn" src="btns/timetravellingbird.gif"></a>
-                
-                <a title="A CRAZY cool interactive site,, so much to explore and if you find the tour? so cool. get lost in it." href="https://moonkitty.neocities.org" target="_blank"><img class="btn" src="btns/moonkitty.jpg"></a>
-                
-                <a href="https://staticattic.neocities.org/" target="_blank"><img class="btn" src="btns/staticattic.png"></a>
-                
-                <a href="https://rai.so/" target="_blank"><img class="btn" src="btns/raiso.gif"></a>
-                
-                <a href="https://pepper.gay/homepage" target="_blank"><img class="btn" src="btns/ghostpepper.png"></a>
-                
-                <a href="https://callmemanatee.neocities.org/" target="_blank"><img class="btn" src="btns/manatee_button.png"></a>
-                
-                <a href="https://tinydiorama.neocities.org/" target="_blank"><img class="btn" src="btns/tinydiorama-button.gif"></a>
-                
-                <a href="https://paintkiller.neocities.org/" target="_blank"><img class="btn" src="btns/paintkiller.gif"></a>
-                
-                <a href="https://auzziejay.com/" target="_blank"><img class="btn" src="btns/auzziejay.gif"></a>
-                
-                <a href="https://inkcaps.neocities.org/" target="_blank"><img class="btn" src="btns/inkcaps.gif"></a>
-                
-                <a href="https://dimden.dev/" target="_blank"><img class="btn" src="https://dimden.dev/services/images/88x31.gif"></a>
-                
-                <!----- green ----->
-                
-                <a href="https://lonelyjuly.online/" target="_blank"><img class="btn" src="btns/lonelyjuly.gif"></a>
-                
-                <a href="https://queenofarms.neocities.org/" target="_blank"><img class="btn" src="btns/queenofarms.gif"></a>
-                
-                <a href="https://creaturefeature.neocities.org/" target="_blank"><img class="btn" src="btns/creaturefeature.png"></a>
-                
-                <a href="https://gothomousspider.neocities.org/" target="_blank"><img class="btn" src="btns/gothomousspider.png"></a>
-                
-                <a href="https://sadgrl.online/" target="_blank"><img class="btn" src="btns/sadgrlonline.gif"></a>
-                
-                <a href="https://32bit.cafe" target="_blank"><img class="btn" src="btns/32b.png"></a>
-                
-                <a href="https://linwood.neocities.org/" target="_blank"><img class="btn" src="btns/linwoodbtn.gif"></a>
-                
-                <a href="https://lostlove.neocities.org/" target="_blank"><img class="btn" src="btns/lunospace.gif"></a>
-                
-                <a href="https://that-mom-friend.neocities.org/" target="_blank"><img class="btn" src="btns/that-mom-friend-button.gif"></a>
-                
-                <a href="https://dogfish99.neocities.org/" target="_blank"><img class="btn" src="btns/dogfish.png"></a>
-                
-                <a href="https://manyface.neocities.org/" target="_blank"><img class="btn" src="btns/manyface.png"></a>
-                
-                <!----- yellow ----->
-                
-                <a href="https://melonking.net/" target="_blank"><img class="btn" src="btns/melonking.gif"></a>
-                
-                <a href="https://randoseru.neocities.org/" target="_blank"><img class="btn" src="/btns/sunflower.gif" style="width:88px;height:31px;"></a>
-                
-                <a href="https://yarrow.neocities.org/" target="_blank"><img class="btn" src="btns/yarrow.png"></a>
-                
-                <!----- orange ----->
-                
-                <a href="https://coeurl.neocities.org/" target="_blank"><img class="btn" src="btns/coeurl.png"></a>
-                
-                <a href="https://xandra.cc/" target="_blank"><img class="btn" src="btns/museumofalexandra.png"></a>
-                
-                <a href="https://saturniids.neocities.org/" target="_blank"><img class="btn" src="btns/ghostlightButton.gif"></a>
-                
-                <a href="https://spiritcellar.art/" target="_blank"><img class="btn" src="btns/spiritcellarart.gif"></a>
-                
-                <a href="https://humanfinny.neocities.org/" target="_blank"><img class="btn" src="btns/humanfinny.jpg"></a>
-                
-                <a href="https://rotaryphoney.neocities.org/" target="_blank"><img class="btn" src="btns/rotaryphoney.gif"></a>
-                
-                <a href="https://webpage1990colourised.neocities.org/" target="_blank"><img class="btn" src="btns/Webpage-1990-Colourised.gif"></a>
-                
-                <!----- red ----->
-                
-                <a href="https://neotomic.neocities.org" target="_blank"><img class="btn" src="btns/neotomicart.gif"></a>
-                
-                <a href="https://raincoats.neocities.org/" target="_blank"><img class="btn" src="btns/raincoats.png"></a>
-                
-                <a href="https://velvet-boutique.neocities.org/" target="_blank"><img class="btn" src="btns/velvet.png"></a>
-                
-                <a href="https://swiftred.neocities.org" target="_blank"><img class="btn" src="btns/SwiftRed.png"></a>
-                
-                <a href="https://devils.neocities.org/" target="_blank"><img class="btn" src="btns/devils.gif"></a>
-                
-                <!----- pink ----->
-                
-                <a href="https://frills.dev/" target="_blank"><img class="btn" src="btns/fri11s.png"></a>
-                
-                <a href="https://glamourgoblin.neocities.org/" target="_blank"><img class="btn" src="btns/glamourgoblin.gif"></a>
-                
-                <a href="https://sleepy-sage.neocities.org/" target="_blank"><img class="btn" src="btns/sleepysage.png"></a>
-                
-                <a href="https://nereidcreation.neocities.org/" target="_blank"><img class="btn" src="btns/nereid.gif"></a>
-                
-                <a href="https://sanguineroyal.com/" target="_blank"><img class="btn" src="btns/sanguine.gif"></a>
-                
-                <a href="https://hillhouse.neocities.org/" target="_blank"><img class="btn" src="btns/hillhouse3.png"></a>
-                
-                <a href="https://remiku.neocities.org/" target="_blank"><img class="btn" src="btns/remiku.png"></a>
-                
-                <a href="https://forgettablename.neocities.org/" target="_blank"><img class="btn" src="btns/forgettablename.gif"></a>
-                
-                <a href="https://netdrifter2000.neocities.org/" target="_blank"><img class="btn" src="btns/netdrifter.png"></a>
-                
-                <a href="https://buntsukim.neocities.org/" target="_blank"><img class="btn" src="btns/buntsukim.jpg"></a>
-                
-                <!----- rainbow ----->
-                
-                <a href="https://artwork.neocities.org/" target="_blank"><img class="btn" src="btns/artwork.gif"></a>
-                
-                <a href="https://much-ado-about-everything.neocities.org/" target="_blank"><img class="btn" src="btns/muchado.png"></a>
-                
-                <a href="https://transrats.neocities.org/" target="_blank"><img class="btn" src="btns/transrats.gif"></a>
-                
-                
-                <p>&#62;&#62; Neighbors with no buttons (that I could find)</p>
-                
-                <section class="blocks">
-                
-                <a style="background: #f0f2b6; color: black" class="btn ph" href="https://blazingcobaltx.neocities.org/" target="_blank">Blazing Cobalt</a>
-                
-                <a style="background: #ea93cf; color: #8b8bfc;" class="btn ph" href="https://howlingmoonrise.neocities.org/" target="_blank">Howl</a>
-                
-                <a style="background: #4fb6f7; color: #e2f2ae;" class="btn ph" href="https://dibs.neocities.org/" target="_blank">Dibs</a>
-                
-                <a style="background: #1f1f1f; color: #b2b2b2;" class="btn ph" href="https://s8seer.github.io/" target="_blank">s8seer</a>
-                
-                <a style="background: #121212; color: #8b2ddb;" class="btn ph" href="https://culturalwasteland.neocities.org/" target="_blank">Cultural Wasteland</a>
-                
-                <a style="background: #ffffff; color: #000000;" class="btn ph" href="https://wichitalk.neocities.org/" target="_blank">wichitalk</a>
-                
-                <a style="background: #121212; color: #5807b5;" class="btn ph" href="https://burntangel.neocities.org/" target="_blank">burntangel</a>
-                
-                <a style="background: #000000; color: #ffffff;" class="btn ph smt-current-element" title="You enter an eerie graveyard. Someone awaits you." href="https://multohhh.neocities.org/" target="_blank">multohhh</a>
-                
-                <a style="background: #3b3b3b; color: #ffffff;" class="btn ph" title="short stories! with mysterious characters" href="https://mapleverse.neocities.org/" target="_blank">mapleverse</a>
-                
-                <a style="background: #ffffff; color: #000000;" class="btn ph" title="heck" href="https://heck.computer/" target="_blank">heck</a>
-                
-                <a style="background: #000000; color: #3cce4e;" class="btn ph" title="Cyberpunk" href="https://psionicblades.neocities.org/" target="_blank">psionic blades</a>
-                
-                <a style="background: #a07979; color: #f5dbdb;" class="btn ph" title="Beautiful dreamy art, like stained glass." href="https://seaglass.ink/" target="_blank">Seaglass</a>
-                
-                <a style="background: #1a2d5f; color: #bbbff0;" class="btn ph" href="https://chroniclerenigma.neocities.org/" target="_blank">Stargazer 7</a>
-                
-                <a style="background: #101b39; color: #646cce;" class="btn ph" href="https://cryptidcafe.net/" target="_blank">Cryptid Cafe</a>
-                
-                <a style="background: #390971; color: #22e641;" class="btn ph" href="https://momomarie.neocities.org/" target="_blank">Momo Marie</a>
-                
-                <a style="background: #1f1616; color: #e0c845;" class="btn ph" href="https://rageinducer.neocities.org/" target="_blank">Rage Inducer</a>
-                
-                <a style="background: #000000; color: #910606;" class="btn ph" href="https://eidodo.neocities.org/" target="_blank">EIDODO</a>
-                
-                <a style="background: #c3d5f2; color: #0256c7;" class="btn ph" href="https://larkandmagpie.neocities.org/" target="_blank">Lark and Magpie</a>
-                    
-                    </section>
+        <p>&#62;&#62; Net neighbors. Organized roughly by color.</p>
+        
+        <table id="links">
+            <tr>
+                <th>Link</th>
+                <th>Description</th>
+            </tr>
+        <!----- black ----->
+            <tr>
+                <td><a  href="https://blackwater.neocities.org/" target="_blank"><img class="btn" src="btns/blackwater.gif"></a></td>
+                <td>A collection of thoughts on dark, horror media.</td>
+            </tr>
             
-            </section>
+            <tr>
+                <td><a href="https://glassheart.neocities.org/" target="_blank"><img class="btn" src="btns/glassheart.png"></a></td>
+                <td>A personal site with cool projects.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://willdotjpg.gay/" target="_blank"><img class="btn" src="btns/willdotjpg.png"></a></td>
+                <td>A personal site reminiscent of the old web.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://grossgirl94.neocities.org/" target="_blank"><img class="btn" src="btns/grossgirl94.gif"></a></td>
+                <td>A punk-rock personal site with a personal blog and projects.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://onlywonder.net/" target="_blank"><img class="btn" src="btns/wonder.png"></a></td>
+                <td>Inspired by early dragon quest games, full of shrines, recipes, and writings.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://pickeraparter.com" target="_blank"><img class="btn" src="btns/pickeraparter.gif"></a></td>
+                <td>A horror site with some cool writings.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://deadrodrick.neocities.org/" target="_blank"><img class="btn" src="btns/DeadRodrick.png"></a></td>
+                <td>A circus with a lot of resources, also the webring owner of Shroom.ink.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://corq.neocities.org/" target="_blank"><img class="btn" src="btns/corbin.png"></a></td>
+                <td>A blue site with a blog, art gallery, and some fun graphics.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://screamingegg.neocities.org/" target="_blank"><img class="btn" src="btns/screamingegg.png"></a></td>
+                <td>A compact personal site that likes sharks :3.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://nymphblood.neocities.org/" target="_blank"><img class="btn" src="btns/primordial.png"></a></td>
+                <td>A gothic dungeon with endless chambers to roam.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://lemonbaskets.neocities.org/" target="_blank"><img class="btn" src="btns/lemonbaskets.png"></a></td>
+                <td>Inside a wooden igloo is a personal site containing interests and projects.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://jlehr.neocities.org/" target="_blank"><img class="btn" src="btns/lehr.gif"></a></td>
+                <td>EYESTRAIN WARNING. A personal site with lots of original music and projects.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://wrender.neocities.org/" target="_blank"><img class="btn" src="btns/wrendering.gif"></a></td>
+                <td>A fun, colorful personal site with some shrines, graphics, and fun widgets for visitors.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://platinumtulip.garden/" target="_blank"><img class="btn" src="btns/platinumtulip.gif"></a></td>
+                <td>A really neat digital garden sanctuary complete with a library, art, and a pretty rose color palette.</td>
+            </tr>
+            
+            <!----- purple ----->
+            
+            <tr>
+                <td><a href="https://lostletters.neocities.org/" target="_blank"><img class="btn" src="btns/LostLetters.gif"></a></td>
+                <td>A personal site with tons of really good resources for small web/site building!</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://sushi-pixels.neocities.org/" target="_blank"><img class="btn" src="btns/sushipixels.png"></a></td>
+                <td>Lots of web graphics for your site.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://virtualobserver.moe/" target="_blank"><img class="btn" src="btns/virtualobserver.png"></a></td>
+                <td>A two-in-one joint site with cool things like a comment widget (that I use) and pokemon!</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://cinni.net/" target="_blank"><img class="btn" src="btns/cinni.gif"></a></td>
+                <td>A cozy digital home with lots of web resources for artists, and links to Cinni's other projects like 99GIF SHOP and more.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://10kph.neocities.org" target="_blank"><img class="btn" src="btns/10kph.png"></a></td>
+                <td>A personal site with a terminal/OS theme with media logs and links to a variety of resources.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://www.bruh.ltd/" target="_blank"><img class="btn" src="btns/bruh.png"></a></td>
+                <td>A super cool site with a minimal folder layout. Check out the media reviews.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://boatemhq.neocities.org/" target="_blank"><img class="btn" src="btns/chaogarden.png"></a></td>
+                <td>A silly corner with a hefty collection of web graphics.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://nine-moonbeams.neocities.org/" target="_blank"><img class="btn" src="btns/nine-moonbeams.gif"></a></td>
+                <td>This site is beautifulll, if you love space and dusk colors, this site is for you. Lots of cool projects.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://doqmeat.neocities.org/" target="_blank"><img class="btn" src="btns/doqmeat.png"></a></td>
+                <td>A really cozy personal site with so much to explore. Personal favorite pages are the music and photobook pages.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://spiritcellar.neocities.org/" target="_blank"><img class="btn" src="btns/spiritcellar.gif"></a></td>
+                <td>A really rad spooky site with lots of spooky web graphics, a library with links to books you can read online, and lots of realms (sub-pages) to explore.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://doctordizzy.space/" target="_blank"><img class="btn" src="btns/dizzy.gif"></a></td>
+                <td>A personal site that's very 8-bit and cozy, with lots to explore like a bookshelf, web goodies, etc.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://solaria.neocities.org/" target="_blank"><img class="btn" src="btns/solaria.gif"></a></td>
+                <td>Personal site with tons of resources and really neat guides for coding! I also like looking at the different rainbow patterns.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://waffles-cosmic-void.neocities.org/" target="_blank"><img class="btn" src="btns/waffles.png"></a></td>
+                <td>A really cool personal site with a lot of personality and old web graphics. Has a Snom shrine.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://divergentrays.com/" target="_blank"><img class="btn" src="btns/divergentrays.png"></a></td>
+                <td>A personal site with lots of hobbies showcased! Also reviving a couple pixel clubs, check them out.</td>
+            </tr>
+            
+            <!----- blue ----->
+            
+            <tr>
+                <td><a href="https://doubleincision.com/" target="_blank"><img class="btn" src="btns/surge.png"></a></td>
+                <td>A deep blue personal site with a journal, photo gallery, and links to cool web things.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://time-travelling-birb.neocities.org/" target="_blank"><img class="btn" src="btns/timetravellingbird.gif"></a></td>
+                <td>Travel through time and space to this cool personal site that's very stylized.</td>
+            </tr>
+            
+            <tr>
+                <td><a  href="https://moonkitty.neocities.org" target="_blank"><img class="btn" src="btns/moonkitty.jpg"></a></td>
+                <td>A CRAZY cool interactive site,, so much to explore and if you find the tour? so cool. get lost in it.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://staticattic.neocities.org/" target="_blank"><img class="btn" src="btns/staticattic.png"></a></td>
+                <td>This personal site is 8-bit spaced themed and super cute! There are extensive music and webgarden pages that you should check out.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://rai.so/" target="_blank"><img class="btn" src="btns/raiso.gif"></a></td>
+                <td>A blog with some really thoughtful writings, give it a read!</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://callmemanatee.neocities.org/" target="_blank"><img class="btn" src="btns/manatee_button.png"></a></td>
+                <td>An adorable manatee themed site with a big stamp collection and pixel cliques!</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://tinydiorama.neocities.org/" target="_blank"><img class="btn" src="btns/tinydiorama-button.gif"></a></td>
+                <td>A cool dual personal site run by an artist and poet. Play some of the games they've made, on their site!</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://paintkiller.neocities.org/" target="_blank"><img class="btn" src="btns/paintkiller.gif"></a></td>
+                <td>A punk ode to the old web, with lots of pages dedicated to hobbies and interests. Lots of sick pixel art too.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://inkcaps.neocities.org/" target="_blank"><img class="btn" src="btns/inkcaps.gif"></a></td>
+                <td>Step into a cozy cottage and explore this personal site and all its rooms.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://dimden.dev/" target="_blank"><img class="btn" src="https://dimden.dev/services/images/88x31.gif"></a></td>
+                <td>A really slick site with lots of code projects and things to check out. Fun things to click on scattered about too.</td>
+            </tr>
+            
+            <!----- green ----->
+            
+            <tr>
+                <td><a href="https://lonelyjuly.online/" target="_blank"><img class="btn" src="btns/lonelyjuly.gif"></a></td>
+                <td>An OS themed site that really feels like you're navigating an old computer.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://creaturefeature.neocities.org/" target="_blank"><img class="btn" src="btns/creaturefeature.png"></a></td>
+                <td>A spooky scary- site with plenty of skeletons. A little bit of personal site mixed with all things creepy and Halloween!</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://gothomousspider.neocities.org/" target="_blank"><img class="btn" src="btns/gothomousspider.png"></a></td>
+                <td>Discover numetal sounds at this news site dedicated to the scene.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://sadgrl.online/" target="_blank"><img class="btn" src="btns/sadgrlonline.gif"></a></td>
+                <td>A site dedicated to webmastery, full of resources and tools for you to build your own!</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://32bit.cafe" target="_blank"><img class="btn" src="btns/32b.png"></a></td>
+                <td>A community of Web Revival enthusiasts putting together webmastering resources and providing tools and help for those who are making sites!</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://linwood.neocities.org/" target="_blank"><img class="btn" src="btns/linwoodbtn.gif"></a></td>
+                <td>A really cozy cabin in the woods site with original art, worlds, and characters to peruse.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://lostlove.neocities.org/" target="_blank"><img class="btn" src="btns/lunospace.gif"></a></td>
+                <td>An ethereal site that's reminiscent of vintage perfume bottles and silver lockets. Read through the scrapbook-like journal or the literature linked there.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://that-mom-friend.neocities.org/" target="_blank"><img class="btn" src="btns/that-mom-friend-button.gif"></a></td>
+                <td>A cozy cottage for you to rest in and perhaps read some poetry, or learn a new recipe!</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://dogfish99.neocities.org/" target="_blank"><img class="btn" src="btns/dogfish.png"></a></td>
+                <td>A <strike>personal website</strike> set of floppy disks found in someone's old office. Will you take a look?</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://manyface.neocities.org/" target="_blank"><img class="btn" src="btns/manyface.png"></a></td>
+                <td>A system's personal site full of art, interests, and other fun things to explore.</td>
+            </tr>
+            
+            <!----- yellow ----->
+            
+            <tr>
+                <td><a href="https://melonking.net/" target="_blank"><img class="btn" src="btns/melonking.gif"></a></td>
+                <td>Step into Melonland, a magical place where many web enthusiasts hang out. You'll find lots to do there.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://randoseru.neocities.org/" target="_blank"><img class="btn" src="/btns/sunflower.gif" style="width:88px;height:31px;"></a></td>
+                <td>A cute, comfy site with pretty graphics! It is under construction as of 3/7/24.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://yarrow.neocities.org/" target="_blank"><img class="btn" src="btns/yarrow.png"></a></td>
+                <td>An amalgamation of hobbies, ramblings, and other personal things.</td>
+            </tr>
+            
+            <!----- orange ----->
+            
+            <tr>
+                <td><a href="https://coeurl.neocities.org/" target="_blank"><img class="btn" src="btns/coeurl.png"></a></td>
+                <td>A personal site for expressing creativity, with a beachy theme that feels like vacation.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://xandra.cc/" target="_blank"><img class="btn" src="btns/museumofalexandra.png"></a></td>
+                <td>A museum dedicated to all things web building and memorializing digital belongings.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://saturniids.neocities.org/" target="_blank"><img class="btn" src="btns/ghostlightButton.gif"></a></td>
+                <td>You enter an empty theatre... what will  you explore?</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://s8seer.github.io/" target="_blank"><img class="btn" src="btns/s8seer.png"></a></td>
+                <td>A really cool site with links to webdev resources and some github repos that you can check out. I enjoy opening the console.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://spiritcellar.art/" target="_blank"><img class="btn" src="btns/spiritcellarart.gif"></a></td>
+                <td>Spirit Cellar's art gallery of many mediums! Stained glass, paper, metal, and wood to name a few.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://humanfinny.neocities.org/" target="_blank"><img class="btn" src="btns/humanfinny.jpg"></a></td>
+                <td>An artistic site with cool projects and art, with an interactive feel.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://rotaryphoney.neocities.org/" target="_blank"><img class="btn" src="btns/rotaryphoney.gif"></a></td>
+                <td>A personal site that feels like the backrooms. Explore some shrines and links.</td>
+            </tr>
+            
+            <!----- red ----->
+            
+            <tr>
+                <td><a href="https://neotomic.neocities.org" target="_blank"><img class="btn" src="btns/neotomicart.gif"></a></td>
+                <td>An artist's site that is very red. Really cool body horror work in there. Be warned of blood.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://raincoats.neocities.org/" target="_blank"><img class="btn" src="btns/raincoats.png"></a></td>
+                <td>A really cute site that's laid out like a scrapbook or picnic spread!</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://velvet-boutique.neocities.org/" target="_blank"><img class="btn" src="btns/velvet.png"></a></td>
+                <td>A lush smoking lounge that's quite relaxing to be in. This personal site feels luxurious like a scandalous victorian lounge. Care for a smoke?</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://swiftred.neocities.org" target="_blank"><img class="btn" src="btns/SwiftRed.png"></a></td>
+                <td>A personal site with writings and links to hobbies such as crochet videos!</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://devils.neocities.org/" target="_blank"><img class="btn" src="btns/devils.gif"></a></td>
+                <td>A dark room with a single light and computer. Click around to find out.</td>
+            </tr>
+            
+            <!----- pink ----->
+            
+            <tr>
+                <td><a href="https://frills.dev/" target="_blank"><img class="btn" src="btns/fri11s.png"></a></td>
+                <td>A very well-made site with lots of bookmarks, experiments, and a focus on accessability!</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://glamourgoblin.neocities.org/" target="_blank"><img class="btn" src="btns/glamourgoblin.gif"></a></td>
+                <td>EYESTRAIN WARNING. A colorful punk site with music and shrines to browse. I'm obsessed with their art.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://sleepy-sage.neocities.org/" target="_blank"><img class="btn" src="btns/sleepysage.png"></a></td>
+                <td>A site that has a lot of stuff dedicated to various media. I visit their horror page often.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://nereidcreation.neocities.org/" target="_blank"><img class="btn" src="btns/nereid.gif"></a></td>
+                <td>A nereid's creation... of many games! Check them out. I like the old web graphics found on this site.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://sanguineroyal.com/" target="_blank"><img class="btn" src="btns/sanguine.gif"></a></td>
+                <td>A lovely site like a castle in the clouds. This personal site has art and projects you can take a look at, including lots of f2u stickers and such.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://hillhouse.neocities.org/" target="_blank"><img class="btn" src="btns/hillhouse3.png"></a></td>
+                <td>A beautiful site inspired by The Haunting of Hill House. This site looks like an artful vintage scrapbook and I'm in awe of its aesthetic and contents.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://symphony.surgery/" target="_blank"><img class="btn" src="btns/symphony.png"></a></td>
+                <td>A colorful personal site with lots of collections of things from art to quiz results.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://remiku.neocities.org/" target="_blank"><img class="btn" src="btns/remiku.png"></a></td>
+                <td>A cute site with some comics to read and art to view!</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://forgettablename.neocities.org/" target="_blank"><img class="btn" src="btns/forgettablename.gif"></a></td>
+                <td>A personal site with ramblings of music, art, and other interests. Go feed her gifypet!</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://netdrifter2000.neocities.org/" target="_blank"><img class="btn" src="btns/netdrifter.png"></a></td>
+                <td>Created with the goal of decentralizing the internet, this personal site has much to explore, including projects and web graphic collections.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://buntsukim.neocities.org/" target="_blank"><img class="btn" src="btns/buntsukim.jpg"></a></td>
+                <td>A personal site containing art, including oc's in a really cute style, links, and shrines.</td>
+            </tr>
+            
+            <!----- rainbow ----->
+            
+            <tr>
+                <td><a href="https://artwork.neocities.org/" target="_blank"><img class="btn" src="btns/artwork.gif"></a></td>
+                <td>As the name might suggest, this site has TONS of artwork. Pixels, traditional, and so much more.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://much-ado-about-everything.neocities.org/" target="_blank"><img class="btn" src="btns/muchado.png"></a></td>
+                <td>A colorful site that displays paintings and pixel art!</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://transrats.neocities.org/" target="_blank"><img class="btn" src="btns/transrats.gif"></a></td>
+                <td>I'm obsessed with the picture of pikachu in... a pool?when you first enter the site. It reminds me of Nirvana's Nevermind album cover. A colorful, playful site that seems to have no end to things to discover!</td>
+            </tr>
+            
+            <!----- no button ----->
+            
+            <tr>
+                <td><a href="https://blazingcobaltx.neocities.org/" target="_blank">Blazing Cobalt</a></td>
+                <td>Get teleported to another realm, and explore the collections of writings, media, and more at this site.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://howlingmoonrise.neocities.org/" target="_blank">Howl</a></td>
+                <td>A bright, sparkly site with a bulletin board that feels like a real board full of updates and notes! I look forward to what they add to this site.</td>
+            </tr>
+            <tr>
+                <td><a href="https://dibs.neocities.org/" target="_blank">Dibs</a></td>
+                <td>A site that reminds me of the 80's on the West Coast (usa) and arcades. A sticker-bombed front page and a rad atmosphere.</td>
+            </tr>
+            <tr>
+                <td><a href="https://wichitalk.neocities.org/" target="_blank">wichitalk</a></td>
+                <td>A liminal space with cool cats and a Wall to explore and read. I like making the kitty in the header flip back and forth, it's neat.</td>
+            </tr>
+            <tr>
+                <td><a href="https://burntangel.neocities.org/" target="_blank">burntangel</a></td>
+                <td>Descend into hell... or somewhere. Gothic personal site with sooo many pages, and hidden ones, to explore. Get into it.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://multohhh.neocities.org/" target="_blank">multohhh</a></td>
+                <td>FLASH WARNING. You enter an eerie graveyard. Someone awaits you. Click through this interactive site with cyber goth vibes.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://mapleverse.neocities.org/" target="_blank">mapleverse</a></td>
+                <td>A series of short stories with original characters!</td>
+            </tr>
+            
+            <tr>
+                <td><a  href="https://psionicblades.neocities.org/" target="_blank">psionic blades</a></td>
+                <td>A very cyberpunk-inspired site.</td>
+            </tr>
+            
+            <tr>
+                <td><a   href="https://seaglass.ink/" target="_blank">Seaglass</a></td>
+                <td>Beautiful dreamy art, like stained glass.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://momomarie.neocities.org/" target="_blank">Momo Marie</a></td>
+                <td>A romantic goth personal site with some shrines and playlists to visit.</td>
+            </tr>
+            
+            <tr>
+                <td><a href="https://rageinducer.neocities.org/" target="_blank">Rage Inducer</a></td>
+                <td>A site that feels like a home, read up on a blog or check out the pixels there.</td>
+            </tr>
+            <!-----
+            <tr>
+                <td></td>
+                <td></td>
+            </tr> ----->
+            
+        </table>
         
-
-        
-        <p>&#62;&#62; Organized roughly by color.</p>
-        
-        <p id="disclaimer">&#62;&#62; DISCLAIMER: Buttons are added by my discretion, and I will only link sites that I feel are safe spaces. Buttons will be removed if I find that a site no longer fits the community that I strive to foster. Do not link me on your site if you hold bigoted, harmful views.</p>
-        
-        <p>&#62;&#62;  To-Do: add site descriptions to each of these....</p>
+        <p>I'm attempting to figure out js to make the table rows load in random order, so the same sites aren't displayed at the top/bottom every time someone visits.</p>
         
         <p><a href="#top">&#60; back to top</a></p>
         
