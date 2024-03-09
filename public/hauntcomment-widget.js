@@ -22,6 +22,7 @@ const s_formId = '1FAIpQLSeDXCW2GxFrs_OThVwTmawsPfrhbIGilB8b0b_gEVXwF2IEIw';
 const s_nameId = '743075380';
 const s_websiteId = '681354258';
 const s_textId = '1762444121';
+const s_moderatedId = '2116351988';
 const s_pageId = '1141229384';
 const s_replyId = '359443944';
 const s_sheetId = '1WVmNwJ0TUFYpMPdlMwMyTwCVFB3AVlWDJv6E0dMHFUY';
@@ -105,6 +106,7 @@ const v_formHtml = `
     <div id="c_textWrapper" class="c-inputWrapper">
         <label class="c-label c-textLabel" for="entry.${s_textId}">${s_textFieldLabel}</label>
         <textarea class="c-input c-textInput" name="entry.${s_textId}" id="entry.${s_textId}" rows="4" cols="50"  maxlength="${s_maxLength}" required></textarea>
+        <input name="entry.${s_moderatedId}" id="entry.${s_moderatedId}" type="hidden" readonly value="false">
     </div>
 
     <input id="c_submitButton" name="c_submitButton" type="submit" value="${s_submitButtonLabel}" disabled>
@@ -374,6 +376,9 @@ function createComment(data) {
     if (s_wordFilterOn) {filteredName = filteredName.replace(v_filteredWords, s_filterReplacement)}
     name.innerText = filteredName;
     name.className = 'c-name';
+    if(data.Moderated == false) {
+    name.innerText = 'Soul'; // Change 'Guest' to whatever you want
+}
     comment.appendChild(name);
 
     // Timestamp
@@ -388,6 +393,9 @@ function createComment(data) {
         site.innerText = s_websiteText;
         site.href = data.Website;
         site.className = 'c-site';
+        if(data.Moderated == false) {
+    site.innerText = '';
+}
         comment.appendChild(site);
     }
 
@@ -397,6 +405,9 @@ function createComment(data) {
     if (s_wordFilterOn) {filteredText = filteredText.replace(v_filteredWords, s_filterReplacement)}
     text.innerText = filteredText;
     text.className = 'c-text';
+    if(data.Moderated == false) {
+    text.innerText = 'This comment is awaiting moderation'; // Change this value to whatever you want
+}
     comment.appendChild(text);
     
     return comment;
