@@ -384,7 +384,7 @@ function createComment(data) {
     name.innerText = filteredName;
     name.className = 'c-name';
     if(data.Moderated == false) {
-    name.innerText = 'Guest'; // Change 'Guest' to whatever you want
+    name.innerText = 'Anonymous'; // Change 'Guest' to whatever you want
 }
     comment.appendChild(name);
 
