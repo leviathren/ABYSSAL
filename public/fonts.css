@@ -28,6 +28,11 @@
         src: url("fonts/comicsans.ttf");
     }
 
+@font-face {
+        font-family: dharma;
+        src: url("fonts/Dharma Punk.ttf");
+    }
+
 @import url('https://cdn.jsdelivr.net/npm/galmuri/dist/galmuri.css');
 
 /* to use above, link this in the html file: <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galmuri/dist/galmuri.css"> */
@@ -38,34 +43,19 @@
 }
 
 @font-face {
-        font-family: vhs;
-        src: url("/fonts/easvhs.ttf");
-    }
-
-@font-face {
         font-family: haunting;
         src: url("fonts/Haunting Attraction.ttf");
     }
 
 @font-face {
-        font-family: type;
-        src: url("/fonts/JMH Typewriter.ttf");
-}
+        font-family: hitme01;
+        src: url("fonts/Hit me, punk! 01.ttf");
+    }
 
 @font-face {
-        font-family: typeb;
-        src: url("/fonts/JMH Typewriter-Bold.ttf");
-}
-
-@font-face {
-        font-family: typeblk;
-        src: url("fonts/JMH Typewriter-Black.ttf");
-}
-
-@font-face {
-        font-family: typethin;
-        src: url("fonts/JMH Typewriter-Thin.ttf");
-}
+        font-family: hitme12;
+        src: url("fonts/Hit me, punk! 12.ttf");
+    }
 
 @font-face {
         font-family: kiss;
@@ -93,6 +83,36 @@
 }
 
 @font-face {
+    font-family: offset;
+    src: url("fonts/Offset Punk.ttf");
+}
+
+@font-face {
+    font-family: punkdots;
+    src: url("fonts/Punk Dots.ttf");
+}
+
+@font-face {
+    font-family: punkkid;
+    src: url("fonts/punk kid.ttf");
+}
+
+@font-face {
+    font-family: punkbabe;
+    src: url("fonts/PUNKBABE TRIAL.ttf");
+}
+
+@font-face {
+    font-family: punkevent;
+    src: url("fonts/PunkEvent.ttf");
+}
+
+@font-face {
+    font-family: punktype;
+    src: url("fonts/Punktype.ttf");
+}
+
+@font-face {
         font-family: rock;
         src: url("fonts/Rock of Times.otf");
 }
@@ -103,13 +123,43 @@
 }
 
 @font-face {
-        font-family: whiteonblack;
-        src: url("/fonts/whiteonblack.ttf");
-    }
+        font-family: satan;
+        src: url("fonts/Satan Team.ttf");
+}
+
+@font-face {
+        font-family: type;
+        src: url("/fonts/JMH Typewriter.ttf");
+}
+
+@font-face {
+        font-family: typeb;
+        src: url("/fonts/JMH Typewriter-Bold.ttf");
+}
+
+@font-face {
+        font-family: typeblk;
+        src: url("fonts/JMH Typewriter-Black.ttf");
+}
+
+@font-face {
+        font-family: typethin;
+        src: url("fonts/JMH Typewriter-Thin.ttf");
+}
 
 @font-face {
         font-family: valtin;
         src: url("fonts/Valtin Demo.ttf");
+    }
+
+@font-face {
+        font-family: vhs;
+        src: url("/fonts/easvhs.ttf");
+    }
+
+@font-face {
+        font-family: whiteonblack;
+        src: url("/fonts/whiteonblack.ttf");
     }
 
 @font-face {
@@ -118,7 +168,7 @@
 }
 
 .hov {
-    transition: .4s ease;
+	transition: .4s ease;
 }
 
 .hov:hover {
