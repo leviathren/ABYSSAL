@@ -63,6 +63,11 @@
 }
 
 @font-face {
+        font-family: lemon;
+        src: url("fonts/DK Lemon Yellow Sun.otf");
+}
+
+@font-face {
         font-family: love;
         src: url("fonts/LoveInYou.otf");
 }
@@ -125,6 +130,16 @@
 @font-face {
         font-family: satan;
         src: url("fonts/Satan Team.ttf");
+}
+
+@font-face {
+        font-family: signature;
+        src: url("fonts/BlackSignature_PERSONAL_USE_ONLY.otf");
+}
+
+@font-face {
+        font-family: trash;
+        src: url("fonts/TrashHand.TTF");
 }
 
 @font-face {
