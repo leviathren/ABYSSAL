@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    
     <head>
     
-        <title>ABYSSAL</title>
-        
-        <!----- metadata ----->
-        
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
         <link rel="stylesheet" href="home.css">
         <link rel="stylesheet" href="fonts.css">
         <link rel="icon" type="image/png" href="decor/blacksparkle.gif">
         
-        <!------ TOOLTIPS DO NOT TOUCH PLEASE GOD ------->
+        <!------ TOOLTIPS ------->
     
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 <script src="https://static.tumblr.com/lspzyz3/xloqk6cgp/jquery.style-my-tooltips.js"></script>
@@ -31,290 +28,47 @@
 </script>
         <!------- end tooltips :) -------->
         
+        <title>ABYSSAL</title>
+        
     </head>
-
     
     <body id="body" class="default">
         
-        <nav>
+        <div class="containment">
             
-            <button class="shortcut" onclick="showDiv(2)">
-            <img class="shortcut-icon" src="decor/computer.gif"><br>Site Directory
-            </button>
-            
-            <button class="shortcut" onclick="showDiv(6)">
-            <img class="shortcut-icon" src="decor/aceofspades.gif"><br>Bulletin Board
-            </button>
-            
-            <button class="shortcut" onclick="showDiv(8)">
-            <img class="shortcut-icon" src="decor/headphone.gif"><br>Music Player
-            </button>
-            
-            <button class="shortcut" onclick="showDiv(11)">
-            <img class="shortcut-icon" src="https://tamanotchi.world/i/10460"><br>Pets!
-            </button>
-            
-            <button class="shortcut" onclick="showDiv(9)">
-            <img class="shortcut-icon" src="decor/catcomputer.gif"><br>Chat Box
-            </button>
-            
-        </nav>
-        
-        <main>
-        
-            <div id="div1" class="window">
-                <div id="header1" class="windowheader"><img class="windowicon" src="decor/tvfav.gif">Welcome<button id="windowclose" onclick="closeDiv(1)"></button></div>
-                <div class="toolbar">
-                    <span class="tools">file</span>
-                    <span class="tools">edit</span>
-                    <span class="tools smt-current-element" title="these are just cosmetic">view</span>
-                </div>
-                <div class="content">
-                    <article>
-                        
-                        <section>
-                            <h1>Make the descent...</h1>
-                            <p>You have surfed your way into the ABYSSAL zone of the web. This internet outpost is a collection of all things that interest me and a project dedicated to the <a href="https://thoughts.melonking.net/guides/introduction-to-the-web-revival-1-what-is-the-web-revival" target="_blank">Web Revival</a>.</p>
-                            
-                            <p>The Web Revival is all about making the web creative and personal again. Taking inspiration from Old Web aesthetics but building on progressive values, Web Revival spaces aim to move away from corporate control and towards a "<a href="https://thoughts.melonking.net/guides/introduction-to-the-web-revival-1-what-is-the-web-revival" target="_blank">spirit of opennes and fresh excitement</a>", free from ads and hostile debate culture.</p>
-                            
-                            <p>One of these spaces is the <a href="https://32bit.cafe/" target="_blank">32-Bit Cafe</a>, a community of web enthusiasts working together to build a fun, friendly place on the internet dedicated to learning and sharing resources. Their <a href="https://discourse.32bit.cafe/" target="_blank">Discourse Forum</a> is now open!</p>
-                            
-                            <p>Anyways, thanks for reading. Stay as long as you like.</p>
-                            <img style="height: 80px; image-rendering: pixelated; margin: 30px auto;" class="center" src="decor/cleareye.png">
-                            <hr>
-                        </section>
-                        
-                        <section>
-                            <h2>Site Stuff</h2>
-                            
-                            <p>My buttons! Please no hotlink. <span id="smt-current"><a href="https://blog.hubspot.com/website/hotlinking" target="_blank" class="smt-current-element" title="What is hotlinking?">[?]</a></span>
-                            </p>
-                                <img class="hov" style="filter: none;" src="/btns/leviathrenbutton.gif">
-                                <img class="hov" style="filter: none;" src="/btns/ABYSSALbtn.gif">
-                            <textarea><a href="https://leviathren.neocities.org/" target="_blank"><img src="**file name here**"></a></textarea>
-                            <a href="https://tamanotchi.world/10460c" target="_blank"><img src="https://tamanotchi.world/i/10460" title="Click to feed me!" alt="It's tamaNOTchi! Click to feed!" style="filter: none;"></a>
-                            <hr>
-                        </section>
-                        
-                        <section class="center">
-                            <div class="badges">
-                                <img src="badges/lgbtfriendly.png">
-                                <img src="badges/nightcoder.gif">
-                                <img src="badges/sinlust.gif">
-                                <img src="badges/smoking.png">
-                            </div>
-                            <div class="palette">
-                                <div class="color c1">FONT</div>
-                                <div class="color c2">BACK<br>GROUND</div>
-                                <div class="color c3">ACCENT</div>
-                                <div class="color c4">LINK</div>
-                                <div class="color c5">LINK<br>HOVER</div>
-                            </div>
-				<div class="updated">Last Updated: <span id="lastupdate"></span></div>
-                        </section>
-                                    
-                </article>
-                </div>
-            </div>
-            
-            <div id="div2" class="window">
-            <div id="header2" class="windowheader">
-                <img class="windowicon" src="decor/tinycomputer.png">Directory<button id="windowclose" onclick="closeDiv(2)"></button>
-                </div>
-                <div class="toolbar">
-                    <span class="tools">file</span>
-                    <span class="tools">edit</span>
-                    <span class="tools">view</span>
-                </div>
-                <div class="content">
-                    <p>Sitely</p>
-                    <ul>
-                    <li><img class="bullet" src="decor/note.png"><a title="What's new with ABYSSAL" href="updates.html" class="smt-current-element">NEWSLETTER</a></li>
-                        <li><img class="bullet" src="decor/an-book.gif"><a class="smt-current-element" title="All my old themes and stuff" href="layouts.html">Layout Archive</a></li>
-                        <li><img class="bullet" src="decor/dragonfly.gif"><a href="sitemap.html">Sitemap</a></li>
-                        <li><img class="bullet" src="decor/purplestars.gif"><a href="credits.html">Info &amp; Credits</a></li>
-                    </ul>
-                    <p>My Stuff</p>
-                    <ul>
-                    <li><img class="bullet" src="decor/ghostrah.webp"><a title="Curious about me?" href="about.html" class="smt-current-element">About</a></li>
-                        <li><img class="bullet" src="decor/eye.gif"><a title="Like my stuff? Consider leaving a tip!" href="https://ko-fi.com/leviathren" target="_blank" class="smt-current-element">Tip Jar</a></li>
-			    <li><img class="bullet" src="decor/palette.gif"><a title="IMAGE HEAVY. CAUTION: you may come across nudity and blood" href="art.html" class="smt-current-element">Art Gallery</a></li>
-                        <li><img class="bullet" src="decor/spiral.webp"><a title="Things i've made with these two hands o mine" href="crafts.html" class="smt-current-element">Craft Studio</a></li>
-                        <li><img class="bullet" src="decor/writing.gif"><a title="Thoughts" href="blog.html" class="smt-current-element">Blog</a></li>
-                        <li><img class="bullet" src="decor/cd6.gif"><a title="Check out my music taste" href="music.html" class="smt-current-element">CD Player</a></li>
-                        <li><img class="bullet" src="decor/roundcat.gif"><a title="Pixel clubs I'm in :3" href="pixels.html" class="smt-current-element">Pixel Clubs</a></li>
-                        <li><img class="bullet" src="decor/tinycomputer.png"><a title="Neocities profile (not checked often)" href="https://neocities.org/site/leviathren" target="_blank" class="smt-current-element">Neocities</a></li>
-                    </ul>
-                    <p>For You</p>
-                    <ul>
-                        <li><img class="bullet" src="decor/circleblack.gif"><a title="Free to use materials" href="f2u.html" class="smt-current-element">F2U</a></li>
-                        <li><img class="bullet" src="decor/conch.gif"><a title="IMAGE HEAVY. Check out these cool sites!" href="buttons.html" class="smt-current-element">Net Neighbors</a></li>
-                        <li><img class="bullet" src="decor/guitarspin.gif"><a class="smt-current-element" title="My pixel club!" href="hallofrock.html">HALL OF ROCK</a></li>
-                        <li><img class="bullet" src="decor/monitor.gif"><a title="My page of off-site linky links" href="links.html" class="smt-current-element">Surf the Web</a></li>
-                        <li><img class="bullet" src="decor/ufo.gif"><a title="Stamps, buttons, and blinkies i like" href="collections.html" class="smt-current-element">Web Graphics</a></li>
-                        <li><img class="bullet" src="decor/letter.gif"><a title="Sign your soul away - or say something nice" href="guest.html" class="smt-current-element">Guestbook</a></li>
-
-                    </ul>
-                    <p>Seasonal</p>
-                    <ul>
-                        <li><img class="bullet" src="decor/heart.png"><a title="Love on the web" href="val24.html" class="smt-current-element">My Valentine</a></li>
-                        <li><img class="bullet" src="decor/crosscoffin.webp"><a title="Care for a scare?" href="haunt.html" class="smt-current-element">Sleepy Hollow</a></li>
-                        <li><img class="bullet" src="pixels/snowbun.gif"><a href="https://32bit.cafe/holidays2023/display/" target="_blank">32Bitmas</a></li>
-                    </ul>
-
-                </div>
-            </div>
-            
-            <div id="div3" class="window">
-            <div id="header3" class="windowheader"><img class="windowicon" src="decor/an-book.gif">Mobile<button id="windowclose" onclick="closeDiv(3)"></button></div>
-                <div class="toolbar"><span class="tools">file</span>
-                    <span class="tools">edit</span>
-                    <span class="tools">view</span></div>
-                <div class="content">
-                    <h3>Hey You!</h3>
-                    <p>I see you're viewing this on mobile. <text style="color: var(--linkhov);">If you are able,</text> I do highly suggest you visit ABYSSAL on a 1280x720 screen (at minimum) for a more interactive experience. If you cannot, then carry on and enjoy.</p>
-                </div>
-            </div>
-            
-            <div id="div4" class="window">
-            <div id="header4" class="windowheader"><img class="windowicon" src="decor/caution.gif">Construction Zone<button id="windowclose" onclick="closeDiv(4)"></button></div>
-                <div class="toolbar"><span class="tools">file</span>
-                    <span class="tools">edit</span>
-                    <span class="tools">view</span></div>
-                <div class="content">
-                    <p>This site is constantly changing, so if you've visited before and something now looks wrong or broken, a cleared cache will probably fix it. If it doesn't, feel free to let me know.</p>
-                </div>
-            </div>
-            
-            <div id="div5" class="window">
-            <div id="header5" class="windowheader"><img class="windowicon" src="decor/moonstars.gif">Select a Theme<button id="windowclose" onclick="closeDiv(5)"></button></div>
-                <div class="toolbar">
-                    <span class="tools">file</span>
-                    <span class="tools">edit</span>
-                    <span class="tools">view</span>
-                </div>
-                <div class="content">
-			<div class="visitor">
-                        <text style="color: grey;">As of 2/20/2024</text>
-                        <div>
-                        <!-- FC2 Counter Starts here -->
-                        You're visitor: <script language="javascript" type="text/javascript" src="//counter1.fc2.com/counter.php?id=39514503&main=1"></script><noscript><img src="//counter1.fc2.com/counter_img.php?id=39514503&main=1" /></noscript>
-                        </div>
-                        
-                        <div>
-                        <!-- FC2 Counter Starts here -->
-                        Online now: <script language="javascript" type="text/javascript" src="//counter1.fc2.com/views.php?id=39514503&main=1"></script><noscript><img src="//counter1.fc2.com/counter_now.php?id=39514503&main=1" /></noscript>
-                        </div>
-                        
-                    </div>
-
-			<div class="theme-switcher">
-
-	                    <button onclick="switchTheme('default')" class="smt-current-element" title="Noir (dark)" style="background-image:url('decor/darkpagedoll.gif')"></button>
-	                    
-	                    <button onclick="switchTheme('forest')" class="smt-current-element" title="Forest (dark)" style="background-image:url('decor/fairy.png')"></button>
-	                    
-	                    <button onclick="switchTheme('golden')" class="smt-current-element" title="Golden (light)" style="background-image:url('decor/sunpagedoll.gif')"></button>
-	                    
-	                    <button onclick="switchTheme('cyberpink')" class="smt-current-element" title="Cyber Grape (eyestrain)" style="background-image:url('decor/mysticalcrystal.gif')"></button>
-	                    
-	                    <button onclick="switchTheme('skyblue')" class="smt-current-element" title="Sky (light)" style="background-image:url('decor/blue clouds.gif')"></button>
-	                    
-	                    <button onclick="switchTheme('toxic')" class="smt-current-element toxicbtn" title="Toxic Waste (eyestrain)" style="background-image:url('decor/greenbiohazard.gif');"></button>
-	                    
-	                    <button onclick="switchTheme('peonies')" class="smt-current-element" title="Peonies (light + low contrast)" style="background-image:url('decor/peonies.png');"></button>
-			</div>
-		</div>
-            </div>
-            
-            <div id="div6" class="window">
-            <div id="header6" class="windowheader">
-                <img class="windowicon" src="decor/aceofspades.gif">Bulletin Board<button id="windowclose" onclick="closeDiv(6)"></button>
-                </div>
-                <div class="toolbar">
-                    <span class="tools">file</span>
-                    <span class="tools">edit</span>
-                    <span class="tools">view</span>
-                </div>
-                <div class="content">
-			<div class="flex" style="align-items: center;">This site is <img style="margin: 10px;" src="btns/ducktape.png"></div>
-                    <h3>Communities</h3>
-                    <div class="flex">
-                        <div>
-                            <p>32-Bit<br>Cafe</p><a href="https://32bit.cafe/" target="_blank"><img class="hov" src="btns/32b.png"></a>
-                        </div>
-                        <div> <p>Void.Shrooms<br>Webring</p><a href="https://void.shroom.ink/" target="_blank"><img class="hov" src="btns/void.shrooms.jpg"></a>
-                        </div>
-                        <div>
-                            <p>MelonLand<br>Forum</p><a href="https://melonking.net/melon?z=/frames/forum" target="_blank"><img class="hov" src="btns/MELONLAND-FORUM.GIF"></a>
-                        </div>
-                    </div>
-                    <h3>Site Snapshot</h3>
-                    <div class="flex">
-                        <img class="hov" src="btns/rainbowbtn.gif">
-                        <img class="hov" src="btns/lesbianbtn.png">
-                        <img class="hov" src="btns/transrightsbtn.png">
-                        <img class="hov" src="btns/palestine.gif">
-                        <img class="hov" src="btns/nop.gif">
-                        <img class="hov" src="btns/notforchildren.jpg">
-                        <img class="hov" src="btns/voidbtn.gif">
-                        <img class="hov" src="btns/dontfeedai.gif">
-                        <img class="hov" src="btns/containsjavascript.png">
-                        <img class="hov" src="btns/responsivewebsite.png">
-                        <img class="hov" src="btns/axolotl.gif">
-                        <img class="hov" src="btns/righttorepair.jpg">
-                        <img class="hov" src="btns/antinftbtn.webp">
-                        <img class="hov" src="btns/madewithpridebtn.gif">
-                    </div>
-                    <div class="flex">
-                        <img class="hov" src="stamps/BLM.png">
-                    </div>
-                    <div class="flex">
-                        <img class="hov" src="blinkies/despiteeverything.gif">
-                    </div>
-                    <marquee onmouseover="this.stop();" onmouseout="this.start();" style="display: block;">
-            <img class="hov" src="btns/neocitiespink.gif">
-                <a href="https://status.cafe"><img class="hov" src="https://status.cafe/assets/button.png" alt="Status Cafe"/></a>
-            <img class="hov" src="btns/makeawebsitebtn.jpg">
-            <img class="hov" src="btns/queerbtn.png">
-            <img class="hov" src="btns/arizonagreentea.gif">
-            <img class="hov" src="btns/learnhtml.gif">
-            <img class="hov" src="btns/changegender.gif">
-            <img class="hov" src="btns/bookmarkthispage.gif">
-            <img class="hov" src="btns/webshare.gif">
-            <img class="hov" src="btns/brackets.gif">
-            <img class="hov" src="btns/handcodebtn.gif">
-            <img src="decor/crawler.gif">
-            </marquee>
-                </div>
-            </div>
-
-		<div id="div7" class="window">
-            <div id="header7" class="windowheader"><img class="windowicon" src="decor/kitty.gif">Currently<button id="windowclose" onclick="closeDiv(7)"></button></div>
-                <div class="toolbar">
-                    <span class="tools">file</span>
-                    <span class="tools">edit</span>
-                    <span class="tools">view</span>
-                </div>
-                <div class="content">
-                <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content" style="display: inline;"></div><span style="display: inline;">&nbsp;</span></div><script src="https://status.cafe/current-status.js?name=leviathren" defer></script>
-                </div>
-            </div>
-            
-            <div id="div8" class="window">
-            <div id="header8" class="windowheader"><img class="windowicon" src="decor/headphone.gif">Music Player<button id="windowclose" onclick="closeDiv(8)"></button></div>
-                <div class="toolbar">
-                    <span class="tools">file</span>
-                    <span class="tools">edit</span>
-                    <span class="tools">view</span>
-                </div>
-                <div class="content">
-                <!----- music player ----->
+            <div class="sidebar">
+                <section>
+                    <h1>ABYSSAL ZONE</h1>
+                    
+                    <div id="mobile"><p>I see you're viewing this on mobile. <text style="color: var(--linkhov);">If you are able,</text> I do highly suggest you visit ABYSSAL on a 1280x720 screen (at minimum) for a more interactive experience. If you cannot, then carry on and enjoy.</p></div>
+                    
+                    <p>You have surfed your way into the ABYSSAL zone of the web. This internet outpost is a collection of all things that interest me and a project dedicated to the <a href="https://thoughts.melonking.net/guides/introduction-to-the-web-revival-1-what-is-the-web-revival" target="_blank">Web Revival</a>.</p>
+                </section>
+                <hr>
                 
-                <div id="musicplayer" class="center">
+                <section>
+                    <h2>whaT's new</h2>
+                    <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content" style="display: inline;"></div><span style="display: inline;">&nbsp;</span></div><script src="https://status.cafe/current-status.js?name=leviathren" defer></script>
+                </section>
+                <hr>
+                
+                <section class="site">
+                    <h2>link to us</h2>
+                    <p>My buttons! Please no hotlink. <span id="smt-current"><a href="https://blog.hubspot.com/website/hotlinking" target="_blank" class="smt-current-element" title="what is hotlinking?">[?]</a></span></p>
+                    <img class="hov" style="filter: none;" src="/btns/leviathrenbutton.gif">
+                    <img class="hov" style="filter: none;" src="/btns/ABYSSALbtn.gif">
+                    <textarea><a href="https://leviathren.neocities.org/" target="_blank"><img src="**file name here**"></a></textarea>
+                </section>
+                <hr>
+                
+                <section class="music">
+                <!----- music player ----->
+                <h2>cd plaYer</h2>
+                <div id="musicplayer">
         
-            <div class="songtitle"></div>
+            <div>
+            <marquee scrollamount="4" class="songtitle"></marquee>
+        </div>
         
 
         <table class="controls">
@@ -343,82 +97,202 @@
     </div>
     
                 <!----- end music player box ----->
+                </section>
+            </div>
+            
+            <div class="stuff">
+            
+                <nav>
+                    <section class="theme-switcher">
+                        <button onclick="switchTheme('default')" class="smt-current-element tiltleft" title="Dark">Basement</button>
 
-                </div>
+                        <button onclick="switchTheme('light')" class="smt-current-element tiltright" title="Light">Rooftop</button>
+                        
+                        <div>
+                        <button onclick="toggleFont()" class="smt-current-element tiltright" title="Need something easier to read?" style="font-size: 1.6em; margin: 6px;">FONT TOGGLE</button>
+                        </div>
+                    </section>
+                    
+                    <div class="directory">
+                    <section>
+                        <button onclick="openTab('Site')" class="tiltleft">Site</button>
+                        <button onclick="openTab('Me')" class="tiltright">Me</button>
+                        <button onclick="openTab('You')" class="tiltleft">You</button>
+                        <button onclick="openTab('Seasonal')" class="tiltright">Seasonal</button>
+                    </section>
+                
+                    <section class="links">
+            <div id="Site" class="tab">
+                <h2>Directory</h2>
+                <ul>
+                    <li><a title="What's new." href="updates.html">Newsletter</a></li>
+                    <li><a title="Old themes and layouts." href="layouts.html">Archives</a></li>
+                    <li><a title="If you don't wanna get lost." href="sitemap.html">Sitemap</a></li>
+                    <li><a href="credits.html">Info &amp; Credits</a></li>
+                </ul>
             </div>
             
-            <div id="div9" class="window">
-            <div id="header9" class="windowheader">
-                <img class="windowicon" src="decor/sparkles.gif">Chatbox<button id="windowclose" onclick="closeDiv(9)"></button>
-                </div>
-                <div class="toolbar">
-                    <span class="tools">file</span>
-                    <span class="tools">edit</span>
-                    <span class="tools">view</span>
-                </div>
-                <div class="content">
-                    <iframe src="https://www3.cbox.ws/box/?boxid=3531613&boxtag=B2PQvw" width="100%" height="250" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>	
-                </div>
+            <div id="Me" class="tab" style="display: none;">
+                <h2>Directory</h2>
+                <ul>
+                    <li><a title="Curious about me?" href="about.html">About</a></li>
+                    <li><a title="Consider leaving a tip?" href="https://ko-fi.com/leviathren" target="_blank">Tip Jar</a></li>
+                    <li><a title="IMAGE HEAVY. CAUTION: You may come across nudity and blood." href="art.html">Art Gallery</a></li>
+                    <li><a title="Thing's I've made." href="crafts.html">Craft Studio</a></li>
+                    <li><a title="Thoughts." href="blog.html">Blog</a></li>
+                    <li><a title="What I'm listening to." href="music.html">CD Player</a></li>
+                    <li><a title="Pixel clubs I'm in." href="pixels.html">Pixel Clubs</a></li>
+                </ul>
             </div>
             
-            <div id="div10" class="window" style="display: none">
-            <div id="header10" class="windowheader">
-                <img class="windowicon" src="decor/notepad.gif">Notepad<button id="windowclose" onclick="closeDiv(10)"></button>
-                </div>
-                <div class="toolbar">
-                    <span class="tools">file</span>
-                    <span class="tools">edit</span>
-                    <span class="tools">view</span>
-                </div>
-                <div class="content">
-                To-Do:
-                    <ul>
-                        <li>- site descriptions for button wall</li>
-                        <li>- web manifesto</li>
-                    </ul>
-                </div>
+            <div id="You" class="tab" style="display: none;">
+                <h2>Directory</h2>
+                <ul>
+                    <li><a title="Free materials for you to use." href="f2u.html">F2U</a></li>
+                    <li><a title="IMAGE HEAVY. Check out these cool sites." href="buttons.html">Net Neighbors</a></li>
+                    <li><a title="My guitar pixel club." href="hallofrock.html">Hall of Rock</a></li>
+                    <li><a title="A bookmark page with links off this site." href="links.html">Surf the Web</a></li>
+                    <li><a title="Stamps, buttons, blinkies, etc. that I like." href="collections.html">Web Graphics</a></li>
+                    <li><a title="Sign your soul away - or say something nice." href="guest.html">Guestbook</a></li>
+                </ul>
             </div>
+            
+            <div id="Seasonal" class="tab" style="display: none;">
+                <h2>Directory</h2>
+                <ul>
+                    <li><a title="Love on the web." href="val24.html">My Valentine</a></li>
+                    <li><a title="Care for a scare?" href="haunt.html">Sleepy Hollow</a></li>
+                    <li><a href="https://32bit.cafe/holidays2023/display/" target="_blank">32Bitmas</a></li>
+                </ul>
+            </div>
+                        </section>
+                        </div>
+                </nav>
+                
+                <main>
+                    <section>
+                        <h3>Web Revival</h3>
+                        <p>The Web Revival is a collective of movements aiming to move away from a corporate-controlled web and towards a "<a href="https://thoughts.melonking.net/guides/introduction-to-the-web-revival-1-what-is-the-web-revival" target="_blank">spirit of opennes and fresh excitement</a>", free from ads and hostile debate culture. I believe we can make the web a fun, friendly, and creative place again.</p>
+                        
+                        <p>Instead of attacking those with differing opinions right out the gate, I believe we should practice approaching conversations and conflict with open ears and good faith intentions.</p>
+                        
+                        <h3>bigots fuck off</h3>
+                        <p><text style="text-decoration: underline">This is not to say that bigots should be tolerated.</text> Having different views on video games, web design, and even social issues are distinctly different than believing certain peoples should not be treated as equal human beings or exist at all. <strong style="text-decoration: underline">This site does not welcome bigots of any kind.</strong> And as a minority myself, it is not my job to educate people who see me as an abomination, a danger, or otherwise lesser than a person, nor is it my job to put myself, emotionally or physically, in harms way to try to reach an understanding with hateful people. There may be some who are willing to do so, but I'm not, so hate speech and unsafe links will be removed from the chatbox and guestbook for the safety and comfort of visitors and myself.</p>
+                        
+                        <h3>safe web spaces</h3>
+                        <p>Disclaimer out of the way, movements that focus on building the independent web are not trying to go back to the wild west days of the internet where moderation was nonexistent and bigotry was rampant, but rather create resources and communities to appreciate and revive the personal web culture that we kinda lost with the rise of social media platforms and corporate takeover. There are plenty of these spaces that build on this now-retro concept but strive to uphold progressive, inclusive ideals.</p>
 
-		<div id="div11" class="window" style="display: none;">
-                <div id="header11" class="windowheader"><img class="windowicon" src="decor/kitty.gif">Pets<button id="windowclose" onclick="closeDiv(11)"></button></div>
-                <div class="toolbar">
-                    <span class="tools">file</span>
-                    <span class="tools">edit</span>
-                    <span class="tools">view</span>
-                </div>
-                <div class="content">
-                    <a href="https://tamanotchi.world/10460c" target="_blank"><img src="https://tamanotchi.world/i2/10460" alt="It's tamaNOTchi! Click to feed!" title="It's tamaNOTchi! Click to feed Meer!"></a>
-                    <iframe width="314" height="321" scrolling="no" src="https://gifypet.neocities.org/pet/pet.html?name=Moss&dob=1707888187&gender=f&element=Earth&pet=https%3A%2F%2Fleviathren.neocities.org%2Fdecor%2Fbatflap.gif&map=https%3A%2F%2Fleviathren.neocities.org%2Fbg%2Fgatebg.png&background=https%3A%2F%2Fleviathren.neocities.org%2Fbg%2Fblackpaper.jpg&tablecolor=white&textcolor=white" frameborder="0"></iframe>
-                    <div style="margin-top: 10px;">
-                        <a href="https://tamanotchi.world/" target="_blank"><img class="hov" src="btns/tamanotchi.gif"></a>
-                        <a href="https://gifypet.neocities.org/" target="_blank"><img class="hov" src="btns/gifypet.gif"></a>
-                    </div>
-                </div>
+                        <p>One such space is the <a href="https://32bit.cafe/" target="_blank">32-Bit Cafe</a>, a community of web enthusiasts working together to build a fun, friendly place on the internet dedicated to learning and sharing resources. Their <a href="https://discourse.32bit.cafe/" target="_blank">Discourse Forum</a> is now open!</p>
+                    </section>
+                    
+                    <section class="chat">
+                    
+                        <iframe id="cbox" src="https://www3.cbox.ws/box/?boxid=3531613&boxtag=B2PQvw" width="60%" height="320" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
+                        
+                        <iframe width="314" height="321" scrolling="no" src="https://gifypet.neocities.org/pet/pet.html?name=Moss&dob=1707888187&gender=f&element=Earth&pet=https%3A%2F%2Fleviathren.neocities.org%2Fdecor%2Fbatflap.gif&map=https%3A%2F%2Fleviathren.neocities.org%2Fbg%2Fgatebg.png&background=https%3A%2F%2Fleviathren.neocities.org%2Fbg%2Fblackpaper.jpg&tablecolor=white&textcolor=white" frameborder="0"></iframe>
+                    </section>
+                </main>
+                
             </div>
             
-        </main>
-        
-        <div id="pagedoll"></div>
-        
-        <div id="start">
-            <img class="starteye">
-            <script>$(".starteye").click(function () {
-    $(this).toggleClass("starteyeclose");
-                });</script>
-            
-            <button class="startbtn" onclick="showDiv(1)">Welcome</button>
-            <button class="startbtn" onclick="showDiv(5)">Themes</button>
-            <button class="startbtn" onclick="showDiv(10)">Notepad</button>
-	    <button class="startbtn" onclick="showDiv(7)">Status</button>
-	    <button class="startbtn" onclick="showDiv(4)">Notice!</button>
-            
-            <p class="copyright">Coded By Leviathren * Hosted On Neocities (c) 2023 - 2024</p>
-        </div>
-        
-    
-        <!----- scripts ----->
+            <div class="end">
+                <div class="tracks">
+                    
+                    <section class="counter">
+                        <text style="color: grey;">As of 2/20/2024</text>
+                            <div>
+                                <!-- FC2 Counter Starts here -->
+                                You're visitor:<br><script language="javascript" type="text/javascript" src="//counter1.fc2.com/counter.php?id=39514503&main=1"></script><noscript><img src="//counter1.fc2.com/counter_img.php?id=39514503&main=1" /></noscript>
+                            </div>
 
-	<!----- last updated ----->
+                            <div>
+                                <!-- FC2 Counter Starts here -->
+                                Online now:<br><script language="javascript" type="text/javascript" src="//counter1.fc2.com/views.php?id=39514503&main=1"></script><noscript><img src="//counter1.fc2.com/counter_now.php?id=39514503&main=1" /></noscript>
+                            </div>
+
+                        <div class="updated">
+                            Last Updated:<br><span id="lastupdate"></span>
+                        </div>
+                    </section>
+                    <hr class="hr2">
+                    
+                    <section>
+                        <a href="https://tamanotchi.world/10460c" target="_blank"><a href="https://tamanotchi.world/10460c"><img src="https://tamanotchi.world/i/10460" alt="It's tamaNOTchi! Click to feed!"></a></a>
+                    </section>
+                    <hr class="hr2">
+                    
+                    <section class="communities">
+                        <a href="https://32bit.cafe/" target="_blank"><img class="hov" src="btns/32b.png"></a>
+
+                        <a href="https://void.shroom.ink/" target="_blank"><img class="hov" src="btns/void.shrooms.jpg"></a>
+
+                        <a href="https://melonking.net/melon?z=/frames/forum" target="_blank"><img class="hov" src="btns/MELONLAND-FORUM.GIF"></a>
+                    </section>
+                    <hr class="hr2">
+
+                    <section>
+                        This site is constantly changing, so if you've visited before and something now looks wrong or broken, a cleared cache will probably fix it. If it doesn't, feel free to let me know.
+                    </section>
+                    <hr class="hr2">
+                    
+                    <section>
+                        Coded by Leviathren <img src="decor/tinysparkle.gif"> Hosted on Neocities 2023 - 2024 &#169;
+                    </section>
+                </div>
+                
+                <section class="ads">
+                    <marquee onmouseover="this.stop();" onmouseout="this.start();" class="buttons">
+                        <img src="decor/crawler.gif">
+                        <img class="hov" src="btns/rainbowbtn.gif">
+                        <img class="hov" src="btns/lesbianbtn.png">
+                        <img class="hov" src="btns/transrightsbtn.png">
+                        <img class="hov" src="btns/palestine.gif">
+                        <img class="hov" src="btns/nop.gif">
+                        <img class="hov" src="btns/notforchildren.jpg">
+                        <img class="hov" src="btns/voidbtn.gif">
+                        <img class="hov" src="btns/dontfeedai.gif">
+                        <img class="hov" src="btns/containsjavascript.png">
+                        <img class="hov" src="btns/responsivewebsite.png">
+                        <img class="hov" src="btns/axolotl.gif">
+                        <img class="hov" src="btns/righttorepair.jpg">
+                        <img class="hov" src="btns/antinftbtn.webp">
+                        <img class="hov" src="btns/madewithpridebtn.gif">
+                        <img src="decor/crawler.gif">
+                        <img class="hov" src="btns/neocitiespink.gif">
+                        <a href="https://status.cafe"><img class="hov" src="https://status.cafe/assets/button.png" alt="Status Cafe"/></a>
+                        <img class="hov" src="btns/makeawebsitebtn.jpg">
+                        <img class="hov" src="btns/queerbtn.png">
+                        <img class="hov" src="btns/arizonagreentea.gif">
+                        <img class="hov" src="btns/learnhtml.gif">
+                        <img class="hov" src="btns/changegender.gif">
+                        <img class="hov" src="btns/bookmarkthispage.gif">
+                        <img class="hov" src="btns/webshare.gif">
+                        <img class="hov" src="btns/ducktape.png">
+                        <img class="hov" src="btns/brackets.gif">
+                        <img class="hov" src="btns/handcodebtn.gif">
+                        <img src="decor/crawler.gif">
+                    </marquee>
+                </section>
+            </div>
+        </div><!---containment--->
+        
+        
+        
+        <!----- SCRIPTS ------>
+        
+        <!----- nav tabs ------>
+        <script>
+function openTab(tabName) {
+  var i;
+  var x = document.getElementsByClassName("tab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  document.getElementById(tabName).style.display = "block";  
+}
+</script> <!---- https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_tabulators ---->
+        
+        <!----- last updated ----->
         <script>
 var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
@@ -438,109 +312,6 @@ xhttp.onreadystatechange = function() {
 };
 xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=leviathren", true);
 xhttp.send();
-</script>
-        
-        <!----- open and close windows ----->
-        <script>
-            function showDiv(divNumber) {
-        document.getElementById("div" + divNumber).style.display="block";}
-        </script>
-        <script>
-            function closeDiv(divNumber) {
-        document.getElementById("div" + divNumber).style.display="none";}
-        </script>
-        
-        <!----- drag windows ----->
-        <script>function makeDragable(dragHandle, dragTarget) {
-  // used to prevent dragged object jumping to mouse location
-  let xOffset = 0;
-  let yOffset = 0;
-
-  let handle = document.querySelector(dragHandle);
-  handle.addEventListener("mousedown", startDrag, true);
-  handle.addEventListener("touchstart", startDrag, true);
-
-  /*sets offset parameters and starts listening for mouse-move*/
-  function startDrag(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    let dragObj = document.querySelector(dragTarget);
-    
-    // shadow element would take the original place of the dragged element, this is to make sure that every sibling will not reflow in the document
-    let shadow = dragObj.cloneNode();
-    shadow.id = ""
-    // You can change the style of the shadow here
-    shadow.style.opacity = 0.5
-    dragObj.parentNode.insertBefore(shadow, dragObj.nextSibling);
-
-    let rect = dragObj.getBoundingClientRect();
-    dragObj.style.left = rect.left;
-    dragObj.style.top = rect.top;
-    dragObj.style.position = "absolute";
-    dragObj.style.zIndex = 999999;
-
-    /*Drag object*/
-    function dragObject(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      if(e.type=="mousemove") {
-        dragObj.style.left = e.clientX-xOffset + "px"; // adjust location of dragged object so doesn't jump to mouse position
-        dragObj.style.top = e.clientY-yOffset + "px";
-      } else if(e.type=="touchmove") {
-        dragObj.style.left = e.targetTouches[0].clientX-xOffset +"px"; // adjust location of dragged object so doesn't jump to mouse position
-        dragObj.style.top = e.targetTouches[0].clientY-yOffset +"px";
-      }
-    }
-    /*End dragging*/
-    document.addEventListener("mouseup", function() {
-      // hide the shadow element, but still let it keep the room, you can delete the shadow element to let the siblings reflow if that is what you want
-      shadow.style.opacity = 0
-      shadow.style.zIndex = -999999
-      window.removeEventListener('mousemove', dragObject, true);
-      window.removeEventListener('touchmove', dragObject, true);
-    }, true)
-
-    if (e.type=="mousedown") {
-      xOffset = e.clientX - rect.left; //clientX and getBoundingClientRect() both use viewable area adjusted when scrolling aka 'viewport'
-      yOffset = e.clientY - rect.top;
-      window.addEventListener('mousemove', dragObject, true);
-    } else if(e.type=="touchstart") {
-      xOffset = e.targetTouches[0].clientX - rect.left;
-      yOffset = e.targetTouches[0].clientY - rect.top;
-      window.addEventListener('touchmove', dragObject, true);
-    }
-  }
-}
-
-makeDragable('#header1', '#div1')
-makeDragable('#header2', '#div2')
-makeDragable('#header3', '#div3')
-makeDragable('#header4', '#div4')
-makeDragable('#header5', '#div5')
-makeDragable('#header6', '#div6')
-makeDragable('#header7', '#div7')
-makeDragable('#header8', '#div8')
-makeDragable('#header9', '#div9')
-makeDragable('#header10', '#div10')
-makeDragable('#header11', '#div11')
-        </script>
-        
-        <!-----  collapse content ----->
-        <script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    } 
-  });
-}
 </script>
         
         <!----- music player ----->
@@ -718,8 +489,15 @@ for (i = 0; i < coll.length; i++) {
         <script src="https://kit.fontawesome.com/f936906ae0.js" crossorigin="anonymous"></script>
         
         <!----- theme switcher ----->
-        <script src="themes.js"></script>
+        <script src="themes1.js"></script>
         
+        <script>
+            function toggleFont() {
+  var element = document.getElementById("body");
+  element.classList.toggle("access");
+} 
+        </script>
+    
     </body>
-
+    
 </html>
