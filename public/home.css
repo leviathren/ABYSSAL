@@ -84,7 +84,7 @@ body {
 .stuff {
     grid-row-start: bar1;
     grid-row-end: bar3;
-    background-image: url(bg/molchatscreen.jpg);
+    background-image: url(bg/molchatscreen.JPG);
     background-size: cover;
     overflow: scroll;
 }
