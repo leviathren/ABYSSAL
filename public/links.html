@@ -3,19 +3,21 @@
 <style>
     
     :root{
-        --bg: black;
+        --bg: #101010;
         --color: #dddddd;
-        --link: var(--blue);
+        --link: #00aa88;
+        --linkhov: #00eeaa;
         --span: #959595;
-        --border: #404040;
+        --border: #797878;
     }
     
     .light{
-        --bg: #697376;
-        --color: #021d27;
-        --link: #01475c;
+        --bg: #a5a5a5;
+        --color: #000000;
+        --link: #006551;
+        --linkhov: #00533c;
         --span: #343434;
-        --border: #0d0d0d;
+        --border: #343434;
     }
     
 ::-webkit-scrollbar {
@@ -36,49 +38,50 @@
     @import url('https://cdn.jsdelivr.net/npm/galmuri/dist/galmuri.css');
     
     html {
-        scrollbar-color: var(--link) var(--bg);
+        scrollbar-color: var(--link) transparent;
         scrollbar-width: thin;
     }
     
     body {
-        background-image: url(bg/bluestarsbg.gif);
+        background-image: url(bg/blackgridpaper.jpg);
         background-attachment: fixed;
-        font-family: Galmuri14, sans-serif;
+        font-family: punkkid, serif;
+        font-size: 1.1em;
         color: var(--color);
-        cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat947.ani), url(https://cur.cursors-4u.net/nature/nat-10/nat947.png), auto !important;
+        overflow: hidden;
     }
     
     .grid {
         display: grid;
-        width: 900px;
-        height: auto;
-        margin: auto;
+        width: 1200px;
+        height: 100vh;
+        margin: 40px auto;
         
-        grid-template-columns: [left-line] 24% [mid-line] auto [right-line];
-    
-        grid-template-areas: "sidebar main";
+        grid-template-columns: [left-line] 200px [mid-line] auto [right-line];
+        grid-template-rows: [topline] 400px [midline] auto [bottomline];
+        grid-template-areas:
+            "sidebar main"
+            ". main";
+        column-gap: 20px;
     }
     
     nav {
-        position: fixed;
         display: flex;
         flex-direction: column;
-        width: 160px;
         padding: 20px 10px;
         background: var(--bg);
         border: 4px double var(--border);
     }
     
     nav a {
-        color: var(--link);
-        font-size: 12px;
         letter-spacing: 2;
         margin: 4px;
     }
     
     button {
         background: var(--bg);
-        font-family: Galmuri14, sans-serif;
+        font-family: punkkid, serif;
+        font-size: 1.1em;
         color: var(--color);
         margin: 6px;
         padding: 4px 8px;
@@ -87,12 +90,15 @@
     }
     
     button:hover {
-        background: var(--link);
-        cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat949.ani), url(https://cur.cursors-4u.net/nature/nat-10/nat949.png), auto !important;
+        background: var(--linkhov);
+        color: var(--bg);
+        border: 1px solid var(--link);
     }
     
     main {
         grid-area: main;
+        padding-right: 12px;
+        overflow-y: scroll;
     }
     
     section {
@@ -107,18 +113,22 @@
         justify-content: center;
     }
     
+    .access {
+        font-family: tahoma, verdana;
+    }
+    
     h1 {
-        font-size: 1.5em;
+        font-size: 1.8em;
         letter-spacing: 2;
     }
     
     h2 {
-        font-size: 1.1em;
+        font-size: 1.4em;
         letter-spacing: 2;
     }
     
     h3 {
-        font-size: 0.8em;
+        font-size: 1.2em;
         letter-spacing: 2;
     }
     
@@ -127,7 +137,6 @@
     }
     
     p {
-        font-size: 1em;
         line-height: 1.6em;
     }
     
@@ -144,21 +153,24 @@
     
     a {
         color: var(--link);
-        transition: 0.3s ease;
-        cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat949.ani), url(https://cur.cursors-4u.net/nature/nat-10/nat949.png), auto !important;
     }
     
     a:hover {
-        color: var(--color);
-        background: var(--link);
-        transition: 0.3s ease;
+        color: var(--bg);
+        background: var(--linkhov);
     }
     
-    @media only screen and (max-width: 750px) {
+    @media only screen and (max-width: 1150px) {
         
-        .container {
+        body {
+            margin: 0;
+        }
+        
+        .grid {
             display: block;
             width: auto;
+            margin: auto;
+            overflow: scroll;
         }
         
         nav {
@@ -173,6 +185,11 @@
 
         main {
             width: auto;
+            padding: 0;
+        }
+        
+        section {
+            margin: 0;
         }
     }
     
@@ -200,6 +217,10 @@
             <button onclick="switchTheme('light')" class="theme">light</button>
             </div>
             
+            <div class="flex">
+            <button onclick="toggleFont()" class="smt-current-element" title="Need something easier to read?">FONT TOGGLE</button>
+            </div>
+            
             <a href="home.html">Home</a>
             <a href="#top">Back To Top</a>
             <a href="#code">Coding Resources</a>
@@ -224,6 +245,7 @@
                 
                 <h3>General Coding Help and Tutorials</h3>
                 <ul>
+                    <li><a href="https://www.liquidweb.com/kb/create-a-robots-txt-file/" target="_blank">5 Steps to Create a Robots.txt File</a></li>
                     <li><a href="https://www.w3schools.com/html/html_intro.asp" target="_blank">Introduction to HTML</a></li>
                     <li><a href="https://www.w3schools.com/" target="_blank">w3schools</a></li>
                     <li><a href="https://32bit.cafe/" target="_blank">32-bit.cafe</a><span> Small web community with lots of resources</span></li>
@@ -270,6 +292,15 @@
                 </ul>
             </section>
             
+            <section id="creative">
+                <h2>Creative Programs For Making</h2>
+                <ul>
+                    <li><a href="https://alienmelon.itch.io/electric-zine-maker" target="_blank">Electric Zine Maker</a></li>
+                    <li><a href="https://zine-machine.glitch.me/" target="_blank">Zine Machine!</a><span> Code that makes your webpage into a printable zine!</span></li>
+                    <li><a href="https://doodad.dev/dither-me-this/" target="_blank">Dither Me This</a><span> Dithering tool</span></li>
+                </ul>
+            </section>
+            
             <section id="access">
                 <h2>Reading Naterial And Resources On Digital Accessability</h2>
                 <p>I do not have physical disabilities myself so I cannot provide first-hand insights to accessability, but I will compile what I find on the internet that I find helpful here.</p>
@@ -284,7 +315,13 @@
             </section>
             
             <section id="web">
-                <h2>Articles, Blog Posts, etc. About Web History And Culture That I Enjoyed Reading</h2>
+                <h2>Web Culture and Communities</h2>
+                <h3>Web Communities</h3>
+                <ul>
+                    <li><a href="https://32bit.cafe/" target="_blank">32bit.cafe</a><span> A community of web hobbyists/professionals that aim to make the web more personal and creative once more.</span></li>
+                    <li><a href="https://melonking.net/" target="_blank">Melonking.net</a><span> The information superhighway of the small web. Find blogs, forums, and more here.</span></li>
+                </ul>
+                <h3>Articles, Blog Posts, etc. About Web History And Culture That I Enjoyed Reading</h3>
                 <ul>
                     <li><a href="https://yesterweb.org/" target="_blank">The Yesterweb Manifesto</a><span> What the web revival was about and yesterweb's goals, organization, and community</span></li>
                     <li><a href="https://www.computerhistory.org/timeline/computers/" target="_blank">History of Computers|Timeline</a></li>
@@ -326,7 +363,13 @@
         
     </div>
     
-
+    <!------ font ------>
+<script>
+            function toggleFont() {
+  var element = document.getElementById("body");
+  element.classList.toggle("access");
+} 
+        </script>
     
     <!------ themes ------>
     <script>
