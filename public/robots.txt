@@ -1,0 +1,17 @@
+User-agent: *
+Disallow: /art/
+
+User-agent: *
+Disallow: /crafts/
+
+User-agent: *
+Disallow: /pixels/
+
+User-agent: Facebot
+Disallow: /
+
+User-agent: Pinterestbot
+Disallow: /
+
+User-agent: la_archiver
+Disallow: /
