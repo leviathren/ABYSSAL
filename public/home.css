@@ -258,7 +258,7 @@ main section:last-child {
 
 #chat {
     position: fixed;
-    right: 0;
+    right: 0px;
     bottom: 7.5em;
     width: 320px;
 }
