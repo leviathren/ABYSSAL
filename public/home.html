@@ -185,14 +185,13 @@
                         <p>One such space is the <a href="https://32bit.cafe/" target="_blank">32-Bit Cafe</a>, a community of web enthusiasts working together to build a fun, friendly place on the internet dedicated to learning and sharing resources. Their <a href="https://discourse.32bit.cafe/" target="_blank">Discourse Forum</a> is now open!</p>
                     </section>
                     
-                    <section class="chat">
-                    
-                        <iframe id="cbox" src="https://www3.cbox.ws/box/?boxid=3531613&boxtag=B2PQvw" width="60%" height="320" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
-                        
-                        <iframe width="314" height="321" scrolling="no" src="https://gifypet.neocities.org/pet/pet.html?name=Moss&dob=1707888187&gender=f&element=Earth&pet=https%3A%2F%2Fleviathren.neocities.org%2Fdecor%2Fbatflap.gif&map=https%3A%2F%2Fleviathren.neocities.org%2Fbg%2Fgatebg.png&background=https%3A%2F%2Fleviathren.neocities.org%2Fbg%2Fblackpaper.jpg&tablecolor=white&textcolor=white" frameborder="0"></iframe>
-                    </section>
+                    <iframe width="314" height="321" scrolling="no" src="https://gifypet.neocities.org/pet/pet.html?name=Moss&dob=1707888187&gender=f&element=Earth&pet=https%3A%2F%2Fleviathren.neocities.org%2Fdecor%2Fbatflap.gif&map=https%3A%2F%2Fleviathren.neocities.org%2Fbg%2Fgatebg.png&background=https%3A%2F%2Fleviathren.neocities.org%2Fbg%2Fblackpaper.jpg&tablecolor=white&textcolor=white" frameborder="0"></iframe>
                 </main>
                 
+                <div id="chat">
+                    <div><button id="showchat" onclick="toggleChat()">Chatroom</button></div>
+                <iframe id="cbox" src="https://www3.cbox.ws/box/?boxid=3531613&boxtag=B2PQvw" width="" height="0px" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
+                </div>
             </div>
             
             <div class="end">
@@ -291,7 +290,15 @@ function openTab(tabName) {
   document.getElementById(tabName).style.display = "block";  
 }
 </script> <!---- https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_tabulators ---->
-        
+
+	    <!----- chatbox toggle ----->
+        <script>
+            function toggleChat() {
+  var element = document.getElementById("cbox");
+  element.style.height = element.style.height === '330px' ? '0px' : '330px';
+} 
+        </script>
+	    
         <!----- last updated ----->
         <script>
 var xhttp = new XMLHttpRequest();
@@ -490,7 +497,8 @@ xhttp.send();
         
         <!----- theme switcher ----->
         <script src="themes1.js"></script>
-        
+
+	    <!----- toggle font ----->
         <script>
             function toggleFont() {
   var element = document.getElementById("body");
