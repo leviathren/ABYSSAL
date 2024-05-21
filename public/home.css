@@ -65,7 +65,7 @@ body {
 
 .containment {
     display: grid;
-    grid-template-rows: [bar1] 1fr [bar2] 5fr [bar3] auto [bar4];
+    grid-template-rows: [bar1] 1fr [bar2] 5fr [bar3] 7.5em [bar4];
     grid-template-columns: [vert1] 1fr [vert2] 3fr [vert3];
     grid-template-areas: 
         "side nav"
@@ -256,14 +256,27 @@ main section:last-child {
     margin-bottom: 8px;
 }
 
-.chat {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
+#chat {
+    position: fixed;
+    right: 0;
+    bottom: 7.5em;
+    width: 320px;
+}
+
+#showchat {
+    padding: 1px 6px;
+    background: url(bg/blackgridpaper.jpg);
+    background-position: 1px -6px;
+}
+
+#showchat:hover {
+    color: var(--linkhov);
 }
 
 #cbox {
-    margin-right: 10px;
+    padding: 6px;
+    background: url(bg/blackgridpaper.jpg);
+    transition: 0.4s ease;
 }
 
 .end a {
