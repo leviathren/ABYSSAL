@@ -1,6 +1,12 @@
 <html data-theme="default">
 
-<style> 
+<style>
+    
+:root {
+    --sea: #003024;
+    --link: #00aa88;
+    --linkhov: #00eeaa;
+}
     
 ::-webkit-scrollbar {
     background-color: black;
@@ -9,61 +15,59 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--red);
+    background-color: var(--sea);
 }
     
     html {
-        scrollbar-color: var(--red) black;
+        background: url(bg/greengrid.jpg);
+        background-attachment: fixed;
+        scrollbar-color: var(--sea) black;
         scrollbar-width: thin;
     }
     
     body {
-        width: auto;
         display: flex;
-        background: url(bg/bloodsplatter.gif);
-        background-attachment: fixed;
+        background: rgba(0, 0, 0, .4);
         color: white;
         font-family: "lucida console", monospace, serif;
-        font-size: 1em;
+        margin: 0;
     }
     
     .container {
-        margin-left: 10px;
-        max-width: 900px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: [l] 5% [lm] 75% [m] 20% [r];
+        grid-template-rows: [t] 20% [m2] 80% [b];
+        grid-template-areas: 
+            'header header side'
+            '. gal side';
+        margin-bottom: 40px;
+    }
+    
+    .top {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 40px;
+        text-align: center;
+        margin: 0;
+        background: black;
+        border: 1px solid var(--link);
+        z-index: 9;
+    }
+    
+    .header {
+        grid-area: header;
         padding: 10px;
     }
     
     .sidebar {
-        position: fixed;
-        left: 950px;
-        top: 8%;
-        width: 200px;
+        grid-area: side;
         background: black;
         padding: 10px;
-        border: 2px solid var(--red);
+        border: 2px solid var(--link);
         transition: 0.5s ease;
-    }
-    
-    /* gallery */
-    
-    .gallery {
-        justify-content: center;
-        display: flex;
-        flex-wrap: wrap;
-    }
-    
-    .col {
-        width: 220px;
-        height: 100%;
-        display: flex;
-        flex-direction: column-reverse;
-        align-content: flex-start;
-    }
-    
-    .gallery img {
-        width: 200px;
-        border: 1px solid white;
-        margin: 10px 20px;
     }
     
     #myBtnContainer {
@@ -76,20 +80,33 @@
         margin: 4px 0;
         background: transparent;
         color: white;
-        font-family: var(--font);
-        font-size: var(--fontsize);
+        font-size: 16px;
         transition: 0.3s ease;
     }
 
     button:hover {
-        background-color: var(--red);
+        background-color: var(--link);
         transition: 0.4s ease;
-        border: 2px outset var(--red);
+        border: 2px outset var(--link);
     }
     
     .btn.active {
-        background-color: var(--red);
-        border: 2px outset var(--red);
+        background-color: var(--link);
+        border: 2px outset var(--link);
+    }
+    
+    /* gallery */
+    
+    .gallery {
+        grid-area: gal;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .gallery img {
+        width: 200px;
+        border: 1px solid white;
+        margin: 20px 10px;
     }
     
     /* filtering */
@@ -111,72 +128,31 @@
     }
     
     p {
+        font-size: 14px;
         margin: 10px;
     }
     
     a {
-        color: var(--redlink);
+        color: var(--link);
         transition: 0.3s ease;
     }
     
     a:hover {
-        color: var(--redlinkhov);
+        color: var(--linkhov);
         transition: 0.4s ease;
     }
     
     hr {
-        color: var(--red);
+        color: var(--sea);
         margin: 20px 10px;
-    }
-    
-    /* lightbox */
-    
-    .lightbox-toggle {
-        background: rgb(0, 0, 0, 0.5);
-        color: white;
-        font-family: var(--font);
-        line-height: 2;
-        border: 1px solid white;
-        cursor: pointer;
-        transition: 0.2s ease;
-    }
-    
-    .lightbox button {
-        background: rgb(0, 0, 0, 0.5);
-        color: white;
-        font-family: var(--font);
-        border: 1px dashed white;
-        cursor: pointer;
-        transition: 0.3s ease;
-    }
-    
-    .lightbox button:hover {
-        background: var(--red);
-        transition: 0.3s ease;
     }
     
     
 @media only screen and (max-width: 1200px) {
 
-    body {
-        display: block;
-        width: auto;
-    }
     
     .container {
-        margin: auto;
-    }
-        
-    .sidebar {
-        position: relative;
-        top: 0;
-        left: 0;
-        display: flex;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        justify-content: center;
-        transition: 0.5s ease;
+        display: block;
     }
     
     hr {
@@ -187,14 +163,17 @@
         display: none;
     }
     
-    .top {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        text-align: center;
-        margin: 0;
-        background: black;
-        z-index: 9;
+}
+    
+@media only screen and (max-width: 550px) {
+
+    
+    .gallery img {
+        width: 380;
+    }
+    
+    .col {
+        margin: auto;
     }
     
 }
@@ -207,6 +186,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <link rel="stylesheet" href="fonts.css">
+        <link rel="icon" type="image/gif" href="decor/blacksparkle.gif">
         <title>Art Gallery</title>
         
         <!------ TOOLTIPS DO NOT TOUCH PLEASE GOD ------->
@@ -246,91 +226,116 @@
     
     <body>
             
-            <div class="sidebar">
-            
-                <p><a class="nav" href="home.html">Home <b>&#10531;</b></a></p>
-                
-                <hr>
-                
-            <section>
-            
-            <div id="myBtnContainer">
-                  <button class="btn active" onclick="filterSelection('all')"> Everything</button>
-                  <button class="btn" onclick="filterSelection('trad')"> Traditional</button>
-                  <button class="btn" onclick="filterSelection('dig')"> Digital</button>
-            </div>
-            </section>
-
-                <hr>
-            
-            <section class="top">
-                
-                <p><a class="center" href="#top">Back To Top</a></p>
-            
-            </section>
-                
-                <hr>
-        
-        <section class="footer">
-                
-            <p>All art by Leviathren. Hosted on neocities (c) 2024.</p>
-            
-            </section>
-            
-        </div>
         
         <div class="container">
             
-            <h1>Art Gallery</h1>
+            <section class="top">
+
+                    <p><a class="center" href="#top">Back To Top</a></p>
+
+                </section>
             
-            <p>Art below is mine. Do not use for commercial purposes. Using as pfp/banner/background with linked credit is fine.</p>
+            <div class="sidebar">
+            
+                <section><p><a class="nav" href="home.html">Home <b>&#10531;</b></a></p></section>
+                
+                <hr>
+                
+                <section>
+                    <div id="myBtnContainer">
+                          <button class="btn active" onclick="filterSelection('all')"> Everything</button>
+                          <button class="btn" onclick="filterSelection('trad')"> Traditional</button>
+                          <button class="btn" onclick="filterSelection('dig')"> Digital</button>
+                    </div>
+                </section>
+
+                <hr>
+                
+                <section>
+                    <p>Meet my <a href="oc.html">original characters</a>.</p>
+                </section>
+                
+                <hr>
+                
+                <section>
+                    <p>Other places you can find my art (higher res):</p> 
+                    <p>
+                        <a href="https://cara.app/leviathren" target="_blank">Cara</a><br>
+                        <a href="https://x.com/leviathren" target="_blank">Twitter</a><br>
+                        <a href="https://www.instagram.com/leviathren/" target="_blank">Instagram</a>
+                    </p>
+                </section>
+                
+                <hr>
+        
+                <section class="footer">
+
+                    <p>All art displayed here is by Leviathren. Do not use or repost. Hosted on neocities (c) 2024.</p>
+
+                </section>
+            
+        </div>
+            
+            <!----- left side ----->
+            
+            <div class="header">
+                <h1>Art Gallery</h1>
+            
+                <p>I'm a self-taught artist. I began studying/doing traditional art around age 8, and digital art around age 19. My preferred mediums are pen/pencil/paper and Procreate. I started making pixel art late 2023, which you can see some of <a href="pixels.html">here</a>.</p>
+            </div>
+            
         
         <div class="gallery">
             
             <!----- COLUMN 1 ----->
             
             <div class="col">
-
-		<img class="column dig hov" alt="Digital drawing of Twinkles the clown from No Pixel GTA 5 RP" title="Twinkles the Clown" src="art/Twinkles.png">
                 
-                <img class="column trad hov smt-current-element" title="The Jaws of Life" alt="Partial Jaws Of Life lyrics next to pen drawing of a jaws-of-life" src="art/jawsoflife.jpg">
+                <img class="column dig" alt="Digital drawing of Creeps Grimoire, an original character, in a purple jester outfit" title="Creeps Grimoire" src="art/Creeps_New.png">
+                
+                <img class="column dig" alt="Digital drawing of Twinkles the clown from No Pixel GTA 5 RP" title="Twinkles the Clown" src="art/Twinkles.png">
+                
+                <img class="column trad smt-current-element" title="The Jaws of Life" alt="Partial Jaws Of Life lyrics next to pen drawing of a jaws-of-life" src="art/jawsoflife.jpg">
                 
                 
-                <img class="column dig hov smt-current-element" alt="Digital drawing of fairy with red hair and wings holding bloody wound from broken horn" title="Kier" src="art/kier2.png">
+                <img class="column dig smt-current-element" alt="Digital drawing of fairy with red hair and wings holding bloody wound from broken horn" title="Kier" src="art/kier2.png">
 
 
-                 <img class="column trad hov smt-current-element" alt="Acrylic painting of purple eyes in the dark" title="Eyes" src="/art/eyes.jpg" >
+                 <img class="column trad smt-current-element" alt="Acrylic painting of purple eyes in the dark" title="Eyes" src="/art/eyes.jpg" >
 
 
-                <img class="column dig hov smt-current-element" alt="Digital drawing of angel in bloody robes holding a large ball of wires" title="Final Responder" src="art/Final_Responder_DTIYS.png">
+                <img class="column dig smt-current-element" alt="Digital drawing of angel in bloody robes holding a large ball of wires" title="Final Responder" src="art/Final_Responder_DTIYS.png">
 
 
-                <img class="column dig hov smt-current-element" alt="Digital drawing of girl with short hair looking at a butterfly in a garden with mountains in the background" title="In the Garden" src="art/in_the_garden.png">
+                <img class="column dig smt-current-element" alt="Digital drawing of girl with short hair looking at a butterfly in a garden with mountains in the background" title="In the Garden" src="art/in_the_garden.png">
             
             </div>
             
             <!----- COLUMN 2 ----->
             
             <div class="col">
-
-		<img class="column dig hov" alt="Digital drawing of the character, James Herondale, from The Last Hours series" title="James Herondale, MS Paint" src="art/james.png">
                 
-                <img class="column dig hov smt-current-element" alt="Digital drawing of a nude woman spinning with a blue and red star with an eye in the background" title="Come and See" src="art/comeandsee.png">
+                <img class="column dig" alt="Digital drawing of Twinkles the Clown from NoPixel GTA RP in a green sweater with a pattern of black eyes" title="Green Eyed Twinkles" src="art/Green_Twinkles.png">
+                
+                <img class="column dig smt-current-element" alt="Digital drawing of a nude woman spinning with a blue and red star with an eye in the background" title="Come and See" src="art/comeandsee.png">
             
                 
-                <img class="column dig hov smt-current-element" alt="Digital drawing of a person looking behind them at a girl in the subway" title="Blue Line" src="art/Blue_Line.png">
+                <img class="column dig smt-current-element" alt="Digital drawing of a person looking behind them at a girl in the subway" title="Blue Line" src="art/Blue_Line.png">
 
 
-                <img class="column trad hov smt-current-element" alt="Pen drawing of the artist wearing kitty headphones" title="Self Portrait" src="/art/selfportrait.jpg">
+                <img class="column trad smt-current-element" alt="Pen drawing of the artist wearing kitty headphones" title="Self Portrait" src="/art/selfportrait.jpg">
 
 
-                <img class="column dig hov smt-current-element" alt="Digital drawing of Ghost from Hollow Knight standing in Greenpath" title="Greenpath" src="art/Greenpath.png">
+                <img class="column dig smt-current-element" alt="Digital drawing of Ghost from Hollow Knight standing in Greenpath" title="Greenpath" src="art/Greenpath.png">
 
 
-                <img class="column dig hov smt-current-element" alt="Digital drawing of nude Kier, the red-haired and winged fairy" title="Kier the Blood Fairy" src="art/Kier.png">
+                <img class="column dig smt-current-element" alt="Digital drawing of nude Kier, the red-haired and winged fairy" title="Kier the Blood Fairy" src="art/Kier.png">
+                
+                
+                <img class="column dig" alt="Human AU of Hornet from Hollow Knight holding a red umbrella" title="Hornet" src="art/Hornet.png">
+                
 
-
-                <img class="column dig hov smt-current-element" alt="Sykkuno and Corpse as among us characters building snowmen" title="Sykkuno and Corpse" src="art/Sykkuno_And_Corpse.png">
+                <img class="column dig smt-current-element" alt="Sykkuno and Corpse as among us characters building snowmen" title="Sykkuno and Corpse" src="art/Sykkuno_And_Corpse.png">
             
             </div>
             
@@ -338,19 +343,21 @@
             
             <div class="col">
                 
-                <img class="column trad hov smt-current-element" alt="Pen and paint drawing of a red bat wing, upside-down crosses, and pentagrams" title="Devils" src="art/devil.jpg">
+                <img class="column dig" alt="Digital drawing of Creeps Grimoire, an original character, in a red and black jester outfit" title="Jeepers Creepers" src="art/Jeepers.png">
+                
+                <img class="column trad smt-current-element" alt="Pen and paint drawing of a red bat wing, upside-down crosses, and pentagrams" title="Devils" src="art/devil.jpg">
             
                 
-                <img class="column trad hov smt-current-element" alt="Pen drawing of a person with angel wings and a raven" title="I Become What I Might Be" src="/art/ibecomewhatiam.jpg">
+                <img class="column trad smt-current-element" alt="Pen drawing of a person with angel wings and a raven" title="I Become What I Might Be" src="/art/ibecomewhatiam.jpg">
 
 
-                <img class="column dig hov smt-current-element" alt="Digital drawing of a nude fairy with light blue wings kneeling and looking at the viewer" title="Fairy Season" src="art/water.png">
+                <img class="column dig smt-current-element" alt="Digital drawing of a nude fairy with light blue wings kneeling and looking at the viewer" title="Fairy Season" src="art/water.png">
 
 
-                <img class="column dig hov smt-current-element" alt="Digital drawing of red eyes with the words 'don't dream'" title="Don't Dream It" src="art/dontdream.png">
+                <img class="column dig smt-current-element" alt="Digital drawing of red eyes with the words 'don't dream'" title="Don't Dream It" src="art/dontdream.png">
 
 
-                <img class="column dig hov smt-current-element" alt="Digital drawing of Ghost from Hollow Knight looking at a pole in Hollownest" title="Hollow Knight" src="art/Hollow_Knight.png">
+                <img class="column dig smt-current-element" alt="Digital drawing of Ghost from Hollow Knight looking at a pole in Hollownest" title="Hollow Knight" src="art/Hollow_Knight.png">
             
             </div>
             
@@ -358,22 +365,24 @@
             
             <div class="col">
                 
-                <img class="column trad hov smt-current-element" alt="Pen and paint drawing of black and white eyes with red lips and blood" title="Eyess" src="art/eyess.jpg">
+                <img class="column dig" alt="Digital drawing of Twinkles the Clown from NoPixel GTA RP on a green skateboard with ducks on the bottom in front of a peach and purple sunset" title="Sk8r Twinkles" src="art/Twinkles_Skate.png">
+                
+                <img class="column trad smt-current-element" alt="Pen and paint drawing of black and white eyes with red lips and blood" title="Eyess" src="art/eyess.jpg">
             
                 
-                <img class="column trad hov smt-current-element" alt="Watercolor paint of a city floating in space" title="Space City" src="/art/spacecity.PNG">
+                <img class="column trad smt-current-element" alt="Watercolor paint of a city floating in space" title="Space City" src="/art/spacecity.PNG">
 
 
-                <img class="column dig hov smt-current-element" alt="Digital drawing of a monotone blue woman praying" title="Blue" src="art/Blue.png">
+                <img class="column dig smt-current-element" alt="Digital drawing of a monotone blue woman praying" title="Blue" src="art/Blue.png">
 
 
-                <img class="column dig hov smt-current-element" alt="Digital drawing of Quarter Jade, aka Jodi as a fairy with pink hair" title="Jodi" src="art/Jodi.png">
+                <img class="column dig smt-current-element" alt="Digital drawing of Quarter Jade, aka Jodi as a fairy with pink hair" title="Jodi" src="art/Jodi.png">
 
 
-                <img class="column dig hov smt-current-element" alt="Digital drawing of Mother Miranda from Resident Evil 8 with her wings extended and the word 'silence' behind her" title="Mother Miranda" src="art/Mother_Miranda.png">
+                <img class="column dig smt-current-element" alt="Digital drawing of Mother Miranda from Resident Evil 8 with her wings extended and the word 'silence' behind her" title="Mother Miranda" src="art/Mother_Miranda.png">
 
 
-                <img class="column dig hov smt-current-element" alt="Digital drawing of a woman in a dimly lit bathroom staring at the viewer in the mirror" title="Dingy Bathroom" src="art/Dingy.png">
+                <img class="column dig smt-current-element" alt="Digital drawing of a woman in a dimly lit bathroom staring at the viewer in the mirror" title="Dingy Bathroom" src="art/Dingy.png">
             
             </div>
             
@@ -383,7 +392,6 @@
         
         </div>
         
-        <script data-lightbox data-target-class="gallery" src="lightbox.js" defer></script>
         
         <script>filterSelection("all") // Execute the function and show all columns
 function filterSelection(c) {
