@@ -72,3 +72,29 @@ a {
 a:hover {
     color: var(--linkhov);
 }
+
+@media only screen and (max-width: 950px) {
+    
+    .containment {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    nav {
+        order: 1;
+        flex-wrap: wrap;
+    }
+    
+    nav a {
+        margin: 6px;
+    }
+    
+    main {
+        order: 2;
+    }
+    
+    .stats {
+        order: 3;
+    }
+}
