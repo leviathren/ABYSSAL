@@ -1,0 +1,74 @@
+body {
+    background: black;
+    background-image: var(--bgimg);
+    font-family: var(--font);
+    color: var(--fontcol);
+    margin: 0;
+}
+
+.containment {
+    display: grid;
+    grid-template-columns: [l] 75% [m] 25% [r];
+    grid-template-rows: [t] 80px [b2] auto [b];
+    grid-template-areas: 
+        'nav nav'
+        'main stats';
+    
+    width: 1000px;
+    background: var(--bgcol);
+    margin: auto;
+}
+
+nav {
+    grid-area: nav;
+    background: var(--bgcol);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    margin: 0 20px;
+}
+
+.stats {
+    grid-area: stats;
+    padding: 20px;
+}
+
+main {
+    grid-area: main;
+    padding: 20px 20px 40px 40px;
+}
+
+.pfp {
+    width: 200px;
+    border-radius: 10px;
+    border: 1px solid var(--fontcol);
+    box-shadow: 0 0 4px black;
+    float: left;
+    margin: 0 20px 10px 0;
+}
+
+/* general */
+
+h1 {
+    font-family: var(--h1font);
+    margin-top: 0;
+}
+
+h2 {
+    font-family: var(--h2font);
+}
+
+h3 {
+    font-family: var(--h3font);
+}
+
+a {
+    color: var(--link);
+}
+
+a:hover {
+    color: var(--linkhov);
+}
