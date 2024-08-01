@@ -1,21 +1,21 @@
 :root{
     --bg: #141414;
-    --color: #d8d8d8;
-    --link: #00aa88;
-    --linkhov: #00eeaa;
+    --color: #888888;
+    --link: #008066;
+    --linkhov: #00af7d;
     --highlight: #d8d8d8;
     --border: #464646;
     --contrast: black;
 }
 
 .light{
-    --bg: #c3c3c3;
-    --color: #101010;
-    --link: #54a595;
-    --linkhov: #006f4f;
-    --highlight: #262626;
-    --border: #585858;
-    --contrast: #dddddd;
+    --bg: #9d9d9d;
+    --color: #262626;
+    --link: #006d58;
+    --linkhov: #139679;
+    --highlight: #b4b4b4;
+    --border: #646464;
+    --contrast: #8b8b8b;
 }
 
 ::-webkit-scrollbar {
@@ -46,7 +46,7 @@ body {
 }
 
 .access {
-    font-family: helvetica, verdana, tahoma;
+    font-family: tahoma, verdana, helvetica;
 }
 
 #s-m-t-tooltip{
@@ -79,6 +79,7 @@ body {
     grid-area: side;
     background: var(--bg);
     border-right: 1px solid var(--border);
+    overflow-y: scroll;
 }
 
 .stuff {
@@ -123,6 +124,7 @@ h3 {
     font-size: 1.6em;
     display: inline;
     background: var(--contrast);
+    padding: 2px 6px;
 }
 
 hr {
@@ -159,10 +161,12 @@ button {
 button:hover {
     background: var(--color);
     color: var(--bg);
+    cursor: pointer;
 }
 
 main p {
     background: var(--contrast);
+    padding: 4px;
 }
 
 p {
@@ -204,7 +208,7 @@ textarea {
 }
 
 #statuscafe-username {
-    color: var(--highlight);
+    color: var(--color);
     font-style: italic;
 }
 
@@ -229,6 +233,11 @@ textarea {
     display: flex;
     position: fixed;
     right: 0;
+    z-index: 9;
+}
+
+.directory button, .links {
+    box-shadow: 2px 2px 8px #141414;
 }
 
 .links {
@@ -256,17 +265,53 @@ main section:last-child {
     margin-bottom: 8px;
 }
 
+.block1 {
+    display: flex;
+    min-height: 180px;
+}
+
+.updates {
+    width: 100%;
+    background: var(--color);
+    color: var(--bg);
+    padding: 10px;
+    outline: 4px dashed var(--color);
+    outline-offset: 6px;
+    margin-right: 14px;
+}
+
+.updates h3, .updates p {
+    background: none;
+}
+
+.ft {
+    width: 100%;
+    position: relative;
+    outline: 4px dashed var(--color);
+    outline-offset: 6px;
+    margin-left: 14px;
+}
+
+.ft a:hover {
+    filter: saturate(0) contrast(120%);
+}
+
 #chat {
     position: fixed;
-    right: 0px;
+    right: 0;
     bottom: 7.5em;
+    display: flex;
+    flex-direction: column;
     width: 320px;
+    z-index: 4;
 }
 
 #showchat {
+    color: #808080;
     padding: 1px 6px;
     background: url(bg/blackgridpaper.jpg);
     background-position: 1px -6px;
+    box-shadow: -2px 0px 8px #141414;
 }
 
 #showchat:hover {
@@ -277,6 +322,7 @@ main section:last-child {
     padding: 6px;
     background: url(bg/blackgridpaper.jpg);
     transition: 0.4s ease;
+    box-shadow: -2px 0px 8px #141414;
 }
 
 .end a {
@@ -432,6 +478,9 @@ main section:last-child {
         /* music player end */
 
 @media only screen and (max-width: 1100px) {
+    #lookhere {
+        display: none;
+    }
     
     .tracks {
         display: none;
@@ -447,15 +496,42 @@ main section:last-child {
         display: block;
     }
     
-    .theme-switcher {
+    .theme-switcher, .directory, .links {
         position: relative;
     }
     
     .chat {
-        flex-direction: column-reverse;
+        position: relative;
+        right: 0;
+        bottom: 0;
+        float: right;
     }
     
+    #showchat {
+        display: none;
+    }
+    
+    #cbox {
+        height: 330px;
+    }
+	
     .tracks {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .directory {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #chat {
+        float: left;
     }
 }
