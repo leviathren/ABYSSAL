@@ -527,4 +527,18 @@ main section:last-child {
         display: flex;
         flex-direction: column;
     }
+	
+    .block1 {
+        display: block;
+    }
+    
+    .updates {
+        width: auto;
+        margin: auto;
+    }
+    
+    .ft {
+        width: auto;
+        margin: 40px auto;
+    }
 }
