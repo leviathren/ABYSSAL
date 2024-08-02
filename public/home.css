@@ -504,7 +504,6 @@ main section:last-child {
         position: relative;
         right: 0;
         bottom: 0;
-        float: right;
     }
     
     #showchat {
@@ -529,9 +528,5 @@ main section:last-child {
     .directory {
         display: flex;
         flex-direction: column;
-    }
-    
-    #chat {
-        float: left;
     }
 }
