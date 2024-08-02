@@ -501,9 +501,7 @@ main section:last-child {
     }
     
     .chat {
-        position: relative;
-        right: 0;
-        bottom: 0;
+        position: static;
     }
     
     #showchat {
