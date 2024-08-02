@@ -500,7 +500,7 @@ main section:last-child {
         position: relative;
     }
     
-    .chat {
+    #chat {
         position: static;
     }
     
