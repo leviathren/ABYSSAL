@@ -57,20 +57,10 @@ html {
 body {
     background: var(--bgimg);
     background-attachment: fixed;
-    background-size: 400px;
+    background-size: var(--bgsize);
     margin: 0;
-    height: auto;
-    width: 100%;
     font-family: "lucida console", monospace, serif;
     color: var(--color);
-}
-
-nav {
-    text-align: center;
-}
-
-nav a {
-    margin: 10px;
 }
 
 main {
@@ -81,6 +71,14 @@ main {
     margin: auto;
     padding: 20px 40px;
     z-index: 2;
+}
+
+nav {
+    text-align: center;
+}
+
+nav a {
+    margin: 10px;
 }
 
 .theme-switcher {
@@ -176,6 +174,13 @@ a:hover {
     transform: rotate(2deg);
 }
 
+@media only screen and (max-width: 850px) {
+    
+    main {
+        width: auto;
+    }
+}
+
 @media only screen and (max-width: 750px) {
     
     body {
@@ -185,6 +190,17 @@ a:hover {
     main {
         width: auto;
         height: auto;
+        padding: 10px 0px;
+    }
+    
+    nav {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    nav a {
+        margin: 5px;
     }
     
     .theme-switcher {
