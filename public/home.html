@@ -6,11 +6,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <link rel="stylesheet" href="home.css">
-        <link rel="stylesheet" href="fonts.css">
         <link rel="icon" type="image/png" href="decor/blacksparkle.gif">
+        <link rel="stylesheet" type="" href="home2.css">
+        <link rel="stylesheet" href="fonts.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Abyssal</title>
         
-        <!------ TOOLTIPS ------->
+        <!------ TOOLTIPS BY MALIHU ------->
     
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 <script src="https://static.tumblr.com/lspzyz3/xloqk6cgp/jquery.style-my-tooltips.js"></script>
@@ -28,336 +30,236 @@
 </script>
         <!------- end tooltips :) -------->
         
-        <title>ABYSSAL</title>
-        
     </head>
     
     <body id="body" class="default">
-        
-        <div class="containment">
+    
+        <div class="container">
             
-            <div class="sidebar">
+            <marquee class="newsroll">
+                <section id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content" style="display: inline;"></div></section><script src="https://status.cafe/current-status.js?name=leviathren" defer></script>
+            </marquee>
+            
+            <div class="leftbar">
+                
                 <section>
-                    <h1>ABYSSAL ZONE</h1>
-                    
-                    <div id="mobile"><p>I see you're viewing this on mobile. <text style="color: var(--linkhov);">If you are able,</text> I do highly suggest you visit ABYSSAL on a 1280x720 screen (at minimum) for a more interactive experience. If you cannot, then carry on and enjoy.</p></div>
-                    
+                    <h1>Abyssal</h1>
                     <p>You have surfed your way into the ABYSSAL zone of the web. This internet outpost is a collection of all things that interest me and a project dedicated to the <a href="https://thoughts.melonking.net/guides/introduction-to-the-web-revival-1-what-is-the-web-revival" target="_blank">Web Revival</a>.</p>
                 </section>
                 <hr>
                 
-                <section>
-                    <h2>LaTelY</h2>
-                    <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content" style="display: inline;"></div><span style="display: inline;">&nbsp;</span></div><script src="https://status.cafe/current-status.js?name=leviathren" defer></script>
+                <section class="theme-switcher">
+                    <button onclick="switchTheme('default')" class="smt-current-element" title="Dark">Basement<i class="fa fa-moon" aria-hidden="true"></i></button>
+                    <button onclick="switchTheme('light')" class="smt-current-element" title="Light">Rooftop<i class="fa fa-sun" aria-hidden="true"></i></button>
+                    <div>
+                        <button onclick="toggleFont()" class="smt-current-element eyesymbol" title="Toggle's font between stylized and standard" style="font-family: Arial, Helvetica, monospace;">Font Toggle
+                            <i class="fa fa-eye-slash inactive" aria-hidden="true"></i>
+                            <i class="fa fa-eye active" style="display: none;" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </section>
+                
+                <section class="theme-switcher">
+                    <button onclick="switchTheme('red')" class="smt-current-element" title="Red">Vampire</button>
                 </section>
                 <hr>
                 
                 <section class="site">
-                    <h2>link to us</h2>
-                    <p>My buttons! Please no hotlink. <span id="smt-current"><a href="https://blog.hubspot.com/website/hotlinking" target="_blank" class="smt-current-element" title="what is hotlinking?">[?]</a></span></p>
-                    <img class="hov" style="filter: none;" src="/btns/leviathrenbutton.gif">
-                    <img class="hov" style="filter: none;" src="/btns/ABYSSALbtn.gif">
+                    <p>My buttons! Please don't hotlink. <span id="smt-current"><a href="https://blog.hubspot.com/website/hotlinking" target="_blank" class="smt-current-element" title="what is hotlinking?">[?]</a></span></p>
+                    <img class="hov" src="/btns/leviathrenbutton.gif">
+                    <img class="hov" src="/btns/ABYSSALbtn.gif">
                     <textarea><a href="https://leviathren.neocities.org/" target="_blank"><img src="**file name here**"></a></textarea>
                 </section>
                 <hr>
                 
-                <section class="music">
-                <!----- music player ----->
-                <h2>cd plaYer</h2>
-                <div id="musicplayer">
-        
-            <div>
-            <marquee scrollamount="4" class="songtitle"></marquee>
-        </div>
-        
-
-        <table class="controls">
-            <tr>
-                <td>
-                    <div class="prev-track" onclick="prevTrack()"><i class="fas fa-backward"></i></div>
-                </td>
-                <td>
-                    <div class="playpause-track" onclick="playpauseTrack()" ><i class="fas fa-play"></i></div>
-                </td>
-                <td>
-                    <div class="next-track" onclick="nextTrack()"><i class="fas fa-forward"></i></div>
-                </td>
-            </tr>
-        </table>
- 
-        <div class="seeking">
-            <div class="current-time">00:00</div>
- 
-            <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
- 
-            <div class="total-duration">0:00</div>
-        </div>
- 
-        <audio id="music" src=""></audio> 
-    </div>
-    
-                <!----- end music player box ----->
-                </section>
-            </div>
-            
-            <div class="stuff">
-            
-                <nav>
-                    <section class="theme-switcher">
-                        <button onclick="switchTheme('default')" class="smt-current-element tiltleft" title="Dark">Basement</button>
-
-                        <button onclick="switchTheme('light')" class="smt-current-element tiltright" title="Light">Rooftop</button>
-                        
-                        <div>
-                        <button onclick="toggleFont()" class="smt-current-element tiltright" title="Need something easier to read?" style="font-family: tahoma, verdana, helvetica; font-size: 1.2em; padding: 4px; margin: 6px;">FONT TOGGLE</button>
-                        </div>
-                    </section>
-                    
-                    <div class="directory">
-			    <img id="lookhere" style="object-fit: contain; height: 30px; margin-top: 15px;" src="decor/greyarrow.gif">
-                    <section>
-                        <button onclick="openTab('Site')" class="tiltleft">Site</button>
-                        <button onclick="openTab('Me')" class="tiltright">Me</button>
-                        <button onclick="openTab('You')" class="tiltleft">You</button>
-                        <button onclick="openTab('Seasonal')" class="tiltright">Seasonal</button>
-                    </section>
-                
-                    <section class="links">
-            <div id="Site" class="tab">
-                <h2>Directory</h2>
-                <ul>
-                    <li><a title="What's new." href="updates.html">Newsletter</a></li>
-                    <li><a title="Old themes and layouts." href="layouts.html">Archives</a></li>
-                    <li><a title="If you don't wanna get lost." href="sitemap.html">Sitemap</a></li>
-                    <li><a href="credits.html">Info &amp; Credits</a></li>
-                </ul>
-            </div>
-            
-            <div id="Me" class="tab" style="display: none;">
-                <h2>Directory</h2>
-                <ul>
-                    <li><a title="Curious about me?" href="about.html">About</a></li>
-                    <li><a title="Consider leaving a tip?" href="https://ko-fi.com/leviathren" target="_blank">Tip Jar</a></li>
-                    <li><a title="IMAGE HEAVY. CAUTION: You may come across nudity and blood." href="art.html">Art Gallery</a></li>
-                    <li><a title="Thing's I've made." href="crafts.html">Craft Studio</a></li>
-                    <li><a title="Thoughts." href="blog.html">Blog</a></li>
-                    <li><a title="What I'm listening to." href="music.html">CD Player</a></li>
-                    <li><a title="Pixel clubs I'm in." href="pixels.html">Pixel Clubs</a></li>
-                </ul>
-            </div>
-            
-            <div id="You" class="tab" style="display: none;">
-                <h2>Directory</h2>
-                <ul>
-                    <li><a title="Free materials for you to use." href="f2u.html">F2U</a></li>
-                    <li><a title="IMAGE HEAVY. Check out these cool sites." href="buttons.html">Net Neighbors</a></li>
-                    <li><a title="My guitar pixel club." href="hallofrock.html">Hall of Rock</a></li>
-                    <li><a title="A bookmark page with links off this site." href="links.html">Surf the Web</a></li>
-                    <li><a title="Stamps, buttons, blinkies, etc. that I like." href="collections.html">Web Graphics</a></li>
-                    <li><a title="Sign your soul away - or say something nice." href="guest.html">Guestbook</a></li>
-                </ul>
-            </div>
-            
-            <div id="Seasonal" class="tab" style="display: none;">
-                <h2>Directory</h2>
-                <ul>
-                    <li><a title="Love on the web." href="val24.html">My Valentine</a></li>
-                    <li><a title="Care for a scare?" href="haunt.html">Sleepy Hollow</a></li>
-                    <li><a href="https://32bit.cafe/holidays2023/display/" target="_blank">32Bitmas</a></li>
-                </ul>
-            </div>
-                        </section>
-                        </div>
-                </nav>
-                
-                <main>
-                    <section>
-                        <h3>Web Revival</h3>
-                        <p>The Web Revival is a collective of movements aiming to move away from a corporate-controlled web and towards a "<a href="https://thoughts.melonking.net/guides/introduction-to-the-web-revival-1-what-is-the-web-revival" target="_blank">spirit of opennes and fresh excitement</a>", free from ads and hostile debate culture. I believe we can make the web a fun, friendly, and creative place again.</p>
-                        
-                        <p>Instead of attacking those with differing opinions right out the gate, I believe we should practice approaching conversations and conflict with open ears and good faith intentions.</p>
-                        
-                        <h3>bigots fuck off</h3>
-                        <p><text style="text-decoration: underline">This is not to say that bigots should be tolerated.</text> Having different approaches or views on video games, web design, and even social issues are distinctly different than believing certain peoples should not be treated as equal human beings or exist at all. <strong style="text-decoration: underline">This site does not welcome bigots of any kind.</strong> And as a minority myself, it is not my job to educate people who see me as an abomination, a danger, or otherwise lesser than a person, nor is it my job to put myself, emotionally or physically, in harms way to try to reach an understanding with hateful people. There may be some who are willing to do so, but I'm not, so hate speech and unsafe links will be removed from the chatbox and guestbook for the safety and comfort of visitors and myself.</p>
-                        
-                        <h3>safe web spaces</h3>
-                        <p>Disclaimer out of the way, movements that focus on building the independent web are not trying to go back to the wild west days of the internet where moderation was nonexistent and bigotry was rampant, but rather create resources and communities to appreciate and revive the personal web culture that we kinda lost with the rise of social media platforms and corporate takeover. There are plenty of these spaces that build on this now-retro concept but strive to uphold progressive, inclusive ideals.</p>
-
-                        <p>One such space is the <a href="https://32bit.cafe/" target="_blank">32-Bit Cafe</a>, a community of web enthusiasts working together to build a fun, friendly place on the internet dedicated to learning and sharing resources. Their <a href="https://discourse.32bit.cafe/" target="_blank">Discourse Forum</a> is now open!</p>
-                    </section>
-
-		    <section class="block1">
-                        
-                        <div class="updates">
-                            <h3>What's new</h3>
-                        
-                            <p>Latest site update:<br>
-                            Aug 1, 2024 - Lowered contrast for light and dark themes, added more writing to homepage, fixed small visuals. Updated archives and sitemap.</p>
-                        </div>
-                    
-                        <div class="ft">
-                            <h3 style="position: absolute; margin: 0; z-index: 2;">featured page</h3>
-                            <a href="music.html" style="background: none;"><img style="filter: none; height: 100%; width: 100%;" src="decor/musicthumb.png"></a>
-                            <h4 style="position: absolute; bottom: 2px; right: 6px; margin: 0; z-index: 2;">Music I'm listening to</h4>
-                        </div>
-                    
-                    </section>
-
-		    <section>
-                    <h3>Create a site! Express yourself to the fullest! Connect with others! Control what you browse!</h3>
-                    </section>
-
-		    <section>
-                        <iframe width="314" height="321" scrolling="no" src="https://gifypet.neocities.org/pet/pet.html?name=Moss&dob=1707888187&gender=f&element=Earth&pet=https%3A%2F%2Fleviathren.neocities.org%2Fdecor%2Fbatflap.gif&map=https%3A%2F%2Fleviathren.neocities.org%2Fbg%2Fgatebg.png&background=https%3A%2F%2Fleviathren.neocities.org%2Fbg%2Fblackpaper.jpg&tablecolor=white&textcolor=white" frameborder="0"></iframe>
-                        
-                        <img src="decor/32bitad.gif" style="height: 321px; filter: none;">
-                    </section>
-
-		    <section>
-                        <h3>You can code too</h3>
-                        <p>I learned how to code back in 2020 by messing around with tumblr themes. Fiddling with stuff and seeing what changed visually when I changed something in the code is basically how I started. Lots of trial and error, and eventually I began watching youtube tutorials and using w3schools when I wanted to be able to do more advanced things. Just getting familiar with the basics will make everything a lot less daunting! I'm sure you can find plenty of resources on your own, but if you need some pointers on where to begin, I have some <a href="https://leviathren.neocities.org/links#code" target="_blank">coding resources</a> listed there to help you get started.</p>
-                        <p>If you're curious about how I built my site, you can look at my disheveled code on <a href="https://github.com/leviathren/ABYSSAL/tree/main/public" target="_blank">github</a>, from which it is deployed to neocities using <a href="https://missmoss.neocities.org/" target="_blank">Miss Moss's</a> <a href="https://github.com/burned-salmon/deploy-to-neocities-template" target="_blank">template</a>.<br>
-                        <text style="text-decoration: underline;">Understand that I'm happy with my code being viewed for inspiration and learning purposes, but I am <text style="color: red;">not</text> okay with large chunks of my code being copy/pasted without permission.</text></p>
-                        
-                        <p>See my <a href="credits.html">credits</a> page to find code snippets provided by other people that i used across my site.</p>
-                    
-                    </section>
-
-			<div id="chat">
-                            <div><button id="showchat" onclick="toggleChat()">Chatroom</button></div>
-                            <iframe id="cbox" src="https://www3.cbox.ws/box/?boxid=3531613&boxtag=B2PQvw" width="" height="0px" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
-                        </div>
-			
-                </main>
-                
-            </div>
-            
-            <div class="end">
-                <div class="tracks">
-                    
-                    <section class="counter">
+                <section class="counter">
                         <text style="color: var(--color);">As of 2/20/2024</text>
                             <div>
                                 <!-- FC2 Counter Starts here -->
-                                You're visitor:<br><script language="javascript" type="text/javascript" src="//counter1.fc2.com/counter.php?id=39514503&main=1"></script><noscript><img src="//counter1.fc2.com/counter_img.php?id=39514503&main=1" /></noscript>
+                                <em>You're Visitor:</em> <script language="javascript" type="text/javascript" src="//counter1.fc2.com/counter.php?id=39514503&main=1"></script><noscript><img src="//counter1.fc2.com/counter_img.php?id=39514503&main=1" /></noscript>
                             </div>
 
                             <div>
                                 <!-- FC2 Counter Starts here -->
-                                Online now:<br><script language="javascript" type="text/javascript" src="//counter1.fc2.com/views.php?id=39514503&main=1"></script><noscript><img src="//counter1.fc2.com/counter_now.php?id=39514503&main=1" /></noscript>
+                                <em>Online Now:</em> <script language="javascript" type="text/javascript" src="//counter1.fc2.com/views.php?id=39514503&main=1"></script><noscript><img src="//counter1.fc2.com/counter_now.php?id=39514503&main=1" /></noscript>
                             </div>
 
                         <div class="updated">
-                            Last Updated:<br><span id="lastupdate"></span>
+                            <em>Last Updated:</em> <span id="lastupdate"></span>
                         </div>
                     </section>
-                    <hr class="hr2">
+                    
+            </div>
+            
+            <main>
+                <article>
+                    <section>
+                        <h3>What's The Web Revival?</h3>
+                        <p>The <a href="https://thoughts.melonking.net/guides/introduction-to-the-web-revival-1-what-is-the-web-revival" target="_blank">Web Revival</a> is a movement that encourages weaving creativity and humanity into how we use the internet. This can look like making a unique personal website to express yourself and surfing other homemade websites, centering people over corporations.
+                        </p>
+                        
+                        <h3>Good Web Manners</h3>
+                        <p>Fast-paced social media platforms seem to have normalized jumping to conclusions and being hostile towards each other at the slightest disagreement. I think we should give grace to one another and approach conversations with good faith and a willingness to reach an understanding, rather than assuming a well-meaning person is attacking others.
+                        </p>
+                        
+                        <h3>Bigots Fuck Off</h3>
+                        <p><text style="text-decoration: underline">This is not to say that bigots should be tolerated.</text> Having different views on video games, web design, or even urgent topics like social issues, are different from believing that certain peoples should not be treated equally or exist at all.</p>
+                        <p><strong style="text-decoration: underline">This site does not welcome bigots of any kind.</strong> As a minority, it is not my job to put myself in harms way, emotionally or physically, to educate or reach an understanding with people that see me as an abomination, a danger, or otherwise subhuman. There are some who are willing to do so, and I commend and support them for that, but I am not willing to deal with it in my digital haven, therefore hate speech and unsafe links will be removed from the chatbox and guestbook for the safety and comfort of visitors and myself.</p>
+                        
+                        <h3>Safe Web Spaces</h3>
+                        <p>Disclaimer out of the way, movements surrounding the independent web are not trying to recreate the wild west days of the internet where moderation was nonexistent and bigotry was rampant, but rather create resources and communities to appreciate and revive the fresh excitement of the early internet and inject it into the personal web with the tools we have in the modern era.</p>
+
+                        <p>One such space I always recommend is the <a href="https://32bit.cafe/" target="_blank">32-Bit Cafe</a>, a community of web enthusiasts working together to build a fun, friendly place on the internet dedicated to learning and sharing resources. Their <a href="https://discourse.32bit.cafe/" target="_blank">Discourse Forum</a> is now open!</p>
+                    </section>
                     
                     <section>
-                        <a href="https://tamanotchi.world/10460c" target="_blank"><a href="https://tamanotchi.world/10460c"><img src="https://tamanotchi.world/i/10460" alt="It's tamaNOTchi! Click to feed!"></a></a>
-                    </section>
-                    <hr class="hr2">
+                        <h3>You Can (and should!) Code Too</h3>
+                        <p>I learned how to code back in 2020 by messing around with tumblr themes. Fiddling with stuff and seeing what changed visually when I changed something in the code is basically how I started. Lots of trial and error, and eventually I began watching YouTube tutorials and using w3schools when I wanted to be able to do more advanced things. Just getting familiar with the basics will make everything a lot less daunting! I'm sure you can find plenty of resources on your own, but if you need some pointers on where to begin, I have some <a href="https://leviathren.neocities.org/links#code" target="_blank">coding resources</a> listed there to help you get started.</p>
+                        
+                        <p>See my <a href="credits.html">credits</a> page to find code snippets provided by other people that I used across my site.</p>
                     
-                    <section class="communities">
+                        <img src="decor/barbedwire.png" style="width: 100%;">
+                        
+                        <p>This site changes from time to time, so if you've visited before and something looks broken now, try refreshing. If it still looks wrong, please let me know and I'll fix it as soon as I can!</p>
+                    </section>
+                </article>
+            </main>
+        
+            <div class="rightbar">
+            
+                <nav>
+                    <h2>Directory</h2>
+                    <h3>Site</h3>
+                        <ul>
+                        <li><a title="What's new." href="updates.html">Newsletter</a></li>
+                        <li><a title="Old themes and layouts." href="layouts.html">Archives</a></li>
+                        <li><a title="If you don't wanna get lost." href="sitemap.html">Sitemap</a></li>
+                        <li><a href="credits.html">Info &amp; Credits</a></li>
+                        </ul>
+                    <h3>Me</h3>
+                        <ul>
+                        <li><a title="Curious about me?" href="about.html">About</a></li>
+                        <li><a title="Handmade stickers here!" href="https://ko-fi.com/novision" target="_blank">Sticker Shop</a></li>
+                        <li><a title="IMAGE HEAVY. CAUTION: You may come across nudity and blood." href="art.html">Art Gallery</a></li>
+                        <li><a title="Thing's I've made." href="crafts.html">Craft Studio</a></li>
+                        <li><a title="Thoughts." href="blog.html">Blog</a></li>
+                        <li><a title="What I'm listening to." href="music.html">CD Player</a></li>
+                        <li><a title="Pixel clubs I'm in." href="pixels.html">Pixel Clubs</a></li>
+                        </ul>    
+                    <h3>You</h3>
+                        <ul>
+                        <li><a title="Free materials for you to use." href="f2u.html">F2U</a></li>
+                        <li><a title="IMAGE HEAVY. Check out these cool sites." href="buttons.html">Net Neighbors</a></li>
+                        <li><a title="My guitar pixel club." href="hallofrock.html">Hall of Rock</a></li>
+                        <li><a title="A bookmark page with links off this site." href="links.html">Surf the Web</a></li>
+                        <li><a title="Stamps, buttons, blinkies, etc. that I like." href="collections.html">Web Graphics</a></li>
+                        <li><a title="Sign your soul away - or say something nice." href="guest.html">Guestbook</a></li>
+                        </ul>
+                    <h3>Seasonal</h3>
+                        <ul>
+                        <li><a title="Love on the web." href="val24.html">My Valentine</a></li>
+                        <li><a title="Care for a scare?" href="haunt.html">Sleepy Hollow</a></li>
+                        <li><a href="https://32bit.cafe/holidays2023/display/" target="_blank">32Bitmas</a></li>
+                        </ul>
+                </nav>
+                
+                <section class="communities">
                         <a href="https://32bit.cafe/" target="_blank"><img class="hov" src="btns/32b.png"></a>
 
                         <a href="https://void.shroom.ink/" target="_blank"><img class="hov" src="btns/void.shrooms.jpg"></a>
 
                         <a href="https://melonking.net/melon?z=/frames/forum" target="_blank"><img class="hov" src="btns/MELONLAND-FORUM.GIF"></a>
                     </section>
-                    <hr class="hr2">
-
-                    <section>
-                        This site is constantly changing, so if you've visited before and something now looks wrong or broken, a cleared cache will probably fix it. If it doesn't, feel free to let me know.
-                    </section>
-                    <hr class="hr2">
-                    
-                    <section>
-                        Coded by Leviathren <img src="decor/tinysparkle.gif"> Hosted on Neocities 2023 - 2024 &#169;
-                    </section>
-                </div>
                 
-                <section class="ads">
-                    <marquee onmouseover="this.stop();" onmouseout="this.start();" class="buttons">
-                        <img src="decor/crawler.gif">
-                        <img class="hov" src="btns/rainbowbtn.gif">
-                        <img class="hov" src="btns/lesbianbtn.png">
-                        <img class="hov" src="btns/transrightsbtn.png">
-                        <img class="hov" src="btns/palestine.gif">
-                        <img class="hov" src="btns/nop.gif">
-                        <img class="hov" src="btns/notforchildren.jpg">
-                        <img class="hov" src="btns/voidbtn.gif">
-                        <img class="hov" src="btns/dontfeedai.gif">
-                        <img class="hov" src="btns/containsjavascript.png">
-                        <img class="hov" src="btns/responsivewebsite.png">
-                        <img class="hov" src="btns/axolotl.gif">
-                        <img class="hov" src="btns/righttorepair.jpg">
-                        <img class="hov" src="btns/antinftbtn.webp">
-                        <img class="hov" src="btns/madewithpridebtn.gif">
-                        <img src="decor/crawler.gif">
-                        <img class="hov" src="btns/neocitiespink.gif">
-                        <a href="https://status.cafe"><img class="hov" src="https://status.cafe/assets/button.png" alt="Status Cafe"/></a>
-                        <img class="hov" src="btns/makeawebsitebtn.jpg">
-                        <img class="hov" src="btns/queerbtn.png">
-                        <img class="hov" src="btns/arizonagreentea.gif">
-                        <img class="hov" src="btns/learnhtml.gif">
-                        <img class="hov" src="btns/changegender.gif">
-                        <img class="hov" src="btns/bookmarkthispage.gif">
-                        <img class="hov" src="btns/webshare.gif">
-                        <img class="hov" src="btns/ducktape.png">
-                        <img class="hov" src="btns/brackets.gif">
-                        <img class="hov" src="btns/handcodebtn.gif">
-                        <img src="decor/crawler.gif">
-                    </marquee>
-                </section>
             </div>
-        </div><!---containment--->
+            
+            <div class="asteroidbelt">
+                <marquee style="height: 31px;">
+                    <img src="decor/crawler.gif">
+                    <img class="hov" src="btns/rainbowbtn.gif">
+                    <img class="hov" src="btns/lesbianbtn.png">
+                    <img class="hov" src="btns/transrightsbtn.png">
+                    <img class="hov" src="btns/palestine.gif">
+                    <img class="hov" src="btns/nop.gif">
+                    <img class="hov" src="btns/notforchildren.jpg">
+                    <img class="hov" src="btns/voidbtn.gif">
+                    <img class="hov" src="btns/dontfeedai.gif">
+                    <img class="hov" src="btns/containsjavascript.png">
+                    <img class="hov" src="btns/responsivewebsite.png">
+                    <img class="hov" src="btns/axolotl.gif">
+                    <img class="hov" src="btns/righttorepair.jpg">
+                    <img class="hov" src="btns/antinftbtn.webp">
+                    <img class="hov" src="btns/neocitiespink.gif">
+                    <a href="https://status.cafe"><img class="hov" src="https://status.cafe/assets/button.png" alt="Status Cafe"/></a>
+                    <img class="hov" src="btns/makeawebsitebtn.jpg">
+                    <a href="https://plasticdino.neocities.org/graphics" target="_blank"><img class="hov" src="btns/queerbtn.png"></a>
+                    <img class="hov" src="btns/arizonagreentea.gif">
+                    <img class="hov" src="btns/learnhtml.gif">
+                    <img class="hov" src="btns/changegender.gif">
+                    <img class="hov" src="btns/bookmarkthispage.gif">
+                    <img class="hov" src="btns/webshare.gif">
+                    <img class="hov" src="btns/ducktape.png">
+                    <img class="hov" src="btns/brackets.gif">
+                    <img class="hov" src="btns/handcodebtn.gif">
+                    <img src="decor/crawler.gif">
+                    </marquee>
+            </div>
+            
+            <div class="outerspace">
+                
+                <section>
+                    <a href="https://32bit.cafe" target="_blank"><img src="decor/32bitad.gif" style="width: 270px"></a>
+                </section>
+                
+                <section>
+                    <h3 style="background-color: var(--bg); line-height: 2; margin: 0 auto 5px;">Want more music?</h3>
+                    <a href="music.html" title="FEATURED PAGE"><img src="decor/musicthumb.png" style="width: 220px; height: 150px; object-fit: cover;"></a>
+                </section>
+            
+                <section class="chat"><iframe id="cbox" src="https://www3.cbox.ws/box/?boxid=3531613&boxtag=B2PQvw" height="270px"></iframe></section>
+            
+                
+                <div id="musicplayer">
         
-        
-        
-        <!----- SCRIPTS ------>
-        
-        <!----- nav tabs ------>
-        <script>
-function openTab(tabName) {
-  var i;
-  var x = document.getElementsByClassName("tab");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  document.getElementById(tabName).style.display = "block";  
-}
-</script> <!---- https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_tabulators ---->
+                    <div>
+                    <marquee scrollamount="4" class="songtitle"></marquee>
+                    </div>
 
-	    <!----- chatbox toggle ----->
-        <script>
-            function toggleChat() {
-  var element = document.getElementById("cbox");
-  element.style.height = element.style.height === '330px' ? '0px' : '330px';
-} 
-        </script>
-	    
-        <!----- last updated ----->
-        <script>
-var xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        var site_data = JSON.parse(this.responseText);
-        var num_arr = site_data.info.views.toString().split("");
-        var num_str = "";
-        for (i = 0; i < num_arr.length; i++) {
-            num_str += num_arr[i];
-            if ( (num_arr.length-1 - i) % 3 == 0 && (num_arr.length-1 - i) != 0 ) {num_str += ",";}
-            var date_str = site_data.info.last_updated;
-            var date_obj = new Date(site_data.info.last_updated);
-            document.getElementById("lastupdate").innerHTML = (date_obj.getMonth()+1) + "-" + date_obj.getDate() + "-" + date_obj.getFullYear();
-        }
-        document.getElementById("hitcount").innerHTML = num_str;
-    }
-};
-xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=leviathren", true);
-xhttp.send();
-</script>
+
+                    <table class="controls">
+                        <tr>
+                            <td>
+                                <div class="prev-track" onclick="prevTrack()"><i class="fa fa-backward"></i></div>
+                            </td>
+                            <td>
+                                <div class="playpause-track" onclick="playpauseTrack()" ><i class="fa fa-play"></i></div>
+                            </td>
+                            <td>
+                                <div class="next-track" onclick="nextTrack()"><i class="fa fa-forward"></i></div>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <div class="seeking">
+                        <div class="current-time">00:00</div>
+
+                        <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+
+                        <div class="total-duration">0:00</div>
+                    </div>
+
+                    <audio id="music" src=""></audio> 
+            </div>
+                
+            </div>
+            
+            <div class="cred">
+            
+                <p>Coded by Leviathren <img src="decor/sparkles.gif" style="margin-bottom: -6px;"> Hosted on <a href="https://neocities.org/" target="_blank">Neocities</a> <img src="decor/sparkles.gif" style="margin-bottom: -6px;"> Deployed via <a href="https://missmoss.neocities.org/" target="_blank">Miss Moss's</a> <a href="https://github.com/burned-salmon/deploy-to-neocities-template" target="_blank">template</a></p>
+            </div>
+        </div>
+    
+        <!------------- SCRIPTS -------------->
         
         <!----- music player ----->
         <script>
@@ -465,7 +367,7 @@ xhttp.send();
             isPlaying = true;
             
             // replace icon with the pause icon
-            playpause_btn.innerHTML = '<i class="fas fa-pause"></i>';
+            playpause_btn.innerHTML = '<i class="fa fa-pause"></i>';
         }
  
         // pauses track when pause button is pressed
@@ -474,7 +376,7 @@ xhttp.send();
             isPlaying = false;
             
             // replace icon with the play icon
-            playpause_btn.innerHTML = '<i class="fas fa-play"></i>';
+            playpause_btn.innerHTML = '<i class="fa fa-play"></i>';
         }
  
         // moves to the next track
@@ -530,20 +432,46 @@ xhttp.send();
         loadTrack(track_index);
     </script>
         
-        <!----- music player icons ----->
-        <script src="https://kit.fontawesome.com/f936906ae0.js" crossorigin="anonymous"></script>
+        
+        <!----- last updated ----->
+        <script>
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var site_data = JSON.parse(this.responseText);
+        var num_arr = site_data.info.views.toString().split("");
+        var num_str = "";
+        for (i = 0; i < num_arr.length; i++) {
+            num_str += num_arr[i];
+            if ( (num_arr.length-1 - i) % 3 == 0 && (num_arr.length-1 - i) != 0 ) {num_str += ",";}
+            var date_str = site_data.info.last_updated;
+            var date_obj = new Date(site_data.info.last_updated);
+            document.getElementById("lastupdate").innerHTML = (date_obj.getMonth()+1) + "-" + date_obj.getDate() + "-" + date_obj.getFullYear();
+        }
+        document.getElementById("hitcount").innerHTML = num_str;
+    }
+};
+xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=leviathren", true);
+xhttp.send();
+</script>
         
         <!----- theme switcher ----->
         <script src="themes1.js"></script>
-
-	    <!----- toggle font ----->
+        
+        <!----- toggle font ----->
         <script>
             function toggleFont() {
   var element = document.getElementById("body");
   element.classList.toggle("access");
-} 
+}
         </script>
-    
+        
+        <!----- toggle font eye ----->
+        <script>$(document).ready(function(){
+	$('.eyesymbol').click(function() {
+		$('.inactive, .active').toggle();
+  });
+});</script>
     </body>
     
 </html>
