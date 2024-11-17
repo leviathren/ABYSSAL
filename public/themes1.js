@@ -1,7 +1,7 @@
 //javascript theme switcher by squidknees @ neocities.
 
 //list of all theme names in toggling order. edit this line to put your theme names here
-const thms = ["default", "light"];
+const thms = ["default", "light", "red", "access"];
 
 //remove all theme classes
 function removeTheme(){
