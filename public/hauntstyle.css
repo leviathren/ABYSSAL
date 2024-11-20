@@ -112,11 +112,11 @@ h3 {
 }
 
 h4 {
-    font-family: haunting;
-    font-size: 1.4rem;
+    font-family: midnight;
+    font-size: 1.2rem;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 4px;
+    letter-spacing: 0.2rem;
 }
 
 hr {
