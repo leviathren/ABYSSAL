@@ -1,384 +1,181 @@
-:root,[data-theme="default"] {
-    --heading: october;
-    --font: midnight;
-}
-
-[data-theme="1"] {
-    --heading: haunting;
-    --font: angel;
-}
-
-[data-theme="2"] {
-    --heading: ms gothic;
-    --font: ms gothic;
-}
-
-::-webkit-scrollbar {
-    background-color: black;
-    width: 5px;
-    height: 5px;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: var(--red);
-}
-
-html {
-    background: black;
-    background-image: url(bg/bloodsplatter.gif);
-    height: 100vh;
-    cursor: url(https://cur.cursors-4u.net/holidays/hol-1/hol35.cur), auto !important;
-}
-
 body {
+    background-image: url(bg/bloodsplatter.gif);
+    background-attachment: fixed;
+    cursor: url(https://cur.cursors-4u.net/holidays/hol-1/hol35.cur), auto !important;
     color: white;
-    font-family: var(--font);
-    font-size: 1em;
-    letter-spacing: 2;
+    margin: 0;
 }
 
 img#bat {
-    position: absolute;
-    right: 0;
+    position: fixed;
+    right: 20px;
+    top: 10px;
     z-index: 2;
 }
 
 img#butterfly {
-    position: absolute;
+    position: fixed;
+    top: 40px;
+    left: 20px;
     height: 200px;
+    z-index: -1;
 }
 
 img#blood {
-    position: absolute;
+    position: fixed;
     height: 300px;
     bottom: 30px;
-    left: 12%;
+    left: 30px;
     z-index: -1;
 }
 
 img#moon {
-    position: absolute;
+    position: fixed;
     height: 250px;
     right: 40px;
     top: 40px;
-}
-
-img#candleabra {
-    display: block;
-    margin: auto;
+    z-index: -1;
 }
 
 img#gothgirl {
-    position: absolute;
-    right: 5%;
-    bottom: 5%;
-}
-
-img#house {
-    width: 100%;
-    max-width: 200px;
-    margin: 20px 0;
+    position: fixed;
+    left: 200px;
+    bottom: 200px;
+    z-index: -1;
 }
 
 img#kiss {
     display: block;
-    margin: auto;
+    margin: 80px auto;
     max-width: 200px;
 }
 
 img#creepyhouse {
-    position: absolute;
+    position: fixed;
     width: 160px;
-    left: 9%;
-    top: 19%;
+    right: 80px;
+    bottom: 80px;
     filter: brightness(50%) hue-rotate(200deg) contrast(140%) saturate(50%);
+    z-index: -1;
 }
 
-img#batwleft {
-    width: 25px;
-}
+/*********** main ***********/
 
-img#batwright {
-    width: 25px;
-    transform: scaleX(-1);
-}
-
-img#pumpkin {
-    position: absolute;
-    left: 80px;
-    bottom: 150px;
-    width: 120px;
-    transform: rotate(-20deg);
-}
-
-/* main */
-
-main {
-    background: black;
-    padding: 30px;
-    height: auto;
-    width: 50%;
+.container {
+    display: grid;
+    grid-template-columns: [l1] 2fr [l2] 6fr [l3];
+    grid-template-rows: [t1] auto [t2];
+    grid-template-areas:
+        "nav main";
+    
+    max-width: 1000px;
+    background: #000000;
+    border: 1px solid #260000;
     margin: auto;
-    position: relative;
-    display: flex;
-}
-
-.col1 {
-    display: block;
-    width: 30%;
-    min-width: 210px;
-    text-align: center;
 }
 
 nav {
-    display: block;
-    border: 3px double var(--red);
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
-
-button#font {
-    display: block;
-    text-align: center;
-    margin: auto;
+    grid-area: nav;
     padding: 10px;
-    border: 3px double var(--red);
-    border-radius: 5px;
+    border: 4px double #640000;
 }
 
-li {
-    display: flex;
-    flex-direction: row;
-    margin-left: 10px;
+main {
+    grid-area: main;
+    padding: 40px;
 }
 
-.bullet {
-    width: 20px;
-    height: 20px;
-    margin-right: 2px;
-}
-
-.btn {
-    background: transparent;
-    border: none;
-    font-family: var(--heading);
-    font-size: 1.1em;
-    letter-spacing: 1.5;
-    text-decoration: none;
-    text-align: left;
-    padding-left: 4px;
-    color: var(--redlink);
-    cursor: url(https://cur.cursors-4u.net/holidays/hol-1/hol64.ani), url(https://cur.cursors-4u.net/holidays/hol-1/hol64.png), auto !important;
-}
-
-/* Add a grey background color on mouse-over */
-.btn:hover {
-    font-style: italic;
-    color: var(--redlinkhov);
-}
-
-/* Add a dark background color to the active button */
-.btn.active {
-    background-color: var(--red);
-    color: white;
-}
-
-.column {
-    display: none;
-}
-
-    /* The "show" class is added to the filtered elements */
-.show {
-    display: block;
-}
-
-.stamps img {
-    max-width: 102px;
-}
-
-.col2 {
-    display: block;
-    margin-left: 20px;
-    width: 100%;
-}
-
-.btnbox {
-    display: block;
-    margin: auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9) ), url(btns/eyebtnold2.gif);
-    height: 31px;
-    overflow: hidden;
-}
-
-.btnbox img {
-    height: 31px;
-}
-
-.contents {
-    position: fixed;
-    display: block;
-    left: 78%;
-    max-width: 200px;
-    padding: 10px;
-    background: black;
-    border: 3px double var(--red);
-    font-family: var(--heading);
-    font-size: 1.1em;
-}
-
-a.top {
-    display: block;
-    text-align: center;
-    margin: 20px auto;
-    padding: 10px;
-    width: 60%;
-    background: var(--red);
-    color: white;
-    text-decoration: none;
-    border: 4px double black;
-}
-
-a.top:hover {
-    background: black;
-    color: var(--redlinkhov);
-    border: 4px double var(--red); 
-    transition: ease background 0.5s;
-}
-
-article {
-    display: block;
-    margin: 20px;
-}
-
-section {
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-section.left img {
-    float: left;
-    margin: 20px;
-}
-
-section.right img {
-    float: right;
-    margin: 20px;
-}
-
-blockquote {
-    background-image: url(bg/ghost.png);
-    background-size: 100px;
-    padding: 10px;
-    border: 3px double var(--grey);
-}
-
-.flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.flex img {
-    max-width: 150px;
-    margin: 10px;
-    -webkit-transition: .1s ease-in-out;
-	transition: .1s ease-in-out;
-}
-
-.flex img:hover {
-    -webkit-transform: scale(1.08);
-	transform: scale(1.08);
-}
-
-.button {
-    max-height: 31px;
-}
-
-.divider {
-    margin: 50px 0;
-}
-
-.center {
-    text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-ul.tiny {
-    font-size: 12px;
-    color: var(--text);
-    margin-left: -20px;
-}
+/**/
 
 h1 {
-    font-family: var(--heading);
-    font-size: 1.6em;
-    letter-spacing: 4px;
-    margin: 20px 0px;
+    font-family: october;
+    font-size: 2.2rem;
+    letter-spacing: 0.2rem;
 }
 
 h2 {
-    font-family: var(--heading);
-    font-size: 1.2em;
-    letter-spacing: 4px;
+    font-family: october;
+    font-size: 1.8rem;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    text-transform: uppercase;
+    background-image: url(bg/ghost.png);
+    background-size: 120px;
+    padding: 20px 60px;
+    border: 4px double white;
 }
 
 h3 {
-    font-family: var(--heading);
-    font-size: 1em;
+    font-family: haunting;
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+}
+
+h4 {
+    font-family: haunting;
+    font-size: 1.4rem;
+    text-align: center;
+    text-transform: uppercase;
     letter-spacing: 4px;
 }
 
-p {
-    margin: 20px 0px;
-    letter-spacing: 1.5;
-    line-height: 1.5;
+hr {
+    border: 2px groove #222222;
+    margin: 20px 0;
+}
+
+section {
+    padding: 25px;
+    margin: 20px 20px 50px;
+}
+
+ul li {
+    line-height: 1.4rem;
 }
 
 a {
-    color: var(--redlink);
-    cursor: url(https://cur.cursors-4u.net/holidays/hol-1/hol35.cur), auto !important;
+    color: red;
+    font-family: october;
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+    text-shadow: 0 0 4px red;
 }
 
 a:hover {
-    color: var(--redlinkhov);
-    cursor: url(https://cur.cursors-4u.net/holidays/hol-1/hol64.ani), url(https://cur.cursors-4u.net/holidays/hol-1/hol64.png), auto !important;
+    color: #ffcccc;
 }
 
-li {
-    margin-bottom: 10px;
+p {
+    font-size: 1.1rem;
 }
 
-@media only screen and (max-width: 750px) {
-    
-    main {
-        width: auto;
-        display: block;
-    }
-    
-    .col1 {
-        width: auto;
-        margin: auto;
-    }
-    
-    #house {
-        display: none;
-    }
-    
-    .stamps {
-        display: none;
-    }
-    
-    img#kiss {
-        display: none;
-    }
-    
-    .col2 {
-        width: auto;
-        margin: auto;
-    }
+figcaption {
+    margin: 10px;
+}
+
+/**/
+
+.orbit {
+    text-align: center;
+    margin: auto auto 40px;
+}
+
+.stamps img {
+    width: 100px
+}
+
+.divider {
+    display: flex;
+    justify-self: center;
+}
+
+.doors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.doors figure {
+    margin: 20px 0;
 }
