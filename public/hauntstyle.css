@@ -10,7 +10,7 @@ img#bat {
     position: fixed;
     right: 20px;
     top: 10px;
-    z-index: 2;
+    z-index: -1;
 }
 
 img#butterfly {
@@ -34,7 +34,7 @@ img#moon {
     height: 250px;
     right: 40px;
     top: 40px;
-    z-index: -1;
+    z-index: -2;
 }
 
 img#gothgirl {
@@ -45,9 +45,13 @@ img#gothgirl {
 }
 
 img#kiss {
-    display: block;
     margin: 80px auto;
     max-width: 200px;
+}
+
+img#haunted {
+    width: 85%;
+    margin: 40px auto;
 }
 
 img#creepyhouse {
@@ -178,4 +182,36 @@ figcaption {
 
 .doors figure {
     margin: 20px 0;
+}
+
+@media only screen and (max-width: 900px) {
+    .container {
+        display: block;
+    }
+    
+    nav hr {
+        display: none;
+    }
+    
+    .stamps {
+        display: none;
+    }
+    
+    #kiss {
+        display: none;
+    }
+    
+    #haunted {
+        display: none;
+    }
+    
+    main {
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .doors figure {
+        width: 50%;
+        margin: 5px 0;
+    }
 }
