@@ -8,16 +8,16 @@
     --link: #00eeaa;
     --border: #5a5a5a;
     
-    --font: 'Times New Roman', courier;
-    --h1: whiteonblack;
-    --h1size: 2rem;
-    --h2: angel;
-    --h2size: 2rem;
-    --h3: haunting;
-    --h3size: 1.5rem;
-    --h3space: 0.2rem;
-    --afont: october;
-    --aspace: 0.1rem;
+    --font: arial, verdana, helvetica;
+    --h1: arial, verdana, helvetica;
+    --h1size: 2.2rem;
+    --h2: arial, verdana, helvetica;
+    --h2size: 1.6rem;
+    --h3: arial, verdana, helvetica;
+    --h3size: 1.2rem;
+    --h3space: 0;
+    --afont: arial, verdana, helvetica;
+    --aspace: 0;
     
     --accent: #080808;
     --accent2: #545454;
@@ -46,16 +46,16 @@
     --link: #00c48c;
     --border: #b2b2b2;
     
-    --font: 'Times New Roman', courier;
-    --h1: whiteonblack;
-    --h1size: 2rem;
-    --h2: angel;
-    --h2size: 2rem;
-    --h3: haunting;
-    --h3size: 1.5rem;
-    --h3space: 0.2rem;
-    --afont: october;
-    --aspace: 0.1rem;
+    --font: arial, verdana, helvetica;
+    --h1: arial, verdana, helvetica;
+    --h1size: 2.2rem;
+    --h2: arial, verdana, helvetica;
+    --h2size: 1.6rem;
+    --h3: arial, verdana, helvetica;
+    --h3size: 1.2rem;
+    --h3space: 0;
+    --afont: arial, verdana, helvetica;
+    --aspace: 0;
     
     --accent: #dbdbdb;
     --accent2: #ececec;
@@ -84,16 +84,16 @@
     --link: #ff0000;
     --border: #242424;
     
-    --font: 'Times New Roman', courier;
-    --h1: angel;
-    --h1size: 3rem;
-    --h2: haunting;
-    --h2size: 2rem;
-    --h3: october;
-    --h3size: 1.4rem;
-    --h3space: 0.1rem;
-    --afont: ss;
-    --aspace: 0.1rem;
+    --font: arial, verdana, helvetica;
+    --h1: arial, verdana, helvetica;
+    --h1size: 2.2rem;
+    --h2: arial, verdana, helvetica;
+    --h2size: 1.6rem;
+    --h3: arial, verdana, helvetica;
+    --h3size: 1.2rem;
+    --h3space: 0;
+    --afont: arial, verdana, helvetica;
+    --aspace: 0;
     
     --accent: #1a0000;
     --accent2: #404040;
@@ -112,17 +112,17 @@
     --backdrop: brightness(80%);
 }
 
-.access {
-    --font: arial, verdana, helvetica;
-    --h1: arial, verdana, helvetica;
-    --h1size: 2.2rem;
-    --h2: arial, verdana, helvetica;
-    --h2size: 1.6rem;
-    --h3: arial, verdana, helvetica;
-    --h3size: 1.2rem;
-    --h3space: 0;
-    --afont: arial, verdana, helvetica;
-    --aspace: 0;
+.font {
+    --font: 'Times New Roman', courier;
+    --h1: angel;
+    --h1size: 3.2rem;
+    --h2: october;
+    --h2size: 2rem;
+    --h3: haunting;
+    --h3size: 1.5rem;
+    --h3space: 0.2rem;
+    --afont: october;
+    --aspace: 0.1rem;
 }
 
 ::-webkit-scrollbar {
