@@ -4,8 +4,8 @@
     --mainbg: url(bg/blacktiles.jpg);
     --mainbgsize: 200px;
     --space: #1a1a1a;
-    --color: #c4c4c4;
-    --link: #00eeaa;
+    --color: #bababa;
+    --link: #00bb88;
     --border: #5a5a5a;
     
     --font: arial, verdana, helvetica;
@@ -39,11 +39,11 @@
 .light {
     --bg: #ffffff;
     --bgpic: url(bg/blackgridpaper.jpg);
-    --mainbg: url(bg/whitegrid.jpg);
-    --mainbgsize: auto;
-    --space: #f4f4f4;
+    --mainbg: url(bg/lightgreygrid.jpg);
+    --mainbgsize: 600px;
+    --space: #c9c9c9;
     --color: #484848;
-    --link: #00c48c;
+    --link: #00a274;
     --border: #b2b2b2;
     
     --font: arial, verdana, helvetica;
@@ -71,7 +71,7 @@
     --buttonhov: #bebebe;
     
     --musicbg: url(bg/whitesatin.jpg);
-    --backdrop: brightness(120%);
+    --backdrop: brightness(102%);
 }
 
 .red {
@@ -343,7 +343,7 @@ em {
 }
 
 #lastupdate {
-    color: var(--border);
+    color: var(--accent2);
 }
 
 .communities a, .communities img:hover {
