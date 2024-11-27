@@ -282,6 +282,7 @@ a:hover {
 
 main p {
     backdrop-filter: var(--backdrop);
+    line-height: 1.4rem;
 }
 
 button {
