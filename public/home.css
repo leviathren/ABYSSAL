@@ -273,7 +273,6 @@ a {
     font-family: var(--afont);
     color: var(--link);
     letter-spacing: var(--aspace);
-    transition: 0.2s ease;
 }
 
 a:hover {
