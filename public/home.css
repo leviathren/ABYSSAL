@@ -360,6 +360,8 @@ marquee img {
 }
 
 #cbox {
+    min-height: 200px;
+    width: auto;
     border: 1px solid var(--border);
     border-radius: 5px;
 }
