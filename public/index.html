@@ -18,24 +18,6 @@
     color: white;
 }
     
-    #s-m-t-tooltip{
-	/* basic */
-	max-width: 250px;
-	z-index: 999999 !important;
-	margin: 24px 14px 7px 12px;
-	/* style and design */
-    color: #c4c4c4;
-    font-size: 14px;
-    line-height: 1.4;
-	padding: 8px;
-    border: 2px inset #c4c4c4;
-    background: #0a0a0a;
-}
-    
-    html {
-        overflow: hidden;
-    }
-    
     body {
         background: black;
         color: #bbbbbb;
@@ -51,47 +33,35 @@
         height: 100vh;
     }
     
+    /**************************************/
     .side {
         grid-area: side;
         position: relative;
         background: url(bg/blacktiles.jpg);
         background-size: 400px;
-        padding: 40px;
+        padding: 40px 50px 0 40px;
     }
     
     .q {
-        position: absolute;
-        right: 40px;
-        width: 580px;
-        text-align: right;
-    }
-    
-    .quotes {
-        width: auto;
-        position: absolute;
-        bottom: 0;
-    }
-    
-    h1 {
-        width: 600px;
+        font-size: 2em;
         font-family: whiteonblack;
-        font-size: 3em;
-        color: #ddd;
-        text-align: left;
+        word-spacing: 4px;
     }
     
-    h2 {
-        width: 600px;
-        text-align: right;
-    }
-    
-    h2 text {
-        background: #ddd;
-        color: black;
+    .q text {
+        background-color: black;
         line-height: 1.4;
-        padding: 2px;
+        padding: 4px;
     }
     
+    .auth {
+        text-align: right;
+        font-family: whiteonblack;
+        font-size: 2em;
+        margin-top: 20px;
+    }
+    
+    /**************************************/
     main {
         grid-area: main;
         background: url(bg/binary.gif);
@@ -104,9 +74,13 @@
         margin: auto;
     }
     
+    .one {
+        margin: 40px auto;
+    }
+    
     #enter {
         position: absolute;
-        top: 250px;
+        top: 44%;
         left: 55%;
         transform: translate(-50%, 0);
         text-transform: uppercase;
@@ -124,7 +98,7 @@
     
     #back {
         position: absolute;
-        top: 320px;
+        top: 50%;;
         left: 55%;
         transform: translate(-50%, 0);
         text-transform: uppercase;
@@ -140,14 +114,9 @@
         text-shadow: 2px 0 grey, 4px 0 #505050, 6px 0 #202020, -2px 0 grey, -4px 0 #505050, -6px 0 #202020;
     }
     
-    p {
-        letter-spacing: 2;
-        line-height: 1.5;
-    }
-    
     .hotline {
         background: #252525;
-        padding: 10px 0;
+        padding: 10px 6px;
         margin: 20px auto;
         border: 3px outset #202020;
         width: 200px;
@@ -156,7 +125,7 @@
     
     .hotline:hover {
         background: #f48eb5;
-        border: 3px outset #ed88ae;
+        border: 3px outset #d37497;
     }
     
     .hotline a{
@@ -164,11 +133,16 @@
         text-transform: uppercase;
         text-decoration: none;
         font-style: italic;
-        letter-spacing: 2;
     }
     
     .hotline a:hover {
-        text-decoration: underline;
+        color: #ffffff;
+        text-shadow: 1px 1px #f55693, 2px 2px #dd266c, 3px 3px #9b0941;
+    }
+    
+    p {
+        letter-spacing: 2;
+        line-height: 1.5;
     }
     
     @media only screen and (max-width: 1000px){
@@ -187,9 +161,15 @@
             display: none;
         }
         
-        main {
-            100%;
+        main section {
+            max-width: 300px;
+            min-width: 180px;
+            width: auto;
         }
+        
+        .one {
+        margin: 20px auto;
+    }
         
         #enter {
             position: relative;
@@ -219,22 +199,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="fonts.css">
-	<link rel="icon" type="image/png" href="decor/blacksparkle.gif">
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-<script src="https://static.tumblr.com/lspzyz3/xloqk6cgp/jquery.style-my-tooltips.js"></script>
-<script>
-							(function($){
-							$(document).ready(function(){
-							$("[title]").style_my_tooltips({
-							tip_follows_cursor: true,
-							tip_delay_time:100,
-							tip_fade_speed:300,
-							attribute:"title"
-							});
-							});
-							})(jQuery);
-</script>
+    <link rel="icon" type="image/png" href="decor/blacksparkle.gif">
     
     </head>
     
@@ -244,21 +209,17 @@
         
         <div class="side">
             
-            <div class="q">
-            <blockquote>"...and in a single day and night of misfortune all your warlike men in a body sank into the earth, and the island of Atlantis in like manner disappeared in the depths of the sea."</blockquote>- Plato, 360 BC</div>
-            
-            <section class="quotes">
-                <h1>’Twas brillig, and the slithy toves Did gyre and gimble in the wabe.</h1>
+            <section>
+                <div class="q"><text>"...and in a single day and night of misfortune all your warlike men in a body sank into the earth, and the island of Atlantis in like manner disappeared in the depths of the sea."</text></div>
                 
-                <h2><text>He took his vorpal sword in hand;
-      Long time the manxome foe he sought</text></h2>
-                </section>
+                <div class="auth">- Plato, 360 BC</div>
+            </section>
         
         </div>
         
         <main>
             
-            <section>
+            <section class="one">
                 
                 <p>This site uses javascript and has only been tested on Firefox and Chrome.
                     <br>
@@ -266,7 +227,7 @@
                     <img src="/decor/caution.gif"> <font color="yellow">Caution:</font> You may come across flashing/shaking images and serious topics, but each will be marked as so.
                     <br>
                     <br>
-                    While this site is not NSFW, I am an adult and my content reflects this.
+                    While this site is not NSFW, I am an adult and my content may reflect this.
                     <br>
                     <br>
                     [mobile friendly - looks cooler on desktop though]
@@ -287,7 +248,7 @@
                 
                     
                     <div class="hotline">
-                        <a href="https://hotlinewebring.club/levi/previous">&#60;</a><a href="https://hotlinewebring.club/"> hotline webring </a><a href="https://hotlinewebring.club/levi/next">&#62;</a>
+                        <a href="https://hotlinewebring.club/levi/previous">&#129144;</a> <a href="https://hotlinewebring.club/">hotline webring</a> <a href="https://hotlinewebring.club/levi/next">&#129146;</a>
                     </div>
                 </section>
             
