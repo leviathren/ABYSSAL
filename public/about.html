@@ -1,298 +1,308 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <title>About Leviathren</title>
+    
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="fonts.css">
+        <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
+        
+        <style>
+    
+            /* #003024 #00aa88 #00eeaa */
 
-<style>
-    
-    /* #003024 #00aa88 #00eeaa */
-    
-    @import url('https://cdn.jsdelivr.net/npm/galmuri/dist/galmuri.css');
-    
-    ::selection {
-        background: #00aa88;
-        color: black;
-    }
-    
-    html {
-        
-    }
-    
-    body {
-        height: 100%;
-        margin: 0;
-        display: flex;
-        background: repeating-linear-gradient(
-        to bottom,
-        #202020 0px,
-        black 1px,
-        black 2px,
-        black 3px
-      );
-        font-family: "lucida console", monospace, serif;
-        font-size: 0.8em;
-        color: white;
-    }
-    
-    .window {
-        position: absolute;
-        height: auto;
-        z-index: 9;
-        background: #101010;
-        border: 3px outset black;
-        padding: 2px;
-    }
+            ::-webkit-scrollbar {
+                background-color: black;
+                width: 2px;
+                height: 2px;
+            }
 
-    .windowheader {
-        cursor: move;
-        z-index: 10;
-        margin: 3px;
-        padding: 4px;
-        background: #202020;
-    }
+            ::-webkit-scrollbar-thumb {
+                background-color: #c8c8c8;
+            }
+            
+            ::selection {
+                background: #00aa88;
+                color: black;
+            }
 
-    .windowicon {
-        height: 15px;
-        width: 15px;
-        margin: 0 6px 0 2px;
-    }
-    
-    .toolbar {
-        margin: 3px;
-        padding: 4px;
-        font-size: 10px;
-        border: 1px outset #282828;
-    }
+            body {
+                height: 100vh;
+                margin: 0;
+                background: repeating-linear-gradient(
+                to bottom,
+                #202020 0,
+                black 1px,
+                black 2px,
+                black 3px);
+                font-family: 'fira mono', monospace, serif;
+                font-size: 0.8em;
+                color: #c8c8c8;
+                overflow: hidden;
+                cursor: url(cursors/hollowknight/Normal.cur), default;
+                scrollbar-color: #c8c8c8 black;
+                scrollbar-width: thin;
+            }
 
-    .toolbar span {
-        padding: 4px 6px;
-    }
+            .window {
+                position: absolute;
+                height: auto;
+                z-index: 9;
+                background: #101010;
+                border: 3px outset black;
+                padding: 2px;
+            }
 
-    .toolbar span:hover {
-        background: rgb(48, 48, 48, 0.8);
-    }
+            .windowheader {
+                cursor: url(cursors/hollowknight/Move.cur), move;
+                z-index: 10;
+                margin: 3px;
+                padding: 4px;
+                background: #202020;
+            }
 
-    .content {
-        box-sizing: border-box;
-        margin: 4px;
-        padding: 10px 20px;
-        background: #080808;
-        border: 2px inset #303030;
-        overflow: scroll;
-    }
-    
-    #start {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 50px;
-        background: #101010;
-        border: 1px solid #282828;
-        z-index: 99999999;
-    }
-    
-    #start button {
-        background: transparent;
-        height: 100%;
-        padding: 10px;
-        color: white;
-        font-family: Galmuri14, monospace, serif;
-        letter-spacing: 2;
-        border: none;
-    }
-    
-    #start button:hover {
-        background: rgb(48, 48, 48, 0.8);
-        color: #00eeaa;
-    }
-    
-    /* BEGIN DIVS */
-    
-    #div1 {
-        top: 15%;
-        left: 40%;
-        width: 600px;
-        z-index: 99;
-    }
-    
-    .icon {
-        width: 100px;
-        float: left;
-        margin: 0 20px 10px 0;
-        image-rendering: pixelated;
-    }
-    
-    #div2 {
-        top: 10%;
-        left: 10%;
-        width: 250px;
-    }
-    
-    /* currently */
-    
-    #div3 {
-        top: 60%;
-        left: 15%;
-        width: 300px;
-    }
-    
-    #div4 {
-        top: 8%;
-        right: 5%;
-        width: 250px;
-    }
-    
-    /* status */
-    #div5 {
-        width: 250px;
-        top: 15%;
-        right: 8%;
-    }
+            .windowicon {
+                height: 15px;
+                width: 15px;
+                margin: 0 6px 0 2px;
+            }
 
-    /* contact */
-    #div6 {
-        width: 250px;
-        top: 30%;
-        left: 16%;
-    }
-    
-    .badge {
-        transition: 0.4s ease;
-    }
-    
-    .badge:hover {
-        box-shadow: 2px 2px 0px #00aa88;
-    }
-    
-    #email img {
-        margin: 6px 0 4px;
-    }
-    
-    #email:hover + .contact {
-        font-size: 12px;
-    }
-    
-    .contact:hover {
-        font-size: 12px;
-    }
-    
-    .contact {
-        font-size: 0px;
-        margin-bottom: 4px;
-        transition: font-size 0.4s linear;
-    }
+            .toolbar {
+                margin: 3px;
+                padding: 4px;
+                font-size: 10px;
+                border: 1px outset #282828;
+            }
 
-    /* status cafe */
-    #statuscafe {
-        display: block;
-        margin: auto;
-        width: 100%;
-        background-color: var(--contentbg);
-        font-size: var(--fontsize);
-    }
-    #statuscafe-username {
-        margin: 10px 0;
-        font-style: italic;
-    }
-    #statuscafe-username a {
-        text-decoration: none;
-    }
-    #statuscafe-content {
-        margin: 0 10px 10px 10px;
-    }
-    #statusbtn {
-        margin-left: 10px;
-    }
-    
-    /* general */
-    article {
-        padding: 20px;
-    }
-    
-    li {
-        margin-left: -20px;
-    }
-    
-    a {
-        color: #00aa88;
-        transition: 0.2s ease;
-    }
-    
-    a:hover {
-        color: #00eeaa;
-    }
-    
-    @media only screen and (max-width: 750px) {
-        
-        body {
-            flex-direction: column;
-        }
-        
-        main {
-            margin-top: 55px;
-        }
-        
-        .window {
-            position: relative;
-            display: block;
-        }
-        
-        #div1 {
-            top: 0;
-            left: 0;
-            width: auto;
-        }
-        
-        #div2 {
-            top: 0;
-            left: 0;
-            width: auto;
-        }
-        
-        #div3 {
-            top: 0;
-            left: 0;
-            width: auto;
-        }
-        
-        #div4 {
-            top: 0;
-            left: 0;
-            width: auto;
-        }
-        
-        #div5 {
-            top: 0;
-            left: 0;
-            width: auto;
-        }
-        
-        #div6 {
-            top: 0;
-            left: 0;
-            width: auto;
-        }
-        
-        #start {
-            top: 0;
-        }
-        
-    }
+            .toolbar span {
+                padding: 4px 6px;
+            }
+
+            .toolbar span:hover {
+                background: rgb(48, 48, 48, 0.8);
+            }
+
+            .content {
+                box-sizing: border-box;
+                margin: 4px;
+                padding: 10px 20px;
+                background: #080808;
+                border: 2px inset #303030;
+                overflow: scroll;
+            }
+
+            #start {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                display: flex;
+                width: 100%;
+                height: 50px;
+                background: #101010;
+                border: 1px solid #282828;
+                z-index: 99999999;
+            }
+
+            #start a {
+                color: white;
+                font-family: 'lucida console', monospace, serif;
+                font-size: 1rem;
+                text-decoration: none;
+                padding: 16px 20px;
+            }
+
+            #start a:hover {
+                background: rgb(48, 48, 48, 0.8);
+                color: #00eeaa;
+            }
+
+            /* BEGIN DIVS */
+
+            #div1 {
+                top: 15%;
+                left: 40%;
+                width: 600px;
+                z-index: 99;
+            }
+
+            .icon {
+                width: 100px;
+                float: left;
+                margin: 0 20px 10px 0;
+                image-rendering: pixelated;
+            }
+
+            #div2 {
+                top: 10%;
+                left: 10%;
+                width: 250px;
+            }
+
+            /* currently */
+
+            #div3 {
+                top: 60%;
+                left: 15%;
+                width: 300px;
+            }
+
+            #div4 {
+                top: 8%;
+                right: 5%;
+                width: 250px;
+            }
+
+            /* status */
+            #div5 {
+                width: 250px;
+                top: 15%;
+                right: 8%;
+            }
+
+            /* contact */
+            #div6 {
+                width: 250px;
+                top: 30%;
+                left: 16%;
+            }
+
+            .badge {
+                transition: 0.4s ease;
+            }
+
+            .badge:hover {
+                box-shadow: 2px 2px 0px #00aa88;
+            }
+
+            #email img {
+                margin: 6px 0 4px;
+            }
+
+            #email:hover + .contact {
+                font-size: 12px;
+            }
+
+            .contact:hover {
+                font-size: 12px;
+            }
+
+            .contact {
+                font-size: 0px;
+                margin-bottom: 4px;
+                transition: font-size 0.4s linear;
+            }
+
+            /* status cafe */
+            #statuscafe {
+                display: block;
+                margin: auto;
+                width: 100%;
+                background-color: var(--contentbg);
+                font-size: var(--fontsize);
+            }
+            #statuscafe-username {
+                margin: 10px 0;
+                font-style: italic;
+            }
+            #statuscafe-username a {
+                text-decoration: none;
+                font-style: normal;
+            }
+            #statuscafe-content {
+                margin: 0 10px 10px 10px;
+            }
+            #statusbtn {
+                margin-left: 10px;
+            }
+
+            /* general */
+            article {
+                padding: 20px;
+            }
+
+            li {
+                list-style-type: '- ';
+                margin-left: -20px;
+            }
+
+            a {
+                color: #00aa88;
+                transition: 0.2s ease;
+            }
+
+            a:hover {
+                color: #00eeaa;
+            }
+
+            @media only screen and (max-width: 750px) {
+
+                body {
+                    flex-direction: column;
+                    overflow: scroll;
+                }
+
+                main {
+                    margin-top: 55px;
+                }
+
+                .window {
+                    position: relative;
+                    display: block;
+                }
+
+                #div1 {
+                    top: 0;
+                    left: 0;
+                    width: auto;
+                }
+
+                #div2 {
+                    top: 0;
+                    left: 0;
+                    width: auto;
+                }
+
+                #div3 {
+                    top: 0;
+                    left: 0;
+                    width: auto;
+                }
+
+                #div4 {
+                    top: 0;
+                    left: 0;
+                    width: auto;
+                }
+
+                #div5 {
+                    top: 0;
+                    left: 0;
+                    width: auto;
+                }
+
+                #div6 {
+                    top: 0;
+                    left: 0;
+                    width: auto;
+                }
+
+                #start {
+                    top: 0;
+                }
+
+            }
     
     </style>
     
-<head>
-    <title>About Leviathren</title>
-    
-    <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galmuri/dist/galmuri.css">
-    
     </head>
     
-<body>
-    
+    <body>
+
         <main>
-            
+
             <div id="div1" class="window">
             <div id="header1" class="windowheader"><img class="windowicon" src="decor/an-book.gif">Introduction</div>
                 <div class="toolbar"><span class="tools">file</span>
@@ -301,25 +311,25 @@
                 <div class="content">
                     <h2>About the Webweaver</h2>
                     <img class="icon" src="decor/me.png">
-                <p>I'm <text style="color:#00aa88">Leviathren</text>. You can shorten that however you like. </p>
-                    
+                <p>I'm <span style="color:#00aa88">Leviathren</span>. You can shorten that however you like. </p>
+
                     <h3>Where Do You Get Your Name?</h3>
                     <p>It's a portmanteau of my favorite mythical sea creature (the Leviathan, specifically the one from Atlantis The Lost Empire) and my name.</p>
-                    
+
                     <h3>How Long Have You Been Coding?</h3>
                     <p>I learned a few coding basics when I was in middle school during a class project where we had to make a game using simple commands.</p>
                     <p>I later learned more about html and css when I started college by messing with tumblr themes.</p>
-                    <p>Only after I graduated did I get into Neocities and the Web Revival, where my interest in coding grew exponentially and I started to get more serious about learning and pouring more time into creating static sites from scratch.</p>
+                    <p>Only after I graduated did I get into Neocities and the Web Revival, where my interest in coding grew and I started to get more serious about learning and pouring more time into creating static sites from scratch.</p>
                     <img src="badges/lgbtfriendly.png">
                     <img src="badges/prochoice.gif">
                     <img src="badges/punkinside.gif">
                     <img src="badges/nightcoder.gif">
                     <img src="badges/sinlust.gif">
                     <img src="badges/smoking.png">
-                    
+
                 </div>
             </div>
-            
+
             <div id="div2" class="window">
             <div id="header2" class="windowheader"><img class="windowicon" src="decor/an-book.gif">Quick Facts</div>
                 <div class="toolbar"><span class="tools">file</span>
@@ -329,35 +339,15 @@
                     <h3>More About Me</h3>
                     <ul>
                         <li>He/She</li>
-                        <li>22 years old</li>
+                        <li>24 years old</li>
                         <li>Chinese</li>
-                        <li>Queer</li>
+                        <li>Gay asf</li>
                         <li>Degree in Biology and minor in Digital Media</li>
-                        <li>Baby barista rn</li>
                 </ul>
                 </div>
             </div>
-            
-            <div id="div3" class="window">
-            <div id="header3" class="windowheader"><img class="windowicon" src="decor/an-book.gif">Currently</div>
-                <div class="toolbar"><span class="tools">file</span>
-                    <span class="tools">edit</span>
-                    <span class="tools">view</span></div>
-                <div class="content">
-                    <p>
-                        <b>Coding:</b> <text style="color:#00aa88">Music Page</text><br>
-                        <b>Reading:</b> <text style="color:#00aa88">Chain of Thorns</text><br>
-                        <b>Listening:</b> <text style="color:#00aa88">Bring Me The Horizon</text><br>
-                        <b>Watching:</b> <text style="color:#00aa88">N/A</text>
-                    </p>
-                    <hr>
-                    <p>
-                        <b>Timezone:</b> <text style="color:#00aa88">GMT-8</text>
-                    </p>
-                </div>
-            </div>
-            
-            
+
+
             <div id="div4" class="window">
             <div id="header4" class="windowheader"><img class="windowicon" src="decor/an-book.gif">Hobbies</div>
                 <div class="toolbar"><span class="tools">file</span>
@@ -372,15 +362,15 @@
                         <li>Reading</li>
                         <li>Skateboarding</li>
                         <li>Gaming</li>
-                        <li>Art<text style="color:#686868;">(sketching and painting)</text></li>
-                        <li>Crafts<text style="color:#686868;">(clothing and accessory alterations, trinkets, sculptures, jewelry, pins, keychains, etc)</text></li>
+                        <li>Art<span style="color:#686868;">(sketching and painting)</span></li>
+                        <li>Crafts<span style="color:#686868;">(clothing and accessory alterations, trinkets, sculptures, jewelry, pins, keychains, etc)</span></li>
                 </ul>
                 </div>
             </div>
-            
+
             <div id="div5" class="window">
             <div id="header5" class="windowheader">
-                <img class="windowicon" src="decor/heart.png">Status<button id="windowclose" onclick="closeDiv(5)"></button>
+                <img class="windowicon" src="decor/heart.png">Status
                 </div>
                 <div class="toolbar">
                     <span class="tools">file</span>
@@ -391,7 +381,7 @@
                     <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div><a href="https://status.cafe/users/leviathren"><img id="statusbtn" class="hov" src="https://status.cafe/users/leviathren/badge.png" alt="Status Cafe Profile"/></a></div><script src="https://status.cafe/current-status.js?name=leviathren" defer></script>
                 </div>
             </div>
-            
+
             <div id="div6" class="window">
             <div id="header6" class="windowheader"><img class="windowicon" src="decor/an-book.gif">Contact</div>
                 <div class="toolbar"><span class="tools">file</span>
@@ -399,87 +389,82 @@
                     <span class="tools">view</span></div>
                 <div class="content">
                     <a id="email" href="mailto:leviathrain@proton.me"><img class="badge" src="badges/contact.png"></a><div class="contact">leviathrain@proton.me</div>
-                    
-                    <a href="https://cohost.org/leviathren?page=0"><img class="badge" src="badges/cohost.png"></a>
-                    
                 </div>
             </div>
-            
-            <div id="start"><button onclick="window.location.href='https://leviathren.neocities.org/home';">home <b>&#10531;</b></button></div>
 
-        
+            <div id="start"><a href="https://leviathren.neocities.org/home">home <b>&#10531;</b></a></div>
+
         </main>
         
-    </body>
-
-    <!----- drag windows ----->
+        <!----- drag windows ----->
         <script>function makeDragable(dragHandle, dragTarget) {
-  // used to prevent dragged object jumping to mouse location
-  let xOffset = 0;
-  let yOffset = 0;
+          // used to prevent dragged object jumping to mouse location
+          let xOffset = 0;
+          let yOffset = 0;
 
-  let handle = document.querySelector(dragHandle);
-  handle.addEventListener("mousedown", startDrag, true);
-  handle.addEventListener("touchstart", startDrag, true);
+          let handle = document.querySelector(dragHandle);
+          handle.addEventListener("mousedown", startDrag, true);
+          handle.addEventListener("touchstart", startDrag, true);
 
-  /*sets offset parameters and starts listening for mouse-move*/
-  function startDrag(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    let dragObj = document.querySelector(dragTarget);
-    
-    // shadow element would take the original place of the dragged element, this is to make sure that every sibling will not reflow in the document
-    let shadow = dragObj.cloneNode();
-    shadow.id = ""
-    // You can change the style of the shadow here
-    shadow.style.opacity = 0.5
-    dragObj.parentNode.insertBefore(shadow, dragObj.nextSibling);
+          /*sets offset parameters and starts listening for mouse-move*/
+          function startDrag(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            let dragObj = document.querySelector(dragTarget);
 
-    let rect = dragObj.getBoundingClientRect();
-    dragObj.style.left = rect.left;
-    dragObj.style.top = rect.top;
-    dragObj.style.position = "absolute";
-    dragObj.style.zIndex = 999999;
+            // shadow element would take the original place of the dragged element, this is to make sure that every sibling will not reflow in the document
+            let shadow = dragObj.cloneNode();
+            shadow.id = ""
+            // You can change the style of the shadow here
+            shadow.style.opacity = 0.5
+            dragObj.parentNode.insertBefore(shadow, dragObj.nextSibling);
 
-    /*Drag object*/
-    function dragObject(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      if(e.type=="mousemove") {
-        dragObj.style.left = e.clientX-xOffset + "px"; // adjust location of dragged object so doesn't jump to mouse position
-        dragObj.style.top = e.clientY-yOffset + "px";
-      } else if(e.type=="touchmove") {
-        dragObj.style.left = e.targetTouches[0].clientX-xOffset +"px"; // adjust location of dragged object so doesn't jump to mouse position
-        dragObj.style.top = e.targetTouches[0].clientY-yOffset +"px";
-      }
-    }
-    /*End dragging*/
-    document.addEventListener("mouseup", function() {
-      // hide the shadow element, but still let it keep the room, you can delete the shadow element to let the siblings reflow if that is what you want
-      shadow.style.opacity = 0
-      shadow.style.zIndex = -999999
-      window.removeEventListener('mousemove', dragObject, true);
-      window.removeEventListener('touchmove', dragObject, true);
-    }, true)
+            let rect = dragObj.getBoundingClientRect();
+            dragObj.style.left = rect.left;
+            dragObj.style.top = rect.top;
+            dragObj.style.position = "absolute";
+            dragObj.style.zIndex = 999999;
 
-    if (e.type=="mousedown") {
-      xOffset = e.clientX - rect.left; //clientX and getBoundingClientRect() both use viewable area adjusted when scrolling aka 'viewport'
-      yOffset = e.clientY - rect.top;
-      window.addEventListener('mousemove', dragObject, true);
-    } else if(e.type=="touchstart") {
-      xOffset = e.targetTouches[0].clientX - rect.left;
-      yOffset = e.targetTouches[0].clientY - rect.top;
-      window.addEventListener('touchmove', dragObject, true);
-    }
-  }
-}
+            /*Drag object*/
+            function dragObject(e) {
+              e.preventDefault();
+              e.stopPropagation();
+              if(e.type=="mousemove") {
+                dragObj.style.left = e.clientX-xOffset + "px"; // adjust location of dragged object so doesn't jump to mouse position
+                dragObj.style.top = e.clientY-yOffset + "px";
+              } else if(e.type=="touchmove") {
+                dragObj.style.left = e.targetTouches[0].clientX-xOffset +"px"; // adjust location of dragged object so doesn't jump to mouse position
+                dragObj.style.top = e.targetTouches[0].clientY-yOffset +"px";
+              }
+            }
+            /*End dragging*/
+            document.addEventListener("mouseup", function() {
+              // hide the shadow element, but still let it keep the room, you can delete the shadow element to let the siblings reflow if that is what you want
+              shadow.style.opacity = 0
+              shadow.style.zIndex = -999999
+              window.removeEventListener('mousemove', dragObject, true);
+              window.removeEventListener('touchmove', dragObject, true);
+            }, true)
 
-makeDragable('#header1', '#div1')
-makeDragable('#header2', '#div2')
-makeDragable('#header3', '#div3')
-makeDragable('#header4', '#div4')
-makeDragable('#header5', '#div5')
-makeDragable('#header6', '#div6')
+            if (e.type=="mousedown") {
+              xOffset = e.clientX - rect.left; //clientX and getBoundingClientRect() both use viewable area adjusted when scrolling aka 'viewport'
+              yOffset = e.clientY - rect.top;
+              window.addEventListener('mousemove', dragObject, true);
+            } else if(e.type=="touchstart") {
+              xOffset = e.targetTouches[0].clientX - rect.left;
+              yOffset = e.targetTouches[0].clientY - rect.top;
+              window.addEventListener('touchmove', dragObject, true);
+            }
+          }
+        }
+
+        makeDragable('#header1', '#div1')
+        makeDragable('#header2', '#div2')
+        makeDragable('#header4', '#div4')
+        makeDragable('#header5', '#div5')
+        makeDragable('#header6', '#div6')
         </script>
+
+    </body>
 
 </html>
