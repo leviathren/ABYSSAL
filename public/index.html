@@ -1,238 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<style>
-    
-::-webkit-scrollbar {
-    background-color: black;
-    width: 5px;
-    height: 5px;
-}
+    <head>
 
-::-webkit-scrollbar-thumb {
-    background-color: #f8f8f8;
-}
-    
-::selection {
-    background: #202020;
-    color: white;
-}
-    
-    body {
-        background: black;
-        color: #bbbbbb;
-        margin: 0;
-        font-family: "lucida console", monospace, serif;
-    }
-    
-    .grid {
-        display: grid;
-        grid-template-columns: [leftline] 55% [mid] auto [rightline];
-        grid-template-areas: "side main";
-        
-        height: 100vh;
-    }
-    
-    /**************************************/
-    .side {
-        grid-area: side;
-        position: relative;
-        background: url(bg/blacktiles.jpg);
-        background-size: 400px;
-        padding: 40px 50px 0 40px;
-    }
-    
-    .q {
-        font-size: 2em;
-        font-family: whiteonblack;
-        word-spacing: 4px;
-    }
-    
-    .q text {
-        background-color: black;
-        line-height: 1.4;
-        padding: 4px;
-    }
-    
-    .auth {
-        text-align: right;
-        font-family: whiteonblack;
-        font-size: 2em;
-        margin-top: 20px;
-    }
-    
-    /**************************************/
-    main {
-        grid-area: main;
-        background: url(bg/binary.gif);
-        padding: 40px;
-    }
-    
-    main section {
-        text-align: center;
-        width: 300px;
-        margin: auto;
-    }
-    
-    .one {
-        margin: 40px auto;
-    }
-    
-    #enter {
-        position: absolute;
-        top: 44%;
-        left: 55%;
-        transform: translate(-50%, 0);
-        text-transform: uppercase;
-        text-decoration: none;
-        font-size: 2em;
-        transition: 1s ease;
-        color: white;
-    }
-    
-    #enter:hover {
-        transition: 0.4s ease;
-        letter-spacing: 4;
-        text-shadow: 2px 0 grey, 4px 0 #505050, 6px 0 #202020, -2px 0 grey, -4px 0 #505050, -6px 0 #202020;
-    }
-    
-    #back {
-        position: absolute;
-        top: 50%;;
-        left: 55%;
-        transform: translate(-50%, 0);
-        text-transform: uppercase;
-        text-decoration: none;
-        font-size: 2em;
-        color: white;
-        transition: 1s ease;
-    }
-    
-    #back:hover {
-        transition: 0.4s ease;
-        letter-spacing: 4;
-        text-shadow: 2px 0 grey, 4px 0 #505050, 6px 0 #202020, -2px 0 grey, -4px 0 #505050, -6px 0 #202020;
-    }
-    
-    .hotline {
-        background: #252525;
-        padding: 10px 6px;
-        margin: 20px auto;
-        border: 3px outset #202020;
-        width: 200px;
-        transition: 0.5s ease;
-    }
-    
-    .hotline:hover {
-        background: #f48eb5;
-        border: 3px outset #d37497;
-    }
-    
-    .hotline a{
-        color: white;
-        text-transform: uppercase;
-        text-decoration: none;
-        font-style: italic;
-    }
-    
-    .hotline a:hover {
-        color: #ffffff;
-        text-shadow: 1px 1px #f55693, 2px 2px #dd266c, 3px 3px #9b0941;
-    }
-    
-    p {
-        letter-spacing: 2;
-        line-height: 1.5;
-    }
-    
-    @media only screen and (max-width: 1000px){
-        
-        html {
-            overflow: scroll;
-            scrollbar-color: #00aa88 black;
-            scrollbar-width: thin;
-        }
-        
-        .grid {
-            display: block;
-        }
-        
-        .side {
-            display: none;
-        }
-        
-        main section {
-            max-width: 300px;
-            min-width: 180px;
-            width: auto;
-        }
-        
-        .one {
-        margin: 20px auto;
-    }
-        
-        #enter {
-            position: relative;
-            display: block;
-            transform: none;
-            top: 0;
-            left: 0;
-        }
-        
-        #back {
-            position: relative;
-            display: block;
-            transform: none;
-            top: 0;
-            left: 0;
-        }
-        
-    }
-    
-    </style>
+        <title>ABYSSAL</title>
 
-<head>
-    
-    <title>ABYSSAL</title>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="fonts.css">
-    <link rel="icon" type="image/png" href="decor/blacksparkle.gif">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" type="image/png" href="decor/blacksparkle.gif">
+        <link rel="stylesheet" href="fonts.css">
+        <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
+
+        <style>
+
+            /****** STUFF ******/
+
+            ::-webkit-scrollbar {
+                background-color: black;
+                width: 2px;
+                height: 2px;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background-color: #969696;
+            }
+
+            ::selection {
+                background: #969696;
+                color: black;
+            }   
+
+            /****** SPACE ******/
+
+            @keyframes rotate {
+              0%{
+                transform:perspective(800px) rotateZ(6deg) rotateX(-30deg) rotateY(0);
+              } 
+              100%{
+                transform:perspective(800px) rotateZ(6deg) rotateX(-30deg) rotateY(-360deg);
+              } 
+            }
+
+            .stars {
+              transform:perspective(900px);
+              transform-style:preserve-3d;
+              position:absolute;
+              bottom:0;
+              perspective-origin:50% 100%;
+              left:50%;
+              animation:rotate 90s infinite linear;
+              z-index: -1;
+            }
+
+            .star {
+              width:2px;
+              height:2px;
+              background:#bebebe;
+              position:absolute;
+              top:0;
+              left:0;
+              transform-origin:0 0 -300px;
+              transform:translate3d(0,0,-300px);
+              backface-visibility:hidden;
+            }
+
+            /****** WEBPAGE ******/
+
+            html {
+                height: 100vh;
+                scrollbar-color: #222222 black;
+                scrollbar-width: thin;
+            }
+
+            body {
+                display: flex;
+                height: 100vh;
+                background: url(bg/starsprinkle.png);
+                font-family: 'fira mono', monospace;
+                font-size: 0.8rem;
+                line-height: 1.2rem;
+                color: #969696;
+                margin: 0;
+                background-attachment: fixed;
+                overflow: hidden;
+                cursor: url(cursors/hollowknight/Normal.cur), auto;
+            }
+
+            /**************************************/
+            main {
+                width: 400px;
+                padding: 40px 20px;
+                margin: auto;
+            }
+
+            main section {
+                text-align: center;
+                margin: 40px auto;
+            }
+
+            #enter {
+                text-transform: uppercase;
+                text-decoration: none;
+                font-size: 1.5em;
+                transition: 1s ease;
+                color: #999999;
+            }
+
+            #enter:hover {
+                transition: 0.4s ease;
+                letter-spacing: 4;
+                text-shadow: 2px 0 grey, 4px 0 #505050, 6px 0 #202020, -2px 0 grey, -4px 0 #505050, -6px 0 #202020;
+                cursor: url(cursors/hollowknight/normalfill.cur), pointer;
+            }
+
+            #back {
+                text-transform: uppercase;
+                text-decoration: none;
+                font-size: 1.5em;
+                color: #999999;
+                transition: 1s ease;
+            }
+
+            #back:hover {
+                transition: 0.4s ease;
+                letter-spacing: 4;
+                text-shadow: 2px 0 grey, 4px 0 #505050, 6px 0 #202020, -2px 0 grey, -4px 0 #505050, -6px 0 #202020;
+                cursor: url(cursors/hollowknight/normalfill.cur), pointer;
+            }
+            
+            iframe {
+                filter: brightness(60%);
+            }
+
+            .hotline {
+                background: #252525;
+                padding: 10px 6px;
+                margin: 20px auto;
+                border: 3px outset #202020;
+                width: 200px;
+                transition: 0.5s ease;
+            }
+
+            .hotline:hover {
+                background: #f25390;
+                border: 3px outset #d37497;
+            }
+
+            .hotline a{
+                color: #c6c6c6;
+                text-transform: uppercase;
+                text-decoration: none;
+                font-style: italic;
+            }
+            
+            .hotline a:hover {
+                color: #ffffff;
+                text-shadow: 1px 1px #f55693, 2px 2px #dd266c, 3px 3px #9b0941;
+            }
+            
+            @media only screen and (max-width: 800px) {
+                
+                .star {
+                    display: none;
+                }
+                
+                .stars {
+                    display: none;
+                }
+                
+                body {
+                    overflow: auto;
+                }
+                
+                main {
+                    width: auto;
+                    padding: 20px 40px;
+                }
+            }
+
+        </style>
     
     </head>
     
-<body>
-    
-    <div class="grid">
+    <body>
         
-        <div class="side">
-            
-            <section>
-                <div class="q"><text>"...and in a single day and night of misfortune all your warlike men in a body sank into the earth, and the island of Atlantis in like manner disappeared in the depths of the sea."</text></div>
-                
-                <div class="auth">- Plato, 360 BC</div>
-            </section>
-        
-        </div>
-        
+        <div class="stars"></div>
+
         <main>
-            
-            <section class="one">
-                
+
+            <section>
+
                 <p>This site uses javascript and has only been tested on Firefox and Chrome.
-                    <br>
-                    <br>
-                    <img src="/decor/caution.gif"> <font color="yellow">Caution:</font> You may come across flashing/shaking images and serious topics, but each will be marked as so.
                     <br>
                     <br>
                     While this site is not NSFW, I am an adult and my content may reflect this.
                     <br>
                     <br>
-                    [mobile friendly - looks cooler on desktop though]
+                    <img src="/decor/caution.gif"> <span style="color: yellow;">Caution:</span> You may come across flashing/shaking images and serious topics.
                 </p>
-                
+
             </section>
 
             <section>
@@ -243,21 +210,46 @@
                 </p>
             </section>
 
-                <section class="rings">                    
-                    <iframe src="https://void.shroom.ink/widget/?slug=ren&hex=FFFFFF" height="250px" width="200px" scrolling="no" frameborder="0" alt="black and white image of mushroom, with words 'void dot shrooms webring' above three clickable buttons: left arrow, circle, and right arrow"></iframe>
-                
-                    
-                    <div class="hotline">
-                        <a href="https://hotlinewebring.club/levi/previous">&#129144;</a> <a href="https://hotlinewebring.club/">hotline webring</a> <a href="https://hotlinewebring.club/levi/next">&#129146;</a>
-                    </div>
-                </section>
+            <section>
+                <p>[mobile friendly but cooler on desktop]</p>
+            </section>
             
-    </main>
+            <section>                    
+                <iframe src="https://void.shroom.ink/widget/?slug=ren&hex=FFFFFF" height="250px" width="200px" scrolling="no" frameborder="0" alt="black and white image of mushroom, with words 'void dot shrooms webring' above three clickable buttons: left arrow, circle, and right arrow"></iframe>
+
+
+                <div class="hotline">
+                    <a href="https://hotlinewebring.club/levi/previous">&#129144;</a> <a href="https://hotlinewebring.club/">hotline webring</a> <a href="https://hotlinewebring.club/levi/next">&#129146;</a>
+                </div>
+            </section>
+            
+
+        </main>
     
+        <!----- ROTATING STARS by Lucas Bebber
+        https://codepen.io/lbebber/pen/xbZKvQ ----->
+        <script>
+            $(document).ready(function(){
+  var stars=800;
+  var $stars=$(".stars");
+  var r=800;
+  for(var i=0;i<stars;i++){
+    var $star=$("<div/>").addClass("star");
+    $stars.append($star);
+  }
+  $(".star").each(function(){
+    var cur=$(this);
+    var s=0.2+(Math.random()*1);
+    var curR=r+(Math.random()*300);
+    cur.css({ 
+      transformOrigin:"0 0 "+curR+"px",
+      transform:" translate3d(0,0,-"+curR+"px) rotateY("+(Math.random()*360)+"deg) rotateX("+(Math.random()*-50)+"deg) scale("+s+","+s+")"
+       
+    })
+  })
+})
+        </script>
         
-        
-    </div>
-    
     </body>
 
 </html>
