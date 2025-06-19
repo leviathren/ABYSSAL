@@ -139,10 +139,10 @@ body {
 
     position: relative;
     width: 960px;
-    height: 82%;
+    height: 866px;
     column-gap: 25px;
     row-gap: 20px;
-    padding: 0 10px;
+    padding: 0 180px;
     margin: 20px auto 0;
     overflow: scroll;
 }
