@@ -1,523 +1,602 @@
 :root {
-    --bg: #000000;
-    --bgpic: url(bg/blacktexture.jpg);
-    --mainbg: url(bg/blacktiles.jpg);
-    --mainbgsize: 200px;
-    --space: #1a1a1a;
-    --color: #bababa;
-    --link: #00bb88;
-    --border: #5a5a5a;
+    /** GENERAL **/
+    --bg: url(bg/starsprinkle.png);
+    --color: #969696;
+    --link: #969696;
+    --linkhov: #00aa88;
+    --accent: black;
+    --border: 1px solid #101010;
+    --shadow: 0 0 6px #101010;
     
-    --font: arial, verdana, helvetica;
-    --h1: arial, verdana, helvetica;
-    --h1size: 2.2rem;
-    --h2: arial, verdana, helvetica;
-    --h2size: 1.6rem;
-    --h3: arial, verdana, helvetica;
-    --h3size: 1.2rem;
-    --h3space: 0;
-    --afont: arial, verdana, helvetica;
-    --aspace: 0;
+    /** BUTTONS **/
+    --btnbg: #222222;
+    --btncl: #767676;
+    --btnbghov: #383838;
+    --btnclhov: #909090;
     
-    --accent: #080808;
-    --accent2: #545454;
-    --accent3: #141414;
-    
-    --ttcl: #080808;
-    --ttbg: #c6c6c6;
-    --ttbs: #0a0a0a;
-    --ttbd: #000000;
-    
-    --buttonbg: #2b2b2b;
-    --buttoncolor: white;
-    --buttonhov: #525252;
-    
-    --musicbg: url(bg/spacemtnbg.gif);
-    --backdrop: brightness(50%);
+    /** OTHER **/
+    --capbg: rgba(0, 0, 0, 0.6);
+    --imgfilter: brightness(60%) saturate(0);
 }
 
 .light {
-    --bg: #ffffff;
-    --bgpic: url(bg/blackgridpaper.jpg);
-    --mainbg: url(bg/lightgreygrid.jpg);
-    --mainbgsize: 600px;
-    --space: #c9c9c9;
-    --color: #484848;
-    --link: #00a274;
-    --border: #b2b2b2;
+    /** GENERAL **/
+    --bg: url(bg/starsprinkle.png);
+    --color: #c4c4c4;
+    --link: #c4c4c4;
+    --linkhov: #00eeaa;
+    --accent: #121212;
+    --border: 1px solid #242424;
+    --shadow: 0 0 10px #303030;
     
-    --font: arial, verdana, helvetica;
-    --h1: arial, verdana, helvetica;
-    --h1size: 2.2rem;
-    --h2: arial, verdana, helvetica;
-    --h2size: 1.6rem;
-    --h3: arial, verdana, helvetica;
-    --h3size: 1.2rem;
-    --h3space: 0;
-    --afont: arial, verdana, helvetica;
-    --aspace: 0;
+    /** BUTTONS **/
+    --btnbg: #343434;
+    --btncl: #989898;
+    --btnbghov: #4f4f4f;
+    --btnclhov: #a0a0a0;
     
-    --accent: #dbdbdb;
-    --accent2: #ececec;
-    --accent3: #dadada;
-    
-    --ttcl: #e8e8e8;
-    --ttbg: #424242;
-    --ttbs: #6c6c6c;
-    --ttbd: #ffffff;
-    
-    --buttonbg: #dadada;
-    --buttoncolor: #222222;
-    --buttonhov: #bebebe;
-    
-    --musicbg: url(bg/whitesatin.jpg);
-    --backdrop: brightness(102%);
+    /** OTHER **/
+    --capbg: rgba(48, 48, 48, 0.6);
+    --imgfilter: brightness(85%) saturate(0);
 }
 
-.red {
-    --bg: #550000;
-    --bgpic: url(bg/bloodsplatter.gif);
-    --mainbg: url(bg/skullsbg.jpg);
-    --mainbgsize: auto;
-    --space: #000000;
-    --color: #cccccc;
-    --link: #ff0000;
-    --border: #242424;
-    
-    --font: arial, verdana, helvetica;
-    --h1: arial, verdana, helvetica;
-    --h1size: 2.2rem;
-    --h2: arial, verdana, helvetica;
-    --h2size: 1.6rem;
-    --h3: arial, verdana, helvetica;
-    --h3size: 1.2rem;
-    --h3space: 0;
-    --afont: arial, verdana, helvetica;
-    --aspace: 0;
-    
-    --accent: #1a0000;
-    --accent2: #404040;
-    --accent3: #100000;
-    
-    --ttcl: #cccccc;
-    --ttbg: #420000;
-    --ttbs: #000000;
-    --ttbd: #420000;
-    
-    --buttonbg: #212121;
-    --buttoncolor: #eaeaea;
-    --buttonhov: #404040;
-    
-    --musicbg: url(bg/gatebg.png);
-    --backdrop: brightness(80%);
-}
-
-.font {
-    --font: 'Times New Roman', courier;
-    --h1: angel;
-    --h1size: 3.2rem;
-    --h2: october;
-    --h2size: 2rem;
-    --h3: haunting;
-    --h3size: 1.5rem;
-    --h3space: 0.2rem;
-    --afont: october;
-    --aspace: 0.1rem;
-}
+/****** STUFF ******/
 
 ::-webkit-scrollbar {
-    background-color: var(--bg);
-    width: 5px;
-    height: 5px;
+    background-color: black;
+    width: 2px;
+    height: 2px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--color);
+    background-color: var(--btnbg);
 }
 
 ::selection {
     background: var(--color);
-    color: var(--space);
+    color: black;
 }
 
-#s-m-t-tooltip{
-	/* basic */
-	max-width: 250px;
-	z-index: 999999 !important;
-	margin: 24px 14px 7px 12px;
-	/* style and design */
-    padding: 4px 8px;
-    font-family: var(--font);
-    color: var(--ttcl);
-    background: var(--ttbg);
-    box-shadow: inset 0 0 6px 4px var(--ttbs);
-    border: 1px solid var(--ttbd);
+#s-m-t-tooltip {
+  /* basic */
+  max-width: 300px;
+  z-index: 10;
+  margin: 16px 14px 7px 10px;
+  /* style and design */
+  padding: 4px;
+  background: #161616;
+  /* font */
+  font-family: Verdana, Tahoma, sans-serif;
+  font-size: 11px;
+  line-height: 16px;
+  color: #dddddd;
 }
+
+/****** SPACE ******/
+
+@keyframes rotate {
+  0%{
+    transform:perspective(800px) rotateZ(6deg) rotateX(-30deg) rotateY(0);
+  } 
+  100%{
+    transform:perspective(800px) rotateZ(6deg) rotateX(-30deg) rotateY(-360deg);
+  } 
+}
+
+.stars {
+  transform:perspective(900px);
+  transform-style:preserve-3d;
+  position:absolute;
+  bottom:0;
+  perspective-origin:50% 100%;
+  left:50%;
+  animation:rotate 90s infinite linear;
+  z-index: -1;
+}
+
+.star {
+  width:2px;
+  height:2px;
+  background:#bebebe;
+  position:absolute;
+  top:0;
+  left:0;
+  transform-origin:0 0 -300px;
+  transform:translate3d(0,0,-300px);
+  backface-visibility:hidden;
+}
+
+/****** WEBPAGE ******/
 
 html {
-    background: var(--bg);
+    height: 100vh;
+    scrollbar-color: var(--btnbg) var(--accent);
     scrollbar-width: thin;
-    scrollbar-color: var(--color) var(--bg);
 }
 
 body {
-    background: var(--bgpic);
-    background-attachment: fixed;
-    font-family: var(--font);
+    height: 100vh;
+    background: var(--bg);
+    font-family: 'fira mono', monospace;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
     color: var(--color);
     margin: 0;
+    background-attachment: fixed;
+    overflow: hidden;
+    cursor: url(cursors/hollowknight/Normal.cur), auto;
 }
 
-/**********************************/
+/****** CONTAINERS ******/
 
-.container {
+.orbit {
     display: grid;
-    grid-template-rows: [l1] 40px [l2] 75vh [l3] 40px [l4] 30vh [l5] 40px [l6];
-    grid-template-columns: [t1] 3fr [t2] 6fr [t3] 2fr [t4];
+    grid-template-columns: [c1] 1.8fr [c2] 4fr [c3] 1.2fr [c4];
+    grid-template-rows: [r1] 115px [r2] auto [r3];
     grid-template-areas: 
-        "news news news"
-        "lb main nav"
-        "ast ast ast"
-        "out out out"
-        "cred cred cred";
-    
-    max-width: 1100px;
-    border: 1px solid var(--border);
-    margin: auto;
+        "fore fore fore"
+        "port hull starboard";
+
+    position: relative;
+    width: 960px;
+    height: 82%;
+    column-gap: 25px;
+    row-gap: 20px;
+    padding: 0 10px;
+    margin: 20px auto 0;
+    overflow: scroll;
 }
 
-.newsroll {
-    grid-area: news;
-    display: flex;
-    align-items: center;
-    background: #000000;
-    border-bottom: 1px solid var(--border);
+.shuttle {
+    grid-area: fore;
+    position: relative;
 }
 
-.leftbar {
-    grid-area: lb;
-    background: var(--space);
-    padding: 20px;
-    border-right: 1px solid var(--border);
+.leftfield {
+    grid-area: port;
 }
 
-main {
-    grid-area: main;
-    background: var(--mainbg);
-    background-size: var(--mainbgsize);
-    padding: 20px;
-    overflow-y: scroll;
+.central {
+    grid-area: hull;
+    padding: 0 10px 200px;
+    scrollbar-color: var(--btnbg) var(--accent);
     scrollbar-width: thin;
-    scrollbar-color: var(--color) var(--bg);
-}
-   
-.rightbar {
-    grid-area: nav;
-    background: var(--space);
-    padding: 20px;
+    overflow-x: visible;
     overflow-y: scroll;
-    overflow-x: hidden;
-    border-left: 1px solid var(--border);
-    scrollbar-width: thin;
-    scrollbar-color: var(--color) var(--bg);
 }
 
-.asteroidbelt {
-    grid-area: ast;
-    display: flex;
-    align-items: center;
-    background: var(--accent3);
-    border-top: 1px solid var(--border);
+.rightfield {
+    grid-area: starboard;
 }
 
-.outerspace {
-    grid-area: out;
-    background: var(--space);
-    display: flex;
-    justify-content: space-evenly;
-    border-top: 1px solid var(--border);
-}
+/****** TAGS ******/
 
-.cred {
-    grid-area: cred;
-    background: var(--space);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top: 1px solid var(--border);
-}
-
-/**********************************/
-
-h1 {
-    font-family: var(--h1);
-    font-size: var(--h1size);
-}
-
-h2 {
-    font-family: var(--h2);
-    font-size: var(--h2size);
-}
-
-h3 {
-    font-family: var(--h3);
-    font-size: var(--h3size);
-    letter-spacing: var(--h3space);
-}
-
-hr {
-    border: 2px groove var(--accent2);
-}
-
-a {
-    font-family: var(--afont);
-    color: var(--link);
-    letter-spacing: var(--aspace);
-}
-
-a:hover {
-    background: var(--link);
-    color: var(--space);
-}
-
-main p {
-    backdrop-filter: var(--backdrop);
-    line-height: 1.4rem;
+nav {
+    position: relative;
 }
 
 button {
-    background: var(--buttonbg);
-    color: var(--color);
-    border: 2px outset var(--border);
-    cursor: pointer;
+    background: var(--btnbg);
+    font-family: monospace;
+    color: var(--btncl);
+    padding: 2px 6px;
+    border: none;
+    margin: 4px 0;
+    cursor: url(cursors/hollowknight/normalfill.cur), pointer;
 }
 
 button:hover {
-    background: var(--buttonhov);
-    color: var(--buttoncolor);
+    background: var(--btnbghov);
+    color: var(--btnclhov);
 }
 
-button:active {
-    border: 2px inset var(--border);
+h1 {
+    position: absolute;
+    bottom: 0;
+    font-size: 1rem;
 }
 
-textarea {
-    background: var(--bg);
-    color: var(--color);
+h2 {
+    font-size: 1rem;
 }
 
-em {
-    color: grey;
+h3 {
+    margin: 4px 0;
 }
 
-/**********************************/
+hr {
+    border: var(--border);
+}
 
-.hov:hover {
-    transform: scale(1.06);
+a {
+    color: var(--link);
+    cursor: url(cursors/hollowknight/normalfill.cur), pointer;
+}
+
+a:hover {
+    color: var(--linkhov);
+}
+
+li {
+    list-style-type: '✦ ';
+}
+
+/****** SPECS ******/
+
+.rocket {
+    display: flex;
+    column-gap: 20px;
+}
+
+.capsule {
+    background: var(--capbg);
+    padding: 8px 12px;
+    border: var(--border);
+    box-shadow: var(--shadow);
+    margin-bottom: 25px;
+}
+
+.currently {
+    font-weight: 800;
+    font-style: oblique;
+    margin: 0 8px 0 0;
+}
+
+.tabcontent {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 115%;
+    width: 135px;
+    padding: 0 10px 0 0;
+}
+
+.close {
+    display: flex;
+    justify-content: space-between;
+    font-style: oblique;
+    font-weight: 800;
+    padding: 12px 0 0 12px;
+}
+
+.close img:hover {
+    cursor: url(cursors/hollowknight/normalfill.cur), pointer;
+}
+
+.asteroid {
+    filter: var(--imgfilter);
     transition: 0.2s ease;
 }
 
-#statuscafe {
-    display: flex;
-    align-items: center;
-    font-family: vhs;
-    line-height: 1;
-    color: #f0f0f0;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    text-shadow: 0 0 2px white;
+.asteroid:hover {
+    filter: none;
+}
+
+/****** COMETS ******/
+
+#theme {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 0 auto 25px;
+}
+
+#statuscafe-username {
+    font-style: oblique;
+    font-size: 0.6rem;
 }
 
 #statuscafe-username a {
-    font-family: vhs;
+    font-style: normal;
+    font-size: 0.8rem;
+}
+
+#album-cover {
+    display: block;
+    width: 85%;
+    margin: 10px auto;
+}
+
+.fm {
     text-decoration: none;
+    margin: 2px 4px 2px 0;
 }
 
-#statuscafe-content {
-    margin: 0 10px;
+.fmicon {
+    display: inline-block;
+    text-align: center;
+    font-size: 0.9rem;
+    width: 12px;
+    margin-right: 5px;
 }
 
-.theme-switcher {
-    display: flex;
-    justify-content: center;
+#date, #date a {
+    color: var(--color);
+    font-size: 0.6rem;
+    font-style: oblique;
+    margin: 4px 0;
 }
 
-#lastupdate {
-    color: var(--accent2);
+#controls {
+    text-align: right;
+    margin: 6px 0;
 }
 
-.communities a, .communities img:hover {
-    background: none;
-    transform: rotate(15deg);
-}
-
-marquee img {
-    max-height: 31px;
-}
-
-.outerspace section {
-    margin: 10px;
+#badges {
+    text-align: center;
+    margin-bottom: 25px;
 }
 
 #cbox {
-    min-height: 200px;
-    width: auto;
-    border: 1px solid var(--border);
-    border-radius: 5px;
-}
-
-/* music player start */
-
-#musicplayer{
-    align-content: flex-end;
-    height: 200px;
     width: 260px;
-    background: var(--musicbg);
-    background-position: center;
-    border: 1px solid var(--border);
-    border-radius: 5px;
-    margin: 10px;
+    height: 252px;
+    border: var(--border);
+    box-shadow: var(--shadow);
+    margin: 0 20px 25px 0;
+    scrollbar-color: var(--color) var(--accent);
+    scrollbar-width: thin;
+}
+
+#saturn {
+    display: block;
+    height: 130px;
+    margin: 0 0 10px 40px;
+}
+
+#depths {
+    grid-area: hull;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    box-shadow: inset 0 -160px 100px -40px black;
+}
+
+
+
+/****** MUSIC PLAYER ******/
+#musicplayer {
+    height: 100%;
+    width: 180px;
+    align-content: flex-end;
+}
+
+.songtitle {
+    font-size: 0.8rem;
+}
+
+.controls {
+    font-size: 14px !important;
+    background: var(--capbg);
+    text-align: center;
+    width: 100%;
+}
+
+.seeking {
+    background: var(--capbg);
+    display: flex;
+    justify-content: space-evenly;
+    padding: 6px 0;
+    cursor: url(cursors/hollowknight/normalfill.cur), pointer;
 }
  
-    .songtitle{
-        font-size: 18px;
-        padding: 4px;/* padding around song title */
-        /* border under song title */
-        display: block;
-    }
- 
-    .controls{
-        font-size: 14px !important; /* size of controls */
-        background: var(--accent); /* background color of controls */
-        text-align: center;
-        width: 100%;
-    }
- 
-    .controls td{
-        padding: 8px 2px 2px 2px; /* padding around controls */
-    }
- 
-    .seeking{
-        background: var(--accent); /* background color of seeking bar */
-        display: flex;
-        justify-content: space-evenly;
-        padding: 6px 8px 10px 8px; /* padding around seeking bar */
-    }
- 
-    .current-time{
-        padding-right: 8px;
-        font-size: 14px;
-    }
- 
-    .total-duration{
-        padding-left: 8px;
-        font-size: 14px;
-    }
- 
-    i.fa.fa-pause, i.fa.fa-play, i.fa.fa-forward, i.fa.fa-backward{
-        color: var(--color); /* color of controls */
-    }
+.current-time {
+    padding: 2px 4px 0 0;
+    font-size: 0.8rem;
+}
 
-    i.fa:hover{
-        cursor: pointer;
-        color: var(--link);
-    }
-    
-    input[type=range] {
-        -webkit-appearance: none;
-        width: 100%;
-        background-color: transparent; /* background color of seeking bar - make the color same as .seeking background color */
-        cursor: pointer;
-    }
-    
-    input[type=range]:focus {
-        outline: none;
-    }
-    
-    /* settings for chrome browsers */
-    input[type=range]::-webkit-slider-runnable-track {
-        width: 100%;
-        height: 1px; /* thickness of seeking track */
-        cursor: pointer;
-        background: var(--color); /* color of seeking track */
-    }
-    
-    input[type=range]::-webkit-slider-thumb {
-        height: 6px; /* height of seeking square */
-        width: 6px; /* width of seeking square */
-        border-radius: 0px; /* change to 5px if you want a circle seeker */
-        background: var(--link); /* color of seeker square */
-        cursor: pointer;
-        -webkit-appearance: none;
-        margin-top: -2.5px; 
-    }
+.total-duration {
+    padding: 2px 0 0 4px;
+    font-size: 0.8rem;
+}
 
-    input[type=range]::-webkit-slider-thumb:hover {
-        background: var(--link);
-    }
+.playbtn {
+    font-size: 1rem;
+    color: var(--color); 
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    background-color: var(--capbg); /* background color of seeking bar - make the color same as .seeking background color */
+    cursor: url(cursors/hollowknight/normalfill.cur), pointer;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+/* settings for chrome browsers */
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 1px; /* thickness of seeking track */
+    cursor: url(cursors/hollowknight/normalfill.cur), pointer;
+    background: var(--color); /* color of seeking track */
+}
+
+input[type=range]::-webkit-slider-thumb {
+    height: 6px; /* height of seeking square */
+    width: 6px; /* width of seeking square */
+    border-radius: 1px; /* change to 5px if you want a circle seeker */
+    background: var(--link); /* color of seeker square */
+    cursor: url(cursors/hollowknight/normalfill.cur), pointer;
+    -webkit-appearance: none;
+    margin-top: -2.5px; 
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+    background: var(--link);
+}
+
+/* settings for firefox browsers */
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 1px; /* thickness of seeking track */
+    cursor: url(cursors/hollowknight/normalfill.cur), pointer;
+    background: var(--color); /* color of seeking track */
+}
+
+input[type=range]::-moz-range-thumb {
+    height: 6px; /* height of seeking square */
+    width: 6px; /* width of seeking square */
+    border-radius: 1px; /* change to 5px if you want a circle seeker */
+    background: var(--link); /* color of seeker square */
+    cursor: url(cursors/hollowknight/normalfill.cur), pointer;
+    border:none;
+}
+
+input[type=range]::-moz-slider-thumb:hover {
+    background: var(--link);
+}
+
+/****** RESPONSIVENESS ******/
+
+@media only screen and (max-width: 920px) {
     
-    /* settings for firefox browsers */
-    input[type=range]::-moz-range-track {
-        width: 100%;
-        height: 1px; /* thickness of seeking track */
-        cursor: pointer;
-        background: var(--color); /* color of seeking track */
-    }
-    
-    input[type=range]::-moz-range-thumb {
-        height: 6px; /* height of seeking square */
-        width: 6px; /* width of seeking square */
-        border-radius: 0px; /* change to 5px if you want a circle seeker */
-        background: var(--link); /* color of seeker square */
-        cursor: pointer;
-        border:none;
-    }
-
-    input[type=range]::-moz-slider-thumb:hover {
-        background: var(--link);
-    }
-        /* music player end */
-
-/**********************************/
-
-@media (prefers-reduced-motion: reduce) {
-    marquee {
+    .stars {
         display: none;
     }
-}
-
-@media only screen and (max-width: 800px) {
     
-    .container {
-        display: block;
+    .star {
+        display: none;
     }
     
-    h1 {
-        font-size: 1.5em;
-    }
+    /**********************/
     
-    main {
-        overflow: hidden;
-    }
-    
-    .rightbar {
-        overflow: hidden;
-    }
-    
-    .outerspace {
-        display: block;
-        text-align: center;
-    }
-    
-    button {
-        font-size: 18px;
-    }
-    
-    #musicplayer {
+    .orbit {
+        width: auto;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        column-gap: 0;
+        row-gap: 0;
+        padding: 0;
         margin: auto;
     }
     
-    .cred {
-        text-align: center;
+    .shuttle {
+        order: 1;
+    }
+
+    .leftfield {
+        order: 4;
+    }
+
+    .central {
+        order: 3;
+        padding: 0;
+        overflow: visible;
+    }
+
+    .rightfield {
+        order: 2;
+    }
+    
+    nav.capsule {
+        position: static;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0;
+    }
+    
+    nav h3 {
+        display: none;
+    }
+    
+    li {
+        margin-left: -10px;
+    }
+    
+    .tablinks {
+        display: none;
+    }
+    
+    .tabcontent {
+        position: static;
+    }
+    
+    #Me, #You, #Site, #Seasonal {
+        position: static;
+        display: inline-block;
+        padding: 0 10px;
+        border: none;
+        box-shadow: none;
+        margin: 0;
+    }
+
+    .close {
+        display: block;
+    }
+    
+    .close img {
+        display: none;
+    }
+    
+    #time, #lastfm {
+        display: none;
+    }
+    
+    #icon {
+        display: none;
+    }
+    
+    #album-cover {
+        display: none;
+    }
+    
+    #badges {
+        float: right;
+        display: flex;
+        flex-direction: column;
+        margin: 50px 0 0 0;
+    }
+    
+    #cbox {
+        width: 80%;
+        margin: 0;
+    }
+    
+    #depths {
+        display: none;
+    }
+    
+    #musicplayer {
+        width: auto;
+        align-content: flex-end;
+    }
+    
+    #saturn {
+        float: right;
+        margin: 0 20px;
+    }
+    
+    /**********************/
+    
+    .rocket, .rocket .capsule {
+        width: 100%;
+        column-gap: 0;
+    }
+
+    .capsule {
+        padding: 8px 25px;
+        margin: 0;
+    }
+    
+}
+
+@media only screen and (max-width: 450px) {
+    
+    #Me, #You, #Site, #Seasonal {
+        padding: 0;
+    }
+    
+    li {
+        list-style-type: none;
+        margin-left: -20px;
+    }
+    
+    .rocket, .rocket .capsule {
+        display: block;
+        width: auto;
     }
 }
