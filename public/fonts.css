@@ -24,6 +24,26 @@
     }
 
 @font-face {
+        font-family: veramono;
+        src: url("/fonts/VeraMono.ttf");
+}
+
+@font-face {
+        font-family: veramonobold;
+        src: url("/fonts/VeraMono-Bold.ttf");
+}
+
+@font-face {
+        font-family: veramonobolditalic;
+        src: url("/fonts/VeraMono-Bold-Italic.ttf");
+}
+
+@font-face {
+        font-family: veramonoitalic;
+        src: url("/fonts/VeraMono-Italic.ttf");
+}
+
+@font-face {
         font-family: comicsans;
         src: url("fonts/comicsans.ttf");
     }
