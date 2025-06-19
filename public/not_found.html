@@ -1,71 +1,6 @@
 ErrorDocument 404 /not_found.html
 <html lang="en">
     
-    <style>
-        
-        html {
-            background: black;
-        }
-        
-        body {
-            display: flex;
-            height: 100vh;
-            margin: 0;
-        }
-        
-        main {
-            margin: auto;
-            text-align: center;
-        }
-        
-        h1 {
-            font-family: punkevent;
-            font-size: 140px;
-            color: grey;
-            margin: 0;
-            animation: 4s linear infinite flash;
-        }
-        
-        p {
-            font-family: haunting;
-            font-size: 24px;
-            color: #555555;
-        }
-        
-        a {
-            font-family: haunting;
-            font-size: 24px;
-            color: #555555;
-            text-decoration: dotted underline;
-        }
-        
-        a:hover {
-            color: grey;
-        }
-        
-@-webkit-keyframes flash{
-    0%  { opacity:1;}
-    18% {opacity: 1;}
-    20% { opacity:0;}
-    22% {opacity: 1;}
-    24% {opacity: 0;}
-    26% {opacity: 1;}
-    56% {color: grey;}
-    58% {color: #404040;}
-    64% {color: #404040;}
-    66% {color: grey;}
-    68% {opacity: 1;}
-    70% {opacity: 0;}
-    72% {opacity: 1;}
-    76% {color: grey;}
-    78% {color: #404040;}
-    84% {color: #404040;}
-    86% {color: grey;}
-  100% { opacity:1;}
-}
-    
-    </style>
-    
     <head>
     
         <meta charset="UTF-8">
@@ -75,14 +10,77 @@ ErrorDocument 404 /not_found.html
         <link rel="icon" type="image/png" href="/decor/spiral.webp">
         <title>Turn Back...</title>
         
+        <style>
+        
+        html {
+            background: black;
+        }
+        
+        body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            color: #cccccc;
+            text-shadow: 0 0 25px #c4c4c4;
+        }
+        
+        main {
+            text-align: center;
+            padding: 100px;
+        }
+        
+        h1 {
+            font-family: glitch;
+            font-size: 6rem;
+            animation: 4s linear infinite flash;
+        }
+        
+        p {
+            font-family: haunting;
+            font-size: 24px;
+        }
+        
+        a {
+            font-family: haunting;
+            font-size: 24px;
+            color: #cccccc;
+            text-decoration: dotted underline;
+        }
+        
+        a:hover {
+            color: #e6e6e6;
+        }
+        
+@-webkit-keyframes flash{
+    0%  { opacity:1;}
+    18% {opacity: 1;}
+    20% { opacity:0;}
+    22% {opacity: 1;}
+    24% {opacity: 0;}
+    26% {opacity: 1;}
+    56% {color: #999999;}
+    58% {color: #323232;}
+    64% {color: #323232;}
+    66% {color: #999999;}
+    68% {opacity: 1;}
+    70% {opacity: 0;}
+    72% {opacity: 1;}
+    76% {color: #999999;}
+    78% {color: #323232;}
+    84% {color: #323232;}
+    86% {color: #999999;}
+  100% { opacity:1;}
+}
+    
+    </style>
     </head>
     
     <body>
         <main>
             
-            <p>You're not supposed to be here. There is nothing here.</p>
+            <p>You're not supposed to be here.</p>
         
-        <h1>404</h1>
+            <h1>404</h1>
             
             <p><a href="home.html">Turn back</a></p>
         
