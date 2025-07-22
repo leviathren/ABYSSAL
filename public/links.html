@@ -1,10 +1,20 @@
-<html>
+<html lang="en">
 
-<style>
+<head>
+    
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galmuri/dist/galmuri.css">
+    
+    <title>Surf The Web</title>
+
+    <style>
     
     :root{
         --bg: #101010;
-        --color: #dddddd;
+        --color: #bbbbbb;
         --link: #00aa88;
         --linkhov: #00eeaa;
         --span: #959595;
@@ -13,8 +23,8 @@
     
     .light{
         --bg: #a5a5a5;
-        --color: #000000;
-        --link: #006551;
+        --color: #303030;
+        --link: #00624f;
         --linkhov: #00533c;
         --span: #343434;
         --border: #343434;
@@ -22,12 +32,12 @@
     
 ::-webkit-scrollbar {
     background-color: var(--bg);
-    width: 5px;
-    height: 5px;
+    width: 4px;
+    height: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--link);
+    background-color: var(--span);
 }
     
     ::selection {
@@ -38,15 +48,15 @@
     @import url('https://cdn.jsdelivr.net/npm/galmuri/dist/galmuri.css');
     
     html {
-        scrollbar-color: var(--link) transparent;
+        scrollbar-color: var(--span) transparent;
         scrollbar-width: thin;
     }
     
     body {
         background-image: url(bg/blackgridpaper.jpg);
         background-attachment: fixed;
-        font-family: punkkid, serif;
-        font-size: 1.1em;
+        font-family: sans-serif;
+        font-size: 1rem;
         color: var(--color);
         overflow: hidden;
     }
@@ -62,7 +72,7 @@
         grid-template-areas:
             "sidebar main"
             ". main";
-        column-gap: 20px;
+        column-gap: 40px;
     }
     
     nav {
@@ -71,22 +81,22 @@
         padding: 20px 10px;
         background: var(--bg);
         border: 4px double var(--border);
+        box-shadow: 0 0 16px 2px black;
     }
     
     nav a {
-        letter-spacing: 2;
         margin: 4px;
     }
     
     button {
         background: var(--bg);
-        font-family: punkkid, serif;
-        font-size: 1.1em;
+        font-family: sans-serif;
+        font-size: 1rem;
         color: var(--color);
         margin: 6px;
         padding: 4px 8px;
         border: 1px solid var(--color);
-        transition: 0.4s ease;
+        transition: 0.2s ease;
     }
     
     button:hover {
@@ -97,47 +107,32 @@
     
     main {
         grid-area: main;
-        padding-right: 12px;
+        padding: 0 10px 20px 15px;
         overflow-y: scroll;
     }
     
     section {
         background: var(--bg);
         border: 4px double var(--border);
-        padding: 40px;
+        padding: 30px;
         margin-bottom: 40px;
-    }
-    
-    .flex {
-        display: flex;
-        justify-content: center;
-    }
-    
-    .access {
-        font-family: tahoma, verdana;
+        box-shadow: 0 0 16px 2px black;
     }
     
     h1 {
-        font-size: 1.8em;
-        letter-spacing: 2;
+        font-size: 1.6em;
     }
     
     h2 {
         font-size: 1.4em;
-        letter-spacing: 2;
     }
     
     h3 {
-        font-size: 1.2em;
-        letter-spacing: 2;
+        font-size: 1.1rem;
     }
     
     h3::before {
         content: '\2937  ';
-    }
-    
-    p {
-        line-height: 1.6em;
     }
     
     span {
@@ -147,12 +142,12 @@
     }
     
     li {
-        letter-spacing: 2;
-        margin-bottom: 10px;
+        margin-bottom: 12px;
     }
     
     a {
         color: var(--link);
+        transition: 0.2s ease;
     }
     
     a:hover {
@@ -195,15 +190,7 @@
     
     </style>
 
-<head>
-    
-    <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="fonts.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galmuri/dist/galmuri.css">
-    
-    <title>Surf The Web</title></head>
+</head>
 
 <body id="body" class="dark">
     
@@ -211,21 +198,17 @@
         
         <nav>
             
-            <div class="flex">
-            <button onclick="switchTheme('dark')" class="theme">dark</button>
+            <div style="display: flex; justify-content: center; margin-bottom: 10px;">
+            <button onclick="switchTheme('dark')" class="theme">Dark</button>
             
-            <button onclick="switchTheme('light')" class="theme">light</button>
-            </div>
-            
-            <div class="flex">
-            <button onclick="toggleFont()" class="smt-current-element" title="Need something easier to read?">FONT TOGGLE</button>
+            <button onclick="switchTheme('light')" class="theme">Light</button>
             </div>
             
             <a href="home.html">Home</a>
             <a href="#top">Back To Top</a>
             <a href="#code">Coding Resources</a>
             <a href="#tools">Stuff for Sites</a>
-	    <a href="#creative">Creative Stuff</a>
+            <a href="#creative">Creative Stuff</a>
             <a href="#access">Accessability</a>
             <a href="#web">Web Culture</a>
             <a href="#read">Reading</a>
@@ -255,11 +238,23 @@
                     <li><a href="https://keithclark.co.uk/articles/pure-css-parallax-websites/" target="_blank">Parallax Effect</a> by Keith Clark<span> Make different elements scroll at different speeds</span></li>
                     <li><a href="https://youtu.be/7JAmKyIzUmI?si=sZml6L0cdOock0k0" target="_blank">How to Upload to Neocities Video</a></li>
                 </ul>
+                
+                <h3>Javascript</h3>
+                <ul>
+                    <li><a href="https://github.com/Proxybat/little-code-snippets/tree/main/font-size%20and%20line-height%20modifier%20script" target="_blank">Font-size and line-height changer</a> by <a href="queenofarms.neocities.org" target="_blank">QueenofArms</a></li>
+                    <li><a href="https://github.com/jasm1nii/jasmines-journal/blob/main/public_html/_assets/scripts/lightbox.js" target="_blank">Lightbox Script</a> by Jasmine</li>
+                    <li><a href="https://stackoverflow.com/questions/9334084/moveable-draggable-div" target="_blank">Draggable Div</a> by Ospider on stackoverflow<span> Used: about page</span></li>
+                    <li><a href="https://www.w3schools.com/howto/howto_js_draggable.asp" target="_blank">Draggable HTML Content</a> tutorial on w3schools</li>
+                    <li><a href="https://github.com/sayantanm19/js-music-player/tree/master">Music Player</a> by sayantanm19</li>
+                    <li><a href="https://netfriend.neocities.org/visitor-count/" target="_blank">Visitor Count</a> by netfriend</li>
+                    <li><a href="https://goblin-heart.net/sadgrl/learn/articles/last-update-visitors" target="_blank">Last Updated</a> by goblin-heart and DANNARCHY</li>
+                    <li><a href="https://squidknees.neocities.org/downloads">Theme Switcher</a> by Squidknees</li>
+                </ul>
+                
                 <h3>Fun Code and Scripts</h3>
                 <ul>
                     <li><a href="https://webneko.net/" target="_blank">Webneko</a><span> A little cat that chases your cursor around</span></li>
                     <li><a href="http://www.mf2fm.com/rv/dhtmlblockrain.php">Block Rain</a> by rv</li>
-                    <li><a href="https://pastebin.com/PiDgrv3J">Music Player</a> by adilene (<a href="https://github.com/sayantanm19/js-music-player/blob/master/index.html">source code</a> by sayantanm19)</li>
                     <li><a href="https://dimden.dev/moonwidget/" target="_blank">Moon Widget</a> by Dimden</li>
                     <li><a href="https://www.cutercounter.com">Free Hit Counter</a> by Cutercounter</li>
                 </ul>
