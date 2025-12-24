@@ -128,6 +128,7 @@ section {
 }
 
 .guitar {
+	image-rendering: pixelated;
     margin: 10px;
 }
 
@@ -216,3 +217,4 @@ a:hover {
         display: none;
     }
 }
+
