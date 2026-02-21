@@ -201,21 +201,28 @@ article:last-of-type {
     margin-bottom: -4px;
 }
 
-.artist {
+h1 {
+    margin: 0;
+}
+
+h3 {
+    margin: 0;
+}
+
+.artists {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
-.artist section {
-    width: 240px;
+.artist {
+    width: 250px;
     background: var(--accent);
-    padding: 0 20px;
+    padding: 0 10px;
     border: 1px solid var(--accent3);
     border-radius: 8px;
-    margin: 10px;
+    margin: 10px 0;
 }
-
  li {
     list-style-type: square;
      margin: 10px auto;
@@ -435,3 +442,4 @@ a:hover {
     }
 
 }
+
