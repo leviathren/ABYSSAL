@@ -139,7 +139,7 @@ body {
 
     position: relative;
     width: 960px;
-    height: 866px;
+    height: 100vh;
     column-gap: 25px;
     row-gap: 20px;
     padding: 0 180px;
@@ -193,7 +193,7 @@ button:hover {
 h1 {
     position: absolute;
     bottom: 0;
-    font-size: 1rem;
+    font-size: 1.4rem;
 }
 
 h2 {
@@ -206,6 +206,10 @@ h3 {
 
 hr {
     border: var(--border);
+}
+
+p {
+    margin: 6px 0;
 }
 
 a {
